@@ -13,32 +13,32 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
+    {value: "7", label: "Published sites"},
     {value: "5+", label: "Published Android apps"},
     {value: "18+", label: "Years in software & teaching"},
-    {value: "222+", label: "GitHub repositories"},
-    {value: "3.7k", label: "GitHub stars"},
+    {value: "236+", label: "GitHub repositories"},
 ];
 
 export const SKILL_GROUPS = [
     {
         title: "Mobile",
         note: "primary focus",
-        items: ["Jetpack Compose", "Flutter", ".NET MAUI", "ML Kit / MediaPipe", "Material Design", "React Native", "Room", "Clean Architecture", "MVI / MVVM"],
+        items: ["Jetpack Compose", "Flutter", "ML Kit / MediaPipe", "Material Design", "React Native", "Room", ".NET MAUI", "Clean Architecture", "MVI / MVVM"],
     },
     {
         title: "Languages",
         note: "core toolkit",
-        items: ["C++", "C#", "Java", "Python", "JavaScript", "TypeScript", "Dart", "SQL", "PHP", "Kotlin"],
+        items: ["C++", "C#", "Java", "Python", "JavaScript", "TypeScript", "SQL", "PHP", "Kotlin"],
     },
     {
         title: "Frameworks",
         note: "backend & web",
-        items: ["ASP.NET Core", "Blazor", "Spring Boot", "Django", "Node.js", "React", "Electron.js", "FastAPI"],
+        items: ["ASP.NET Core", "Blazor", "Spring Boot", "Django", "Node.js", "Next.js", "React", "Electron.js", "FastAPI"],
     },
     {
         title: "Tooling",
         note: "day to day",
-        items: ["Git & GitHub", "Docker", "PostgreSQL", "REST APIs", "CI/CD", "Figma", "GraphQL / gRPC", "AI Ecosystem"],
+        items: ["Git & GitHub", "Docker", "PostgreSQL", "REST APIs", "CI/CD", "Figma", "GraphQL / gRPC", "AI Ecosystem", "Redis", "Postman", "Webpack / Vite"],
     },
 ];
 
@@ -155,20 +155,20 @@ export const REPOS = [
         name: "aspnetcore_services",
         desc: "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.",
         lang: "C#"
+    },
+    {
+        name: "aspnetcore_auth2.0",
+        desc: "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.",
+        lang: "C#"
+    },
+    {
+        name: "aspnetcore_testing",
+        desc: "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.",
+        lang: "C#"
     }
 ];
 
 export const SITES = [
-    {
-        id: "u-viktorii",
-        name: "Solenya",
-        url: "https://uviktorii.vercel.app/",
-        domain: "uviktorii.vercel.app",
-        mono: "UV",
-        tag: "Korean Pickles",
-        status: "live",
-        desc: "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.",
-    },
     {
         id: "alex-fm",
         name: "Alex FM",
@@ -178,6 +178,16 @@ export const SITES = [
         tag: "Web Audio",
         status: "live",
         desc: "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.",
+    },
+    {
+        id: "u-viktorii",
+        name: "Solenya",
+        url: "https://uviktorii.vercel.app/",
+        domain: "uviktorii.vercel.app",
+        mono: "UV",
+        tag: "Korean Pickles",
+        status: "live",
+        desc: "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.",
     },
     {
         id: "pisanina",
@@ -294,10 +304,10 @@ export const SOCIALS = [
     {label: "Telegram", href: "https://t.me/sunmeat", icon: "telegram"},
     {label: "GitHub", href: "https://github.com/sunmeat", icon: "github"},
     {label: "LinkedIn", href: "https://www.linkedin.com/in/sunmeat/", icon: "linkedin"},
+    {label: "Credly", href: "https://www.credly.com/users/sunmeat/badges/credly", icon: "credly"},
     {label: "Microsoft Learn", href: "https://learn.microsoft.com/en-us/users/sunmeat/achievements", icon: "microsoft"},
     {label: "Google Developer", href: "https://g.dev/sunmeat", icon: "google"},
     {label: "HackerRank", href: "https://www.hackerrank.com/sunmeat", icon: "code"},
-    {label: "Credly", href: "https://www.credly.com/users/sunmeat/badges/credly", icon: "credly"},
     {label: "Duolingo", href: "https://duolingo.com/profile/taemnus", icon: "duolingo"},
     {label: "Linktree", href: "https://linktr.ee/sunmeat", icon: "linktree"},
     {label: "My Android Apps", href: "https://play.google.com/store/apps/developer?id=sunmeat", icon: "star"},

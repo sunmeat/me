@@ -13,6 +13,7 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import Websites from "./components/Websites.jsx";
 import NewsFeed from "./components/NewsFeed.jsx";
+import StarlinkOffer from "./components/StarlinkOffer.jsx";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
             <Nav/>
             <main>
                 <Hero/>
+                <StarlinkOffer/>
                 <About/>
                 <Skills/>
                 <Apps/>
