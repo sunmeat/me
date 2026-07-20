@@ -1,16 +1,66 @@
-# React + Vite
+# sunmeat.shop — Software Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A single-page portfolio built to present **Oleksandr Zahoruiko** — Odesa-based Android developer, software engineer and lecturer — to clients, recruiters and advertisers.
 
-Currently, two official plugins are available:
+The design leans into the developer's own identity: a dark, engineering-grade palette, a terminal-style hero section that echoes the real `npx sunmeat` easter egg from his GitHub profile, and section labels styled as shell commands (`$ whoami`, `$ ls skills/`, `$ git log --stat` …).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Terminal hero** — a typed, self-animating terminal window introducing the developer, triggered on scroll into view
+- **Live stats bar** — published apps, years of experience, repositories, GitHub stars
+- **Skills matrix** — grouped by Mobile / Languages / Frameworks / Tooling
+- **App showcase** — real, linked Google Play listings with ratings and package IDs
+- **Open source grid** — highlighted GitHub repositories with live links
+- **Experience & education timeline**
+- **Contact section** — direct email/Telegram links plus a full social row (LinkedIn, GitHub, HackerRank, Google Developer profile)
+- **"Buy me a coffee"** support button (Monobank) in both the navigation/contact area and the footer
+- Sticky navigation with scroll-based active-section highlighting
+- Fully responsive, down to small mobile screens
+- Zero external UI dependencies — plain React + hand-drawn inline SVG icons
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠 Tech Stack
+
+| Layer      | Choice                                              |
+|------------|------------------------------------------------------|
+| Library    | React (functional components + hooks)                |
+| Styling    | Plain CSS with a token-based design system (`App.css`) |
+| Fonts      | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (display), [Inter](https://fonts.google.com/specimen/Inter) (body), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (terminal/labels) |
+| Icons      | Inline SVG (no icon library)                          |
+| Build tool | Vite                                                  |
+
+```
+
+## 📱 Content Source
+
+All content — bio, education, experience, skills, and app listings — is pulled from:
+
+- [github.com/sunmeat](https://github.com/sunmeat)
+- [Google Play developer page](https://play.google.com/store/apps/developer?id=sunmeat)
+- Personal contact channels (email, Telegram, LinkedIn)
+
+Update the data arrays at the top of `App.jsx` (`APPS`, `SKILL_GROUPS`, `EXPERIENCE`, `EDUCATION`, `REPOS`, `SOCIALS`) to keep the site in sync as new apps ship or repositories are added.
+
+---
+
+## ☕ Support
+
+If this portfolio (or the apps it showcases) was useful to you, consider [buying a coffee](https://send.monobank.ua/2YRyvEGWAn).
+
+---
+
+## 📬 Contact
+
+- **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
+- **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
+- **LinkedIn:** [linkedin.com/in/sunmeat](https://www.linkedin.com/in/sunmeat/)
+- **GitHub:** [github.com/sunmeat](https://github.com/sunmeat)
+
+---
+
+## 📄 License
+
+© 2019–2026 Oleksandr Zahoruiko. All rights reserved.
