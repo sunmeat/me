@@ -56,7 +56,6 @@ If this portfolio (or the apps it showcases) was useful to you, consider [buying
 - **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
 - **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
 - **LinkedIn:** [linkedin.com/in/sunmeat](https://www.linkedin.com/in/sunmeat/)
-- **GitHub:** [github.com/sunmeat](https://github.com/sunmeat)
 
 ---
 
