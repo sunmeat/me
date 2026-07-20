@@ -1,4 +1,4 @@
-# sunmeat.shop — Software Developer Portfolio
+# Software Developer Portfolio — sunmeat.shop 
 
 A single-page portfolio built to present **Oleksandr Zahoruiko** — Odesa-based Android developer, software engineer and lecturer — to clients, recruiters and advertisers.
 
