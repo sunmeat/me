@@ -32,7 +32,6 @@ The design leans into the developer's own identity: a dark, engineering-grade pa
 | Icons      | Inline SVG (no icon library)                          |
 | Build tool | Vite                                                  |
 
-```
 
 ## 📱 Content Source
 
