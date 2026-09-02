@@ -1,6 +1,6 @@
 # Software Developer Portfolio — sunmeat.shop 
 
-A single-page portfolio built to present **Oleksandr Zahoruiko** — Odesa-based Android developer, software engineer and lecturer — to clients, recruiters and advertisers.
+A single-page portfolio built to present **Oleksandr Zahoruiko** — Orléans-based Android developer, software engineer and lecturer — to clients, recruiters and advertisers.
 
 The design leans into the developer's own identity: a dark, engineering-grade palette, a terminal-style hero section that echoes the real `npx sunmeat` easter egg from his GitHub profile, and section labels styled as shell commands (`$ whoami`, `$ ls skills/`, `$ git log --stat` …).
 
