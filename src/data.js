@@ -160,6 +160,16 @@ export const REPOS = [
 
 export const SITES = [
     {
+        id: "u-viktorii",
+        name: "У Вікторії",
+        url: "https://uviktorii.vercel.app/",
+        domain: "uviktorii.vercel.app",
+        mono: "UV",
+        tag: "Korean Pickles",
+        status: "live",
+        desc: "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.",
+    },
+    {
         id: "pisanina",
         name: "Pisanina",
         url: "https://pisanina.vercel.app/",
