@@ -10,7 +10,7 @@ Android & Full-Stack Developer · Lecturer · Orléans, France
 [![Live Site](https://img.shields.io/badge/Live-sunmeat.shop-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.shop)
 [![GitHub](https://img.shields.io/badge/GitHub-sunmeat-181717?style=for-the-badge&logo=github)](https://github.com/sunmeat)
 [![npx](https://img.shields.io/badge/npx-sunmeat-cb3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/sunmeat)
-[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](./LICENSE.md)
 
 <br/>
 
@@ -166,7 +166,7 @@ This portfolio is personal.
 You may look at the code for inspiration and learning.  
 You may **not** copy the design, structure, or content and present it as your own work.
 
-Full terms (English & Français) → **[LICENSE](./LICENSE)**
+Full terms (English & Français) → **[LICENSE.md](./LICENSE.md)**
 
 ---
 
