@@ -20,7 +20,7 @@ function Hero() {
                     <p className="hero__lede">
                         {BIO}
                     </p>
-                    <div className="hero__actions">
+                   <div className="hero__actions">
                         <a className="btn btn--primary" href="#websites" onClick={(e) => {
                             e.preventDefault();
                             document.getElementById("websites")?.scrollIntoView({behavior: "smooth"});
