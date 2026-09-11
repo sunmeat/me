@@ -1,64 +1,175 @@
-# Software Developer Portfolio — sunmeat.shop 
+<div align="center">
 
-A single-page portfolio built to present **Oleksandr Zahoruiko** — Orléans-based Android developer, software engineer and lecturer — to clients, recruiters and advertisers.
+# ⚡ sunmeat.shop
 
-The design leans into the developer's own identity: a dark, engineering-grade palette, a terminal-style hero section that echoes the real `npx sunmeat` easter egg from his GitHub profile, and section labels styled as shell commands (`$ whoami`, `$ ls skills/`, `$ git log --stat` …).
+### The personal portfolio of **Oleksandr Zahoruiko**
+Android & Full-Stack Developer · Lecturer · Orléans, France
+
+<br/>
+
+[![Live Site](https://img.shields.io/badge/Live-sunmeat.shop-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.shop)
+[![GitHub](https://img.shields.io/badge/GitHub-sunmeat-181717?style=for-the-badge&logo=github)](https://github.com/sunmeat)
+[![npx](https://img.shields.io/badge/npx-sunmeat-cb3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/sunmeat)
+[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](#-license)
+
+<br/>
+
+```bash
+$ npx sunmeat
+```
+
+*Try it. Right now. In your terminal.*
+
+<br/>
+
+<img src="https://sunmeat.shop/preview.jpg" alt="sunmeat.shop preview" width="800"/>
+
+</div>
 
 ---
 
-## ✨ Features
+## 🎯 What is this?
 
-- **Terminal hero** — a typed, self-animating terminal window introducing the developer, triggered on scroll into view
-- **Live stats bar** — published apps, years of experience, repositories, GitHub stars
-- **Skills matrix** — grouped by Mobile / Languages / Frameworks / Tooling
-- **App showcase** — real, linked Google Play listings with ratings and package IDs
-- **Open source grid** — highlighted GitHub repositories with live links
-- **Experience & education timeline**
-- **Contact section** — direct email/Telegram links plus a full social row (LinkedIn, GitHub, HackerRank, Google Developer profile)
-- **"Buy me a coffee"** support button (Monobank) in both the navigation/contact area and the footer
-- Sticky navigation with scroll-based active-section highlighting
-- Fully responsive, down to small mobile screens
-- Zero external UI dependencies — plain React + hand-drawn inline SVG icons
+A dark, terminal-flavored, zero-bloat personal portfolio built to present **Oleksandr Zahoruiko** — software engineer, university lecturer, and builder of real Android apps + full-stack web projects.
+
+Not another generic “hi I’m a developer” template.  
+This one actually feels like it was made by someone who ships code and teaches people how to write it.
+
+**Live → [sunmeat.shop](https://sunmeat.shop)**
+
+---
+
+## ✨ Highlights
+
+| Feature | Description |
+|---------|-------------|
+| **Terminal Hero** | Animated, typewriter-style intro that echoes the real `npx sunmeat` CLI card |
+| **Live Stats** | Published apps · Years of experience · Repos · GitHub stars |
+| **Skills Matrix** | Clean grouping: Mobile / Languages / Frameworks / Tooling |
+| **App Showcase** | Real Google Play listings with ratings and package IDs |
+| **Side Projects** | Live web experiments deployed on Vercel & Netlify |
+| **Open Source Grid** | Selected repositories with direct links |
+| **Experience Timeline** | Teaching + engineering path over nearly two decades |
+| **Contact + Support** | Email, Telegram, LinkedIn + “Buy me a coffee” (Monobank) |
+| **Sticky Nav** | Scroll-spy active section highlighting |
+| **Fully Responsive** | Looks sharp from 320px to 4K |
+| **Zero UI libs** | Pure React + hand-crafted CSS + inline SVG icons |
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer      | Choice                                              |
-|------------|------------------------------------------------------|
-| Library    | React (functional components + hooks)                |
-| Styling    | Plain CSS with a token-based design system (`App.css`) |
-| Fonts      | [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (display), [Inter](https://fonts.google.com/specimen/Inter) (body), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (terminal/labels) |
-| Icons      | Inline SVG (no icon library)                          |
-| Build tool | Vite                                                  |
+```text
+React 19          → functional components + hooks
+Vite 8            → blazing fast builds
+Plain CSS         → token-based design system (no Tailwind, no CSS-in-JS)
+Space Grotesk     → display
+Inter             → body
+JetBrains Mono    → terminal & labels
+Inline SVG        → zero icon libraries
+Firebase          → used in some side projects
+oxlint            → fast linting
+gh-pages          → deployment
+```
 
-
-## 📱 Content Source
-
-All content — bio, education, experience, skills, and app listings — is pulled from:
-
-- [github.com/sunmeat](https://github.com/sunmeat)
-- [Google Play developer page](https://play.google.com/store/apps/developer?id=sunmeat)
-- Personal contact channels (email, Telegram, LinkedIn)
-
-Update the data arrays at the top of `App.jsx` (`APPS`, `SKILL_GROUPS`, `EXPERIENCE`, `EDUCATION`, `REPOS`, `SOCIALS`) to keep the site in sync as new apps ship or repositories are added.
+Everything is intentionally lean. No unnecessary dependencies. Just clean, modern frontend engineering.
 
 ---
 
-## ☕ Support
+## 🚀 Getting Started
 
-If this portfolio (or the apps it showcases) was useful to you, consider [buying a coffee](https://send.monobank.ua/2YRyvEGWAn).
+```bash
+# Clone
+git clone https://github.com/sunmeat/me.git
+cd me
+
+# Install
+npm install
+
+# Develop
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+me/
+├── public/                 # Static assets (favicon, og image, ads.txt…)
+├── src/
+│   ├── App.jsx             # Main component + all content data
+│   ├── App.css             # Design system & styles
+│   ├── main.jsx            # Entry point
+│   └── ...
+├── index.html              # Meta tags, Open Graph, JSON-LD
+├── vite.config.js
+└── package.json
+```
+
+All content (apps, skills, experience, sites, socials) lives in data arrays at the top of `App.jsx`.  
+Update those arrays → the site stays in sync.
+
+---
+
+## 🌐 SEO & Sharing
+
+The site ships with:
+
+- Proper `<title>` + meta description
+- Full Open Graph + Twitter Cards
+- Canonical URL
+- JSON-LD structured data (`Person` + side projects as `WebSite` / `WebApplication`)
+
+So when you drop the link in Telegram, LinkedIn, or X — it actually looks good.
+
+---
+
+## ☕ Support the work
+
+If this portfolio (or any of the apps / sites it showcases) helped you, consider buying a coffee:
+
+**[Buy me a coffee →](https://send.monobank.ua/2YRyvEGWAn)**
+
+Also available via [Patreon](https://patreon.com/sunmeat).
 
 ---
 
 ## 📬 Contact
 
-- **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
-- **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
-- **LinkedIn:** [linkedin.com/in/sunmeat](https://www.linkedin.com/in/sunmeat/)
+| Channel     | Link                                      |
+|-------------|-------------------------------------------|
+| **Email**   | [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com) |
+| **Telegram**| [t.me/sunmeat](https://t.me/sunmeat)      |
+| **LinkedIn**| [linkedin.com/in/sunmeat](https://www.linkedin.com/in/sunmeat) |
+| **GitHub**  | [github.com/sunmeat](https://github.com/sunmeat) |
+| **CLI card**| `npx sunmeat`                             |
+
+Based in **Orléans, France** (EET/EEST). Usually replies within a business day.
 
 ---
 
 ## 📄 License
 
 © 2019–2026 Oleksandr Zahoruiko. All rights reserved.
+
+This portfolio is personal. Feel free to look at the code for inspiration, but please don’t copy it wholesale and claim it as your own.
+
+---
+
+<div align="center">
+
+**Built with React, caffeine, and nearly 20 years of writing & teaching code.**
+
+[sunmeat.shop](https://sunmeat.shop) · [npx sunmeat](https://www.npmjs.com/package/sunmeat)
+
+</div>
