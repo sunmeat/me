@@ -1,4 +1,13 @@
 import { useState, useRef, useEffect } from "react";
+import {
+    collection,
+    addDoc,
+    onSnapshot,
+    orderBy,
+    query,
+    serverTimestamp,
+} from "firebase/firestore";
+import { db } from "../firebase.js";
 import Icon from "./Icon.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 
@@ -6,16 +15,11 @@ const AVATAR_URL = "https://github.com/sunmeat/storage/blob/main/images/jpg/squa
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
 const TELEGRAM_URL = "https://t.me/sunmeat";
-const COMMENTS_STORAGE_KEY = "about-card-comments";
 
-function loadStoredComments() {
-    try {
-        const stored = localStorage.getItem(COMMENTS_STORAGE_KEY);
-        return stored ? JSON.parse(stored) : [];
-    } catch {
-        return [];
-    }
-}
+// Separate Firestore collection just for this card — does not touch
+// the existing "poems" / "comments" collections used elsewhere.
+const COMMENTS_COLLECTION = "about_comments";
+const GUEST_NAME_STORAGE_KEY = "about-card-guest-name";
 
 function formatTimestamp(date) {
     const formatted = date.toLocaleString("en-US", {
@@ -28,24 +32,75 @@ function formatTimestamp(date) {
     return formatted.replace(" at ", ", ");
 }
 
+function formatRelative(date) {
+    if (!date) return "";
+    const diff = Date.now() - date.getTime();
+    const mins = Math.floor(diff / 60000);
+    const hours = Math.floor(diff / 3600000);
+    const days = Math.floor(diff / 86400000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins}m`;
+    if (hours < 24) return `${hours}h`;
+    if (days < 7) return `${days}d`;
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+function loadStoredGuestName() {
+    try {
+        return localStorage.getItem(GUEST_NAME_STORAGE_KEY) || "";
+    } catch {
+        return "";
+    }
+}
+
 function About() {
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
     const [showBurst, setShowBurst] = useState(false);
     const [saved, setSaved] = useState(false);
+    const [guestName, setGuestName] = useState(loadStoredGuestName);
     const [commentText, setCommentText] = useState("");
-    const [comments, setComments] = useState(loadStoredComments);
+    const [comments, setComments] = useState([]);
+    const [commentsError, setCommentsError] = useState(null);
+    const [posting, setPosting] = useState(false);
     const [timestamp, setTimestamp] = useState(() => formatTimestamp(new Date()));
     const burstTimeout = useRef(null);
 
+    // Live-sync real comments from Firebase — every visitor sees the same feed.
+    useEffect(() => {
+        const q = query(collection(db, COMMENTS_COLLECTION), orderBy("createdAt", "asc"));
+        const unsubscribe = onSnapshot(
+            q,
+            (snapshot) => {
+                setCommentsError(null);
+                setComments(
+                    snapshot.docs.map((doc) => {
+                        const data = doc.data();
+                        return {
+                            id: doc.id,
+                            name: data.name || "Guest",
+                            text: data.text || "",
+                            createdAt: data.createdAt?.toDate ? data.createdAt.toDate() : null,
+                        };
+                    })
+                );
+            },
+            (err) => {
+                console.error("Failed to load comments:", err);
+                setCommentsError("Couldn't load comments right now.");
+            }
+        );
+        return () => unsubscribe();
+    }, []);
+
     useEffect(() => {
         try {
-            localStorage.setItem(COMMENTS_STORAGE_KEY, JSON.stringify(comments));
+            localStorage.setItem(GUEST_NAME_STORAGE_KEY, guestName);
         } catch {
             /* localStorage unavailable — ignore */
         }
-    }, [comments]);
+    }, [guestName]);
 
     useEffect(() => {
         const id = setInterval(() => {
@@ -92,12 +147,26 @@ function About() {
         }
     };
 
-    const handleCommentSubmit = (e) => {
+    const handleCommentSubmit = async (e) => {
         e.preventDefault();
         const text = commentText.trim();
-        if (!text) return;
-        setComments((prev) => [...prev, text]);
-        setCommentText("");
+        if (!text || posting) return;
+
+        setPosting(true);
+        setCommentsError(null);
+        try {
+            await addDoc(collection(db, COMMENTS_COLLECTION), {
+                name: guestName.trim() || "Guest",
+                text,
+                createdAt: serverTimestamp(),
+            });
+            setCommentText("");
+        } catch (err) {
+            console.error("Failed to post comment:", err);
+            setCommentsError("Couldn't post your comment. Please try again.");
+        } finally {
+            setPosting(false);
+        }
     };
 
     return (
@@ -169,18 +238,36 @@ function About() {
 
                         <div className="about-card__caption">
                             <span className="about-card__username">{USERNAME}</span>
-                            bonjour, epta 🇫🇷️ Orléans, France
+                            bonjour, epta{" "}
+                            <img
+                                src="https://flagcdn.com/16x12/fr.png"
+                                srcSet="https://flagcdn.com/32x24/fr.png 2x"
+                                width="16"
+                                height="12"
+                                alt="France"
+                                className="about-card__flag"
+                            />{" "}
+                            Orléans, France
                         </div>
 
                         {comments.length > 0 && (
                             <div className="about-card__comments-list">
-                                {comments.map((text, i) => (
-                                    <div className="about-card__comment-item" key={i}>
-                                        <strong>{USERNAME}</strong>
-                                        {text}
+                                {comments.map((c) => (
+                                    <div className="about-card__comment-item" key={c.id}>
+                                        <strong>{c.name}</strong>
+                                        {c.text}
+                                        {c.createdAt && (
+                                            <span className="about-card__comment-time">
+                                                {formatRelative(c.createdAt)}
+                                            </span>
+                                        )}
                                     </div>
                                 ))}
                             </div>
+                        )}
+
+                        {commentsError && (
+                            <div className="about-card__comment-error">{commentsError}</div>
                         )}
 
                         <span className="about-card__timestamp">{timestamp}</span>
@@ -192,19 +279,23 @@ function About() {
                         >
                             <input
                                 type="text"
+                                className="about-card__comment-name"
+                                placeholder="Name"
+                                maxLength={40}
+                                value={guestName}
+                                onChange={(e) => setGuestName(e.target.value)}
+                            />
+                            <input
+                                type="text"
                                 placeholder="Add a comment..."
+                                maxLength={500}
                                 value={commentText}
                                 onChange={(e) => setCommentText(e.target.value)}
                             />
-                            <button type="submit" disabled={!commentText.trim()}>
-                                Post
+                            <button type="submit" disabled={!commentText.trim() || posting}>
+                                {posting ? "..." : "Post"}
                             </button>
                         </form>
-                    </div>
-
-                    <div className="about__location">
-                        <Icon name="pin" size={15} />
-                        Orléans, France
                     </div>
                 </div>
 

@@ -21,11 +21,11 @@ function Hero() {
                         {BIO}
                     </p>
                     <div className="hero__actions">
-                        <a className="btn btn--primary" href="#apps" onClick={(e) => {
+                        <a className="btn btn--primary" href="#websites" onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById("apps")?.scrollIntoView({behavior: "smooth"});
+                            document.getElementById("websites")?.scrollIntoView({behavior: "smooth"});
                         }}>
-                            View published apps
+                            View published sites
                             <Icon name="arrow" size={16}/>
                         </a>
                         <a className="btn btn--ghost" href="#contact" onClick={(e) => {

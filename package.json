@@ -1,7 +1,7 @@
 {
   "name": "me",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.7",
   "type": "module",
   "homepage": "https://sunmeat.shop",
   "scripts": {
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "firebase": "^12.19.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
