@@ -161,13 +161,23 @@ export const REPOS = [
 export const SITES = [
     {
         id: "u-viktorii",
-        name: "У Вікторії",
+        name: "Solenya",
         url: "https://uviktorii.vercel.app/",
         domain: "uviktorii.vercel.app",
         mono: "UV",
         tag: "Korean Pickles",
         status: "live",
         desc: "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.",
+    },
+    {
+        id: "alex-fm",
+        name: "Alex FM",
+        url: "https://alexfm.vercel.app/",
+        domain: "alexfm.vercel.app",
+        mono: "FM",
+        tag: "Web Audio",
+        status: "live",
+        desc: "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.",
     },
     {
         id: "pisanina",
@@ -188,16 +198,6 @@ export const SITES = [
         tag: "Stats Card",
         status: "live",
         desc: "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.",
-    },
-    {
-        id: "alex-fm",
-        name: "Alex FM",
-        url: "https://alexfm.vercel.app/",
-        domain: "alexfm.vercel.app",
-        mono: "FM",
-        tag: "Web Audio",
-        status: "live",
-        desc: "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.",
     },
     {
         id: "happy-lena",
