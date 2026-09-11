@@ -1490,11 +1490,13 @@ a.contact__row:hover {
 .about__media {
     display: flex;
     justify-content: center;
+    min-width: 0;
 }
 
 .about-card {
     width: 100%;
     max-width: 420px;
+    min-width: 0;
     margin: 0 auto;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -1635,11 +1637,20 @@ a.contact__row:hover {
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .about-card__caption .about-card__username {
     margin-right: 6px;
     display: inline;
+}
+
+.about-card__flag {
+    display: inline-block;
+    vertical-align: -1px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--border-soft);
 }
 
 .about-card__comments-list {
@@ -1652,6 +1663,8 @@ a.contact__row:hover {
 .about-card__comment-item {
     font-size: 0.86rem;
     color: var(--text-muted);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .about-card__comment-item strong {
@@ -2365,11 +2378,4 @@ a.contact__row:hover {
         height: 34px;
         font-size: 0.8rem;
     }
-}
-
-.about-card__flag {
-    display: inline-block;
-    vertical-align: -1px;
-    border-radius: 2px;
-    box-shadow: 0 0 0 1px var(--border-soft);
 }
