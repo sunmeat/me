@@ -59,10 +59,24 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+}
+
+button,
+.btn,
+.nav__link,
+.nav__mobile-link,
+.news__arrow,
+.news__pager-btn,
+.platform-card,
+.feature-chip,
+.timeline-option {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+}
+
+::selection {
+    background: var(--accent-dim);
+    color: var(--text);
 }
 
 img {
