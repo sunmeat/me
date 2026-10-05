@@ -1,0 +1,351 @@
+.starlink-offer {
+    position: relative;
+    max-width: var(--container);
+    margin: 56px auto 0;
+    padding: 0 32px;
+    overflow: hidden;
+}
+
+.starlink-offer__content {
+    position: relative;
+    z-index: 2;
+    min-height: 230px;
+    padding: 28px 32px 22px;
+    overflow: hidden;
+    background:
+            radial-gradient(circle at 85% 40%, rgba(255, 255, 255, 0.06), transparent 32%),
+            linear-gradient(145deg, #0e1218 0%, #141920 45%, #0a0d12 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-l);
+    box-shadow:
+            0 24px 60px -30px rgba(0, 0, 0, 0.9),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    isolation: isolate;
+}
+
+.starlink-offer__content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at 75% 45%, black 0%, transparent 68%);
+}
+
+.starlink-offer__content::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 380px;
+    height: 380px;
+    right: -140px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.02) 35%,
+            transparent 70%
+    );
+    filter: blur(12px);
+    pointer-events: none;
+}
+
+/* Space elements */
+.starlink-offer__space {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.4;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+    animation: star-drift 8s linear infinite;
+}
+
+.star--1 { top: 16%; left: 48%; animation-duration: 7s; }
+.star--2 { top: 68%; left: 56%; width: 1px; height: 1px; animation-duration: 10s; animation-delay: -2s; }
+.star--3 { top: 28%; left: 72%; animation-duration: 9s; animation-delay: -4s; }
+.star--4 { top: 78%; left: 80%; width: 1px; height: 1px; animation-duration: 11s; }
+.star--5 { top: 22%; left: 88%; animation-duration: 8s; animation-delay: -3s; }
+.star--6 { top: 58%; left: 93%; width: 1px; height: 1px; animation-duration: 12s; }
+
+@keyframes star-drift {
+    0%   { transform: translate3d(0, 0, 0); opacity: 0.2; }
+    40%  { opacity: 0.7; }
+    100% { transform: translate3d(-60px, 30px, 0); opacity: 0; }
+}
+
+.starlink-offer__orbit {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.starlink-offer__orbit--1 {
+    width: 420px;
+    height: 150px;
+    right: -130px;
+    top: 36px;
+    transform: rotate(-16deg);
+    animation: orbit-pulse 7s ease-in-out infinite;
+}
+
+.starlink-offer__orbit--2 {
+    width: 320px;
+    height: 110px;
+    right: -60px;
+    top: 62px;
+    transform: rotate(-16deg);
+    border-color: rgba(255, 255, 255, 0.05);
+    animation: orbit-pulse 7s ease-in-out infinite reverse;
+}
+
+@keyframes orbit-pulse {
+    0%, 100% { opacity: 0.3; transform: rotate(-16deg) scale(1); }
+    50%      { opacity: 0.65; transform: rotate(-16deg) scale(1.03); }
+}
+
+/* Scan line */
+.starlink-offer__scan {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: -20%;
+    width: 16%;
+    pointer-events: none;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.1),
+            transparent
+    );
+    filter: blur(6px);
+    animation: starlink-scan 9s ease-in-out infinite;
+}
+
+@keyframes starlink-scan {
+    0%   { left: -25%; opacity: 0; }
+    12%  { opacity: 1; }
+    32%  { left: 115%; opacity: 0; }
+    100% { left: 115%; opacity: 0; }
+}
+
+/* Content */
+.starlink-offer__eyebrow {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.starlink-offer__status {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 6px #fff, 0 0 14px rgba(255, 255, 255, 0.7);
+    animation: status-blink 2.2s ease-in-out infinite;
+}
+
+@keyframes status-blink {
+    0%, 100% { opacity: 0.4; }
+    50%      { opacity: 1; }
+}
+
+.starlink-offer__main {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-top: 16px;
+}
+
+.starlink-offer__copy {
+    min-width: 0;
+    max-width: 620px;
+}
+
+.starlink-offer__label {
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.starlink-offer__title {
+    font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.starlink-offer__title span {
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.75) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+.starlink-offer__text {
+    margin-top: 14px;
+    max-width: 520px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* Button — без логотипа */
+.starlink-offer__button {
+    position: relative;
+    z-index: 8;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 0 26px;
+    background: #fff;
+    color: #0a0c10;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    text-decoration: none;
+    transition:
+            transform 0.22s ease,
+            background 0.22s ease,
+            box-shadow 0.22s ease;
+}
+
+.starlink-offer__button:hover {
+    transform: translateY(-2px);
+    background: #f4f4f4;
+    box-shadow: 0 12px 32px -12px rgba(255, 255, 255, 0.35);
+}
+
+.starlink-offer__button-arrow {
+    font-size: 1.05rem;
+    transition: transform 0.22s ease;
+}
+
+.starlink-offer__button:hover .starlink-offer__button-arrow {
+    transform: translateX(4px);
+}
+
+/* Footer */
+.starlink-offer__footer {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.starlink-offer__note {
+    font-size: 0.63rem;
+    color: rgba(255, 255, 255, 0.28);
+}
+
+.starlink-offer__coordinates {
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    .starlink-offer {
+        margin-top: 40px;
+        padding-inline: 24px;
+    }
+
+    .starlink-offer__content {
+        padding: 24px;
+    }
+
+    .starlink-offer__main {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .starlink-offer__button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .starlink-offer__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .starlink-offer {
+        margin-inline: 16px;
+        padding-inline: 0;
+    }
+
+    .starlink-offer__content {
+        min-height: 0;
+        padding: 22px 20px;
+        border-radius: var(--radius-m);
+    }
+
+    .starlink-offer__title {
+        font-size: 2rem;
+    }
+
+    .starlink-offer__text {
+        font-size: 0.88rem;
+    }
+
+    .starlink-offer__coordinates {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .star,
+    .starlink-offer__orbit,
+    .starlink-offer__scan,
+    .starlink-offer__status {
+        animation: none;
+    }
+}
