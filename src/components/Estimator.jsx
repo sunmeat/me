@@ -304,7 +304,7 @@ export default function Estimator() {
     };
 
     return (
-        <section className="section section--alt estimator" id="estimate">
+        <section className="section estimator" id="estimate">
             <div className="section__inner">
                 <span className="eyebrow">$ estimate --init</span>
                 <h2 className="section__title">Estimate Your App Project</h2>

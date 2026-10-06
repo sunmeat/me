@@ -506,12 +506,6 @@ button {
     border-bottom: 1px solid var(--border-soft);
 }
 
-.section:has(.estimator__layout) {
-    background: var(--bg-elevated);
-    border-top: 1px solid var(--border-soft);
-    border-bottom: 1px solid var(--border-soft);
-}
-
 .section__inner {
     max-width: var(--container);
     margin: 0 auto;
