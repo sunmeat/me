@@ -13,7 +13,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "8", label: "Published sites"},
+    {value: "9", label: "Published sites"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "241+", label: "GitHub repositories"},
@@ -248,6 +248,16 @@ export const SITES = [
         tag: "Calculator",
         status: "live",
         desc: "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.",
+    },
+    {
+        id: "shrimp-watch",
+        name: "ShrimpWatch",
+        url: "https://shrimp-watch.vercel.app/",
+        domain: "shrimp-watch.vercel.app",
+        mono: "SW",
+        tag: "Price Tracker",
+        status: "live",
+        desc: "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.",
     },
 ];
 
