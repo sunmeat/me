@@ -13,10 +13,10 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "7", label: "Published sites"},
+    {value: "8", label: "Published sites"},
     {value: "5+", label: "Published Android apps"},
-    {value: "18+", label: "Years in software & teaching"},
-    {value: "236+", label: "GitHub repositories"},
+    {value: "19+", label: "Years in software & teaching"},
+    {value: "241+", label: "GitHub repositories"},
 ];
 
 export const SKILL_GROUPS = [
@@ -198,6 +198,16 @@ export const SITES = [
         tag: "Poetry Blog",
         status: "live",
         desc: "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.",
+    },
+    {
+        id: "aerodion",
+        name: "Aerodion",
+        url: "https://aerodion.vercel.app/",
+        domain: "aerodion.vercel.app",
+        mono: "AM",
+        tag: "Music Learning",
+        status: "live",
+        desc: "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.",
     },
     {
         id: "duo-stats",
