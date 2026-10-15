@@ -13,7 +13,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "9", label: "Published sites"},
+    {value: "10", label: "Published sites"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "241+", label: "GitHub repositories"},
@@ -258,6 +258,16 @@ export const SITES = [
         tag: "Price Tracker",
         status: "live",
         desc: "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.",
+    },
+    {
+        id: "natadenium",
+        name: "Natadenium",
+        url: "https://natadenium.vercel.app/",
+        domain: "natadenium.vercel.app",
+        mono: "ND",
+        tag: "Plant Collection",
+        status: "live",
+        desc: "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.",
     },
 ];
 
