@@ -36,6 +36,10 @@ npm run dev
 
 Before submitting changes, run `npm run lint` and `npm run build`.
 
+### GitHub community and automation
+
+Repository templates, Dependabot, security-reporting guidance, and the manual audit workflow live in [`.github/`](../.github/README.md).
+
 ### Project principles
 
 - Keep the portfolio fast, responsive, and deliberately lightweight.
@@ -70,6 +74,10 @@ npm run dev
 ```
 
 Перед отправкой изменений выполни `npm run lint` и `npm run build`.
+
+### Сообщество GitHub и автоматизация
+
+Шаблоны для участников, Dependabot, инструкции по безопасности и ручной аудит собраны в [`.github/`](../.github/README.md).
 
 ### Принципы проекта
 
