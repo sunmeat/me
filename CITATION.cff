@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: >-
+  If you use, reference, or build upon this project, please cite it using
+  the metadata below.
+title: "sunmeat/me: Personal Portfolio of Oleksandr Zahoruiko"
+authors:
+  - family-names: Zahoruiko
+    given-names: Oleksandr
+    alias: sunmeat
+type: software
+url: "https://sunmeat.shop"
+repository-code: "https://github.com/sunmeat/me"
+abstract: >-
+  A dark, terminal-inspired personal portfolio presenting software
+  engineering, teaching, native Android applications, and full-stack
+  web projects by Oleksandr Zahoruiko.
