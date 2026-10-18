@@ -117,7 +117,7 @@ Documentation is available in English and Russian:
 - [SEO and metadata](docs/SEO-AND-METADATA.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 
-Repository contribution templates, automation, and security guidance are documented in [`.github/README.md`](.github/README.md).
+Repository contribution templates, automation, and security guidance are documented in [`.github/COMMUNITY.md`](.github/COMMUNITY.md).
 
 ## Contact
 
