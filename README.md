@@ -2,128 +2,111 @@
 
 # ⚡ sunmeat.shop
 
-### The personal portfolio of **Oleksandr Zahoruiko**
-Android & Full-Stack Developer · Lecturer · Orléans, France
+### Personal portfolio of Oleksandr Zahoruiko
+**Android & Full-Stack Developer · IT Lecturer**
 
-<br/>
+Building native Android apps, full-stack web projects, and tools that make learning and everyday life a little better.
 
-[![Live Site](https://img.shields.io/badge/Live-sunmeat.shop-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.shop)
+[![Live Site](https://img.shields.io/badge/Portfolio-sunmeat.shop-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.shop)
 [![GitHub](https://img.shields.io/badge/GitHub-sunmeat-181717?style=for-the-badge&logo=github)](https://github.com/sunmeat)
-[![npx](https://img.shields.io/badge/npx-sunmeat-cb3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/sunmeat)
+[![npm](https://img.shields.io/badge/npm-sunmeat-cb3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/sunmeat)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](./LICENSE.md)
 
 <br/>
 
-```bash
-$ npx sunmeat
-```
-
-*Try it. Right now. In your terminal.*
-
-<br/>
-
-<img src="https://sunmeat.shop/preview.jpg" alt="sunmeat.shop preview" width="800"/>
+<img src="https://sunmeat.shop/preview.jpg" alt="Preview of the sunmeat.shop portfolio" width="800"/>
 
 </div>
 
 ---
 
-## 🎯 What is this?
+## About
 
-A dark, terminal-flavored, zero-bloat personal portfolio built to present **Oleksandr Zahoruiko** — software engineer, university lecturer, and builder of real Android apps + full-stack web projects.
+This repository contains the source code for [sunmeat.shop](https://sunmeat.shop), a dark, terminal-inspired portfolio showcasing my software development and teaching work.
 
-Not another generic “hi I’m a developer” template.  
-This one actually feels like it was made by someone who ships code and teaches people how to write it.
+The site brings together my background, technical skills, published Android apps, live websites, open-source projects, and contact information.
 
-**Live → [sunmeat.shop](https://sunmeat.shop)**
+## Portfolio at a glance
 
----
+| | |
+|---|---|
+| **10** | Published websites |
+| **6** | Android apps showcased on Google Play |
+| **19+ years** | Software development and teaching |
+| **241+** | GitHub repositories |
 
-## ✨ Highlights
+Numbers and showcased projects reflect the portfolio data and may change over time.
 
-| Feature | Description |
-|---------|-------------|
-| **Terminal Hero** | Animated, typewriter-style intro that echoes the real `npx sunmeat` CLI card |
-| **Live Stats** | Published apps · Years of experience · Repos · GitHub stars |
-| **Skills Matrix** | Clean grouping: Mobile / Languages / Frameworks / Tooling |
-| **App Showcase** | Real Google Play listings with ratings and package IDs |
-| **Side Projects** | Live web experiments deployed on Vercel & Netlify |
-| **Open Source Grid** | Selected repositories with direct links |
-| **Experience Timeline** | Teaching + engineering path over nearly two decades |
-| **Contact + Support** | Email, Telegram, LinkedIn + “Buy me a coffee” (Monobank) |
-| **Sticky Nav** | Scroll-spy active section highlighting |
-| **Fully Responsive** | Looks sharp from 320px to 4K |
-| **Zero UI libs** | Pure React + hand-crafted CSS + inline SVG icons |
+## Features
 
----
+- Terminal-style hero section and interactive CLI card
+- Responsive layout for mobile, tablet, and desktop
+- Skills grouped by mobile development, languages, frameworks, and tooling
+- Published Android apps with direct Google Play links
+- Live website and open-source project showcases
+- Experience timeline and contact links
+- Interactive profile card with comments powered by Firebase
+- SEO metadata, Open Graph previews, and structured data
+- Vercel Web Analytics
 
-## 🛠 Tech Stack
+## Tech stack
 
-```text
-React 19          → functional components + hooks
-Vite 8            → blazing fast builds
-Plain CSS         → token-based design system (no Tailwind, no CSS-in-JS)
-Space Grotesk     → display
-Inter             → body
-JetBrains Mono    → terminal & labels
-Inline SVG        → zero icon libraries
-Firebase          → used in some side projects
-oxlint            → fast linting
-gh-pages          → deployment
-```
+- **Frontend:** React 19, JavaScript, Vite
+- **Styling:** plain CSS with a token-based design system
+- **Backend service:** Firebase / Firestore for profile comments
+- **Analytics:** Vercel Web Analytics
+- **Quality:** oxlint
+- **Deployment:** Vercel
 
-Everything is intentionally lean. No unnecessary dependencies. Just clean, modern frontend engineering.
+## Run locally
 
----
-
-## 🚀 Getting Started
+Requirements: a recent Node.js version and npm.
 
 ```bash
-# Clone
 git clone https://github.com/sunmeat/me.git
 cd me
-
-# Install
 npm install
-
-# Develop
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Deploy to GitHub Pages
-npm run deploy
 ```
 
----
+Create a production build and preview it locally:
 
-## 📂 Project Structure
+```bash
+npm run build
+npm run preview
+```
+
+Run lint checks:
+
+```bash
+npm run lint
+```
+
+Some interactive features rely on Firebase configuration. Without valid configuration, those features may not work in a local environment.
+
+## Project structure
 
 ```text
 me/
-├── public/                 # Static assets (favicon, og image, ads.txt…)
+├── public/             # Static assets and preview images
 ├── src/
-│   ├── App.jsx             # Main component + all content data
-│   ├── App.css             # Design system & styles
-│   ├── main.jsx            # Entry point
-│   └── ...
-├── index.html              # Meta tags, Open Graph, JSON-LD
-├── vite.config.js
+│   ├── components/     # Page sections and reusable UI
+│   ├── App.jsx         # Main page composition
+│   ├── data.js         # Portfolio text, skills, apps, sites, and stats
+│   ├── firebase.js     # Firebase setup
+│   ├── App.css         # Design system and responsive styles
+│   └── main.jsx        # Application entry point
+├── docs/               # Project documentation
+├── .github/            # Templates and repository automation
+├── index.html          # Metadata and document shell
 └── package.json
 ```
 
-All content (apps, skills, experience, sites, socials) lives in data arrays at the top of `App.jsx`.  
-Update those arrays → the site stays in sync.
+Portfolio content is primarily maintained in `src/data.js`. Page sections and reusable components live in `src/components/`.
 
----
+## Documentation
 
-## 📚 Documentation
-
-The project documentation is available in **English and Russian**.
+Documentation is available in English and Russian:
 
 - [Documentation index](docs/README.md)
 - [Architecture](docs/ARCHITECTURE.md)
@@ -134,67 +117,18 @@ The project documentation is available in **English and Russian**.
 - [SEO and metadata](docs/SEO-AND-METADATA.md)
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 
----
+Repository contribution templates, automation, and security guidance are documented in [`.github/README.md`](.github/README.md).
 
-## 🧰 GitHub Community & Automation
+## Contact
 
-The [`.github/` directory](.github/README.md) contains bilingual contribution and discussion templates, a manual repository audit workflow, Dependabot configuration, and security-reporting guidance.
+- **Website:** [sunmeat.shop](https://sunmeat.shop)
+- **GitHub:** [github.com/sunmeat](https://github.com/sunmeat)
+- **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
+- **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
+- **npm CLI card:** [npx sunmeat](https://www.npmjs.com/package/sunmeat)
 
----
+## License
 
-## 🌐 SEO & Sharing
+© Oleksandr Zahoruiko. All rights reserved.
 
-The site ships with:
-
-- Proper `<title>` + meta description
-- Full Open Graph + Twitter Cards
-- Canonical URL
-- JSON-LD structured data (`Person` + side projects as `WebSite` / `WebApplication`)
-
-So when you drop the link in Telegram, LinkedIn, or X — it actually looks good.
-
----
-
-## ☕ Support the work
-
-If this portfolio (or any of the apps / sites it showcases) helped you, consider buying a coffee:
-
-**[Buy me a coffee →](https://send.monobank.ua/2YRyvEGWAn)**
-
-Also available via [Patreon](https://patreon.com/sunmeat).
-
----
-
-## 📬 Contact
-
-| Channel     | Link                                      |
-|-------------|-------------------------------------------|
-| **Email**   | [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com) |
-| **Telegram**| [t.me/sunmeat](https://t.me/sunmeat)      |
-| **LinkedIn**| [linkedin.com/in/sunmeat](https://www.linkedin.com/in/sunmeat) |
-| **GitHub**  | [github.com/sunmeat](https://github.com/sunmeat) |
-| **CLI card**| `npx sunmeat`                             |
-
-Based in **Orléans, France** (EET/EEST). Usually replies within a business day.
-
----
-
-## 📄 License
-
-© 2019–2027 Oleksandr Zahoruiko. All rights reserved.
-
-This portfolio is personal.  
-You may look at the code for inspiration and learning.  
-You may **not** copy the design, structure, or content and present it as your own work.
-
-Full terms (English & Français) → **[LICENSE.md](./LICENSE.md)**
-
----
-
-<div align="center">
-
-**Built with React, caffeine, and nearly 20 years of writing & teaching code.**
-
-[sunmeat.shop](https://sunmeat.shop) · [npx sunmeat](https://www.npmjs.com/package/sunmeat)
-
-</div>
+This is a personal portfolio. The source is publicly viewable for reference and learning, but the design, structure, and content may not be copied and presented as someone else's work. See [LICENSE.md](./LICENSE.md) for the full terms.
