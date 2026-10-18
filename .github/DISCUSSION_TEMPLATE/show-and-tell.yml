@@ -1,0 +1,52 @@
+title: "Show and tell / Покажи свой проект"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share something you built, learned, or improved. Please keep it relevant, respectful, and safe to share.
+        
+        Расскажите, что вы создали, чему научились или что улучшили. Публикация должна относиться к теме, быть уважительной и не содержать конфиденциальных данных.
+  - type: input
+    id: project_name
+    attributes:
+      label: Project / Проект
+      description: "Name your project or contribution / Название проекта или вклада"
+      placeholder: "My project / Мой проект"
+    validations:
+      required: true
+  - type: input
+    id: project_link
+    attributes:
+      label: Link / Ссылка
+      description: "A public demo or repository, if available / Публичная демоверсия или репозиторий, если есть"
+      placeholder: "https://"
+    validations:
+      required: false
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / Категория
+      options:
+        - Web development / Веб-разработка
+        - Android / Android
+        - Education / Образование
+        - Open source / Открытый код
+        - Learning / Обучение
+        - Other / Другое
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: What would you like to share? / Чем хотите поделиться?
+      description: "Context, what you learned, and what feedback would help / Контекст, полученный опыт и обратная связь, которая будет полезна"
+      placeholder: "I built… / Я создал…"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before posting / Перед публикацией
+      options:
+        - label: "I have permission to share all links and materials, and I have removed secrets and personal data. / У меня есть право публиковать материалы, секреты и персональные данные удалены."
+          required: true
