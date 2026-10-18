@@ -3,7 +3,7 @@
 **Personal Portfolio License**  
 Oleksandr Zahoruiko — sunmeat.shop
 
-Copyright © 2019–2026 Oleksandr Zahoruiko. All rights reserved.
+Copyright © 2019–2027 Oleksandr Zahoruiko. All rights reserved.
 
 ---
 
