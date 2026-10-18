@@ -136,6 +136,12 @@ The project documentation is available in **English and Russian**.
 
 ---
 
+## 🧰 GitHub Community & Automation
+
+The [`.github/` directory](.github/README.md) contains bilingual contribution and discussion templates, a manual repository audit workflow, Dependabot configuration, and security-reporting guidance.
+
+---
+
 ## 🌐 SEO & Sharing
 
 The site ships with:
