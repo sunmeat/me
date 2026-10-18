@@ -121,6 +121,21 @@ Update those arrays → the site stays in sync.
 
 ---
 
+## 📚 Documentation
+
+The project documentation is available in **English and Russian**.
+
+- [Documentation index](docs/README.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Content guide](docs/CONTENT-GUIDE.md)
+- [Design system](docs/DESIGN-SYSTEM.md)
+- [Development and deployment](docs/DEPLOYMENT.md)
+- [Quality checklist](docs/QUALITY-CHECKLIST.md)
+- [SEO and metadata](docs/SEO-AND-METADATA.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+
+---
+
 ## 🌐 SEO & Sharing
 
 The site ships with:
