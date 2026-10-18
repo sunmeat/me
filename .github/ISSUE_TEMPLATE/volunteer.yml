@@ -1,0 +1,49 @@
+name: "Contributor volunteering / Хочу помочь проекту"
+description: "Offer a concrete contribution to the portfolio or its documentation / Предложите конкретный вклад в портфолио или документацию"
+title: "[Contribution] "
+labels:
+  - "help wanted"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for offering to help. Describe a small, specific contribution and how it could be verified.
+        
+        Спасибо за желание помочь. Опишите конкретный вклад и способ проверить результат.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Направление
+      options:
+        - Documentation / Документация
+        - Accessibility / Доступность
+        - Bug fix / Исправление ошибки
+        - Testing / Тестирование
+        - Design and UX / Дизайн и UX
+        - Other / Другое
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to do? / Что вы предлагаете сделать?
+      description: "Explain the problem, proposed change, and expected result / Опишите проблему, изменение и ожидаемый результат"
+      placeholder: "I would like to… / Я хотел(а) бы…"
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Approach and verification / План и проверка
+      description: "How would you implement and test it? / Как вы планируете реализовать и проверить решение?"
+    validations:
+      required: false
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Contributor checklist / Чек-лист участника
+      options:
+        - label: "I have checked the existing documentation and issues to avoid duplication. / Я проверил(а) документацию и существующие issues, чтобы не дублировать работу."
+          required: true
+        - label: "I understand that a proposal should be discussed before substantial work begins. / Я понимаю, что крупные изменения нужно предварительно обсудить."
+          required: true
