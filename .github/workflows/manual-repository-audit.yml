@@ -1,0 +1,57 @@
+name: Manual Repository Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_dependency_audit:
+        description: "Run npm dependency audit / Проверить зависимости npm"
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Inspect repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Verify required project files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in package.json package-lock.json README.md index.html; do
+            if [[ ! -f "$file" ]]; then
+              echo "::error::Required file is missing: $file"
+              exit 1
+            fi
+            echo "OK: $file"
+          done
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Audit npm dependencies
+        if: ${{ inputs.run_dependency_audit }}
+        run: npm audit --audit-level=high
