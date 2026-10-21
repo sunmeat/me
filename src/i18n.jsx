@@ -410,6 +410,6 @@ export function withTranslation(Component) {
         const element = Component(translatedProps);
         return translateNode(element, language);
     }
-    TranslatedComponent.displayName = \`Translated(\${Component.displayName || Component.name || "Component"})\`;
+    TranslatedComponent.displayName = "Translated(" + (Component.displayName || Component.name || "Component") + ")";
     return TranslatedComponent;
 }
