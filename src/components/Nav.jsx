@@ -1,17 +1,18 @@
 import {useEffect, useState} from "react";
 import Icon from "./Icon.jsx";
-import {
-    NAV_LINKS,
-    COFFEE_URL,
-} from "../data.js";
+import {NAV_LINKS, COFFEE_URL} from "../data.js";
+import {useLanguage, withTranslation} from "../i18n.jsx";
 
-function FrenchFlag({size = 22}) {
+function Flag({country, label}) {
     return (
-        <svg width={size} height={size} viewBox="0 0 24 24" style={{borderRadius: 4, display: "block"}}>
-            <rect x="0" y="0" width="8" height="24" fill="#0055A4"/>
-            <rect x="8" y="0" width="8" height="24" fill="#FFFFFF"/>
-            <rect x="16" y="0" width="8" height="24" fill="#EF4135"/>
-        </svg>
+        <img
+            className="language-switcher__flag"
+            src={`https://flagcdn.com/w40/${country}.png`}
+            srcSet={`https://flagcdn.com/w80/${country}.png 2x`}
+            width="24"
+            height="18"
+            alt={label}
+        />
     );
 }
 
@@ -19,6 +20,8 @@ function Nav() {
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState("about");
     const [scrolled, setScrolled] = useState(false);
+    const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+    const {language, setLanguage} = useLanguage();
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 12);
@@ -42,9 +45,22 @@ function Nav() {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        const closeOnEscape = (event) => {
+            if (event.key === "Escape") setLanguageMenuOpen(false);
+        };
+        window.addEventListener("keydown", closeOnEscape);
+        return () => window.removeEventListener("keydown", closeOnEscape);
+    }, []);
+
     const go = (id) => {
         setOpen(false);
         document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
+    };
+
+    const chooseLanguage = (nextLanguage) => {
+        setLanguage(nextLanguage);
+        setLanguageMenuOpen(false);
     };
 
     return (
@@ -52,11 +68,11 @@ function Nav() {
             <div className="nav__inner">
                 <button className="nav__brand" onClick={() => go("top")}>
                     <span className="nav__brand-mark">
-                        <FrenchFlag size={22}/>
+                        <span className="nav__brand-glyph">S</span>
                     </span>
                     <span className="nav__brand-text">
-            sunmeat<span className="dim">.dev</span>
-          </span>
+                        sunmeat<span className="dim">.dev</span>
+                    </span>
                 </button>
 
                 <nav className="nav__links">
@@ -70,6 +86,55 @@ function Nav() {
                         </button>
                     ))}
                 </nav>
+
+                <div className="language-switcher">
+                    <button
+                        type="button"
+                        className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
+                        onClick={() => setLanguageMenuOpen((value) => !value)}
+                        aria-label={language === "fr" ? "Choisir la langue" : "Choose language"}
+                        aria-expanded={languageMenuOpen}
+                        aria-haspopup="menu"
+                    >
+                        <Flag country="us" label="English" />
+                        <Icon name={languageMenuOpen ? "chevron-up" : "chevron-down"} size={14}/>
+                    </button>
+
+                    {languageMenuOpen && (
+                        <>
+                            <button
+                                type="button"
+                                className="language-switcher__backdrop"
+                                aria-label="Close language menu"
+                                onClick={() => setLanguageMenuOpen(false)}
+                            />
+                            <div className="language-switcher__menu" role="menu" aria-label="Language">
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "en"}
+                                    className={`language-switcher__option ${language === "en" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("en")}
+                                >
+                                    <Flag country="us" label="United States flag" />
+                                    <span>English</span>
+                                    {language === "en" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "fr"}
+                                    className={`language-switcher__option ${language === "fr" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("fr")}
+                                >
+                                    <Flag country="fr" label="Drapeau français" />
+                                    <span>Français</span>
+                                    {language === "fr" && <Icon name="check" size={15}/>}
+                                </button>
+                            </div>
+                        </>
+                    )}
+                </div>
 
                 <a className="btn btn--coffee" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
                     <Icon name="coffee" size={15}/>
@@ -101,4 +166,4 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default withTranslation(Nav);
