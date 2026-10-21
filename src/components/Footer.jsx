@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import React from "react";
 import {COFFEE_URL} from "../data.js";
 import Icon from "./Icon.jsx";
@@ -23,4 +24,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export default withTranslation(Footer);
