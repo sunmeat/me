@@ -1,13 +1,13 @@
 <div align="center">
 
-# ⚡ sunmeat.shop
+# ⚡ sunmeat.dev
 
 ### The personal portfolio of **Oleksandr Zahoruiko**
 Android & Full-Stack Developer · Lecturer · Orléans, France
 
 <br/>
 
-[![Live Site](https://img.shields.io/badge/Live-sunmeat.shop-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.shop)
+[![Live Site](https://img.shields.io/badge/Live-sunmeat.dev-00e676?style=for-the-badge&logo=vercel&logoColor=white)](https://sunmeat.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-sunmeat-181717?style=for-the-badge&logo=github)](https://github.com/sunmeat)
 [![npx](https://img.shields.io/badge/npx-sunmeat-cb3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/sunmeat)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=for-the-badge)](#-license)
@@ -22,7 +22,7 @@ $ npx sunmeat
 
 <br/>
 
-<img src="https://sunmeat.shop/preview.jpg" alt="sunmeat.shop preview" width="800"/>
+<img src="https://sunmeat.dev/preview.jpg" alt="sunmeat.dev preview" width="800"/>
 
 </div>
 
@@ -35,7 +35,7 @@ A dark, terminal-flavored, zero-bloat personal portfolio built to present **Olek
 Not another generic “hi I’m a developer” template.  
 This one actually feels like it was made by someone who ships code and teaches people how to write it.
 
-**Live → [sunmeat.shop](https://sunmeat.shop)**
+**Live → [sunmeat.dev](https://sunmeat.dev)**
 
 ---
 
@@ -170,6 +170,6 @@ This portfolio is personal. Feel free to look at the code for inspiration, but p
 
 **Built with React, caffeine, and nearly 20 years of writing & teaching code.**
 
-[sunmeat.shop](https://sunmeat.shop) · [npx sunmeat](https://www.npmjs.com/package/sunmeat)
+[sunmeat.dev](https://sunmeat.dev) · [npx sunmeat](https://www.npmjs.com/package/sunmeat)
 
 </div>
