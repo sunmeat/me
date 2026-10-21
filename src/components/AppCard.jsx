@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Icon from "./Icon.jsx";
 
 function AppCard({app}) {
@@ -29,4 +30,4 @@ function AppCard({app}) {
     );
 }
 
-export default AppCard;
+export default withTranslation(AppCard);
