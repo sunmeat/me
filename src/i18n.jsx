@@ -13,6 +13,30 @@ export function LanguageProvider({children}) {
 
     useEffect(() => {
         document.documentElement.lang = language;
+        document.title = language === "fr"
+            ? "Oleksandr Zahoruiko — Développeur Android et Full-stack | Orléans, France"
+            : "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France";
+
+        const updateMeta = (selector, content) => {
+            const element = document.querySelector(selector);
+            if (element) element.setAttribute("content", content);
+        };
+        updateMeta('meta[name="description"]', language === "fr"
+            ? "Ingénieur logiciel et enseignant basé à Orléans. Applications Android natives et développement web full-stack. Projets en ligne et ouvert aux collaborations freelance."
+            : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
+        updateMeta('meta[property="og:title"]', language === "fr"
+            ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
+            : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
+        updateMeta('meta[property="og:description"]', language === "fr"
+            ? "Applications Android natives, développement web full-stack et projets en ligne. Basé à Orléans, France. Disponible pour vos projets."
+            : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
+        updateMeta('meta[name="twitter:title"]', language === "fr"
+            ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
+            : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
+        updateMeta('meta[name="twitter:description"]', language === "fr"
+            ? "Applications Android natives et développement web full-stack. Projets en ligne. Basé à Orléans, France."
+            : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -374,7 +398,7 @@ function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
 }
 
-function translateString(value, language) {
+export function translateString(value, language) {
     if (language !== "fr") return value;
     const normalized = normalize(value);
     if (FR[normalized]) return FR[normalized];
