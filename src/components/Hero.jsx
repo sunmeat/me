@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import {
     BIO,
     STATS,
@@ -52,4 +53,4 @@ function Hero() {
     );
 }
 
-export default Hero;
+export default withTranslation(Hero);
