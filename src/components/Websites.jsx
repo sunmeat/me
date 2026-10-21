@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import SiteCard from "./Sitecard.jsx";
 import {SITES} from "../data.js";
@@ -22,4 +23,4 @@ function Websites() {
     );
 }
 
-export default Websites;
+export default withTranslation(Websites);
