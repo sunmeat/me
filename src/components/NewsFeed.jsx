@@ -96,6 +96,7 @@ function cleanContent(rawHtml, title) {
 }
 
 function NewsFeed() {
+    const { language } = useLanguage();
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [activeTopic, setActiveTopic] = useState("AI Machine Learning");
