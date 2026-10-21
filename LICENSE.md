@@ -1,7 +1,7 @@
 # LICENSE
 
 **Personal Portfolio License**  
-Oleksandr Zahoruiko — sunmeat.shop
+Oleksandr Zahoruiko — sunmeat.dev
 
 Copyright © 2019–2027 Oleksandr Zahoruiko. All rights reserved.
 
@@ -17,7 +17,7 @@ You are permitted to:
 
 - View and study the source code for personal learning and educational purposes;
 - Take inspiration from technical solutions and architectural approaches;
-- Share links to the live website (https://sunmeat.shop).
+- Share links to the live website (https://sunmeat.dev).
 
 ### 3. Restrictions
 You are **not** permitted to:
@@ -47,7 +47,7 @@ Il vous est permis de :
 
 - Consulter et étudier le code source à des fins d’apprentissage personnel et éducatif ;
 - Vous inspirer des solutions techniques et des approches architecturales ;
-- Partager des liens vers le site en ligne (https://sunmeat.shop).
+- Partager des liens vers le site en ligne (https://sunmeat.dev).
 
 ### 3. Restrictions
 Il vous est **interdit** de :
