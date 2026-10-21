@@ -311,7 +311,7 @@ function translateString(value, language) {
     if (FR[normalized]) return FR[normalized];
 
     let translated = value;
-    const entries = Object.entries(FR).filter(([source]) => source.length >= 4).sort((a, b) => b[0].length - a[0].length);
+    const entries = Object.entries(FR).filter(([source]) => source.includes(" ") || source.length >= 6).sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
     }
