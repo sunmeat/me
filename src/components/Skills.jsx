@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import {
     SKILL_GROUPS,
 } from "../data.js";
@@ -33,4 +34,4 @@ function Skills() {
     );
 }
 
-export default Skills;
+export default withTranslation(Skills);
