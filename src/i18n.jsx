@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -10,6 +10,10 @@ export function LanguageProvider({children}) {
             return "en";
         }
     });
+
+    useEffect(() => {
+        document.documentElement.lang = language;
+    }, [language]);
 
     const changeLanguage = (next) => {
         setLanguage(next);
