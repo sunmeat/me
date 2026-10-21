@@ -260,6 +260,7 @@ function JsonBlock({ payload }) {
 }
 
 function Estimator() {
+    const { language } = useLanguage();
     const [platformId, setPlatformId] = useState("android");
     const [featureIds, setFeatureIds] = useState(["auth"]);
     const [timelineId, setTimelineId] = useState("standard");
