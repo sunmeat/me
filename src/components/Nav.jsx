@@ -55,7 +55,7 @@ function Nav() {
                         <FrenchFlag size={22}/>
                     </span>
                     <span className="nav__brand-text">
-            sunmeat<span className="dim">.shop</span>
+            sunmeat<span className="dim">.dev</span>
           </span>
                 </button>
 
