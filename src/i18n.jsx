@@ -181,6 +181,86 @@ const FR = {
     "View on GitHub": "Voir sur GitHub",
     "Visit site": "Visiter le site",
     "Loading": "Chargement",
+    "A toolkit built for shipping, not just prototyping.": "Une boîte à outils conçue pour livrer, pas seulement pour prototyper.",
+    "Experience & education.": "Expérience et formation.",
+    "Experience": "Expérience",
+    "Education": "Formation",
+    "Let's build your own app.": "Créons votre application.",
+    "Open to freelance projects, long-term collaborations and consulting work. Based in": "Disponible pour des missions freelance, des collaborations à long terme et du conseil. Basé à",
+    "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Orléans, France (CET/CEST) : je réponds généralement sous un jour ouvré.",
+    "Buy me one more coffee": "Offrez-moi un autre café",
+    "Back to top": "Retour en haut",
+    "Built with ❤️ & React • Available for projects": "Créé avec ❤️ et React • Disponible pour vos projets",
+    "Available for projects": "Disponible pour vos projets",
+    "Android Native": "Android natif",
+    "Backend API + Web App": "API backend + application web",
+    "Core features": "Fonctionnalités principales",
+    "Balanced pace, full QA cycle": "Rythme équilibré, cycle QA complet",
+    "Priority slot, ~30% faster": "Prioritaire, environ 30 % plus rapide",
+    "Not specified": "Non précisé",
+    "Authentication": "Authentification",
+    "Offline Mode": "Mode hors ligne",
+    "In-App Purchases": "Achats intégrés",
+    "Hardware / Sensors": "Matériel et capteurs",
+    "Admin Panel": "Panneau d’administration",
+    "Custom UI/UX": "Interface et expérience personnalisées",
+    "Firebase Auth": "Authentification Firebase",
+    "Room DB": "Base de données Room",
+    "Play Billing": "Facturation Google Play",
+    "Design System": "Système de design",
+    "Platform:": "Plateforme :",
+    "Features:": "Fonctionnalités :",
+    "Timeline:": "Délais :",
+    "Estimated scope:": "Périmètre estimé :",
+    "Suggested stack:": "Technologies suggérées :",
+    "Sent via sunmeat.dev project estimator.": "Envoyé depuis le configurateur de projet sunmeat.dev.",
+    "Project Brief — sunmeat.dev": "Cahier des charges — sunmeat.dev",
+    "A personal poetry blog with a minimal reading experience and a simple admin CMS for managing poems, built with React, Vite and Firebase.": "Un blog de poésie personnel et minimaliste avec un CMS simple pour gérer les poèmes, réalisé avec React, Vite et Firebase.",
+    "Source code of my personal single-page portfolio website.": "Code source de mon portfolio personnel monopage.",
+    "My interactive digital business card (npx sunmeat) right in your terminal": "Ma carte de visite numérique interactive (npx sunmeat), directement dans votre terminal.",
+    "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Un roguelike textuel classique en C++ utilisant l’API Windows et un labyrinthe 40 × 10 généré procéduralement. Récupérez les pièces d’or, évitez les ennemis qui épuisent votre santé et trouvez la sortie à temps.",
+    "Practical React component examples and patterns prepared for student groups.": "Exemples pratiques de composants React et de modèles préparés pour les groupes d’étudiants.",
+    "A C# console Snake game that uses Hamiltonian cycles to generate perfect, non-colliding paths across the entire board.": "Un Snake en console C# qui utilise des cycles hamiltoniens pour générer des parcours sans collision sur tout le plateau.",
+    "A comprehensive collection of clean Object-Oriented Programming examples in C++: classes, inheritance, polymorphism, abstract classes and more.": "Une collection complète d’exemples de programmation orientée objet en C++ : classes, héritage, polymorphisme, classes abstraites et plus encore.",
+    "Practical C++ Standard Template Library examples covering containers, iterators, algorithms, adapters and functors.": "Exemples pratiques de la bibliothèque standard C++ : conteneurs, itérateurs, algorithmes, adaptateurs et foncteurs.",
+    "C++ examples demonstrating algorithmic complexity and Big O Notation.": "Exemples C++ illustrant la complexité algorithmique et la notation grand O.",
+    "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Projet pédagogique ASP.NET Core MVC illustrant le fonctionnement du conteneur d’injection de dépendances intégré.",
+    "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Projet pédagogique ASP.NET Core Web API présentant l’authentification et l’autorisation avec Firebase Authentication et des jetons JWT.",
+    "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Projet pédagogique ASP.NET Core Web API sur les tests unitaires et d’intégration avec xUnit, FluentAssertions, NSubstitute et WebApplicationFactory.",
+    "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Conception, développement et déploiement de produits logiciels complets. Création d’applications Android natives et web full-stack avec React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL et MySQL, de la base de données aux API et à la publication sur Google Play.",
+    "Streamlining night-shift venue logistics, rapid floor management, and deep sanitation protocols for high-capacity hard techno events. Maintaining strict operational safety and hygiene standards, optimizing post-event cleanup workflows under tight turnaround times, and ensuring high-throughput venue readiness during peak operations.": "Coordination logistique de nuit, gestion rapide des espaces et protocoles de nettoyage approfondi pour des événements hard techno de grande capacité. Respect des normes de sécurité et d’hygiène, optimisation du nettoyage après événement et préparation rapide des lieux.",
+    "React": "React",
+    "Live": "En ligne",
+    "Forever alive": "Toujours vivant",
+    "United States flag": "Drapeau des États-Unis",
+    "English": "Anglais",
+    "French": "Français",
+    "Choose language": "Choisir la langue",
+    "Close language menu": "Fermer le menu des langues",
+    "Toggle menu": "Ouvrir ou fermer le menu",
+    "About": "À propos",
+    "Skills": "Compétences",
+    "Apps": "Applications",
+    "Experience": "Expérience",
+    "Education": "Formation",
+    "Timeline": "Calendrier",
+    "Estimated budget": "Budget estimé",
+    "Copy brief": "Copier le cahier des charges",
+    "Copied": "Copié",
+    "Reset": "Réinitialiser",
+    "Send project brief": "Envoyer le cahier des charges",
+    "Choose a platform": "Choisissez une plateforme",
+    "iOS app": "Application iOS",
+    "Web application": "Application web",
+    "Landing page": "Page d’atterrissage",
+    "Standard": "Standard",
+    "Rush": "Express",
+    "Flexible": "Flexible",
+    "The page could not be loaded.": "La page n’a pas pu être chargée.",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Des compétences façonnées par le travail en production, l’enseignement et l’expérimentation continue.",
+    "A toolkit built for shipping, not just prototyping.": "Une boîte à outils conçue pour livrer, pas seulement pour prototyper.",
+    "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.": "Ingénieur logiciel et enseignant basé à Orléans. Applications Android natives de bout en bout (Jetpack Compose, Kotlin) et développement web full-stack (React, Spring Boot, .NET, Node.js). Projets en ligne et ouvert aux collaborations freelance.",
+    "A dark, terminal-inspired personal portfolio presenting software projects, Android applications, technical experience, and open-source work.": "Un portfolio personnel sombre inspiré du terminal, présentant des projets logiciels, des applications Android, une expérience technique et du travail open source.",
     "just now": "à l’instant",
 };
 
@@ -191,7 +271,19 @@ function normalize(value) {
 function translateString(value, language) {
     if (language !== "fr") return value;
     const normalized = normalize(value);
+    if (FR[normalized]) return FR[normalized];
+
+    let translated = value;
+    const entries = Object.entries(FR).filter(([source]) => source.length >= 4).sort((a, b) => b[0].length - a[0].length);
+    for (const [source, target] of entries) {
+        const escaped = source.replace(/[.*+?^${}()|[\]\\]/g, "\\function translateString(value, language) {
+    if (language !== "fr") return value;
+    const normalized = normalize(value);
     return FR[normalized] ?? value;
+}");
+        translated = translated.replace(new RegExp(`\\b${escaped}\\b`, "g"), target);
+    }
+    return translated;
 }
 
 function translateValue(value, language, key = "") {
