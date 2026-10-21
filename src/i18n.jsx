@@ -392,6 +392,16 @@ const FR = {
     "Screenshot Testing": "Tests par capture d’écran",
     "UI Testing": "Tests d’interface",
 
+    "Estimate Your App Project": "Estimez votre projet d’application",
+    "Choose your platform": "Choisissez votre plateforme",
+    "Pick your core features": "Choisissez les fonctionnalités principales",
+    "Set your timeline": "Définissez votre calendrier",
+    "Estimated timeframe": "Délai estimé",
+    "Recommended stack": "Technologies recommandées",
+    "Step 01": "Étape 01",
+    "Step 02": "Étape 02",
+    "Step 03": "Étape 03",
+
 };
 
 function normalize(value) {
