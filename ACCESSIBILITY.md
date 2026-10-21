@@ -1,6 +1,6 @@
 # Accessibility Statement
 
-**Project:** [sunmeat/me](https://github.com/sunmeat/me) · [sunmeat.shop](https://sunmeat.shop)  
+**Project:** [sunmeat/me](https://github.com/sunmeat/me) · [sunmeat.dev](https://sunmeat.dev)  
 **Maintainer:** [@sunmeat](https://github.com/sunmeat)  
 **Languages:** English and Русский
 
