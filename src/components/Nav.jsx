@@ -106,7 +106,7 @@ function Nav() {
                         aria-haspopup="menu"
                     >
                         <Flag country="us" label="English" />
-                        <Icon name={languageMenuOpen ? "chevron-up" : "chevron-down"} size={14}/>
+                        <span className="language-switcher__chevron" aria-hidden="true">{languageMenuOpen ? "⌃" : "⌄"}</span>
                     </button>
 
                     {languageMenuOpen && (
