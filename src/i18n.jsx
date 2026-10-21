@@ -194,13 +194,29 @@ function translateString(value, language) {
     return FR[normalized] ?? value;
 }
 
+function translateValue(value, language, key = "") {
+    if (typeof value === "string") {
+        if (["href", "src", "srcSet", "id", "className", "key", "name", "url", "link", "date", "time", "mono", "icon", "country"].includes(key)) return value;
+        return translateString(value, language);
+    }
+    if (Array.isArray(value)) return value.map((item) => translateValue(item, language, key));
+    if (value && typeof value === "object" && !React.isValidElement(value)) {
+        const translated = {};
+        for (const [childKey, childValue] of Object.entries(value)) {
+            translated[childKey] = translateValue(childValue, language, childKey);
+        }
+        return translated;
+    }
+    return value;
+}
+
 function translateProps(props, language) {
     const next = {...props};
     for (const [key, value] of Object.entries(next)) {
         if (key === "children") {
             next[key] = translateNode(value, language);
-        } else if (["placeholder", "aria-label", "title", "alt"].includes(key) && typeof value === "string") {
-            next[key] = translateString(value, language);
+        } else if (typeof value === "string" || Array.isArray(value) || (value && typeof value === "object" && !React.isValidElement(value))) {
+            next[key] = translateValue(value, language, key);
         }
     }
     return next;
@@ -210,10 +226,7 @@ function translateNode(node, language) {
     if (typeof node === "string") return translateString(node, language);
     if (Array.isArray(node)) return node.map((child) => translateNode(child, language));
     if (!React.isValidElement(node)) return node;
-    if (typeof node.type === "string") {
-        return React.cloneElement(node, translateProps(node.props, language));
-    }
-    return node;
+    return React.cloneElement(node, translateProps(node.props, language));
 }
 
 export function withTranslation(Component) {
