@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import AppCard from "./AppCard.jsx";
 import {APPS} from "../data.js";
@@ -22,4 +23,4 @@ function Apps() {
     );
 }
 
-export default Apps;
+export default withTranslation(Apps);
