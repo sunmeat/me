@@ -221,14 +221,14 @@ function buildBrief(estimate) {
         : "Not specified";
 
     return [
-        "Project Brief — sunmeat.shop",
+        "Project Brief — sunmeat.dev",
         `Platform: ${estimate.platform.label} (${estimate.platform.sub})`,
         `Features: ${featureLine}`,
         `Timeline: ${estimate.timeline.label} — ${estimate.timeline.note}`,
         `Estimated scope: ${estimate.range}`,
         `Suggested stack: ${estimate.stack.join(", ")}`,
         "",
-        "Sent via sunmeat.shop project estimator.",
+        "Sent via sunmeat.dev project estimator.",
     ].join("\n");
 }
 
