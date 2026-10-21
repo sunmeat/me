@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import "./styles/StarlinkOffer.css";
 
 function StarlinkOffer() {
@@ -62,4 +63,4 @@ function StarlinkOffer() {
     );
 }
 
-export default StarlinkOffer;
+export default withTranslation(StarlinkOffer);
