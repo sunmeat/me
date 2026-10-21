@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ sunmeat.shop
+# ⚡ sunmeat.dev
 
 ### Oleksandr Zahoruiko
 **Android & Full-Stack Developer · IT Lecturer**
@@ -8,7 +8,7 @@
 Designing and building thoughtful digital products, native Android applications, and web experiences.
 
 <p>
-  <a href="https://sunmeat.shop"><img src="https://img.shields.io/badge/PORTFOLIO-sunmeat.shop-3ddc84?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"></a>
+  <a href="https://sunmeat.dev"><img src="https://img.shields.io/badge/PORTFOLIO-sunmeat.dev-3ddc84?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio"></a>
   <a href="https://github.com/sunmeat"><img src="https://img.shields.io/badge/GITHUB-sunmeat-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://www.npmjs.com/package/sunmeat"><img src="https://img.shields.io/badge/npm-sunmeat-CB3837?style=for-the-badge&logo=npm" alt="npm"></a>
 </p>
@@ -19,7 +19,7 @@ Designing and building thoughtful digital products, native Android applications,
   <a href="#français">🇫🇷 Français</a>
 </p>
 
-<img src="https://sunmeat.shop/preview.jpg" alt="Preview of the sunmeat.shop portfolio" width="820">
+<img src="https://sunmeat.dev/preview.jpg" alt="Preview of the sunmeat.dev portfolio" width="820">
 
 <br>
 
@@ -35,7 +35,7 @@ Designing and building thoughtful digital products, native Android applications,
 
 ### Overview
 
-**sunmeat.shop** is my personal portfolio and a living showcase of the things I build. It brings together my work in full-stack development, native Android, education, and independent product experiments in one carefully designed space.
+**sunmeat.dev** is my personal portfolio and a living showcase of the things I build. It brings together my work in full-stack development, native Android, education, and independent product experiments in one carefully designed space.
 
 The interface combines a dark, terminal-inspired aesthetic with a clear responsive layout. The repository is also documented to make its structure, design decisions, maintenance, and deployment easier to understand.
 
@@ -154,7 +154,7 @@ All repository-level documents are linked below so they are easy to find and mai
 
 ### Find me
 
-- **Portfolio:** [sunmeat.shop](https://sunmeat.shop)
+- **Portfolio:** [sunmeat.dev](https://sunmeat.dev)
 - **GitHub:** [@sunmeat](https://github.com/sunmeat)
 - **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
 - **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
@@ -172,7 +172,7 @@ All repository-level documents are linked below so they are easy to find and mai
 
 ### О проекте
 
-**sunmeat.shop** это моё персональное портфолио и живая витрина проектов. Здесь собраны работы в full-stack-разработке, нативном Android, преподавании IT и независимых экспериментах.
+**sunmeat.dev** это моё персональное портфолио и живая витрина проектов. Здесь собраны работы в full-stack-разработке, нативном Android, преподавании IT и независимых экспериментах.
 
 Визуальный стиль сочетает тёмную эстетику терминала с аккуратной адаптивной вёрсткой. Репозиторий сопровождается документацией, которая объясняет устройство проекта, дизайн-систему, обновление контента, проверки и публикацию.
 
@@ -291,7 +291,7 @@ me/
 
 ### Контакты
 
-- **Сайт:** [sunmeat.shop](https://sunmeat.shop)
+- **Сайт:** [sunmeat.dev](https://sunmeat.dev)
 - **GitHub:** [@sunmeat](https://github.com/sunmeat)
 - **Telegram:** [t.me/sunmeat](https://t.me/sunmeat)
 - **Email:** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
@@ -309,7 +309,7 @@ me/
 
 ### Présentation
 
-**sunmeat.shop** est mon portfolio personnel et une vitrine vivante de mes projets. Il rassemble mon travail en développement full-stack, applications Android natives, enseignement informatique et expérimentations indépendantes.
+**sunmeat.dev** est mon portfolio personnel et une vitrine vivante de mes projets. Il rassemble mon travail en développement full-stack, applications Android natives, enseignement informatique et expérimentations indépendantes.
 
 Son identité visuelle associe une esthétique sombre inspirée du terminal à une interface responsive soignée. Le dépôt comprend également une documentation structurée sur l'architecture, le système de design, la mise à jour du contenu, les contrôles qualité et le déploiement.
 
@@ -428,7 +428,7 @@ Tous les documents du dépôt sont répertoriés ici pour faciliter leur consult
 
 ### Me contacter
 
-- **Site web :** [sunmeat.shop](https://sunmeat.shop)
+- **Site web :** [sunmeat.dev](https://sunmeat.dev)
 - **GitHub :** [@sunmeat](https://github.com/sunmeat)
 - **Telegram :** [t.me/sunmeat](https://t.me/sunmeat)
 - **E-mail :** [sunmeatrich@gmail.com](mailto:sunmeatrich@gmail.com)
@@ -444,6 +444,6 @@ Tous les documents du dépôt sont répertoriés ici pour faciliter leur consult
 
 **Built with care in Odesa, Ukraine.**
 
-[Portfolio](https://sunmeat.shop) · [GitHub](https://github.com/sunmeat) · [Documentation](docs/README.md)
+[Portfolio](https://sunmeat.dev) · [GitHub](https://github.com/sunmeat) · [Documentation](docs/README.md)
 
 </div>
