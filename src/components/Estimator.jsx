@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import React, { useEffect, useRef, useState } from "react";
 
 const PLATFORMS = [
@@ -257,7 +258,7 @@ function JsonBlock({ payload }) {
     );
 }
 
-export default function Estimator() {
+function Estimator() {
     const [platformId, setPlatformId] = useState("android");
     const [featureIds, setFeatureIds] = useState(["auth"]);
     const [timelineId, setTimelineId] = useState("standard");
@@ -449,3 +450,5 @@ export default function Estimator() {
         </section>
     );
 }
+
+export default withTranslation(Estimator);
