@@ -14,9 +14,9 @@ Designing and building thoughtful digital products, native Android applications,
 </p>
 
 <p>
-  <a href="#english">🇬🇧 English</a> ·
-  <a href="#русский">🇷🇺 Русский</a> ·
-  <a href="#français">🇫🇷 Français</a>
+  <a href="#english">:uk: English</a> ·
+  <a href="#русский">:ru: Русский</a> ·
+  <a href="#français">:fr: Français</a>
 </p>
 
 <img src="https://sunmeat.dev/preview.jpg" alt="Preview of the sunmeat.dev portfolio" width="820">
@@ -31,7 +31,7 @@ Designing and building thoughtful digital products, native Android applications,
 
 <a id="english"></a>
 
-## 🇬🇧 English
+## :uk: English
 
 ### Overview
 
@@ -168,7 +168,7 @@ All repository-level documents are linked below so they are easy to find and mai
 
 <a id="русский"></a>
 
-## 🇷🇺 Русский
+## :ru: Русский
 
 ### О проекте
 
@@ -305,7 +305,7 @@ me/
 
 <a id="français"></a>
 
-## 🇫🇷 Français
+## :fr: Français
 
 ### Présentation
 
