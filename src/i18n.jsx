@@ -347,6 +347,27 @@ const FR = {
     "Aug 2026 — Present": "Août 2026 — aujourd’hui",
     "Ongoing": "En cours",
 
+    "Kotlin Coroutines": "Coroutines Kotlin",
+    "Kotlin Flow": "Flux Kotlin",
+    "Jetpack Compose Architecture": "Architecture Jetpack Compose",
+    "Adaptive Layouts": "Mises en page adaptatives",
+    "Clean Architecture": "Architecture propre",
+    "Modularization": "Modularisation",
+    "Performance Optimization": "Optimisation des performances",
+    "Memory Profiling": "Analyse de la mémoire",
+    "App Startup": "Démarrage de l’application",
+    "Baseline Profiles": "Profils de référence",
+    "App Distribution": "Distribution d’applications",
+    "AI Machine Learning": "IA et apprentissage automatique",
+    "LLM Integration in Apps": "Intégration des LLM dans les applications",
+    "Foldables & Large Screens": "Écrans pliables et grands écrans",
+    "App Security": "Sécurité des applications",
+    "Biometric Authentication": "Authentification biométrique",
+    "Location & Maps": "Localisation et cartes",
+    "Offline-First": "Hors ligne en priorité",
+    "Screenshot Testing": "Tests par capture d’écran",
+    "UI Testing": "Tests d’interface",
+
 };
 
 function normalize(value) {
