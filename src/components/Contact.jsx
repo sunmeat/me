@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import {
     SOCIALS,
 } from "../data.js";
@@ -66,4 +67,4 @@ function Contact() {
     );
 }
 
-export default Contact;
+export default withTranslation(Contact);
