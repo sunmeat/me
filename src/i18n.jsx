@@ -341,7 +341,7 @@ function translateString(value, language) {
 
 function translateValue(value, language, key = "") {
     if (typeof value === "string") {
-        if (["href", "src", "srcSet", "id", "className", "key", "name", "url", "link", "date", "time", "mono", "icon", "country"].includes(key)) return value;
+        if (["href", "src", "srcSet", "id", "className", "key", "name", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
         return translateString(value, language);
     }
     if (Array.isArray(value)) return value.map((item) => translateValue(item, language, key));
@@ -371,6 +371,13 @@ function translateProps(props, language) {
     "My Android Apps": "Mes applications Android",
     "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Conception, développement et déploiement de produits logiciels complets. Création d’applications Android natives et web full-stack avec React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL et MySQL, de la base de données aux intégrations d’API et à la publication sur Google Play.",
     "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Formation et accompagnement de futurs ingénieurs logiciels en C++, C#, Python web, Android et bases de données : POO, algorithmes, structures de données, patrons de conception et SOLID. Création de supports pédagogiques, revues de code et encadrement de projets de fin d’études avec SCRUM.",
+
+    "Jul 2023 — Present": "Juil. 2023 — aujourd’hui",
+    "May 2017 — Dec 2017": "Mai 2017 — déc. 2017",
+    "Jun 2022 — Present": "Juin 2022 — aujourd’hui",
+    "Sep 2007 — Present (Remote)": "Sept. 2007 — aujourd’hui (à distance)",
+    "Aug 2026 — Present": "Août 2026 — aujourd’hui",
+    "Ongoing": "En cours",
 };
     for (const [key, value] of Object.entries(next)) {
         if (key === "children") {
