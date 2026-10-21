@@ -1,4 +1,4 @@
-import {withTranslation} from "../i18n.jsx";
+import {useLanguage, withTranslation} from "../i18n.jsx";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const TOPICS = [
@@ -40,7 +40,7 @@ function truncateText(text, maxLen = 850) {
     return text.slice(0, cut > 0 ? cut : maxLen) + "...";
 }
 
-function formatDate(dateStr) {
+function formatDate(dateStr, language = "en") {
     const d = new Date(dateStr);
     if (isNaN(d.getTime())) return "";
     const now = new Date();
@@ -52,7 +52,7 @@ function formatDate(dateStr) {
     if (mins < 60) return `${mins}m ago`;
     if (hours < 24) return `${hours}h ago`;
     if (days < 7) return `${days}d ago`;
-    return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    return d.toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
 function cleanTitle(title) {
@@ -119,7 +119,8 @@ function NewsFeed() {
         setLoading(true);
         setFeedError(null);
 
-        const cached = cache.current.get(topic);
+        const cacheKey = `${language}:${topic}`;
+        const cached = cache.current.get(cacheKey);
         if (isCacheValid(cached)) {
             setItems(cached.items);
             setCurrentIndex(0);
@@ -127,7 +128,8 @@ function NewsFeed() {
             return;
         }
 
-        const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(topic)}&hl=en-US&gl=US&ceid=US:en`;
+        const locale = language === "fr" ? {hl: "fr-FR", gl: "FR", ceid: "FR:fr"} : {hl: "en-US", gl: "US", ceid: "US:en"};
+        const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(topic)}&hl=${locale.hl}&gl=${locale.gl}&ceid=${locale.ceid}`;
         const url = `${RSS2JSON_URL}?rss_url=${encodeURIComponent(rssUrl)}`;
 
         try {
@@ -158,7 +160,7 @@ function NewsFeed() {
                     title: cleanTitle(it.title),
                     link: it.link,
                     date: it.pubDate,
-                    formattedDate: formatDate(it.pubDate),
+                    formattedDate: formatDate(it.pubDate, language),
                     topic,
                     content: truncateText(cleanContent(it.content || it.description || "", it.title)),
                     source: getSource(it),
@@ -166,7 +168,7 @@ function NewsFeed() {
                 .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
                 .slice(0, ITEMS_PER_TOPIC);
 
-            cache.current.set(topic, { items: allItems, timestamp: Date.now() });
+            cache.current.set(cacheKey, { items: allItems, timestamp: Date.now() });
             setItems(allItems);
             setCurrentIndex(0);
         } catch (err) {
@@ -176,7 +178,7 @@ function NewsFeed() {
         } finally {
             setLoading(false);
         }
-    }, [getNextTopicIndex]);
+    }, [getNextTopicIndex, language]);
 
     useEffect(() => {
         setCurrentIndex(0);
