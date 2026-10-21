@@ -320,6 +320,33 @@ const FR = {
     "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Projet pédagogique ASP.NET Core MVC illustrant le fonctionnement du conteneur d’injection de dépendances intégré.",
     "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Projet pédagogique ASP.NET Core Web API présentant l’authentification et l’autorisation avec Firebase Authentication et des jetons JWT.",
     "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Projet pédagogique ASP.NET Core Web API sur les tests unitaires et d’intégration avec xUnit, FluentAssertions, NSubstitute et WebApplicationFactory.",
+    "Web Audio": "Audio Web",
+    "Korean Pickles": "Pickles coréens",
+    "Poetry Blog": "Blog de poésie",
+    "Music Learning": "Apprentissage musical",
+    "Stats Card": "Carte de statistiques",
+    "Interactive": "Interactif",
+    "Pet Memorial": "Mémorial animalier",
+    "Calculator": "Calculateur",
+    "Price Tracker": "Suivi des prix",
+    "Plant Collection": "Collection botanique",
+    "JavaScript Library": "Bibliothèque JavaScript",
+    "My Android Apps": "Mes applications Android",
+    "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Conception, développement et déploiement de produits logiciels complets. Création d’applications Android natives et web full-stack avec React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL et MySQL, de la base de données aux intégrations d’API et à la publication sur Google Play.",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\"": "Formation et accompagnement de futurs ingénieurs logiciels en C++, C#, Python web, Android et bases de données : POO, algorithmes, structures de données, patrons de conception et SOLID. Création de supports pédagogiques, revues de code et encadrement de projets de fin d’études avec SCRUM.",
+    "Select your project requirements to get an instant scope estimate.": "Sélectionnez les besoins de votre projet pour obtenir une estimation immédiate.",
+    " weeks": " semaines",
+    "Estimated scope:": "Périmètre estimé :",
+    "Suggested stack:": "Technologies suggérées :",
+    "Priority slot, ~30% faster": "Créneau prioritaire, environ 30 % plus rapide",
+    "Balanced pace, full QA cycle": "Rythme équilibré, cycle QA complet",
+    "Jul 2023 — Present": "Juil. 2023 — aujourd’hui",
+    "May 2017 — Dec 2017": "Mai 2017 — déc. 2017",
+    "Jun 2022 — Present": "Juin 2022 — aujourd’hui",
+    "Sep 2007 — Present (Remote)": "Sept. 2007 — aujourd’hui (à distance)",
+    "Aug 2026 — Present": "Août 2026 — aujourd’hui",
+    "Ongoing": "En cours",
+
 };
 
 function normalize(value) {
@@ -332,7 +359,9 @@ function translateString(value, language) {
     if (FR[normalized]) return FR[normalized];
 
     let translated = value;
-    const entries = Object.entries(FR).filter(([source]) => source.includes(" ") || source.length >= 6).sort((a, b) => b[0].length - a[0].length);
+    const entries = Object.entries(FR)
+        .filter(([source]) => source.includes(" ") || source.length >= 6)
+        .sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
     }
@@ -356,29 +385,7 @@ function translateValue(value, language, key = "") {
 }
 
 function translateProps(props, language) {
-    const next = {...props
-    "Web Audio": "Audio Web",
-    "Korean Pickles": "Pickles coréens",
-    "Poetry Blog": "Blog de poésie",
-    "Music Learning": "Apprentissage musical",
-    "Stats Card": "Carte de statistiques",
-    "Interactive": "Interactif",
-    "Pet Memorial": "Mémorial animalier",
-    "Calculator": "Calculateur",
-    "Price Tracker": "Suivi des prix",
-    "Plant Collection": "Collection botanique",
-    "JavaScript Library": "Bibliothèque JavaScript",
-    "My Android Apps": "Mes applications Android",
-    "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Conception, développement et déploiement de produits logiciels complets. Création d’applications Android natives et web full-stack avec React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL et MySQL, de la base de données aux intégrations d’API et à la publication sur Google Play.",
-    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Formation et accompagnement de futurs ingénieurs logiciels en C++, C#, Python web, Android et bases de données : POO, algorithmes, structures de données, patrons de conception et SOLID. Création de supports pédagogiques, revues de code et encadrement de projets de fin d’études avec SCRUM.",
-
-    "Jul 2023 — Present": "Juil. 2023 — aujourd’hui",
-    "May 2017 — Dec 2017": "Mai 2017 — déc. 2017",
-    "Jun 2022 — Present": "Juin 2022 — aujourd’hui",
-    "Sep 2007 — Present (Remote)": "Sept. 2007 — aujourd’hui (à distance)",
-    "Aug 2026 — Present": "Août 2026 — aujourd’hui",
-    "Ongoing": "En cours",
-};
+    const next = {...props};
     for (const [key, value] of Object.entries(next)) {
         if (key === "children") {
             next[key] = translateNode(value, language);
@@ -403,6 +410,6 @@ export function withTranslation(Component) {
         const element = Component(translatedProps);
         return translateNode(element, language);
     }
-    TranslatedComponent.displayName = `Translated(${Component.displayName || Component.name || "Component"})`;
+    TranslatedComponent.displayName = \`Translated(\${Component.displayName || Component.name || "Component"})\`;
     return TranslatedComponent;
 }
