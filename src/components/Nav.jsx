@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Icon from "./Icon.jsx";
 import {NAV_LINKS, COFFEE_URL} from "../data.js";
 import {useLanguage, withTranslation} from "../i18n.jsx";
@@ -21,6 +21,7 @@ function Nav() {
     const [active, setActive] = useState("about");
     const [scrolled, setScrolled] = useState(false);
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+    const languageSwitcherRef = useRef(null);
     const {language, setLanguage} = useLanguage();
 
     useEffect(() => {
@@ -43,6 +44,14 @@ function Nav() {
         );
         sections.forEach((s) => observer.observe(s));
         return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const closeOnOutsideClick = (event) => {
+            if (!languageSwitcherRef.current?.contains(event.target)) setLanguageMenuOpen(false);
+        };
+        document.addEventListener("pointerdown", closeOnOutsideClick);
+        return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
     }, []);
 
     useEffect(() => {
@@ -87,7 +96,7 @@ function Nav() {
                     ))}
                 </nav>
 
-                <div className="language-switcher">
+                <div className="language-switcher" ref={languageSwitcherRef}>
                     <button
                         type="button"
                         className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
@@ -101,14 +110,7 @@ function Nav() {
                     </button>
 
                     {languageMenuOpen && (
-                        <>
-                            <button
-                                type="button"
-                                className="language-switcher__backdrop"
-                                aria-label="Close language menu"
-                                onClick={() => setLanguageMenuOpen(false)}
-                            />
-                            <div className="language-switcher__menu" role="menu" aria-label="Language">
+                        <div className="language-switcher__menu" role="menu" aria-label="Language">
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -131,8 +133,7 @@ function Nav() {
                                     <span>Français</span>
                                     {language === "fr" && <Icon name="check" size={15}/>}
                                 </button>
-                            </div>
-                        </>
+                        </div>
                     )}
                 </div>
 
