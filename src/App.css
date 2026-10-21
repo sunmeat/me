@@ -2446,18 +2446,15 @@ a.contact__row:hover {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.language-switcher__backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    cursor: default;
+ .language-switcher__chevron {
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--text-faint);
 }
 
 .language-switcher__menu {
     position: absolute;
+    z-index: 2;
     top: calc(100% + 10px);
     right: 0;
     width: 190px;
