@@ -356,7 +356,22 @@ function translateValue(value, language, key = "") {
 }
 
 function translateProps(props, language) {
-    const next = {...props};
+    const next = {...props
+    "Web Audio": "Audio Web",
+    "Korean Pickles": "Pickles coréens",
+    "Poetry Blog": "Blog de poésie",
+    "Music Learning": "Apprentissage musical",
+    "Stats Card": "Carte de statistiques",
+    "Interactive": "Interactif",
+    "Pet Memorial": "Mémorial animalier",
+    "Calculator": "Calculateur",
+    "Price Tracker": "Suivi des prix",
+    "Plant Collection": "Collection botanique",
+    "JavaScript Library": "Bibliothèque JavaScript",
+    "My Android Apps": "Mes applications Android",
+    "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Conception, développement et déploiement de produits logiciels complets. Création d’applications Android natives et web full-stack avec React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL et MySQL, de la base de données aux intégrations d’API et à la publication sur Google Play.",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Formation et accompagnement de futurs ingénieurs logiciels en C++, C#, Python web, Android et bases de données : POO, algorithmes, structures de données, patrons de conception et SOLID. Création de supports pédagogiques, revues de code et encadrement de projets de fin d’études avec SCRUM.",
+};
     for (const [key, value] of Object.entries(next)) {
         if (key === "children") {
             next[key] = translateNode(value, language);
