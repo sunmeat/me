@@ -14,9 +14,9 @@ Designing and building thoughtful digital products, native Android applications,
 </p>
 
 <p>
-  <a href="#english">:uk: English</a> ·
-  <a href="#русский">:ru: Русский</a> ·
-  <a href="#français">:fr: Français</a>
+  <a href="#english"><img src="https://flagcdn.com/20x15/gb.png" width="20" height="15" alt="UK flag"> English</a> ·
+  <a href="#русский"><img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="Russian flag"> Русский</a> ·
+  <a href="#français"><img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="French flag"> Français</a>
 </p>
 
 <img src="https://sunmeat.dev/preview.jpg" alt="Preview of the sunmeat.dev portfolio" width="820">
@@ -31,7 +31,7 @@ Designing and building thoughtful digital products, native Android applications,
 
 <a id="english"></a>
 
-## :uk: English
+## <img src="https://flagcdn.com/20x15/gb.png" width="20" height="15" alt="UK flag"> English
 
 ### Overview
 
@@ -168,7 +168,7 @@ All repository-level documents are linked below so they are easy to find and mai
 
 <a id="русский"></a>
 
-## :ru: Русский
+## <img src="https://flagcdn.com/20x15/ru.png" width="20" height="15" alt="Russian flag"> Русский
 
 ### О проекте
 
@@ -305,7 +305,7 @@ me/
 
 <a id="français"></a>
 
-## :fr: Français
+## <img src="https://flagcdn.com/20x15/fr.png" width="20" height="15" alt="French flag"> Français
 
 ### Présentation
 
