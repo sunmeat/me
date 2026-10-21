@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.7",
   "type": "module",
-  "homepage": "https://sunmeat.shop",
+  "homepage": "https://sunmeat.dev",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
