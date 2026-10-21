@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const TOPICS = [
@@ -94,7 +95,7 @@ function cleanContent(rawHtml, title) {
     return text.length > 50 ? text : "Read the full article for more details.";
 }
 
-export default function NewsFeed() {
+function NewsFeed() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [activeTopic, setActiveTopic] = useState("AI Machine Learning");
@@ -302,3 +303,5 @@ export default function NewsFeed() {
         </section>
     );
 }
+
+export default withTranslation(NewsFeed);
