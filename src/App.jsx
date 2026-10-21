@@ -1,4 +1,5 @@
 import React from "react";
+import {LanguageProvider} from "./i18n.jsx";
 import "./App.css";
 
 import Estimator from "./components/Estimator.jsx";
@@ -17,6 +18,7 @@ import StarlinkOffer from "./components/StarlinkOffer.jsx";
 
 export default function App() {
     return (
+        <LanguageProvider>
         <div className="page">
             <Nav/>
             <main>
@@ -34,5 +36,6 @@ export default function App() {
             </main>
             <Footer/>
         </div>
+        </LanguageProvider>
     );
 }
