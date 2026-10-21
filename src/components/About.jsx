@@ -55,6 +55,7 @@ function loadStoredGuestName() {
 }
 
 function About() {
+    const { language } = useLanguage();
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
