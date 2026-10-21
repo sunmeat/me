@@ -276,12 +276,7 @@ function translateString(value, language) {
     let translated = value;
     const entries = Object.entries(FR).filter(([source]) => source.length >= 4).sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
-        const escaped = source.replace(/[.*+?^${}()|[\]\\]/g, "\\function translateString(value, language) {
-    if (language !== "fr") return value;
-    const normalized = normalize(value);
-    return FR[normalized] ?? value;
-}");
-        translated = translated.replace(new RegExp(`\\b${escaped}\\b`, "g"), target);
+        translated = translated.split(source).join(target);
     }
     return translated;
 }
