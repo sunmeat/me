@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import {EDUCATION, EXPERIENCE} from "../data.js";
 
@@ -45,4 +46,4 @@ function Experience() {
     );
 }
 
-export default Experience;
+export default withTranslation(Experience);
