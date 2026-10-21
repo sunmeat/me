@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import { useState, useRef, useEffect } from "react";
 import {
     collection,
@@ -326,4 +327,4 @@ function About() {
     );
 }
 
-export default About;
+export default withTranslation(About);
