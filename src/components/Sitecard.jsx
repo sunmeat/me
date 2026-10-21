@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Icon from "./Icon.jsx";
 
 function SiteCard({site}) {
@@ -25,4 +26,4 @@ function SiteCard({site}) {
     );
 }
 
-export default SiteCard;
+export default withTranslation(SiteCard);
