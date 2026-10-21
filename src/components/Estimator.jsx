@@ -1,4 +1,4 @@
-import {withTranslation} from "../i18n.jsx";
+import {translateString, useLanguage, withTranslation} from "../i18n.jsx";
 import React, { useEffect, useRef, useState } from "react";
 
 const PLATFORMS = [
@@ -216,20 +216,21 @@ function buildEstimate(platformId, featureIds, timelineId) {
     };
 }
 
-function buildBrief(estimate) {
+function buildBrief(estimate, language = "en") {
+    const t = (value) => translateString(value, language);
     const featureLine = estimate.selectedFeatures.length
-        ? estimate.selectedFeatures.map((f) => f.label).join(", ")
-        : "Not specified";
+        ? estimate.selectedFeatures.map((feature) => t(feature.label)).join(", ")
+        : t("Not specified");
 
     return [
-        "Project Brief — sunmeat.dev",
-        `Platform: ${estimate.platform.label} (${estimate.platform.sub})`,
-        `Features: ${featureLine}`,
-        `Timeline: ${estimate.timeline.label} — ${estimate.timeline.note}`,
-        `Estimated scope: ${estimate.range}`,
-        `Suggested stack: ${estimate.stack.join(", ")}`,
+        t("Project Brief — sunmeat.dev"),
+        `${t("Platform:")} ${t(estimate.platform.label)} (${t(estimate.platform.sub)})`,
+        `${t("Features:")} ${featureLine}`,
+        `${t("Timeline:")} ${t(estimate.timeline.label)} — ${t(estimate.timeline.note)}`,
+        `${t("Estimated scope:")} ${t(estimate.range)}`,
+        `${t("Suggested stack:")} ${estimate.stack.join(", ")}`,
         "",
-        "Sent via sunmeat.dev project estimator.",
+        t("Sent via sunmeat.dev project estimator."),
     ].join("\n");
 }
 
@@ -268,7 +269,7 @@ function Estimator() {
     useEffect(() => () => timeoutRef.current && clearTimeout(timeoutRef.current), []);
 
     const estimate = buildEstimate(platformId, featureIds, timelineId);
-    const brief = buildBrief(estimate);
+    const brief = buildBrief(estimate, language);
 
     function toggleFeature(id) {
         setFeatureIds((prev) => (prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]));
