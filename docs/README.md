@@ -1,8 +1,8 @@
 # Project Documentation · Документация проекта
 
 <p align="center">
-  <strong>A field guide to building, maintaining, and publishing sunmeat.shop.</strong><br />
-  <em>Практическое руководство по разработке, поддержке и публикации sunmeat.shop.</em>
+  <strong>A field guide to building, maintaining, and publishing sunmeat.dev.</strong><br />
+  <em>Практическое руководство по разработке, поддержке и публикации sunmeat.dev.</em>
 </p>
 
 <p align="center">🇬🇧 English · 🇷🇺 Русский</p>
@@ -11,7 +11,7 @@
 
 ## 🇬🇧 English
 
-Welcome to the documentation for **[sunmeat/me](https://github.com/sunmeat/me)**, the source repository for [sunmeat.shop](https://sunmeat.shop). This is a personal portfolio, not a generic starter template: changes should preserve its distinct identity and accurately represent the work it showcases.
+Welcome to the documentation for **[sunmeat/me](https://github.com/sunmeat/me)**, the source repository for [sunmeat.dev](https://sunmeat.dev). This is a personal portfolio, not a generic starter template: changes should preserve its distinct identity and accurately represent the work it showcases.
 
 ### Documentation map
 
@@ -50,7 +50,7 @@ Repository templates, Dependabot, security-reporting guidance, and the manual au
 
 ## 🇷🇺 Русский
 
-Добро пожаловать в документацию **[sunmeat/me](https://github.com/sunmeat/me)**, репозитория исходного кода сайта [sunmeat.shop](https://sunmeat.shop). Это персональное портфолио, а не безликий шаблон: изменения должны сохранять индивидуальный характер проекта и точно отражать представленные работы.
+Добро пожаловать в документацию **[sunmeat/me](https://github.com/sunmeat/me)**, репозитория исходного кода сайта [sunmeat.dev](https://sunmeat.dev). Это персональное портфолио, а не безликий шаблон: изменения должны сохранять индивидуальный характер проекта и точно отражать представленные работы.
 
 ### Карта документации
 
