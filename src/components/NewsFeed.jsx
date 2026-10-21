@@ -24,7 +24,6 @@ const TOPICS = [
     "Media3", "Location & Maps", "Offline-First"
 ];
 
-const RSS2JSON_URL = "https://api.rss2json.com/v1/api.json";
 const ITEMS_PER_TOPIC = 7;
 const CACHE_TTL = 10 * 60 * 1000;
 
@@ -129,9 +128,8 @@ function NewsFeed() {
             return;
         }
 
-        const locale = language === "fr" ? {hl: "fr-FR", gl: "FR", ceid: "FR:fr"} : {hl: "en-US", gl: "US", ceid: "US:en"};
-        const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(topic)}&hl=${locale.hl}&gl=${locale.gl}&ceid=${locale.ceid}`;
-        const url = `${RSS2JSON_URL}?rss_url=${encodeURIComponent(rssUrl)}`;
+        const locale = language === "fr" ? "fr-FR" : "en-US";
+        const url = `/api/news?topic=${encodeURIComponent(topic)}&locale=${locale}`;
 
         try {
             const res = await fetch(url, { signal: abortRef.current.signal });
