@@ -1,4 +1,4 @@
-import {withTranslation} from "../i18n.jsx";
+import {useLanguage, withTranslation} from "../i18n.jsx";
 import { useState, useRef, useEffect } from "react";
 import {
     collection,
@@ -22,8 +22,8 @@ const TELEGRAM_URL = "https://t.me/sunmeat";
 const COMMENTS_COLLECTION = "about_comments";
 const GUEST_NAME_STORAGE_KEY = "about-card-guest-name";
 
-function formatTimestamp(date) {
-    const formatted = date.toLocaleString("en-US", {
+function formatTimestamp(date, language = "en") {
+    const formatted = date.toLocaleString(language === "fr" ? "fr-FR" : "en-US", {
         month: "short",
         day: "numeric",
         hour: "2-digit",
@@ -33,7 +33,7 @@ function formatTimestamp(date) {
     return formatted.replace(" at ", ", ");
 }
 
-function formatRelative(date) {
+function formatRelative(date, language = "en") {
     if (!date) return "";
     const diff = Date.now() - date.getTime();
     const mins = Math.floor(diff / 60000);
@@ -43,7 +43,7 @@ function formatRelative(date) {
     if (mins < 60) return `${mins}m`;
     if (hours < 24) return `${hours}h`;
     if (days < 7) return `${days}d`;
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    return date.toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", { month: "short", day: "numeric" });
 }
 
 function loadStoredGuestName() {
@@ -65,7 +65,7 @@ function About() {
     const [comments, setComments] = useState([]);
     const [commentsError, setCommentsError] = useState(null);
     const [posting, setPosting] = useState(false);
-    const [timestamp, setTimestamp] = useState(() => formatTimestamp(new Date()));
+    const [timestamp, setTimestamp] = useState(() => formatTimestamp(new Date(), language));
     const burstTimeout = useRef(null);
 
     // Live-sync real comments from Firebase — every visitor sees the same feed.
@@ -105,10 +105,10 @@ function About() {
 
     useEffect(() => {
         const id = setInterval(() => {
-            setTimestamp(formatTimestamp(new Date()));
+            setTimestamp(formatTimestamp(new Date(), language));
         }, 60000);
         return () => clearInterval(id);
-    }, []);
+    }, [language]);
 
     const toggleLike = () => {
         setLiked((prev) => {
@@ -259,7 +259,7 @@ function About() {
                                         {c.text}
                                         {c.createdAt && (
                                             <span className="about-card__comment-time">
-                                                {formatRelative(c.createdAt)}
+                                                {formatRelative(c.createdAt, language)}
                                             </span>
                                         )}
                                     </div>
