@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import Icon from "./Icon.jsx";
 import {REPOS} from "../data.js";
@@ -42,4 +43,4 @@ function OpenSource() {
     );
 }
 
-export default OpenSource;
+export default withTranslation(OpenSource);
