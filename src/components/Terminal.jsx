@@ -1,3 +1,4 @@
+import {withTranslation} from "../i18n.jsx";
 import {useEffect, useRef, useState} from "react";
 
 import {
@@ -54,4 +55,4 @@ function Terminal() {
     );
 }
 
-export default Terminal;
+export default withTranslation(Terminal);
