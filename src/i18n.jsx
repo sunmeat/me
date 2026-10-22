@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -16,7 +16,9 @@ export function LanguageProvider({children}) {
 
     useEffect(() => {
         document.documentElement.lang = language;
-        document.title = language === "ru"
+        document.title = language === "zh"
+            ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
+            : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик | Орлеан, Франция"
             : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack | Orleans, Francia"
@@ -30,7 +32,9 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "ru"
+        updateMeta('meta[name="description"]', language === "zh"
+            ? "常驻法国奥尔良的软件工程师与讲师，专注原生 Android 应用和全栈 Web 开发。展示已发布项目，欢迎自由职业合作。"
+            : language === "ru"
             ? "Инженер-программист и преподаватель в Орлеане. Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты и открыт к сотрудничеству на фрилансе."
             : language === "es"
             ? "Ingeniero de software y profesor en Orleans. Aplicaciones Android nativas y desarrollo web full-stack. Proyectos publicados y disponible para colaboraciones freelance."
@@ -39,7 +43,9 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "ru"
+        updateMeta('meta[property="og:title"]', language === "zh"
+            ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
+            : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
             : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack"
@@ -48,7 +54,9 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "ru"
+        updateMeta('meta[property="og:description"]', language === "zh"
+            ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
+            : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
             : language === "es"
             ? "Aplicaciones Android nativas, desarrollo web full-stack y proyectos publicados. Más de 19 años de experiencia. En Orleans, Francia."
@@ -57,7 +65,9 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "ru"
+        updateMeta('meta[name="twitter:title"]', language === "zh"
+            ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
+            : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
             : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack"
@@ -66,7 +76,9 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "ru"
+        updateMeta('meta[name="twitter:description"]', language === "zh"
+            ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
+            : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
             : language === "es"
             ? "Aplicaciones Android nativas y desarrollo web full-stack. Proyectos publicados. En Orleans, Francia."
@@ -75,7 +87,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "zh" ? "zh_CN" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -1285,7 +1297,56 @@ const RU = {
     "Orléans-based software engineer & lecturer.": "Инженер-программист и преподаватель из Орлеана.",
 };
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU };
+const ZH = {
+"About":"关于我","Skills":"技能","Apps":"应用","Sites":"网站","Experience":"工作经历","Contact":"联系","Education":"教育背景",
+"Buy me a coffee":"请我喝杯咖啡","Hire me":"联系合作","Toggle menu":"打开或关闭菜单","Choose language":"选择语言","Close language menu":"关闭语言菜单",
+"English":"英语","French":"法语","Spanish":"西班牙语","Russian":"俄语","Chinese":"中文","Chinese flag":"中国国旗","United States flag":"美国国旗",
+"Engineer by trade, teacher by habit.":"以工程为业，以教学为乐。","Technical skills":"技术技能",
+"A toolkit shaped by production work, teaching, and constant experimentation.":"我的技术栈来自实际开发、教学与持续探索。",
+"Professional experience":"工作经历","Open Source / Side Projects":"开源与个人项目","View GitHub profile":"查看 GitHub 主页","Get in touch":"联系我",
+"Have a project in mind? Let's talk about how to make it real.":"有项目构想？让我们聊聊如何将它变为现实。","Email me":"发送邮件","Message on Telegram":"通过 Telegram 联系",
+"Orléans, France":"法国奥尔良","Name":"姓名","Post":"发布","Like":"点赞","Unlike":"取消点赞","Comment":"评论","Save":"收藏","Remove from saved":"取消收藏",
+"just now":"刚刚","Guest":"访客","Couldn't load comments right now.":"暂时无法加载评论。","Couldn't post your comment. Please try again.":"评论发布失败，请重试。",
+"Check out this portfolio":"看看这个作品集","Loading news...":"正在加载新闻…","Developer News Feed":"开发者新闻",
+"Curated headlines from Google News. Swipe or use arrow keys.":"精选 Google 新闻标题。可滑动浏览或使用方向键。",
+"Click this card to read full article.":"点击卡片阅读完整文章。","SOURCE":"来源","News Source":"新闻来源","Read the full article for more details.":"阅读完整文章了解详情。",
+"Failed to load news.":"新闻加载失败。","Server-side problem. Switching topic...":"服务器出现问题，正在切换主题…","Rate limit exceeded. Please wait a few minutes.":"请求次数过多，请稍等几分钟。",
+"STARLINK REFERRAL":"STARLINK 推荐优惠","LIMITED OFFER":"限时优惠","1 MONTH":"1 个月","FREE":"免费",
+"Activate Starlink through my referral link and get one month of service free.":"通过我的推荐链接开通 Starlink，即可免费获得一个月服务。",
+"Activate Starlink":"开通 Starlink","*Offer subject to Starlink eligibility and terms.":"*优惠资格及具体条款以 Starlink 官方规定为准。",
+"LOW EARTH ORBIT · 550 KM":"低地球轨道 · 550 公里","Android / Full-Stack Developer":"Android / 全栈开发工程师",
+"primary focus":"主要方向","core toolkit":"核心技术栈","backend & web":"后端与 Web","day to day":"日常工具","Mobile":"移动开发","Languages":"编程语言","Frameworks":"框架","Tooling":"开发工具",
+"Utility":"实用工具","Board Games":"桌游","Casual Game":"休闲游戏","Quiz":"问答游戏","Local Business":"本地商家",
+"Published sites":"已发布的网站","Published Android apps":"已发布的 Android 应用","Years in software & teaching":"软件开发与教学年限","GitHub repositories":"GitHub 仓库",
+"Live on Google Play right now.":"现已在 Google Play 上架。",
+"Six apps across utilities, casual games and local business tools — each one designed, built and published independently.":"六款涵盖实用工具、休闲游戏和本地商业服务的应用，均独立设计、开发并发布。",
+"Side projects, live on the web.":"已上线的个人项目。",
+"A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.":"不断扩展的网站与实验项目集合，每个项目都独立部署，用来验证创意、尝试技术，或单纯享受创造的乐趣。",
+"Orléans-based software engineer & lecturer.":"常驻法国奥尔良的软件工程师与讲师。",
+"Orléans-based software engineer and lecturer building native Android applications end to end — ":"我是一名常驻法国奥尔良的软件工程师与讲师，负责原生 Android 应用的完整开发流程，",
+"from first sketch to a live listing on Google Play. ":"从最初构想到最终发布至 Google Play。",
+"Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. ":"同时开发全栈 Web 应用，前端使用 React，后端使用 Spring Boot、Django、ASP.NET Core 或 Node.js。",
+"Six published apps so far — just the beginning. ":"目前已发布六款应用，这只是开始。","Over nineteen years of writing and teaching code.":"拥有超过十九年的编程与教学经验。",
+"Open to freelance projects, long-term collaborations and consulting work.":"欢迎自由职业项目、长期合作与技术咨询。",
+"The user can contact me by email or Telegram.":"可以通过电子邮件或 Telegram 联系我。","The page could not be loaded.":"页面加载失败。",
+"French":"法语","Français":"法语","Drapeau français":"法国国旗","Bandeira do Brasil":"巴西国旗","Bandera de España":"西班牙国旗","Russian flag":"俄罗斯国旗",
+"Web Audio":"Web 音频","Korean Pickles":"韩式泡菜","Poetry Blog":"诗歌博客","Music Learning":"音乐学习","Stats Card":"统计卡片","Interactive":"互动项目",
+"Pet Memorial":"宠物纪念","Calculator":"计算器","Price Tracker":"价格追踪器","Plant Collection":"植物收藏","JavaScript Library":"JavaScript 库","My Android Apps":"我的 Android 应用",
+"Kotlin Coroutines":"Kotlin 协程","Kotlin Flow":"Kotlin Flow","Jetpack Compose Architecture":"Jetpack Compose 架构","Adaptive Layouts":"自适应布局",
+"Clean Architecture":"整洁架构","Modularization":"模块化","Performance Optimization":"性能优化","Memory Profiling":"内存分析","App Startup":"应用启动","Baseline Profiles":"基准配置文件",
+"App Distribution":"应用分发","AI Machine Learning":"人工智能与机器学习","LLM Integration in Apps":"在应用中集成大语言模型","Foldables & Large Screens":"折叠屏与大屏设备",
+"App Security":"应用安全","Biometric Authentication":"生物识别认证","Location & Maps":"定位与地图","Offline-First":"离线优先","Screenshot Testing":"截图测试","UI Testing":"界面测试",
+"Estimate Your App Project":"估算应用开发项目","Choose your platform":"选择平台","Pick your core features":"选择核心功能","Set your timeline":"设定时间安排","Estimated timeframe":"预计周期","Recommended stack":"推荐技术栈",
+"Step 01":"第 01 步","Step 02":"第 02 步","Step 03":"第 03 步","Express":"快速方案","Voice Recorder":"录音机","Munchkin Level Counter":"Munchkin 等级计数器",
+"QR Code Reader: Scan & Create!":"二维码阅读器：扫描与生成！","Gullibility Test":"轻信测试","Massage Kyiv":"基辅按摩","Visit":"访问","m ago":"分钟前","h ago":"小时前","d ago":"天前",
+"Jul 2023 — Present":"2023 年 7 月 — 至今","May 2017 — Dec 2017":"2017 年 5 月 — 12 月","Jun 2022 — Present":"2022 年 6 月 — 至今",
+"Sep 2007 — Present (Remote)":"2007 年 9 月 — 至今（远程）","Aug 2026 — Present":"2026 年 8 月 — 至今","Ongoing":"进行中","Based in":"所在地",
+"Built with ❤️ & React":"使用 ❤️ 与 React 构建","Send Brief to Telegram":"将项目需求发送至 Telegram","Brief copied — open chat":"需求已复制，打开聊天",
+"Copy Brief Text":"复制项目需求","Copied to clipboard":"已复制到剪贴板","Select your project requirements to get an instant scope estimate.":"选择项目需求，即可快速估算工作范围。",
+"weeks":"周"," weeks":" 周"
+};
+
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
