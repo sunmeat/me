@@ -1,11 +1,14 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
+const SUPPORTED_LANGUAGES = ["en", "fr"];
+
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
 export function LanguageProvider({children}) {
     const [language, setLanguage] = useState(() => {
         try {
-            return localStorage.getItem("sunmeat-language") === "fr" ? "fr" : "en";
+            const storedLanguage = localStorage.getItem("sunmeat-language");
+            return SUPPORTED_LANGUAGES.includes(storedLanguage) ? storedLanguage : "en";
         } catch {
             return "en";
         }
@@ -40,6 +43,7 @@ export function LanguageProvider({children}) {
     }, [language]);
 
     const changeLanguage = (next) => {
+        if (!SUPPORTED_LANGUAGES.includes(next)) return;
         setLanguage(next);
         try {
             localStorage.setItem("sunmeat-language", next);
