@@ -1481,6 +1481,11 @@ const ZH = {
     "A curated collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "精选的小型网站与实验项目，每个项目均独立部署，用于验证创意、尝试新技术，或单纯享受创造的乐趣。",
     "Source": "来源",
     "News request timed out. Please try again.": "新闻请求超时，请重试。",
+    "AI Ecosystem": "人工智能生态",
+    "Failed to load comments:": "评论加载失败：",
+    "Failed to post comment:": "评论发布失败：",
+    "Invalid news API response": "新闻 API 响应无效",
+    "Starlink referral offer": "Starlink 推荐优惠",
 };
 
 const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH };
