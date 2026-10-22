@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv", "qya"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
             : language === "zh"
@@ -36,7 +36,7 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
+        updateMeta('meta[name="description"]', language === "qya" ? "Quenya, the High-elven language created by J. R. R. Tolkien. A small experimental localization of a developer portfolio." : language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
             : language === "ko-KP"
             ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."
@@ -51,7 +51,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -62,7 +62,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[property="og:description"]', language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -73,7 +73,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -84,7 +84,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -2245,6 +2245,40 @@ const JA = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "公開されているDuolingoプロフィールの統計を表示・共有するシンプルなツールです。アバター、XP、連続学習日数、主なコースを表示し、共有用PNGカードを生成します。ログインは不要です。"
 };
 
+const QUENYA = {
+    "About": "Námen",
+    "Skills": "Isilmë",
+    "Apps": "Mentaner",
+    "Sites": "Nórë",
+    "Experience": "Oiencarmë",
+    "Contact": "Ómen",
+    "Buy me a coffee": "Mecarë coivie",
+    "Hire me": "Mecarë",
+    "Toggle menu": "Panyë menya",
+    "View published sites": "Cenë nórë",
+    "Start a project": "Yesta carmë",
+    "Published sites": "Nórë tyernë",
+    "Published Android apps": "Android mentaner",
+    "GitHub repositories": "GitHub nórë",
+    "Professional experience": "Oiencarmë",
+    "Education": "Parma",
+    "Get in touch": "Ómen",
+    "Email me": "Mentanë",
+    "Name": "Essë",
+    "Post": "Tenta",
+    "Like": "Mára",
+    "Comment": "Ómentië",
+    "Save": "Ráma",
+    "Remove from saved": "Áva ráma",
+    "Guest": "Eldar",
+    "Loading news...": "Lá carë...",
+    "Read the full article for more details.": "Cenë i parma",
+    "Technical skills": "Isilmë",
+    "Check out this portfolio": "Elen síla lúmenn' omentielvo",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Elen síla lúmenn' omentielvo.",
+    "Orléans, France": "Orléans, France"
+};
+
 const HV = {
     "About": "Ñuha dārys",
     "Skills": "Ñuha sȳz",
@@ -2333,7 +2367,7 @@ const HV = {
     "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Dārys se ȳdragon: aōha sȳz, music sȳz.",
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Duolingo vēzos: XP, sȳz, se courses. PNG urnegon, login daor."
 };
-\nconst TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV };
+\nconst TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
