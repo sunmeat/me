@@ -447,19 +447,56 @@ const FR = {
     "Step 02": "Étape 02",
     "Step 03": "Étape 03",
 
+
+    "Voice Recorder": "Enregistreur vocal",
+    "Munchkin Level Counter": "Compteur de niveaux Munchkin",
+    "QR Code Reader: Scan & Create!": "Lecteur de QR codes : scanner et créer !",
+    "Gullibility Test": "Test de crédulité",
+    "Massage Kyiv": "Massage Kyiv",
+    "Live": "En ligne",
+    "Visit": "Visiter",
+    "Choose language": "Choisir la langue",
+    "Toggle menu": "Ouvrir ou fermer le menu",
+    "Close language menu": "Fermer le menu des langues",
+    "Select your project requirements to get an instant scope estimate.": "Sélectionnez les besoins de votre projet pour obtenir une estimation immédiate.",
+    "Choose your platform": "Choisissez votre plateforme",
+    "Pick your core features": "Choisissez les fonctionnalités principales",
+    "Set your timeline": "Définissez votre calendrier",
+    "Standard": "Standard",
+    "Express": "Express",
+    "Rush": "Urgent",
+    "Flexible": "Flexible",
+    "Copy brief": "Copier le cahier des charges",
+    "Reset": "Réinitialiser",
+    "Send project brief": "Envoyer le cahier des charges",
+    "View project": "Voir le projet",
+    "View all": "Tout afficher",
+    "Loading": "Chargement",
+    "No articles for": "Aucun article pour",
+    "just now": "à l’instant",
+    "m ago": "min",
+    "h ago": "h",
+    "d ago": "j",
+    "SOURCE": "SOURCE",
+    "News Source": "Source d’actualité",
+    "Read the full article for more details.": "Lisez l’article complet pour en savoir plus.",
+
 };
+
+const TRANSLATIONS = { fr: FR };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
 }
 
 export function translateString(value, language) {
-    if (language !== "fr") return value;
+    const dictionary = TRANSLATIONS[language];
+    if (!dictionary) return value;
     const normalized = normalize(value);
-    if (FR[normalized]) return FR[normalized];
+    if (dictionary[normalized]) return dictionary[normalized];
 
     let translated = value;
-    const entries = Object.entries(FR)
+    const entries = Object.entries(dictionary)
         .filter(([source]) => source.includes(" ") || source.length >= 6)
         .sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
@@ -470,7 +507,7 @@ export function translateString(value, language) {
 
 function translateValue(value, language, key = "") {
     if (typeof value === "string") {
-        if (["href", "src", "srcSet", "id", "className", "key", "name", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
+        if (["href", "src", "srcSet", "id", "className", "key", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
         return translateString(value, language);
     }
     if (Array.isArray(value)) return value.map((item) => translateValue(item, language, key));
