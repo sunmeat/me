@@ -17,7 +17,8 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
+        document.title = language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+            : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
             : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
@@ -1905,6 +1906,10 @@ const AR = {
 };
 
 const SA = {
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "फ्रान्सदेशस्य ओरलेआँ-नगरे वसामि, सङ्गणकविद्यायाः साधकः विश्वविद्यालयस्य आचार्यश्च। अर्थशास्त्रे प्रोग्रामलेखने च मम विद्या। विंशतेः वर्षाणां समीपे मम यात्रा द्वयोः क्षेत्रयोः मध्ये प्रवहति: दिवा नवपीढीं शिक्षयामि, निशि च लोकहिताय नूतनानि सॉफ्टवेयर्-रत्नानि निर्माय प्रकाशयामि।",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "अद्य आन्ड्रॉइड्-जगति मम शिल्पं प्रफुल्लति: कल्पनाबीजात् Google Play-मञ्चपर्यन्तं सुशोभितान्, सिद्धान् अनुप्रयोगान् निर्मामि। React इत्यनेन अग्रभागं, Spring Boot, Django, ASP.NET Core, Node.js इत्येतैः पश्चाद्भागं च रचयामि। स्वच्छा रचना मम धर्मः, परिरक्षणयोग्यं कूटलेखनं मम व्रतम्, यथार्थः कालः मम नियमः। एकोनविंशत्यधिकवर्षाणि लेखनाध्यापनयोः तपसा एते आदर्शाः मयि दृढाः।",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "कार्यविरामेषु चित्राणि गृह्णामि, अनेकवाद्यानि च वादयामि। अतः कस्यापि दृश्यपटस्य लयभङ्गः अर्धमात्रया अपि मम सूक्ष्मदृष्टेः न गुप्यते।",
+
     "About": "मम परिचयः",
     "Skills": "कौशलानि",
     "Apps": "अनुप्रयोगाः",
