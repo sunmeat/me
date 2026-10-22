@@ -488,7 +488,7 @@ export function translateString(value, language) {
 
 function translateValue(value, language, key = "") {
     if (typeof value === "string") {
-        if (["href", "src", "srcSet", "id", "className", "key", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
+        if (["href", "src", "srcSet", "id", "className", "key", "ref", "style", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
         return translateString(value, language);
     }
     if (Array.isArray(value)) return value.map((item) => translateValue(item, language, key));
@@ -505,6 +505,9 @@ function translateValue(value, language, key = "") {
 function translateProps(props, language) {
     const next = {...props};
     for (const [key, value] of Object.entries(next)) {
+        // Preserve React refs and styling objects. Replacing a ref breaks outside-click handling
+        // and can unmount the language menu before its option receives the click.
+        if (key === "ref" || key === "style" || key.startsWith("on")) continue;
         if (key === "children") {
             next[key] = translateNode(value, language);
         } else if (typeof value === "string" || Array.isArray(value) || (value && typeof value === "object" && !React.isValidElement(value))) {
