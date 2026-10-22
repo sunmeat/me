@@ -210,11 +210,20 @@ button {
     gap: 32px;
 }
 
+.nav__brand-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
 .nav__brand {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: auto;
+    margin-right: 0;
+    padding: 0;
 }
 
 .nav__brand-mark {
@@ -2515,8 +2524,12 @@ a.contact__row:hover {
 }
 
 @media (max-width: 720px) {
-    .language-switcher {
+    .language-switcher:not(.language-switcher--brand) {
         margin-left: auto;
+    }
+
+    .language-switcher--brand {
+        margin-left: 0;
     }
 
     .language-switcher__menu {
