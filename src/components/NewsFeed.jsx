@@ -142,11 +142,9 @@ function NewsFeed() {
             if (abortRef.current !== controller) return;
 
             if (!res.ok) {
-                if (res.status === 500) {
-                    setFeedError("Server-side problem. Switching topic...");
-                    setActiveTopic(getNextTopicIndex(topic));
-                    setLoading(false);
-                    return;
+                if (res.status >= 500) {
+                    const details = await res.json().catch(() => null);
+                    throw new Error(details?.message || `News API returned HTTP ${res.status}`);
                 }
                 if (res.status === 429) {
                     setFeedError("Rate limit exceeded. Please wait a few minutes.");
@@ -158,7 +156,9 @@ function NewsFeed() {
             }
 
             const data = await res.json();
-            if (data.status !== "ok") throw new Error("Feed error");
+            if (data.status !== "ok" || !Array.isArray(data.items)) {
+                throw new Error(data.message || "Invalid news API response");
+            }
 
             const allItems = (data.items || [])
                 .map((it) => ({
@@ -186,7 +186,7 @@ function NewsFeed() {
             window.clearTimeout(timeoutId);
             if (abortRef.current === controller) setLoading(false);
         }
-    }, [getNextTopicIndex, language]);
+    }, [language]);
 
     useEffect(() => {
         setCurrentIndex(0);
