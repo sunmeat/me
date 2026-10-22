@@ -104,6 +104,17 @@ function Nav() {
                                 <button
                                     type="button"
                                     role="menuitemradio"
+                                    aria-checked={language === "de"}
+                                    className={`language-switcher__option ${language === "de" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("de")}
+                                >
+                                    <Flag country="de" label="Flagge Deutschlands" />
+                                    <span>Deutsch</span>
+                                    {language === "de" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
                                     aria-checked={language === "fr"}
                                     className={`language-switcher__option ${language === "fr" ? "is-selected" : ""}`}
                                     onClick={() => chooseLanguage("fr")}
