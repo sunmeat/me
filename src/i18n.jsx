@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -16,7 +16,9 @@ export function LanguageProvider({children}) {
 
     useEffect(() => {
         document.documentElement.lang = language;
-        document.title = language === "es"
+        document.title = language === "ru"
+            ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик | Орлеан, Франция"
+            : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack | Orleans, Francia"
             : language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack | Orléans, France"
@@ -28,42 +30,52 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "es"
+        updateMeta('meta[name="description"]', language === "ru"
+            ? "Инженер-программист и преподаватель в Орлеане. Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты и открыт к сотрудничеству на фрилансе."
+            : language === "es"
             ? "Ingeniero de software y profesor en Orleans. Aplicaciones Android nativas y desarrollo web full-stack. Proyectos publicados y disponible para colaboraciones freelance."
             : language === "fr"
             ? "Ingénieur logiciel et enseignant basé à Orléans. Applications Android natives et développement web full-stack. Projets en ligne et ouvert aux collaborations freelance."
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "es"
+        updateMeta('meta[property="og:title"]', language === "ru"
+            ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
+            : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack"
             : language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "es"
+        updateMeta('meta[property="og:description"]', language === "ru"
+            ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
+            : language === "es"
             ? "Aplicaciones Android nativas, desarrollo web full-stack y proyectos publicados. Más de 19 años de experiencia. En Orleans, Francia."
             : language === "fr"
             ? "Applications Android natives, développement web full-stack et projets en ligne. Basé à Orléans, France. Disponible pour vos projets."
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "es"
+        updateMeta('meta[name="twitter:title"]', language === "ru"
+            ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
+            : language === "es"
             ? "Oleksandr Zahoruiko — Desarrollador Android y Full-stack"
             : language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "es"
+        updateMeta('meta[name="twitter:description"]', language === "ru"
+            ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
+            : language === "es"
             ? "Aplicaciones Android nativas y desarrollo web full-stack. Proyectos publicados. En Orleans, Francia."
             : language === "fr"
             ? "Applications Android natives et développement web full-stack. Projets en ligne. Basé à Orléans, France."
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -1077,7 +1089,180 @@ const ES = {
     "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\\\"": "Formación y mentoría de futuros ingenieros de software en C++, C#, Python web, Android y bases de datos; programación orientada a objetos, algoritmos, estructuras de datos, patrones de diseño y SOLID. Creación de materiales didácticos, revisión de código y supervisión de proyectos finales con SCRUM."
 };
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES };
+const RU = {
+    "About": "Обо мне",
+    "Skills": "Навыки",
+    "Apps": "Приложения",
+    "Sites": "Сайты",
+    "Experience": "Опыт",
+    "Contact": "Контакты",
+    "Buy me a coffee": "Поддержать проект",
+    "Hire me": "Связаться",
+    "Toggle menu": "Открыть или закрыть меню",
+    "View published sites": "Посмотреть опубликованные сайты",
+    "Start a project": "Обсудить проект",
+    "Published sites": "Опубликованные сайты",
+    "Published Android apps": "Опубликованные Android-приложения",
+    "Years in software & teaching": "Лет в разработке и преподавании",
+    "GitHub repositories": "Репозитории GitHub",
+    "Engineer by trade, teacher by habit.": "Инженер по профессии, преподаватель по призванию.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Я инженер-программист и преподаватель, живу в Орлеане, Франция. У меня образование в области программирования и экономики. Почти два десятилетия я совмещаю аудиторию и разработку: днём обучаю новое поколение разработчиков, а вечером выпускаю программные продукты.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Сейчас мой главный фокус — нативная Android-разработка: создаю готовые к публикации приложения от идеи до Google Play. Также разрабатываю full-stack веб-приложения: React на фронтенде и Spring Boot, Django, ASP.NET Core или Node.js на бэкенде. В мобильной и веб-разработке ценю чистую архитектуру, поддерживаемый код, реалистичные сроки и решения, в которых легко разобраться даже спустя год. Эти принципы я оттачивал более девятнадцати лет разработки и преподавания.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Вне работы увлекаюсь фотографией и играю на нескольких музыкальных инструментах. Возможно, поэтому я замечаю, когда интерфейс сбивается с ритма хотя бы на полтакта.",
+    "Live on Google Play right now.": "Уже доступны в Google Play.",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Шесть приложений: утилиты, казуальные игры и инструменты для локального бизнеса. Каждое я самостоятельно придумал, разработал и опубликовал.",
+    "Side projects, live on the web.": "Мои проекты уже в интернете.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Коллекция небольших сайтов и экспериментов, каждый из которых опубликован отдельно и создан для проверки идеи, освоения технологии или просто ради удовольствия.",
+    "Open source & teaching material.": "Открытый код и учебные материалы.",
+    "View GitHub profile": "Открыть профиль GitHub",
+    "Technical skills": "Технические навыки",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Мой набор инструментов сформирован коммерческой разработкой, преподаванием и постоянными экспериментами.",
+    "Professional experience": "Опыт работы",
+    "Education": "Образование",
+    "Get in touch": "Связаться со мной",
+    "Have a project in mind? Let's talk about how to make it real.": "Есть идея для проекта? Давайте обсудим, как воплотить её в жизнь.",
+    "Email me": "Написать на почту",
+    "Message on Telegram": "Написать в Telegram",
+    "Orléans, France": "Орлеан, Франция",
+    "Name": "Имя",
+    "Add a comment...": "Добавить комментарий...",
+    "Post": "Опубликовать",
+    "Like": "Нравится",
+    "Unlike": "Убрать отметку «Нравится»",
+    "Comment": "Комментировать",
+    "Save": "Сохранить",
+    "Remove from saved": "Убрать из сохранённого",
+    "likes": "отметок «Нравится»",
+    "just now": "только что",
+    "Guest": "Гость",
+    "Couldn't load comments right now.": "Не удалось загрузить комментарии.",
+    "Couldn't post your comment. Please try again.": "Не удалось опубликовать комментарий. Попробуйте ещё раз.",
+    "Check out this portfolio": "Посмотрите это портфолио",
+    "Loading news...": "Загрузка новостей...",
+    "Developer News Feed": "Новости для разработчиков",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Подборка заголовков из Google Новостей. Листайте или используйте клавиши со стрелками.",
+    "Click this card to read full article.": "Нажмите на карточку, чтобы прочитать статью целиком.",
+    "SOURCE": "ИСТОЧНИК",
+    "News Source": "Источник новости",
+    "Read the full article for more details.": "Откройте полную статью, чтобы узнать подробности.",
+    "No articles for": "Нет статей по теме",
+    "Failed to load news.": "Не удалось загрузить новости.",
+    "Server-side problem. Switching topic...": "Проблема на сервере. Переключаем тему...",
+    "Rate limit exceeded. Please wait a few minutes.": "Превышен лимит запросов. Подождите несколько минут.",
+    "STARLINK REFERRAL": "РЕФЕРАЛЬНОЕ ПРЕДЛОЖЕНИЕ STARLINK",
+    "LIMITED OFFER": "ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ",
+    "1 MONTH": "1 МЕСЯЦ",
+    "FREE": "БЕСПЛАТНО",
+    "Activate Starlink through my referral link and get one month of service free.": "Подключите Starlink по моей реферальной ссылке и получите один месяц обслуживания бесплатно.",
+    "Activate Starlink": "Подключить Starlink",
+    "*Offer subject to Starlink eligibility and terms.": "*Предложение действует с учётом условий и критериев Starlink.",
+    "LOW EARTH ORBIT · 550 KM": "НИЗКАЯ ОКОЛОЗЕМНАЯ ОРБИТА · 550 КМ",
+    "Android / Full-Stack Developer": "Android-разработчик / Full-stack-разработчик",
+    "primary focus": "основной фокус",
+    "core toolkit": "основной стек",
+    "backend & web": "бэкенд и веб",
+    "day to day": "ежедневные инструменты",
+    "Mobile": "Мобильная разработка",
+    "Languages": "Языки",
+    "Frameworks": "Фреймворки",
+    "Tooling": "Инструменты",
+    "Utility": "Утилита",
+    "Board Games": "Настольные игры",
+    "Casual Game": "Казуальная игра",
+    "Quiz": "Викторина",
+    "Local Business": "Локальный бизнес",
+    "Technical skills": "Технические навыки",
+    "Open Source / Side Projects": "Открытый код / личные проекты",
+    "Night Shift Venue Logistics & Facility Specialist": "Специалист по ночной логистике и обслуживанию площадки",
+    "The user can contact me by email or Telegram.": "Со мной можно связаться по электронной почте или в Telegram.",
+    "United States flag": "Флаг США",
+    "English": "Английский",
+    "French": "Французский",
+    "Spanish": "Испанский",
+    "Russian": "Русский",
+    "Russian flag": "Флаг России",
+    "Choose language": "Выбрать язык",
+    "Close language menu": "Закрыть меню языков",
+    "The page could not be loaded.": "Не удалось загрузить страницу.",
+    "name": "имя",
+    "role": "роль",
+    "base": "местоположение",
+    "focus": "основной стек",
+    "status": "статус",
+    "Web Audio": "Веб-аудио",
+    "Korean Pickles": "Корейские соленья",
+    "Poetry Blog": "Поэтический блог",
+    "Music Learning": "Обучение музыке",
+    "Stats Card": "Карточка статистики",
+    "Interactive": "Интерактивный проект",
+    "Pet Memorial": "Памяти питомца",
+    "Calculator": "Калькулятор",
+    "Price Tracker": "Отслеживание цен",
+    "Plant Collection": "Коллекция растений",
+    "JavaScript Library": "Библиотека JavaScript",
+    "My Android Apps": "Мои Android-приложения",
+    "Kotlin Coroutines": "Корутины Kotlin",
+    "Kotlin Flow": "Kotlin Flow",
+    "Jetpack Compose Architecture": "Архитектура Jetpack Compose",
+    "Adaptive Layouts": "Адаптивные макеты",
+    "Clean Architecture": "Чистая архитектура",
+    "Modularization": "Модульная архитектура",
+    "Performance Optimization": "Оптимизация производительности",
+    "Memory Profiling": "Профилирование памяти",
+    "App Startup": "Запуск приложения",
+    "Baseline Profiles": "Базовые профили",
+    "App Distribution": "Распространение приложений",
+    "AI Machine Learning": "Машинное обучение и ИИ",
+    "LLM Integration in Apps": "Интеграция LLM в приложения",
+    "Foldables & Large Screens": "Складные устройства и большие экраны",
+    "App Security": "Безопасность приложений",
+    "Biometric Authentication": "Биометрическая аутентификация",
+    "Location & Maps": "Геолокация и карты",
+    "Offline-First": "Приоритет автономной работы",
+    "Screenshot Testing": "Тестирование скриншотами",
+    "UI Testing": "Тестирование интерфейса",
+    "Estimate Your App Project": "Оцените стоимость приложения",
+    "Choose your platform": "Выберите платформу",
+    "Pick your core features": "Выберите основные функции",
+    "Set your timeline": "Укажите сроки",
+    "Estimated timeframe": "Ориентировочные сроки",
+    "Recommended stack": "Рекомендуемый стек",
+    "Step 01": "Шаг 01",
+    "Step 02": "Шаг 02",
+    "Step 03": "Шаг 03",
+    "Express": "Экспресс",
+    "Voice Recorder": "Диктофон",
+    "Munchkin Level Counter": "Счётчик уровней Munchkin",
+    "QR Code Reader: Scan & Create!": "QR-сканер: сканируй и создавай!",
+    "Gullibility Test": "Тест на доверчивость",
+    "Massage Kyiv": "Massage Kyiv",
+    "Visit": "Открыть",
+    "m ago": "мин. назад",
+    "h ago": "ч назад",
+    "d ago": "дн. назад",
+    "Open to freelance projects, long-term collaborations and consulting work.": "Открыт к фриланс-проектам, долгосрочному сотрудничеству и консультациям.",
+    "Jul 2023 — Present": "Июль 2023 — настоящее время",
+    "May 2017 — Dec 2017": "Май 2017 — декабрь 2017",
+    "Jun 2022 — Present": "Июнь 2022 — настоящее время",
+    "Sep 2007 — Present (Remote)": "Сентябрь 2007 — настоящее время (удалённо)",
+    "Aug 2026 — Present": "Август 2026 — настоящее время",
+    "Ongoing": "В процессе",
+    "React": "React",
+    "weeks": "нед.",
+    " weeks": " нед.",
+    "Built with ❤️ & React": "Создано с ❤️ и React",
+    "Send Brief to Telegram": "Отправить описание в Telegram",
+    "Brief copied — open chat": "Описание скопировано, открыть чат",
+    "Copy Brief Text": "Скопировать текст описания",
+    "Copied to clipboard": "Скопировано в буфер обмена",
+    "Based in": "Местоположение",
+    " — I typically reply within a business day.": " — обычно отвечаю в течение рабочего дня.",
+    "Select your project requirements to get an instant scope estimate.": "Выберите требования к проекту, чтобы сразу получить оценку объёма работ.",
+    "Estimated timeframe": "Примерные сроки",
+    "Recommended stack": "Рекомендуемый стек"
+};
+
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
