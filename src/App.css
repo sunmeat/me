@@ -254,6 +254,8 @@ button {
 }
 
 .nav__link {
+    white-space: nowrap;
+    flex-shrink: 0;
     font-size: 0.92rem;
     color: var(--text-muted);
     padding: 4px 0;
