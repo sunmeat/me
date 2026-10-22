@@ -75,42 +75,22 @@ function Nav() {
     return (
         <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
             <div className="nav__inner">
-                <button className="nav__brand" onClick={() => go("top")}>
-                    <span className="nav__brand-mark">
-                        <span className="nav__brand-glyph">S</span>
-                    </span>
-                    <span className="nav__brand-text">
-                        sunmeat<span className="dim">.dev</span>
-                    </span>
-                </button>
-
-                <nav className="nav__links">
-                    {NAV_LINKS.map((l) => (
+                <div className="nav__brand-group">
+                    <div className="language-switcher language-switcher--brand" ref={languageSwitcherRef}>
                         <button
-                            key={l.id}
-                            className={`nav__link ${active === l.id ? "is-active" : ""}`}
-                            onClick={() => go(l.id)}
+                            type="button"
+                            className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
+                            onClick={() => setLanguageMenuOpen((value) => !value)}
+                            aria-label={language === "fr" ? "Choisir la langue" : "Choose language"}
+                            aria-expanded={languageMenuOpen}
+                            aria-haspopup="menu"
                         >
-                            {l.label}
+                            <Flag country={language === "fr" ? "fr" : "us"} label={language === "fr" ? "Drapeau français" : "United States flag"} />
+                            <span className="language-switcher__chevron" aria-hidden="true">{languageMenuOpen ? "⌃" : "⌄"}</span>
                         </button>
-                    ))}
-                </nav>
 
-                <div className="language-switcher" ref={languageSwitcherRef}>
-                    <button
-                        type="button"
-                        className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
-                        onClick={() => setLanguageMenuOpen((value) => !value)}
-                        aria-label={language === "fr" ? "Choisir la langue" : "Choose language"}
-                        aria-expanded={languageMenuOpen}
-                        aria-haspopup="menu"
-                    >
-                        <Flag country="us" label="English" />
-                        <span className="language-switcher__chevron" aria-hidden="true">{languageMenuOpen ? "⌃" : "⌄"}</span>
-                    </button>
-
-                    {languageMenuOpen && (
-                        <div className="language-switcher__menu" role="menu" aria-label="Language">
+                        {languageMenuOpen && (
+                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : "Language"}>
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -133,9 +113,27 @@ function Nav() {
                                     <span>Français</span>
                                     {language === "fr" && <Icon name="check" size={15}/>}
                                 </button>
-                        </div>
-                    )}
+                            </div>
+                        )}
+                    </div>
+                    <button className="nav__brand" onClick={() => go("top")}>
+                        <span className="nav__brand-text">
+                            sunmeat<span className="dim">.dev</span>
+                        </span>
+                    </button>
                 </div>
+
+                <nav className="nav__links">
+                    {NAV_LINKS.map((l) => (
+                        <button
+                            key={l.id}
+                            className={`nav__link ${active === l.id ? "is-active" : ""}`}
+                            onClick={() => go(l.id)}
+                        >
+                            {l.label}
+                        </button>
+                    ))}
+                </nav>
 
                 <a className="btn btn--coffee" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
                     <Icon name="coffee" size={15}/>
