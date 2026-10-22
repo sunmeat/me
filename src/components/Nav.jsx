@@ -86,7 +86,6 @@ function Nav() {
                             aria-haspopup="menu"
                         >
                             <Flag country={language === "fr" ? "fr" : "us"} label={language === "fr" ? "Drapeau français" : "United States flag"} />
-                            <span className="language-switcher__chevron" aria-hidden="true">{languageMenuOpen ? "⌃" : "⌄"}</span>
                         </button>
 
                         {languageMenuOpen && (
