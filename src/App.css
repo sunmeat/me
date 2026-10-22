@@ -1005,9 +1005,24 @@ a.contact__row:hover {
 .estimator__layout {
     margin-top: 44px;
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: 32px;
     align-items: start;
+}
+
+.estimator__steps,
+.estimator__result {
+    min-width: 0;
+}
+
+.estimator__step,
+.estimator__platforms,
+.estimator__features,
+.estimator__timeline,
+.estimator__result-card,
+.estimator__terminal {
+    min-width: 0;
+    max-width: 100%;
 }
 
 .estimator__steps {
@@ -1077,8 +1092,14 @@ a.contact__row:hover {
     justify-content: center;
 }
 
+.platform-card__body {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .platform-card__body h4 {
     font-size: 0.95rem;
+    overflow-wrap: anywhere;
     font-weight: 600;
 }
 
@@ -1244,6 +1265,10 @@ a.contact__row:hover {
 .estimator__actions .btn {
     justify-content: center;
     width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
 }
 
 .estimator__terminal {
@@ -1251,6 +1276,10 @@ a.contact__row:hover {
 }
 
 .estimator__json {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     font-size: 0.82rem;
     line-height: 1.6;
     overflow-x: auto;
@@ -1330,6 +1359,15 @@ a.contact__row:hover {
 }
 
 @media (max-width: 720px) {
+    .estimator__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .estimator__result {
+        position: static;
+    }
+
     .section {
         padding: 84px 0;
     }
@@ -2523,6 +2561,12 @@ a.contact__row:hover {
 }
 
 @media (max-width: 720px) {
+    .language-switcher--brand .language-switcher__menu {
+        left: 0;
+        right: auto;
+        transform-origin: top left;
+    }
+
     .language-switcher:not(.language-switcher--brand) {
         margin-left: auto;
     }
