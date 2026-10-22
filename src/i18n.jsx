@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -15,8 +15,8 @@ export function LanguageProvider({children}) {
     });
 
     useEffect(() => {
-        document.documentElement.lang = language;
-        document.title = language === "zh"
+        document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
+        document.title = language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"\n            : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик | Орлеан, Франция"
@@ -32,7 +32,7 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "zh"
+        updateMeta('meta[name="description"]', language === "ko-KP"\n            ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."\n            : language === "zh"
             ? "常驻法国奥尔良的软件工程师与讲师，专注原生 Android 应用和全栈 Web 开发。展示已发布项目，欢迎自由职业合作。"
             : language === "ru"
             ? "Инженер-программист и преподаватель в Орлеане. Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты и открыт к сотрудничеству на фрилансе."
@@ -43,7 +43,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "zh"
+        updateMeta('meta[property="og:title"]', language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -54,7 +54,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "zh"
+        updateMeta('meta[property="og:description"]', language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -65,7 +65,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -76,7 +76,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -87,7 +87,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "zh" ? "zh_CN" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -1487,8 +1487,236 @@ const ZH = {
     "Invalid news API response": "新闻 API 响应无效",
     "Starlink referral offer": "Starlink 推荐优惠",
 };
+const KP = {
+    "About": "소개",
+    "Skills": "기술",
+    "Apps": "응용프로그램",
+    "Sites": "홈페지",
+    "Experience": "경력",
+    "Contact": "련락",
+    "Buy me a coffee": "커피 한잔을 대접해주십시오",
+    "Hire me": "협력 제의",
+    "Toggle menu": "차림표 열기 또는 닫기",
+    "View published sites": "공개된 홈페지 보기",
+    "Start a project": "새 사업을 시작합시다",
+    "Published sites": "공개된 홈페지",
+    "Published Android apps": "공개된 안드로이드 응용프로그램",
+    "Years in software & teaching": "프로그람 개발 및 교육 년수",
+    "GitHub repositories": "GitHub 저장소",
+    "Engineer by trade, teacher by habit.": "프로그람을 만들고 후대들을 가르치는것을 본분으로 삼고있습니다.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "나는 프랑스 오를레앙에서 활동하는 소프트웨어 기술자이며 대학 강사이다. 프로그람 작성과 경제학을 함께 공부하였으며 지난 20년 가까이 낮에는 새 세대 개발자들을 키우고 밤에는 실용적인 소프트웨어를 개발하여왔다.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "현재 나의 기본 사업은 안드로이드 응용프로그램 개발이다. 착상으로부터 Google Play 공개에 이르기까지 완성도 높은 응용프로그램을 만든다. 또한 React를 리용한 전단부와 Spring Boot, Django, ASP.NET Core, Node.js를 리용한 후단부를 갖춘 전면부-후면부 웹 응용프로그램도 개발한다. 나는 명백한 구조, 유지보수가 쉬운 코드, 현실적인 기한을 중시한다. 이는 19년이 넘는 개발 및 교육 경험에서 다져진 원칙이다.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "사업시간 밖에는 사진촬영과 여러 악기 연주를 즐긴다. 그래서인지 사용자 화면의 작은 불협화음도 놓치지 않는다.",
+    "Open source & teaching material.": "공개 소스와 교육 자료.",
+    "View GitHub profile": "GitHub 활동 보기",
+    "Technical skills": "기술 능력",
+    "Professional experience": "사업 경력",
+    "Education": "학력",
+    "Get in touch": "련락하기",
+    "Have a project in mind? Let's talk about how to make it real.": "실현할 사업 구상이 있는가? 구체적인 실천 방도를 함께 토의하자.",
+    "Email me": "전자우편 보내기",
+    "Message on Telegram": "Telegram으로 련락하기",
+    "Orléans, France": "프랑스 오를레앙",
+    "Name": "이름",
+    "Add a comment...": "의견을 남기십시오...",
+    "Post": "등록",
+    "Like": "지지",
+    "Unlike": "지지 취소",
+    "Comment": "의견",
+    "Save": "보관",
+    "Remove from saved": "보관 목록에서 삭제",
+    "likes": "개의 지지",
+    "just now": "방금",
+    "Guest": "손님",
+    "Couldn't load comments right now.": "현재 의견을 불러올 수 없습니다.",
+    "Couldn't post your comment. Please try again.": "의견 등록에 실패하였습니다. 다시 시도하십시오.",
+    "Check out this portfolio": "이 기술 성과집을 보십시오",
+    "Loading news...": "소식을 불러오는 중...",
+    "Developer News Feed": "프로그람 개발 소식",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Google News에서 선정한 주요 소식. 밀어넘기거나 방향건을 리용하십시오.",
+    "Click this card to read full article.": "이 항목을 눌러 전문을 읽으십시오.",
+    "SOURCE": "출처",
+    "News Source": "소식 출처",
+    "Read the full article for more details.": "자세한 내용은 전문을 읽으십시오.",
+    "No articles for": "관련 기사가 없습니다:",
+    "Failed to load news.": "소식을 불러오지 못하였습니다.",
+    "Server-side problem. Switching topic...": "봉사기측에 문제가 발생하여 주제를 바꿉니다...",
+    "Rate limit exceeded. Please wait a few minutes.": "요청 한도를 초과하였습니다. 몇분간 기다리십시오.",
+    "STARLINK REFERRAL": "STARLINK 추천 혜택",
+    "LIMITED OFFER": "특별 제한 혜택",
+    "1 MONTH": "한달",
+    "FREE": "무료",
+    "Activate Starlink through my referral link and get one month of service free.": "추천 련결을 통해 Starlink를 개통하면 한달간 봉사를 무료로 리용할수 있습니다.",
+    "Activate Starlink": "Starlink 개통",
+    "*Offer subject to Starlink eligibility and terms.": "*혜택 적용 여부와 조건은 Starlink의 규정에 따릅니다.",
+    "Android / Full-Stack Developer": "안드로이드 및 전면부-후면부 개발 기술자",
+    "primary focus": "기본 분야",
+    "core toolkit": "핵심 기술",
+    "backend & web": "후단부 및 웹",
+    "day to day": "일상 도구",
+    "Mobile": "이동통신 응용프로그램",
+    "Languages": "프로그람 언어",
+    "Frameworks": "프레임워크",
+    "Tooling": "개발 도구",
+    "Utility": "실용 도구",
+    "Board Games": "탁상놀이",
+    "Casual Game": "오락용 유희",
+    "Quiz": "문답 유희",
+    "Local Business": "지역 봉사",
+    "Live on Google Play right now.": "현재 Google Play에 공개되여있다.",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "실용 도구, 오락용 유희, 지역 봉사 도구 등 6개의 응용프로그램을 직접 설계하고 개발하여 공개하였다.",
+    "Side projects, live on the web.": "인터네트에 공개된 개인 사업들.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "새로운 착상과 기술을 시험하기 위해 독립적으로 개발하고 공개한 홈페지 및 실험 사업들의 모음이다.",
+    "Orléans-based software engineer & lecturer.": "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 강사.",
+    "Orléans-based software engineer and lecturer building native Android applications end to end — ": "프랑스 오를레앙에서 활동하며 안드로이드 응용프로그램을 처음부터 끝까지 개발하는 소프트웨어 기술자 및 강사이다. ",
+    "from first sketch to a live listing on Google Play. ": "첫 구상으로부터 Google Play 공개에 이르기까지 개발한다. ",
+    "Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. ": "React 전단부와 Spring Boot, Django, ASP.NET Core, Node.js 후단부를 리용한 웹 응용프로그램도 개발한다. ",
+    "Six published apps so far — just the beginning. ": "현재까지 6개 응용프로그램을 공개하였으며 이것은 시작에 불과하다. ",
+    "Over nineteen years of writing and teaching code.": "프로그람 작성과 교육 경력은 19년을 넘는다.",
+    "Open to freelance projects, long-term collaborations and consulting work.": "개별 개발 사업, 장기 협력 및 기술 자문을 환영한다.",
+    "The user can contact me by email or Telegram.": "전자우편 또는 Telegram을 통해 련락할수 있다.",
+    "The page could not be loaded.": "페지를 불러오지 못하였습니다.",
+    "name": "이름",
+    "role": "직책",
+    "base": "활동 지역",
+    "focus": "전문 분야",
+    "status": "상태",
+    "Web Audio": "웹 음향",
+    "Korean Pickles": "조선식 절임식품",
+    "Poetry Blog": "시문학 홈페지",
+    "Music Learning": "음악 학습",
+    "Stats Card": "통계 카드",
+    "Interactive": "상호작용형",
+    "Pet Memorial": "반려동물 추모",
+    "Calculator": "계산기",
+    "Price Tracker": "가격 추적",
+    "Plant Collection": "식물 모음",
+    "JavaScript Library": "JavaScript 라이브러리",
+    "My Android Apps": "나의 안드로이드 응용프로그램",
+    "Kotlin Coroutines": "Kotlin 코루틴",
+    "Kotlin Flow": "Kotlin Flow",
+    "Jetpack Compose Architecture": "Jetpack Compose 구조",
+    "Adaptive Layouts": "적응형 배치",
+    "Clean Architecture": "명백한 구조",
+    "Modularization": "모듈화",
+    "Performance Optimization": "성능 최적화",
+    "Memory Profiling": "메모리 분석",
+    "App Startup": "응용프로그램 시작",
+    "Baseline Profiles": "기준 프로파일",
+    "App Distribution": "응용프로그램 배포",
+    "AI Machine Learning": "인공지능 및 기계학습",
+    "LLM Integration in Apps": "응용프로그램의 대규모 언어모형 통합",
+    "Foldables & Large Screens": "접이식 기기 및 대형 화면",
+    "App Security": "응용프로그램 보안",
+    "Biometric Authentication": "생체인증",
+    "Location & Maps": "위치 및 지도",
+    "Offline-First": "오프라인 우선",
+    "Screenshot Testing": "화면촬영 시험",
+    "UI Testing": "사용자 화면 시험",
+    "Estimate Your App Project": "응용프로그램 개발 규모 산정",
+    "Choose your platform": "플랫폼을 선택하십시오",
+    "Pick your core features": "핵심 기능을 선택하십시오",
+    "Set your timeline": "기한을 설정하십시오",
+    "Estimated timeframe": "예상 기간",
+    "Recommended stack": "권장 기술 구성",
+    "Step 01": "제1단계",
+    "Step 02": "제2단계",
+    "Step 03": "제3단계",
+    "Express": "신속형",
+    "Voice Recorder": "음성 기록기",
+    "Munchkin Level Counter": "Munchkin 수준 계수기",
+    "QR Code Reader: Scan & Create!": "QR 부호 읽기 및 생성",
+    "Gullibility Test": "쉽게 믿는 성향 시험",
+    "Massage Kyiv": "키예브 마사지",
+    "Visit": "방문",
+    "m ago": "분 전",
+    "h ago": "시간 전",
+    "d ago": "일 전",
+    "Jul 2023 — Present": "2023년 7월 — 현재",
+    "May 2017 — Dec 2017": "2017년 5월 — 12월",
+    "Jun 2022 — Present": "2022년 6월 — 현재",
+    "Sep 2007 — Present (Remote)": "2007년 9월 — 현재 (원격)",
+    "Aug 2026 — Present": "2026년 8월 — 현재",
+    "Ongoing": "진행중",
+    "Based in": "활동 지역",
+    "Built with ❤️ & React": "❤️와 React로 제작",
+    "Send Brief to Telegram": "사업 개요를 Telegram으로 보내기",
+    "Brief copied — open chat": "사업 개요를 복사하였습니다 — 대화창 열기",
+    "Copy Brief Text": "사업 개요 복사",
+    "Copied to clipboard": "클립보드에 복사하였습니다",
+    "Select your project requirements to get an instant scope estimate.": "사업 요구사항을 선택하면 작업 규모를 즉시 산정할수 있습니다.",
+    "weeks": "주",
+    " weeks": " 주",
+    "View project": "사업 보기",
+    "View all": "모두 보기",
+    "Read more": "더 읽기",
+    "Let's build something.": "우리 함께 훌륭한 결과물을 만들어냅시다.",
+    "Send me a message and I'll get back to you.": "련락을 남기면 회답하겠습니다.",
+    "Open to freelance projects": "개별 개발 사업 협력 환영",
+    "Years of experience": "경력 년수",
+    "Work": "경력",
+    "Status": "상태",
+    "Project": "사업",
+    "Education & certifications": "학력 및 자격",
+    "View on GitHub": "GitHub에서 보기",
+    "Visit site": "홈페지 방문",
+    "Loading": "불러오는 중",
+    "A toolkit built for shipping, not just prototyping.": "시험용 모형에 그치지 않고 실제 제품을 완성하기 위한 기술 도구들이다.",
+    "Experience & education.": "경력 및 학력.",
+    "Let's build your own app.": "당신의 응용프로그램을 함께 개발합시다.",
+    "Open to freelance projects, long-term collaborations and consulting work. Based in": "개별 개발 사업, 장기 협력 및 기술 자문을 환영한다. 활동 지역:",
+    "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "프랑스 오를레앙 (EET/EEST, UTC+1). 보통 한 업무일 안에 회답한다.",
+    "Buy me one more coffee": "커피 한잔 더 대접하기",
+    "Back to top": "맨 우로",
+    "Available for projects": "사업 협력 가능",
+    "Android Native": "네이티브 안드로이드",
+    "Backend API + Web App": "후단부 API 및 웹 응용프로그램",
+    "Core features": "핵심 기능",
+    "Balanced pace, full QA cycle": "균형잡힌 일정, 완전한 품질검사",
+    "Priority slot, ~30% faster": "우선 진행, 약 30% 단축",
+    "Not specified": "지정되지 않음",
+    "Authentication": "인증",
+    "Offline Mode": "오프라인 모드",
+    "In-App Purchases": "응용프로그램내 구매",
+    "Hardware / Sensors": "하드웨어 및 감지기",
+    "Admin Panel": "관리자 판",
+    "Custom UI/UX": "맞춤형 사용자 화면",
+    "Firebase Auth": "Firebase 인증",
+    "Room DB": "Room 데이터베이스",
+    "Play Billing": "Play 결제",
+    "Design System": "설계 체계",
+    "Platform:": "플랫폼:",
+    "Features:": "기능:",
+    "Timeline:": "기한:",
+    "Estimated scope:": "예상 작업 규모:",
+    "Suggested stack:": "권장 기술 구성:",
+    "Sent via sunmeat.dev project estimator.": "sunmeat.dev 사업 규모 산정기를 통해 전송되였습니다.",
+    "Project Brief — sunmeat.dev": "사업 개요 — sunmeat.dev",
+    "Source": "출처",
+    "News request timed out. Please try again.": "소식 요청 시간이 초과되였습니다. 다시 시도하십시오.",
+    "AI Ecosystem": "인공지능 생태계",
+    "Failed to load comments:": "의견을 불러오지 못하였습니다:",
+    "Failed to post comment:": "의견 등록에 실패하였습니다:",
+    "Invalid news API response": "소식 API 응답이 잘못되였습니다",
+    "Starlink referral offer": "Starlink 추천 혜택",
+    "English": "영어",
+    "French": "프랑스어",
+    "Spanish": "에스빠냐어",
+    "Russian": "로씨야어",
+    "Chinese": "중국어",
+    "Choose language": "언어 선택",
+    "Close language menu": "언어 차림표 닫기",
+    "United States flag": "미국 국기",
+    "Russian flag": "로씨야 국기",
+    "Chinese flag": "중국 국기",
+    "French flag": "프랑스 국기",
+    "Bandera de España": "에스빠냐 국기",
+    "Bandeira do Brasil": "브라질 국기",
+    "Français": "프랑스어",
+    "Drapeau français": "프랑스 국기",
+};
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH };
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
