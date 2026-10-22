@@ -170,13 +170,23 @@ function Nav() {
                                 <button
                                     type="button"
                                     role="menuitemradio"
+                                    aria-checked={language === "sa"}
+                                    className={`language-switcher__option ${language === "sa" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("sa")}
+                                >
+                                    <Flag country="in" label="India" />
+                                    <span>संस्कृतम्</span>
+                                    {language === "sa" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
                                     aria-checked={language === "pt-BR"}
                                     className={`language-switcher__option ${language === "pt-BR" ? "is-selected" : ""}`}
                                     onClick={() => chooseLanguage("pt-BR")}
                                 >
                                     <Flag country="br" label="Bandeira do Brasil" />
-                                    <span>संस्कृतम्</span>
-                    <span>Português (Brasil)</span>
+                                    <span>Português (Brasil)</span>
                                     {language === "pt-BR" && <Icon name="check" size={15}/>}
                                 </button>
                             </div>
