@@ -51,7 +51,7 @@ export default async function handler(req, res) {
         const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)]
             .slice(0, 10)
             .map(([, item]) => {
-                const sourceMatch = item.match(/<source\\b[^>]*>([\\s\\S]*?)<\\/source>/i);
+                const sourceMatch = item.match(/<source\b[^>]*>([\s\S]*?)<\/source>/i);
                 const title = getTag(item, "title");
                 const link = getTag(item, "link");
                 const pubDate = getTag(item, "pubDate");
