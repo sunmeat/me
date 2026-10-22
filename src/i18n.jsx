@@ -18,7 +18,8 @@ export function LanguageProvider({children}) {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
         document.title = language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
-            : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"\n            : language === "zh"
+            : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
+            : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик | Орлеан, Франция"
@@ -36,7 +37,9 @@ export function LanguageProvider({children}) {
         };
         updateMeta('meta[name="description"]', language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
-            : language === "ko-KP"\n            ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."\n            : language === "zh"
+            : language === "ko-KP"
+            ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."
+            : language === "zh"
             ? "常驻法国奥尔良的软件工程师与讲师，专注原生 Android 应用和全栈 Web 开发。展示已发布项目，欢迎自由职业合作。"
             : language === "ru"
             ? "Инженер-программист и преподаватель в Орлеане. Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты и открыт к сотрудничеству на фрилансе."
