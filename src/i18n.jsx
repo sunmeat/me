@@ -1064,7 +1064,17 @@ const ES = {
     "Visit": "Visitar",
     "m ago": "min atrás",
     "h ago": "h atrás",
-    "d ago": "d atrás"
+    "d ago": "d atrás",
+    "Open to freelance projects, long-term collaborations and consulting work.": "Disponible para proyectos freelance, colaboraciones a largo plazo y consultoría.",
+    "Jul 2023 — Present": "Jul 2023 — Actualidad",
+    "May 2017 — Dec 2017": "May 2017 — Dic 2017",
+    "Jun 2022 — Present": "Jun 2022 — Actualidad",
+    "Sep 2007 — Present (Remote)": "Sep 2007 — Actualidad (remoto)",
+    "Aug 2026 — Present": "Ago 2026 — Actualidad",
+    "Ongoing": "En curso",
+    "React": "React",
+    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Six published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Ingeniero de software y profesor en Orleans que desarrolla aplicaciones Android nativas de principio a fin, desde el primer boceto hasta su publicación en Google Play. También crea aplicaciones web full-stack con React, Spring Boot, Django, ASP.NET Core y Node.js. Seis aplicaciones publicadas hasta ahora, y esto es solo el comienzo. Más de diecinueve años programando y enseñando.",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\\\"": "Formación y mentoría de futuros ingenieros de software en C++, C#, Python web, Android y bases de datos; programación orientada a objetos, algoritmos, estructuras de datos, patrones de diseño y SOLID. Creación de materiales didácticos, revisión de código y supervisión de proyectos finales con SCRUM."
 };
 
 const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES };
