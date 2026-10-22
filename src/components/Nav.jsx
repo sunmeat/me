@@ -81,15 +81,15 @@ function Nav() {
                             type="button"
                             className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
                             onClick={() => setLanguageMenuOpen((value) => !value)}
-                            aria-label={language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : "Choose language"}
+                            aria-label={language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : language === "es" ? "Elegir idioma" : "Choose language"}
                             aria-expanded={languageMenuOpen}
                             aria-haspopup="menu"
                         >
-                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : "United States flag"} />
+                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : "United States flag"} />
                         </button>
 
                         {languageMenuOpen && (
-                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : "Language"}>
+                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : "Language"}>
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -111,6 +111,17 @@ function Nav() {
                                     <Flag country="fr" label="Drapeau français" />
                                     <span>Français</span>
                                     {language === "fr" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "es"}
+                                    className={`language-switcher__option ${language === "es" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("es")}
+                                >
+                                    <Flag country="es" label="Bandera de España" />
+                                    <span>Español</span>
+                                    {language === "es" && <Icon name="check" size={15}/>}
                                 </button>
                                 <button
                                     type="button"
