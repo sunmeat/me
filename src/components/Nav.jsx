@@ -4,6 +4,9 @@ import {NAV_LINKS, COFFEE_URL} from "../data.js";
 import {useLanguage, withTranslation} from "../i18n.jsx";
 
 function Flag({country, label}) {
+    if (country === "hv" || country === "qya") {
+        return <span className="language-switcher__flag" role="img" aria-label={label}>{country === "qya" ? "🍃" : "🐉"}</span>;
+    }
     return (
         <img
             className="language-switcher__flag"
@@ -111,6 +114,17 @@ function Nav() {
                                     <Flag country="hv" label="Three-headed dragon" />
                                     <span>Valyrio (High Valyrian)</span>
                                     {language === "hv" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "qya"}
+                                    className={`language-switcher__option ${language === "qya" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("qya")}
+                                >
+                                    <Flag country="qya" label="Quenya leaf symbol" />
+                                    <span>Quenya (High Elven)</span>
+                                    {language === "qya" && <Icon name="check" size={15}/>}
                                 </button>
                                 <button
                                     type="button"
