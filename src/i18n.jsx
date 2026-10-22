@@ -430,6 +430,7 @@ const FR = {
     "No articles for": "Aucun article pour",
     "Loading news...": "Chargement des actualités…",
     "Failed to load news.": "Impossible de charger les actualités.",
+    "News request timed out. Please try again.": "La requête a expiré. Veuillez réessayer.",
     "Server-side problem. Switching topic...": "Problème côté serveur. Changement de sujet…",
     "Rate limit exceeded. Please wait a few minutes.": "Limite de requêtes atteinte. Veuillez patienter quelques minutes.",
     "Click this card to read full article.": "Cliquez sur cette carte pour lire l’article complet.",
