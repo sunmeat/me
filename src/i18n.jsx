@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
             : language === "zh"
@@ -36,7 +36,7 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
+        updateMeta('meta[name="description"]', language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
             : language === "ko-KP"
             ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."
@@ -51,7 +51,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -62,7 +62,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[property="og:description"]', language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -73,7 +73,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -84,7 +84,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -95,7 +95,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : language === "ja" ? "ja_JP" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : language === "ja" ? "ja_JP" : language === "hv" ? "en_US" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -2245,7 +2245,95 @@ const JA = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "公開されているDuolingoプロフィールの統計を表示・共有するシンプルなツールです。アバター、XP、連続学習日数、主なコースを表示し、共有用PNGカードを生成します。ログインは不要です。"
 };
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA };
+const HV = {
+    "About": "Ñuha dārys",
+    "Skills": "Ñuha sȳz",
+    "Apps": "Vāedar",
+    "Sites": "Vēzos",
+    "Experience": "Ñuha dārys",
+    "Contact": "Sȳrī",
+    "Buy me a coffee": "Jēda sȳz",
+    "Hire me": "Ñuha daor",
+    "Toggle menu": "Vēzos gōntan",
+    "View published sites": "Vēzos urnegon",
+    "Start a project": "Dārys gīmigon",
+    "Published sites": "Urnegtos vēzos",
+    "Published Android apps": "Urnegtos Android vāedar",
+    "Years in software & teaching": "Dārys se mandia",
+    "GitHub repositories": "GitHub vēzos",
+    "Engineer by trade, teacher by habit.": "Dārys issa, mandia sȳz.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Ñuha emagon Orléans, France, se ñuha dārys issa. Ñuha mandia se programming issa, se ñuha sȳz ānogar. Tolī bēvilza sȳz, ñuha sȳz mandia se dārys, se ñuha sȳz vēzos urnegon.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Ñuha dārys issa Android. Ñuha vāedar gīmigon, dārys se Google Play urnegon. Ñuha React, Spring Boot, Django, ASP.NET Core, se Node.js sȳz. Ñuha sȳz dārys, gīmigon, se mandia sȳz.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Ñuha dārys daor, ñuha ūndegon se ȳdragon. Rytsas, valonqar!",
+    "Live on Google Play right now.": "Google Play issa.",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Six vāedar: sȳz, kēli, se ānogar. Ñuha gīmigon, dārys, se urnegon.",
+    "Side projects, live on the web.": "Ñuha dārys vēzos issa.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Vēzos se sȳz dārys, tolī gīmigon. Sȳz urnegon, sȳz dārys.",
+    "Open source & teaching material.": "Open source se mandia.",
+    "View GitHub profile": "GitHub vēzos urnegon",
+    "Technical skills": "Dārys sȳz",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Dārys, mandia, se sȳz gīmigon.",
+    "Professional experience": "Dārys",
+    "Education": "Mandia",
+    "Get in touch": "Sȳrī",
+    "Have a project in mind? Let's talk about how to make it real.": "Dārys gīmigon? Ñuha sȳrī.",
+    "Email me": "Email",
+    "Message on Telegram": "Telegram",
+    "Orléans, France": "Orléans, France",
+    "Name": "Aōha",
+    "Add a comment...": "Sȳrī...",
+    "Post": "Urnegon",
+    "Like": "Sȳz",
+    "Unlike": "Daor sȳz",
+    "Comment": "Sȳrī",
+    "Save": "Gīmigon",
+    "Remove from saved": "Gīmigon daor",
+    "likes": "sȳz",
+    "just now": "ȳdragon",
+    "Guest": "Lēkia",
+    "Couldn't load comments right now.": "Sȳrī daor urnegon.",
+    "Couldn't post your comment. Please try again.": "Sȳrī daor urnegon. Gīmigon sȳz.",
+    "Check out this portfolio": "Ñuha vēzos urnegon",
+    "Loading news...": "Sȳrī gīmigon...",
+    "Developer News Feed": "Dārys sȳrī",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Google News sȳrī. Vēzos gōntan.",
+    "Click this card to read full article.": "Vēzos urnegon.",
+    "SOURCE": "Vēzos",
+    "News Source": "Sȳrī vēzos",
+    "Read the full article for more details.": "Sȳrī urnegon.",
+    "No articles for": "Sȳrī daor",
+    "Failed to load news.": "Sȳrī daor gīmigon.",
+    "Server-side problem. Switching topic...": "Sȳrī daor. Gīmigon...",
+    "Rate limit exceeded. Please wait a few minutes.": "Lykirī daor. Gīmigon.",
+    "STARLINK REFERRAL": "STARLINK",
+    "LIMITED OFFER": "Sȳz",
+    "1 MONTH": "Lunar",
+    "FREE": "Daor ānogar",
+    "Activate Starlink through my referral link and get one month of service free.": "Starlink gīmigon, lunar sȳz.",
+    "Activate Starlink": "Starlink gīmigon",
+    "*Offer subject to Starlink eligibility and terms.": "*Starlink sȳz.",
+    "LOW EARTH ORBIT · 550 KM": "Lunar vēzos · 550 km",
+    "Android / Full-Stack Developer": "Android / Full-Stack dārys",
+    "primary focus": "Dārys",
+    "core toolkit": "Sȳz dārys",
+    "backend & web": "Vēzos se dārys",
+    "day to day": "Ānogar",
+    "Mobile": "Vāedar",
+    "Languages": "Dārys",
+    "Frameworks": "Dārys sȳz",
+    "Tooling": "Dārys",
+    "Utility": "Sȳz",
+    "Board Games": "Kēli",
+    "Casual Game": "Kēli",
+    "Quiz": "Sȳrī",
+    "Local Business": "Ānogar",
+    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Sȳz sȳrī, mandia se dārys urnegon.",
+    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper bookkeeping with a simple mobile companion.": "Munchkin kēli sȳz: dārys se ānogar urnegon.",
+    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Sȳz poetry vēzos, React se Firebase sȳz.",
+    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Dārys se ȳdragon: aōha sȳz, music sȳz.",
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Duolingo vēzos: XP, sȳz, se courses. PNG urnegon, login daor."
+};
+\nconst TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
