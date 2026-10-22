@@ -104,6 +104,17 @@ function Nav() {
                                 <button
                                     type="button"
                                     role="menuitemradio"
+                                    aria-checked={language === "hv"}
+                                    className={`language-switcher__option ${language === "hv" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("hv")}
+                                >
+                                    <Flag country="hv" label="Three-headed dragon" />
+                                    <span>Valyrio (High Valyrian)</span>
+                                    {language === "hv" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
                                     aria-checked={language === "ja"}
                                     className={`language-switcher__option ${language === "ja" ? "is-selected" : ""}`}
                                     onClick={() => chooseLanguage("ja")}
