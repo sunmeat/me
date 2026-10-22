@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
             : language === "zh"
@@ -36,7 +36,7 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", content);
         };
-        updateMeta('meta[name="description"]', language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
+        updateMeta('meta[name="description"]', language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
             : language === "ko-KP"
             ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."
@@ -51,7 +51,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -62,7 +62,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[property="og:description"]', language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -73,7 +73,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -84,7 +84,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -95,7 +95,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -2056,7 +2056,106 @@ const OD = {
     "A growing collection of small sites and experiments": "Коллекция небольших сайтов и экспериментов растёт.",
     "Six apps across utilities, casual games and local business tools": "Шесть приложений: утилиты, игры и инструменты для местного бизнеса"
 };
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD };
+const DE = {
+    "About": "Über mich",
+    "Skills": "Kenntnisse",
+    "Apps": "Apps",
+    "Sites": "Websites",
+    "Experience": "Berufserfahrung",
+    "Contact": "Kontakt",
+    "Buy me a coffee": "Spendier mir einen Kaffee",
+    "Hire me": "Zusammenarbeiten",
+    "Toggle menu": "Menü öffnen oder schließen",
+    "View published sites": "Veröffentlichte Websites ansehen",
+    "Start a project": "Projekt starten",
+    "Published sites": "Veröffentlichte Websites",
+    "Published Android apps": "Veröffentlichte Android-Apps",
+    "Years in software & teaching": "Jahre in Softwareentwicklung und Lehre",
+    "GitHub repositories": "GitHub-Repositories",
+    "Engineer by trade, teacher by habit.": "Ingenieur von Beruf, Lehrer aus Überzeugung.",
+    "Technical skills": "Technische Kenntnisse",
+    "Professional experience": "Berufserfahrung",
+    "Education": "Ausbildung",
+    "Get in touch": "Kontakt aufnehmen",
+    "Email me": "E-Mail schreiben",
+    "Message on Telegram": "Auf Telegram schreiben",
+    "Orléans, France": "Orléans, Frankreich",
+    "Name": "Name",
+    "Add a comment...": "Kommentar hinzufügen …",
+    "Post": "Veröffentlichen",
+    "Like": "Gefällt mir",
+    "Unlike": "Gefällt mir nicht mehr",
+    "Comment": "Kommentar",
+    "Save": "Speichern",
+    "Remove from saved": "Aus Gespeicherten entfernen",
+    "likes": "Gefällt-mir-Angaben",
+    "just now": "gerade eben",
+    "Guest": "Gast",
+    "Live on Google Play right now.": "Jetzt bei Google Play verfügbar.",
+    "Side projects, live on the web.": "Nebenprojekte im Web",
+    "Open source & teaching material.": "Open Source und Lehrmaterial",
+    "View GitHub profile": "GitHub-Profil ansehen",
+    "primary focus": "Schwerpunkt",
+    "core toolkit": "Zentrale Werkzeuge",
+    "backend & web": "Backend und Web",
+    "day to day": "Alltag",
+    "Mobile": "Mobile Entwicklung",
+    "Languages": "Programmiersprachen",
+    "Frameworks": "Frameworks",
+    "Tooling": "Werkzeuge",
+    "Utility": "Dienstprogramm",
+    "Board Games": "Brettspiele",
+    "Casual Game": "Gelegenheitsspiel",
+    "Quiz": "Quiz",
+    "Local Business": "Lokales Unternehmen",
+    "Loading news...": "Nachrichten werden geladen …",
+    "Developer News Feed": "Entwickler-News",
+    "SOURCE": "QUELLE",
+    "News Source": "Nachrichtenquelle",
+    "Failed to load news.": "Nachrichten konnten nicht geladen werden.",
+    "Server-side problem. Switching topic...": "Serverproblem. Thema wird gewechselt …",
+    "Rate limit exceeded. Please wait a few minutes.": "Anfragelimit erreicht. Bitte warte einige Minuten.",
+    "STARLINK REFERRAL": "STARLINK-EMPFEHLUNG",
+    "LIMITED OFFER": "BEGRENZTES ANGEBOT",
+    "1 MONTH": "1 MONAT",
+    "FREE": "KOSTENLOS",
+    "Activate Starlink": "Starlink aktivieren",
+    "LOW EARTH ORBIT · 550 KM": "NIEDRIGE ERDUMLAUFBAHN · 550 KM",
+    "Android / Full-Stack Developer": "Android- und Full-Stack-Entwickler",
+    "© 2019-": "© 2019-",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Sechs Apps aus den Bereichen Dienstprogramme, Gelegenheitsspiele und lokale Geschäftslösungen, jeweils eigenständig konzipiert, entwickelt und veröffentlicht.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Eine wachsende Sammlung kleiner Websites und Experimente. Jede wird unabhängig veröffentlicht und dient dazu, Ideen und Techniken auszuprobieren oder einfach Spaß am Entwickeln zu haben.",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Ein Werkzeugkasten, geprägt durch produktive Entwicklungsarbeit, Lehre und kontinuierliches Experimentieren.",
+    "Have a project in mind? Let's talk about how to make it real.": "Hast du ein Projekt im Sinn? Lass uns darüber sprechen, wie wir es umsetzen können.",
+    "Couldn't load comments right now.": "Kommentare konnten gerade nicht geladen werden.",
+    "Couldn't post your comment. Please try again.": "Dein Kommentar konnte nicht veröffentlicht werden. Bitte versuche es erneut.",
+    "Check out this portfolio": "Sieh dir dieses Portfolio an",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Ausgewählte Schlagzeilen von Google News. Wische oder nutze die Pfeiltasten.",
+    "Click this card to read full article.": "Klicke auf diese Karte, um den vollständigen Artikel zu lesen.",
+    "Read the full article for more details.": "Weitere Informationen findest du im vollständigen Artikel.",
+    "No articles for": "Keine Artikel zu",
+    "Activate Starlink through my referral link and get one month of service free.": "Aktiviere Starlink über meinen Empfehlungslink und erhalte einen Monat Service kostenlos.",
+    "*Offer subject to Starlink eligibility and terms.": "*Es gelten die Teilnahmebedingungen und Voraussetzungen von Starlink.",
+    "Source code of my personal single-page portfolio website.": "Quellcode meiner persönlichen One-Page-Portfolio-Website.",
+    "My interactive digital business card (npx sunmeat) right in your terminal": "Meine interaktive digitale Visitenkarte (npx sunmeat) direkt im Terminal",
+    "Practical React component examples and patterns prepared for student groups.": "Praktische Beispiele und Muster für React-Komponenten für Studierendengruppen.",
+    "C++ examples demonstrating algorithmic complexity and Big O Notation.": "C++-Beispiele zur algorithmischen Komplexität und zur Big-O-Notation.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Ich bin Softwareentwickler und Hochschuldozent in Orléans, Frankreich, mit Kenntnissen in Informatik und Wirtschaft. Seit fast zwei Jahrzehnten teile ich meine Zeit zwischen Hörsaal und Codebasis: Tagsüber bilde ich die nächste Generation von Entwicklern aus, abends veröffentliche ich produktionsreife Software.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Mein Schwerpunkt liegt auf nativer Android-Entwicklung: Ich entwickle ausgereifte Apps von der ersten Idee bis zur Veröffentlichung bei Google Play. Darüber hinaus entwickle ich Full-Stack-Webanwendungen mit React im Frontend und Spring Boot, Django, ASP.NET Core oder Node.js im Backend. Ob mobil oder webbasiert: Ich lege Wert auf klare Architektur, wartbaren Code, realistische Zeitpläne und Software, die auch ein Jahr später noch verständlich ist. Diese Grundsätze habe ich in mehr als neunzehn Jahren Entwicklung und Lehre verfeinert.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Außerhalb der Arbeit fotografiere ich gern und spiele mehrere Instrumente. Vielleicht fällt mir deshalb auf, wenn eine Benutzeroberfläche rhythmisch um einen halben Takt danebenliegt.",
+    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Ein leichter Audiorekorder für kurze Notizen, Vorlesungen und Interviews mit einer übersichtlichen Liste gespeicherter Aufnahmen.",
+    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table.": "Ein digitaler Zähler für Stufen und Schätze im Kartenspiel Munchkin, der die manuelle Strichliste am Spieltisch ersetzt.",
+    "A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards.": "Ein schneller QR-Scanner, der auch individuelle Codes für Links, Text und Kontaktkarten erstellt.",
+    "A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun.": "Ein unterhaltsames Minispiel mit Katzenmotiv für kurze Spielrunden unterwegs.",
+    "A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions.": "Ein humorvolles Quiz mit kniffligen, augenzwinkernden Fragen, das die Leichtgläubigkeit der Spieler auf die Probe stellt.",
+    "A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio.": "Eine App für ein lokales Unternehmen mit Leistungen, Preisen und Buchungsinformationen eines Massagestudios in Kyjiw.",
+    "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.": "Ein Radioplayer im Browser mit einer live auf Audio reagierenden Visualisierung auf Basis der Web Audio API zur Frequenzanalyse in Echtzeit.",
+    "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.": "Eine farbenfrohe Website für eine authentische koreanische Marke für eingelegtes Gemüse in Odesa mit Produktübersicht, Marktstandorten und landesweiten Lieferinformationen.",
+    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Ein minimalistischer persönlicher Poesieblog mit angenehmem Leseerlebnis und einem einfachen, mit React und Firebase betriebenen CMS.",
+    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Eine interaktive Musik-App mit Handtracking, die Fingergesten in Noten und Akkorde umwandelt und Musik ohne physisches Instrument ermöglicht.",
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Ein einfaches Tool zum Anzeigen und Teilen öffentlicher Duolingo-Profilstatistiken. Es zeigt Avatar, XP, Lernserie und Top-Kurse und erstellt eine teilbare PNG-Karte, ganz ohne Anmeldung."
+};
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
