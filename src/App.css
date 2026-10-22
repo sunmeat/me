@@ -432,14 +432,13 @@ button {
 }
 
 .terminal__row--out {
-    opacity: 0;
+    opacity: 1;
     color: var(--text-muted);
     padding-left: 20px;
-    animation: none;
 }
 
 .terminal.is-running .terminal__row--out {
-    animation: terminal-in 0.4s ease forwards;
+    animation: terminal-in 0.4s ease both;
 }
 
 .terminal__key {
