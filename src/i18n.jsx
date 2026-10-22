@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -18,7 +18,9 @@ export function LanguageProvider({children}) {
         document.documentElement.lang = language;
         document.title = language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack | Orléans, France"
-            : "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France";
+            : language === "pt-BR"
+                ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack | Orléans, França"
+                : "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France";
 
         const updateMeta = (selector, content) => {
             const element = document.querySelector(selector);
@@ -26,20 +28,30 @@ export function LanguageProvider({children}) {
         };
         updateMeta('meta[name="description"]', language === "fr"
             ? "Ingénieur logiciel et enseignant basé à Orléans. Applications Android natives et développement web full-stack. Projets en ligne et ouvert aux collaborations freelance."
-            : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
+            : language === "pt-BR"
+                ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
+                : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
         updateMeta('meta[property="og:title"]', language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
-            : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
+            : language === "pt-BR"
+                ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
+                : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
         updateMeta('meta[property="og:description"]', language === "fr"
             ? "Applications Android natives, développement web full-stack et projets en ligne. Basé à Orléans, France. Disponible pour vos projets."
-            : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
+            : language === "pt-BR"
+                ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
+                : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
         updateMeta('meta[name="twitter:title"]', language === "fr"
             ? "Oleksandr Zahoruiko — Développeur Android et Full-stack"
-            : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
+            : language === "pt-BR"
+                ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
+                : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
         updateMeta('meta[name="twitter:description"]', language === "fr"
             ? "Applications Android natives et développement web full-stack. Projets en ligne. Basé à Orléans, France."
-            : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : "en_US");
+            : language === "pt-BR"
+                ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
+                : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
+        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -464,7 +476,250 @@ const FR = {
 
 };
 
-const TRANSLATIONS = { fr: FR };
+const PT_BR = {
+    "About": "Sobre",
+    "Skills": "Competências",
+    "Apps": "Aplicativos",
+    "Experience": "Experiência",
+    "Contact": "Contato",
+    "Buy me a coffee": "Pague-me um café",
+    "Hire me": "Contrate-me",
+    "Toggle menu": "Abrir ou fechar o menu",
+    "View published sites": "Ver sites publicados",
+    "Start a project": "Começar um projeto",
+    "Published sites": "Sites publicados",
+    "Published Android apps": "Aplicativos Android publicados",
+    "Years in software & teaching": "Anos em desenvolvimento e ensino",
+    "GitHub repositories": "Repositórios no GitHub",
+    "Engineer by trade, teacher by habit.": "Engenheiro por profissão, professor por vocação.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Sou engenheiro de software e professor universitário em Orléans, na França, com formação em programação e economia. Há quase duas décadas, divido meu tempo entre a sala de aula e o código: durante o dia, ensino a próxima geração de desenvolvedores e, à noite, entrego software pronto para produção.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Hoje, meu foco principal é o desenvolvimento Android nativo, criando aplicativos refinados e prontos para produção, da ideia à publicação no Google Play. Também desenvolvo aplicações web full-stack com React no frontend e Spring Boot, Django, ASP.NET Core ou Node.js no backend. Em projetos mobile ou web, valorizo arquitetura limpa, código sustentável, prazos realistas e software fácil de entender tanto no primeiro dia quanto um ano depois. São princípios que aperfeiçoei em mais de dezenove anos desenvolvendo e ensinando programação.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Fora do trabalho, sou apaixonado por fotografia e multi-instrumentista. Talvez por isso eu perceba quando uma interface sai meio compasso do ritmo.",
+    "Live on Google Play right now.": "Disponíveis agora no Google Play.",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Seis aplicativos de utilidades, jogos casuais e ferramentas para negócios locais, todos idealizados, desenvolvidos e publicados de forma independente.",
+    "Side projects, live on the web.": "Projetos pessoais publicados na web.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Uma coleção crescente de sites e experimentos, publicados de forma independente para testar ideias, técnicas ou simplesmente por diversão.",
+    "Open source & teaching material.": "Código aberto e materiais didáticos.",
+    "View GitHub profile": "Ver perfil no GitHub",
+    "Technical skills": "Competências técnicas",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Um conjunto de ferramentas moldado pela produção, pelo ensino e pela experimentação constante.",
+    "Professional experience": "Experiência profissional",
+    "Education": "Formação",
+    "Get in touch": "Entre em contato",
+    "Have a project in mind? Let's talk about how to make it real.": "Tem um projeto em mente? Vamos conversar sobre como tirá-lo do papel.",
+    "Email me": "Enviar e-mail",
+    "Message on Telegram": "Enviar mensagem pelo Telegram",
+    "Orléans, France": "Orléans, França",
+    "Name": "Nome",
+    "Add a comment...": "Adicione um comentário...",
+    "Post": "Publicar",
+    "Like": "Curtir",
+    "Unlike": "Descurtir",
+    "Comment": "Comentar",
+    "Save": "Salvar",
+    "Remove from saved": "Remover dos salvos",
+    "likes": "curtidas",
+    "just now": "agora mesmo",
+    "Guest": "Visitante",
+    "Couldn't load comments right now.": "Não foi possível carregar os comentários agora.",
+    "Couldn't post your comment. Please try again.": "Não foi possível publicar seu comentário. Tente novamente.",
+    "Check out this portfolio": "Confira este portfólio",
+    "Loading news...": "Carregando notícias...",
+    "Developer News Feed": "Notícias para desenvolvedores",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Seleção de manchetes do Google Notícias. Deslize ou use as setas do teclado.",
+    "Click this card to read full article.": "Clique neste cartão para ler a notícia completa.",
+    "SOURCE": "FONTE",
+    "News Source": "Fonte da notícia",
+    "Read the full article for more details.": "Leia a notícia completa para saber mais.",
+    "No articles for": "Nenhuma notícia sobre",
+    "Failed to load news.": "Falha ao carregar as notícias.",
+    "Server-side problem. Switching topic...": "Problema no servidor. Mudando de assunto...",
+    "Rate limit exceeded. Please wait a few minutes.": "Limite de requisições atingido. Aguarde alguns minutos.",
+    "STARLINK REFERRAL": "INDICAÇÃO STARLINK",
+    "LIMITED OFFER": "OFERTA POR TEMPO LIMITADO",
+    "1 MONTH": "1 MÊS",
+    "FREE": "GRÁTIS",
+    "Activate Starlink through my referral link and get one month of service free.": "Ative a Starlink pelo meu link de indicação e ganhe um mês de serviço grátis.",
+    "Activate Starlink": "Ativar Starlink",
+    "*Offer subject to Starlink eligibility and terms.": "*Oferta sujeita aos critérios de elegibilidade e aos termos da Starlink.",
+    "LOW EARTH ORBIT · 550 KM": "ÓRBITA TERRESTRE BAIXA · 550 KM",
+    "Android / Full-Stack Developer": "Desenvolvedor Android / Full-stack",
+    "primary focus": "foco principal",
+    "core toolkit": "ferramentas principais",
+    "backend & web": "backend e web",
+    "day to day": "no dia a dia",
+    "Mobile": "Dispositivos móveis",
+    "Languages": "Linguagens",
+    "Frameworks": "Frameworks",
+    "Tooling": "Ferramentas",
+    "Utility": "Utilitário",
+    "Board Games": "Jogos de tabuleiro",
+    "Casual Game": "Jogo casual",
+    "Quiz": "Quiz",
+    "Local Business": "Negócio local",
+    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Um gravador leve para notas rápidas, aulas e entrevistas, com uma lista organizada de gravações salvas e sem distrações.",
+    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table.": "Um contador digital de níveis e tesouros para o jogo de cartas Munchkin, substituindo as anotações em papel durante a partida.",
+    "A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards.": "Um leitor de QR Code rápido e simples, que também cria códigos personalizados para links, textos e cartões de contato.",
+    "A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun.": "Um minijogo divertido com tema de gatos, ideal para partidas rápidas e descontraídas em qualquer lugar.",
+    "A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions.": "Um quiz descontraído que testa a credulidade dos jogadores com perguntas capciosas e bem-humoradas.",
+    "A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio.": "Um aplicativo comercial com serviços, preços e informações de agendamento de um estúdio de massagem em Kyiv.",
+    "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.": "Um player de rádio no navegador com visualização reativa ao áudio em tempo real, usando a Web Audio API para analisar frequências.",
+    "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.": "Um site vibrante para uma marca de conservas coreanas autênticas em Odesa, com apresentação dos produtos, pontos de venda e informações sobre entregas em todo o país.",
+    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Um blog pessoal de poesia minimalista, com leitura agradável e um painel administrativo simples feito com React e Firebase.",
+    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Um aplicativo musical interativo que transforma gestos das mãos em notas e acordes, permitindo criar música sem um instrumento físico.",
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Uma ferramenta simples para consultar e compartilhar estatísticas públicas do Duolingo: avatar, XP, sequência de dias, cursos principais e um cartão PNG compartilhável, sem login.",
+    "A personal interactive birthday greeting page with playful animations and a small surprise built in.": "Uma página interativa de aniversário com animações divertidas e uma pequena surpresa.",
+    "A lightweight interactive page built as a personal project — a playground for small UI and animation ideas.": "Uma página interativa leve, criada como projeto pessoal para experimentar ideias de interface e animação.",
+    "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.": "Uma calculadora de aluguel versus compra que mostra como a economia com aluguel poderia crescer ao longo do tempo se fosse investida.",
+    "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.": "Um radar de preços de camarão no Silpo, com alertas por e-mail quando o camarão-rei custa menos de 40 UAH por 100 g, além de curiosidades, receitas e humor de Odesa.",
+    "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.": "Uma vitrine botânica multilíngue dedicada às rosas-do-deserto, com galeria da coleção, atlas de floração e orientações práticas de cultivo.",
+    "Freelance Full-Stack & Android Developer": "Desenvolvedor freelancer Full-stack e Android",
+    "Independent": "Autônomo",
+    "Technical Project Consultant": "Consultor técnico de projetos",
+    "Provided architectural guidance, code reviews, and technical consulting for web and mobile solutions. Assisted in optimizing system performance, streamlining API design, and advising engineering teams on best software practices.": "Prestei consultoria de arquitetura, revisão de código e orientação técnica para soluções web e mobile. Ajudei a otimizar o desempenho, aprimorar o design de APIs e orientar equipes de engenharia sobre boas práticas.",
+    "Independent Software Engineer & R&D": "Engenheiro de software independente e P&D",
+    "Building and maintaining custom developer tooling, exploratory mobile modules, and open-source utility libraries. Experimenting with modern web frameworks, algorithm optimization, and UI/UX patterns.": "Desenvolvimento e manutenção de ferramentas para desenvolvedores, módulos mobile experimentais e bibliotecas utilitárias de código aberto. Experimentação com frameworks web modernos, otimização de algoritmos e padrões de UI/UX.",
+    "Leading Teacher Specialist": "Professor especialista líder",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Formação e orientação de futuros engenheiros de software em C++, C#, Python para web, Android e bancos de dados; POO, algoritmos, estruturas de dados, padrões de projeto e SOLID. Criação de materiais didáticos, revisão de código dos alunos e orientação de projetos finais com SCRUM.",
+    "Master's degree, Programming": "Formação em programação",
+    "Bachelor's degree, Economics": "Bacharelado em Economia",
+    "Continuous Education & Professional Certifications": "Formação continuada e certificações profissionais",
+    "Constantly expanding technical expertise through specialized courses, hands-on skill validations, and industry certifications in software engineering, networking, and cloud services.": "Amplio continuamente meus conhecimentos técnicos por meio de cursos especializados, avaliações práticas e certificações em engenharia de software, redes e serviços em nuvem.",
+    "Project Brief": "Resumo do projeto",
+    "Platform": "Plataforma",
+    "Features": "Funcionalidades",
+    "Timeline": "Cronograma",
+    "Estimated budget": "Orçamento estimado",
+    "Copy brief": "Copiar resumo",
+    "Copied": "Copiado",
+    "Reset": "Redefinir",
+    "Send project brief": "Enviar resumo do projeto",
+    "Choose a platform": "Escolha uma plataforma",
+    "Android app": "Aplicativo Android",
+    "iOS app": "Aplicativo iOS",
+    "Web application": "Aplicação web",
+    "Landing page": "Landing page",
+    "Rush": "Urgente",
+    "Flexible": "Flexível",
+    "available for freelance work": "disponível para trabalhos freelance",
+    "software & teaching": "software e ensino",
+    "Live": "No ar",
+    "Forever alive": "Para sempre vivo",
+    "View project": "Ver projeto",
+    "View all": "Ver todos",
+    "Read more": "Saiba mais",
+    "Let's build something.": "Vamos construir algo.",
+    "Send me a message and I'll get back to you.": "Envie uma mensagem e retornarei em breve.",
+    "Open to freelance projects": "Disponível para projetos freelance",
+    "Years of experience": "Anos de experiência",
+    "Work": "Trabalho",
+    "Status": "Status",
+    "Project": "Projeto",
+    "Education & certifications": "Formação e certificações",
+    "View on GitHub": "Ver no GitHub",
+    "Visit site": "Visitar site",
+    "Loading": "Carregando",
+    "A toolkit built for shipping, not just prototyping.": "Ferramentas para entregar produtos, não apenas protótipos.",
+    "Experience & education.": "Experiência e formação.",
+    "Let's build your own app.": "Vamos criar seu aplicativo.",
+    "Open to freelance projects, long-term collaborations and consulting work.": "Disponível para projetos freelance, colaborações de longo prazo e consultoria.",
+    "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Orléans, França (EET/EEST, UTC+1) — normalmente respondo em até um dia útil.",
+    "Buy me one more coffee": "Pague-me mais um café",
+    "Back to top": "Voltar ao topo",
+    "Built with ❤️ & React • Available for projects": "Feito com ❤️ e React • Disponível para projetos",
+    "Available for projects": "Disponível para projetos",
+    "Android Native": "Android nativo",
+    "Backend API + Web App": "API backend + aplicação web",
+    "Core features": "Funcionalidades principais",
+    "Balanced pace, full QA cycle": "Ritmo equilibrado, ciclo completo de QA",
+    "Priority slot, ~30% faster": "Prioridade na agenda, cerca de 30% mais rápido",
+    "Not specified": "Não especificado",
+    "Authentication": "Autenticação",
+    "Offline Mode": "Modo offline",
+    "In-App Purchases": "Compras no aplicativo",
+    "Hardware / Sensors": "Hardware / sensores",
+    "Admin Panel": "Painel administrativo",
+    "Custom UI/UX": "UI/UX personalizada",
+    "Firebase Auth": "Autenticação Firebase",
+    "Room DB": "Banco Room",
+    "Play Billing": "Faturamento do Google Play",
+    "Design System": "Sistema de design",
+    "Platform:": "Plataforma:",
+    "Features:": "Funcionalidades:",
+    "Timeline:": "Cronograma:",
+    "Estimated scope:": "Escopo estimado:",
+    "Suggested stack:": "Tecnologias sugeridas:",
+    "Sent via sunmeat.dev project estimator.": "Enviado pelo estimador de projetos do sunmeat.dev.",
+    "Project Brief — sunmeat.dev": "Resumo do projeto — sunmeat.dev",
+    "Source code of my personal single-page portfolio website.": "Código-fonte do meu site pessoal de portfólio de página única.",
+    "My interactive digital business card (npx sunmeat) right in your terminal": "Meu cartão de visitas digital interativo (npx sunmeat) direto no terminal.",
+    "A C# console Snake game that uses Hamiltonian cycles to generate perfect, non-colliding paths across the entire board.": "Um jogo Snake para console em C# que usa ciclos hamiltonianos para criar caminhos perfeitos sem colisões por todo o tabuleiro.",
+    "A comprehensive collection of clean Object-Oriented Programming examples in C++: classes, inheritance, polymorphism, abstract classes and more.": "Uma coleção abrangente de exemplos claros de programação orientada a objetos em C++: classes, herança, polimorfismo, classes abstratas e muito mais.",
+    "Practical C++ Standard Template Library examples covering containers, iterators, algorithms, adapters and functors.": "Exemplos práticos da biblioteca padrão de C++ que abrangem contêineres, iteradores, algoritmos, adaptadores e functors.",
+    "C++ examples demonstrating algorithmic complexity and Big O Notation.": "Exemplos em C++ que demonstram complexidade de algoritmos e notação Big O.",
+    "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Projeto educacional em ASP.NET Core MVC que demonstra o funcionamento do contêiner integrado de injeção de dependência.",
+    "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Projeto educacional em ASP.NET Core Web API que demonstra autenticação e autorização com Firebase Authentication e tokens JWT.",
+    "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Projeto educacional em ASP.NET Core Web API sobre testes unitários e de integração com xUnit, FluentAssertions, NSubstitute e WebApplicationFactory.",
+    "Web Audio": "Áudio web",
+    "Korean Pickles": "Conservas coreanas",
+    "Poetry Blog": "Blog de poesia",
+    "Music Learning": "Aprendizado musical",
+    "Stats Card": "Cartão de estatísticas",
+    "Interactive": "Interativo",
+    "Pet Memorial": "Memorial de pet",
+    "Calculator": "Calculadora",
+    "Price Tracker": "Monitor de preços",
+    "Plant Collection": "Coleção de plantas",
+    "JavaScript Library": "Biblioteca JavaScript",
+    "My Android Apps": "Meus aplicativos Android",
+    "Jul 2023 — Present": "Jul. 2023 — atual",
+    "May 2017 — Dec 2017": "Mai. 2017 — dez. 2017",
+    "Jun 2022 — Present": "Jun. 2022 — atual",
+    "Sep 2007 — Present (Remote)": "Set. 2007 — atual (remoto)",
+    "Aug 2026 — Present": "Ago. 2026 — atual",
+    "Ongoing": "Em andamento",
+    "Kotlin Coroutines": "Coroutines Kotlin",
+    "Kotlin Flow": "Kotlin Flow",
+    "Jetpack Compose Architecture": "Arquitetura Jetpack Compose",
+    "Adaptive Layouts": "Layouts adaptáveis",
+    "Clean Architecture": "Arquitetura limpa",
+    "Modularization": "Modularização",
+    "Performance Optimization": "Otimização de desempenho",
+    "Memory Profiling": "Análise de memória",
+    "App Startup": "Inicialização do aplicativo",
+    "Baseline Profiles": "Perfis de referência",
+    "App Distribution": "Distribuição de aplicativos",
+    "AI Machine Learning": "IA e aprendizado de máquina",
+    "LLM Integration in Apps": "Integração de LLMs em aplicativos",
+    "Foldables & Large Screens": "Dobráveis e telas grandes",
+    "App Security": "Segurança de aplicativos",
+    "Biometric Authentication": "Autenticação biométrica",
+    "Location & Maps": "Localização e mapas",
+    "Offline-First": "Offline-first",
+    "Screenshot Testing": "Testes por captura de tela",
+    "UI Testing": "Testes de interface",
+    "Estimate Your App Project": "Estime seu projeto de aplicativo",
+    "Choose your platform": "Escolha sua plataforma",
+    "Pick your core features": "Escolha as funcionalidades principais",
+    "Set your timeline": "Defina o cronograma",
+    "Estimated timeframe": "Prazo estimado",
+    "Recommended stack": "Tecnologias recomendadas",
+    "Step 01": "Etapa 01",
+    "Step 02": "Etapa 02",
+    "Step 03": "Etapa 03",
+    "Express": "Expresso",
+    "Voice Recorder": "Gravador de voz",
+    "Munchkin Level Counter": "Contador de níveis Munchkin",
+    "QR Code Reader: Scan & Create!": "Leitor de QR Code: leia e crie!",
+    "Gullibility Test": "Teste de credulidade",
+    "Massage Kyiv": "Massagem Kyiv",
+    "Visit": "Visitar",
+    "m ago": "min atrás",
+    "h ago": "h atrás",
+    "d ago": "d atrás"
+};
+
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
