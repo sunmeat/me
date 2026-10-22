@@ -114,7 +114,13 @@ function NewsFeed() {
 
     const fetchNews = useCallback(async (topic) => {
         if (abortRef.current) abortRef.current.abort();
-        abortRef.current = new AbortController();
+        const controller = new AbortController();
+        abortRef.current = controller;
+        let timedOut = false;
+        const timeoutId = window.setTimeout(() => {
+            timedOut = true;
+            controller.abort();
+        }, 12000);
 
         setLoading(true);
         setFeedError(null);
@@ -132,7 +138,8 @@ function NewsFeed() {
         const url = `/api/news?topic=${encodeURIComponent(topic)}&locale=${locale}`;
 
         try {
-            const res = await fetch(url, { signal: abortRef.current.signal });
+            const res = await fetch(url, { signal: controller.signal });
+            if (abortRef.current !== controller) return;
 
             if (!res.ok) {
                 if (res.status === 500) {
@@ -171,11 +178,13 @@ function NewsFeed() {
             setItems(allItems);
             setCurrentIndex(0);
         } catch (err) {
-            if (err.name === "AbortError") return;
+            if (abortRef.current !== controller) return;
+            if (err.name === "AbortError" && !timedOut) return;
             console.error(err);
-            setFeedError("Failed to load news.");
+            setFeedError(timedOut ? "News request timed out. Please try again." : "Failed to load news.");
         } finally {
-            setLoading(false);
+            window.clearTimeout(timeoutId);
+            if (abortRef.current === controller) setLoading(false);
         }
     }, [getNextTopicIndex, language]);
 
