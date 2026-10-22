@@ -7,7 +7,7 @@ export const BIO = "Orléans-based software engineer and lecturer building nativ
 export const NAV_LINKS = [
     {id: "about", label: "About"},
     {id: "skills", label: "Skills"},
-    {id: "apps", label: "Apps"},
+    {id: "websites", label: "Sites"},
     {id: "experience", label: "Experience"},
     {id: "contact", label: "Contact"},
 ];
