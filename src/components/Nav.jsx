@@ -85,7 +85,7 @@ function Nav() {
                             aria-expanded={languageMenuOpen}
                             aria-haspopup="menu"
                         >
-                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : "United States flag"} />
+                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : "United States flag"} />
                         </button>
 
                         {languageMenuOpen && (
