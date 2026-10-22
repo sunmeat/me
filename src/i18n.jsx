@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv", "qya"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv", "qya", "av"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "av" ? "Анастасиеволочковский: шпагаты, песни и блистательная карьера!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
             : language === "zh"
@@ -2367,7 +2367,121 @@ const HV = {
     "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Dārys se ȳdragon: aōha sȳz, music sȳz.",
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Duolingo vēzos: XP, sȳz, se courses. PNG urnegon, login daor."
 };
-\nconst TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA };
+\n
+const AV = {
+    "About": "Обо мне, о моей невероятности!",
+    "Skills": "Мои таланты, дорогие мои!",
+    "Apps": "Приложения, которые просто песня!",
+    "Sites": "Сайты, прекрасные как я!",
+    "Experience": "Моя блистательная карьера!",
+    "Contact": "Приглашаю к диалогу, дорогие мои!",
+    "Buy me a coffee": "Кофе для прекрасной женщины!",
+    "Hire me": "Записывайтесь, пока есть свободные даты!",
+    "Toggle menu": "Открыть меню, дорогие мои",
+    "View published sites": "Полюбоваться моими сайтами",
+    "Start a project": "Начнём прекрасное, я в прекрасной форме!",
+    "Published sites": "Мои блистательные сайты",
+    "Published Android apps": "Мои приложения, просто песня",
+    "Years in software & teaching": "Лет таланта и педагогического величия",
+    "GitHub repositories": "Моя творческая коллекция",
+    "Engineer by trade, teacher by habit.": "Я инженер, я педагог, я женщина-праздник!",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Дорогие мои, я инженер-программист и преподаватель в Орлеане. Почти два десятилетия я блистаю и в аудитории, и в коде. Это моё мнение, и оно имеет право на существование!",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Сегодня, дорогие мои, я создаю нативные Android-приложения и full-stack-проекты. Всё должно быть красиво, всё должно быть на высшем уровне. Я в прекрасной форме, а код у меня вообще загляденье!",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "А ещё я творческая личность: фотографирую, играю на инструментах и чувствую ритм. Где-то звучит музыка, где-то уже просится шпагат!",
+    "Live on Google Play right now.": "Уже блистают в Google Play, дорогие мои!",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Шесть приложений: всё придумано, создано и выпущено самостоятельно. Талант он либо есть, либо его нет!",
+    "Side projects, live on the web.": "Мои проекты уже в сети, а вы что думали?",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Коллекция сайтов и экспериментов. Красота требует творчества, а творчество требует размаха!",
+    "Open source & teaching material.": "Открытый код и педагогическая мудрость",
+    "View GitHub profile": "Смотреть мой GitHub, дорогие мои",
+    "Technical skills": "Технические таланты",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Всё отточено практикой, преподаванием и постоянными экспериментами. Я же не просто так!",
+    "Professional experience": "Мой профессиональный путь",
+    "Education": "Образование, достойное уважения",
+    "Get in touch": "Свяжитесь со мной, дорогие мои",
+    "Have a project in mind? Let's talk about how to make it real.": "Есть идея? Давайте воплотим её красиво. Я человек слова!",
+    "Email me": "Написать мне, прекрасные мои",
+    "Message on Telegram": "Написать в Telegram, дорогие мои",
+    "Orléans, France": "Орлеан, Франция. А что вы хотели?",
+    "Name": "Ваше блистательное имя",
+    "Add a comment...": "Оставьте мнение, дорогие мои...",
+    "Post": "Опубликовать красиво",
+    "Like": "Нравится, конечно!",
+    "Unlike": "Уже не нравится",
+    "Comment": "Высказать мнение",
+    "Save": "Сохранить, я разрешаю",
+    "Remove from saved": "Убрать из избранного, дорогие мои",
+    "likes": "восхищённых отметок",
+    "just now": "только что, между прочим",
+    "Guest": "Дорогой гость",
+    "Couldn't load comments right now.": "Комментарии временно не загрузились. Это технический момент!",
+    "Couldn't post your comment. Please try again.": "Не удалось опубликовать. Попробуйте ещё раз, дорогие мои!",
+    "Check out this portfolio": "Полюбуйтесь портфолио, дорогие мои!",
+    "Loading news...": "Новости уже загружаются, терпение!",
+    "Developer News Feed": "Новости из мира высоких технологий",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Новости собраны специально для вас. Листайте, дорогие мои!",
+    "Click this card to read full article.": "Нажмите, чтобы прочитать полностью. Всё самое интересное впереди!",
+    "SOURCE": "ИСТОЧНИК, ДОРОГИЕ МОИ",
+    "News Source": "Источник блистательных новостей",
+    "Read the full article for more details.": "Читайте целиком, там всё самое интересное!",
+    "No articles for": "Пока нет новостей для",
+    "Failed to load news.": "Новости не загрузились. Не будем делать трагедию!",
+    "Server-side problem. Switching topic...": "Техническая накладка. Меняем тему, дорогие мои!",
+    "Rate limit exceeded. Please wait a few minutes.": "Слишком много запросов. Немного терпения, прекрасные мои!",
+    "STARLINK REFERRAL": "МОЯ КОСМИЧЕСКАЯ РЕКОМЕНДАЦИЯ",
+    "LIMITED OFFER": "ПРЕДЛОЖЕНИЕ, ПОКА ЕСТЬ ВОЗМОЖНОСТЬ",
+    "1 MONTH": "ОДИН МЕСЯЦ",
+    "FREE": "БЕСПЛАТНО, ДОРОГИЕ МОИ",
+    "Activate Starlink through my referral link and get one month of service free.": "Подключайтесь по моей ссылке и получите месяц сервиса бесплатно. Всё для вас!",
+    "Activate Starlink": "Подключить Starlink красиво",
+    "Orléans": "Орлеан, дорогие мои",
+    "France": "Франция, страна прекрасных возможностей",
+    "Open menu": "Открыть меню, дорогие мои",
+    "Close menu": "Закрыть меню, дорогие мои",
+    "Back": "Назад, но с достоинством",
+    "Next": "Далее, к новым победам",
+    "Previous": "Предыдущий, дорогие мои",
+    "Close": "Закрыть, я так решила",
+    "Search": "Ищем прекрасное",
+    "Filter": "Отфильтровать, как положено",
+    "All": "Всё самое лучшее",
+    "Loading...": "Загружается, дорогие мои...",
+    "Error": "Техническая накладка!",
+    "Retry": "Повторить, я настаиваю",
+    "No results found.": "Ничего не найдено. Но мы не теряем достоинства!",
+    "Read more": "Читать дальше, прекрасные мои",
+    "Learn more": "Узнать больше, дорогие мои",
+    "View project": "Полюбоваться проектом",
+    "View on GitHub": "Посмотреть на GitHub",
+    "Open project": "Открыть проект, и пусть весь мир подождёт",
+    "Download": "Скачать, пока есть возможность",
+    "Send": "Отправить с чувством и достоинством",
+    "Submit": "Подтвердить, дорогие мои",
+    "Cancel": "Отмена, я передумала",
+    "Save changes": "Сохранить изменения, красота требует порядка",
+    "No projects yet.": "Проектов пока нет, но это временно!",
+    "All rights reserved.": "Все права защищены, и это моё мнение!",
+    "Made with love.": "Создано с любовью и артистизмом",
+    "A little about me": "Немного обо мне. Хотя скромность мне не к лицу!",
+    "Let's connect": "Давайте дружить, дорогие мои",
+    "Get started": "Начинаем, я в прекрасной форме!",
+    "Welcome": "Добро пожаловать, дорогие мои!",
+    "Thank you": "Благодарю, мои хорошие!",
+    "You're welcome": "Всегда пожалуйста, я же душка!",
+    "This is my opinion": "Это моё мнение, и оно имеет право на существование!",
+    "Dear friends": "Дорогие мои!",
+    "I'm a woman-holiday": "Я женщина-праздник!",
+    "Split for your feed": "Шпагат вам в ленту!",
+    "I am in excellent shape": "Я в прекрасной форме!",
+    "A little song for you": "Песню вам в ленту, дорогие мои!",
+    "The show must go on": "Шоу должно продолжаться, а шпагат должен быть безупречным!",
+    "The prima donna has arrived": "Примадонна прибыла. Прошу любить и жаловать!",
+    "Ballet is my life": "Балет это моя жизнь, дорогие мои!",
+    "A song of boundless beauty": "Песня о прекрасном, о вечном и обо мне!",
+    "My creative universe": "Моя творческая вселенная, где я главная звезда!"
+};
+
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
