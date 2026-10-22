@@ -81,15 +81,15 @@ function Nav() {
                             type="button"
                             className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
                             onClick={() => setLanguageMenuOpen((value) => !value)}
-                            aria-label={language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : language === "es" ? "Elegir idioma" : language === "ru" ? "Выбрать язык" : "Choose language"}
+                            aria-label={language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : language === "es" ? "Elegir idioma" : language === "ru" ? "Выбрать язык" : language === "zh" ? "选择语言" : "Choose language"}
                             aria-expanded={languageMenuOpen}
                             aria-haspopup="menu"
                         >
-                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : "United States flag"} />
+                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "zh" ? "cn" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "zh" ? "Chinese flag" : "United States flag"} />
                         </button>
 
                         {languageMenuOpen && (
-                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : language === "ru" ? "Язык" : "Language"}>
+                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : language === "ru" ? "Язык" : language === "zh" ? "语言" : "Language"}>
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -133,6 +133,17 @@ function Nav() {
                                     <Flag country="ru" label="Russian flag" />
                                     <span>Русский</span>
                                     {language === "ru" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "zh"}
+                                    className={`language-switcher__option ${language === "zh" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("zh")}
+                                >
+                                    <Flag country="cn" label="Chinese flag" />
+                                    <span>中文</span>
+                                    {language === "zh" && <Icon name="check" size={15}/>}
                                 </button>
                                 <button
                                     type="button"
