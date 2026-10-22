@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -1904,7 +1904,52 @@ const AR = {
     "Six apps across utilities, casual games and local business tools": "ستة تطبيقات للأدوات العملية والألعاب الخفيفة والأعمال المحلية",
 };
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR };
+const SA = {
+    "About": "मम परिचयः",
+    "Skills": "कौशलानि",
+    "Apps": "अनुप्रयोगाः",
+    "Sites": "जालस्थलानि",
+    "Experience": "अनुभवः",
+    "Contact": "सम्पर्कः",
+    "Buy me a coffee": "मम कृते पेयम् अर्पयतु",
+    "Hire me": "कार्याय मां नियोजयतु",
+    "Published sites": "प्रकाशितानि जालस्थलानि",
+    "Published Android apps": "प्रकाशिताः आन्ड्रॉइड्-अनुप्रयोगाः",
+    "Years in software & teaching": "सङ्गणककार्ये अध्यापने च वर्षाणि",
+    "GitHub repositories": "GitHub-सङ्ग्रहाः",
+    "Engineer by trade, teacher by habit.": "कर्मणा अभियन्ता, स्वभावेन आचार्यः।",
+    "Technical skills": "तान्त्रिककौशलानि",
+    "Professional experience": "व्यावसायिकानुभवः",
+    "Education": "शिक्षा",
+    "Get in touch": "सम्पर्कं करोतु",
+    "Have a project in mind? Let's talk about how to make it real.": "काचित् कल्पना मनसि अस्ति किम्? तां वास्तविकरूपेण कथं परिणमयेम इति चर्चयामः।",
+    "Email me": "विद्युत्पत्रं प्रेषयतु",
+    "Message on Telegram": "Telegram-माध्यमेन सन्देशं प्रेषयतु",
+    "Orléans, France": "ओरलेआँ, फ्रान्सदेशः",
+    "Name": "नाम",
+    "Add a comment...": "टिप्पणीं योजयतु...",
+    "Post": "प्रकाशयतु",
+    "Like": "रोचते",
+    "Comment": "टिप्पणी",
+    "Save": "रक्षतु",
+    "Guest": "अतिथिः",
+    "Loading news...": "समाचाराः आनयन्ति...",
+    "Developer News Feed": "विकासकसमाचारप्रवाहः",
+    "STARLINK REFERRAL": "STARLINK-अनुशंसाप्रस्तावः",
+    "LIMITED OFFER": "सीमितकालिकः प्रस्तावः",
+    "FREE": "निःशुल्कम्",
+    "Android / Full-Stack Developer": "आन्ड्रॉइड् तथा सम्पूर्ण-जालविकासकः",
+    "Languages": "भाषाः",
+    "Frameworks": "कार्यरचनासमूहाः",
+    "Utility": "उपयोगसाधनम्",
+    "Board Games": "पट्टक्रीडाः",
+    "Casual Game": "लघुक्रीडा",
+    "Quiz": "प्रश्नोत्तरी",
+    "Local Business": "स्थानीयव्यापारः",
+    "A growing collection of small sites and experiments": "लघुजालस्थलानां प्रयोगाणां च वर्धमानः सङ्ग्रहः",
+    "Six apps across utilities, casual games and local business tools": "उपयोगसाधन-लघुक्रीडा-स्थानीयव्यापारसाधनरूपाः षट् अनुप्रयोगाः",
+};
+const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA };
 
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
