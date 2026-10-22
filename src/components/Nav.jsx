@@ -4,8 +4,8 @@ import {NAV_LINKS, COFFEE_URL} from "../data.js";
 import {useLanguage, withTranslation} from "../i18n.jsx";
 
 function Flag({country, label}) {
-    if (country === "hv" || country === "qya") {
-        return <span className="language-switcher__flag" role="img" aria-label={label}>{country === "qya" ? "🍃" : "🐉"}</span>;
+    if (country === "hv" || country === "qya" || country === "av") {
+        return <span className="language-switcher__flag" role="img" aria-label={label}>{country === "qya" ? "🍃" : country === "av" ? "🩰" : "🐉"}</span>;
     }
     return (
         <img
@@ -114,6 +114,17 @@ function Nav() {
                                     <Flag country="hv" label="Three-headed dragon" />
                                     <span>Valyrio (High Valyrian)</span>
                                     {language === "hv" && <Icon name="check" size={15}/>}
+                                </button>
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "av"}
+                                    className={`language-switcher__option ${language === "av" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("av")}
+                                >
+                                    <Flag country="av" label="Балетная туфелька" />
+                                    <span>Анастасиеволочковский</span>
+                                    {language === "av" && <Icon name="check" size={15}/>}
                                 </button>
                                 <button
                                     type="button"
