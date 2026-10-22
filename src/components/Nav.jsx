@@ -175,7 +175,8 @@ function Nav() {
                                     onClick={() => chooseLanguage("pt-BR")}
                                 >
                                     <Flag country="br" label="Bandeira do Brasil" />
-                                    <span>Português (Brasil)</span>
+                                    <span>संस्कृतम्</span>
+                    <span>Português (Brasil)</span>
                                     {language === "pt-BR" && <Icon name="check" size={15}/>}
                                 </button>
                             </div>
