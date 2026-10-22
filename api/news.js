@@ -48,7 +48,7 @@ export default async function handler(req, res) {
         }
 
         const xml = await response.text();
-        const items = [...xml.matchAll(/<item\\b[^>]*>([\\s\\S]*?)<\\/item>/gi)]
+        const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)]
             .slice(0, 10)
             .map(([, item]) => {
                 const sourceMatch = item.match(/<source\\b[^>]*>([\\s\\S]*?)<\\/source>/i);
