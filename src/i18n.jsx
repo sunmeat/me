@@ -1171,7 +1171,6 @@ const RU = {
     "Casual Game": "Казуальная игра",
     "Quiz": "Викторина",
     "Local Business": "Локальный бизнес",
-    "Technical skills": "Технические навыки",
     "Open Source / Side Projects": "Открытый код / личные проекты",
     "Night Shift Venue Logistics & Facility Specialist": "Специалист по ночной логистике и обслуживанию площадки",
     "The user can contact me by email or Telegram.": "Со мной можно связаться по электронной почте или в Telegram.",
@@ -1258,8 +1257,6 @@ const RU = {
     "Based in": "Местоположение",
     " — I typically reply within a business day.": " — обычно отвечаю в течение рабочего дня.",
     "Select your project requirements to get an instant scope estimate.": "Выберите требования к проекту, чтобы сразу получить оценку объёма работ.",
-    "Estimated timeframe": "Примерные сроки",
-    "Recommended stack": "Рекомендуемый стек",
     "Orléans-based software engineer and lecturer building native Android applications end to end — ": "Инженер-программист и преподаватель из Орлеана, разрабатываю нативные Android-приложения от начала до конца: ",
     "from first sketch to a live listing on Google Play. ": "от первого наброска до публикации в Google Play. ",
     "Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. ": "Также создаю full-stack веб-приложения: React на фронтенде и Spring Boot, Django, ASP.NET Core или Node.js на бэкенде. ",
@@ -1286,8 +1283,6 @@ const RU = {
     "The source code of my personal single-page portfolio website.": "Исходный код моего персонального одностраничного сайта-портфолио.",
     "A dark, terminal-inspired personal portfolio presenting software projects, Android applications, technical experience, and open-source work.": "Тёмное персональное портфолио в эстетике терминала: программные проекты, Android-приложения, технический опыт и работа с открытым кодом.",
     "Orléans-based software engineer & lecturer.": "Инженер-программист и преподаватель из Орлеана.",
-    "Open to freelance projects, long-term collaborations and consulting work.": "Открыт к фриланс-проектам, долгосрочному сотрудничеству и техническим консультациям.",
-    "The page could not be loaded.": "Не удалось загрузить страницу."
 };
 
 const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU };
