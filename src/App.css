@@ -2487,6 +2487,7 @@ a.contact__row:hover {
 
 .language-switcher__flag {
     display: block;
+    flex: 0 0 24px;
     width: 24px;
     height: 18px;
     object-fit: cover;
@@ -2505,9 +2506,12 @@ a.contact__row:hover {
     z-index: 2;
     top: calc(100% + 10px);
     right: 0;
-    width: 190px;
+    width: 210px;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 100px);
     padding: 7px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 15px;
@@ -2519,9 +2523,10 @@ a.contact__row:hover {
 .language-switcher__option {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 10px;
     width: 100%;
-    padding: 11px 10px;
+    min-width: 0;
+    padding: 9px 10px;
     border: 1px solid transparent;
     border-radius: 9px;
     color: var(--text-muted);
@@ -2541,8 +2546,12 @@ a.contact__row:hover {
     border-color: var(--accent-dim);
 }
 
-.language-switcher__option span {
+.language-switcher__option .language-switcher__label {
     flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .language-switcher__option > svg {
