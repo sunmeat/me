@@ -2664,3 +2664,37 @@ html[lang="ko-KP"] .hero__stats {
         to { background-position: 100% center; }
     }
 }
+
+
+/* A more immersive first screen for the Korean edition. */
+html[lang="ko-KP"] .hero { padding-top: 58px; }
+html[lang="ko-KP"] .hero--epic::after { content: ""; display: block; height: 1px; margin-top: 30px; background: linear-gradient(90deg, transparent, rgba(242, 200, 121, 0.58), rgba(230, 75, 75, 0.7), transparent); }
+html[lang="ko-KP"] .hero__inner { gap: 44px; }
+html[lang="ko-KP"] .hero__title { display: flex; flex-direction: column; gap: 12px; font-size: clamp(2.15rem, 4.4vw, 3.7rem); line-height: 1.17; letter-spacing: -0.035em; }
+html[lang="ko-KP"] .hero__title-accent--epic { display: block; font-size: clamp(1.65rem, 3.3vw, 2.65rem); line-height: 1.35; letter-spacing: -0.025em; }
+html[lang="ko-KP"] .hero__lede { max-width: 570px; color: #d4c7c0; font-size: 1.04rem; line-height: 1.95; }
+html[lang="ko-KP"] .hero__declaration { display: grid; gap: 8px; margin-top: 22px; padding: 15px 17px; border-left: 2px solid #e64b4b; background: linear-gradient(90deg, rgba(150, 22, 34, 0.16), rgba(150, 22, 34, 0.015)); color: #c8b9b1; font-size: 0.9rem; line-height: 1.8; }
+html[lang="ko-KP"] .hero__declaration-mark { color: #f2c879; font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; }
+html[lang="ko-KP"] .hero__actions .btn--primary { color: #fff5e6; font-weight: 800; box-shadow: 0 8px 28px rgba(170, 24, 38, 0.2); }
+html[lang="ko-KP"] .hero__stats { margin-top: 34px; padding: 20px 0; background: linear-gradient(90deg, transparent, rgba(110, 16, 28, 0.11), transparent); }
+html[lang="ko-KP"] .hero__stat-value { color: #f2c879; font-size: clamp(1.7rem, 3vw, 2.35rem); text-shadow: 0 0 22px rgba(242, 200, 121, 0.13); }
+html[lang="ko-KP"] .hero__stat-label { max-width: 190px; line-height: 1.65; }
+html[lang="ko-KP"] .hero__seal { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 20px 0 0; color: #c8a96d; font-size: 0.78rem; letter-spacing: 0.09em; text-align: center; }
+html[lang="ko-KP"] .hero__seal-line { width: clamp(18px, 5vw, 72px); height: 1px; background: linear-gradient(90deg, transparent, #a52c36); }
+html[lang="ko-KP"] .terminal--epic { border-color: rgba(230, 75, 75, 0.34); background: linear-gradient(145deg, #19171b, #111318 75%); box-shadow: 0 26px 70px -22px rgba(105, 12, 25, 0.4), inset 0 1px 0 rgba(242, 200, 121, 0.06); }
+html[lang="ko-KP"] .terminal--epic .terminal__bar { background: linear-gradient(90deg, rgba(125, 18, 31, 0.3), rgba(24, 24, 29, 0.96)); }
+html[lang="ko-KP"] .terminal--epic .terminal__dot:first-child { background: #e64b4b; }
+html[lang="ko-KP"] .terminal--epic .terminal__dot:nth-child(2) { background: #d8a64d; }
+html[lang="ko-KP"] .terminal--epic .terminal__dot:nth-child(3) { background: #7b8e7e; }
+html[lang="ko-KP"] .terminal--epic .terminal__key { color: #e9bd73; }
+html[lang="ko-KP"] .terminal--epic .terminal__prompt, html[lang="ko-KP"] .terminal--epic .terminal__cursor { background-color: #e64b4b; color: #e64b4b; }
+html[lang="ko-KP"] .terminal--epic .terminal__seal { padding: 12px 18px; border-top: 1px solid rgba(230, 75, 75, 0.2); color: #d8b87a; font-size: 0.76rem; letter-spacing: 0.08em; text-align: right; }
+@media (max-width: 860px) {
+    html[lang="ko-KP"] .hero { padding: 44px 22px 0; }
+    html[lang="ko-KP"] .hero__inner { grid-template-columns: 1fr; gap: 34px; }
+    html[lang="ko-KP"] .hero__title { font-size: clamp(2rem, 8vw, 3.2rem); }
+    html[lang="ko-KP"] .hero__title-accent--epic { font-size: clamp(1.5rem, 6vw, 2.3rem); }
+    html[lang="ko-KP"] .hero__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+    html[lang="ko-KP"] .hero__stat-label { font-size: 0.76rem; }
+}
+@media (max-width: 420px) { html[lang="ko-KP"] .hero__declaration { font-size: 0.84rem; } html[lang="ko-KP"] .hero__seal { font-size: 0.68rem; letter-spacing: 0.02em; } }
