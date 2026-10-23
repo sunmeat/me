@@ -13,8 +13,8 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "10", label: "Published sites"},
-    {value: "5+", label: "Published Android apps"},
+    {value: "9", label: "Published sites"},
+    {value: "6", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "241+", label: "GitHub repositories"},
 ];
