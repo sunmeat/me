@@ -1351,7 +1351,7 @@ const ZH = {
 "Sep 2007 — Present (Remote)":"2007 年 9 月 — 至今（远程）","Aug 2026 — Present":"2026 年 8 月 — 至今","Ongoing":"进行中","Based in":"所在地",
 "Built with ❤️ & React":"使用 ❤️ 与 React 构建","Send Brief to Telegram":"将项目需求发送至 Telegram","Brief copied — open chat":"需求已复制，打开聊天",
 "Copy Brief Text":"复制项目需求","Copied to clipboard":"已复制到剪贴板","Select your project requirements to get an instant scope estimate.":"选择项目需求，即可快速估算工作范围。",
-"weeks":"周"," weeks":" 周"
+"weeks":"周"," weeks":" 周",
     "View published sites": "查看已发布的网站",
     "Start a project": "启动一个项目",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "我是一名常驻法国奥尔良的软件工程师和大学讲师，兼具编程与经济学背景。近二十年来，我一直穿梭于课堂与代码之间：白天培养新一代开发者，夜晚打造并交付可投入实际使用的软件。",
