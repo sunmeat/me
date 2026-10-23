@@ -2590,6 +2590,62 @@ function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
 }
 
+function translateExperimentalFallback(value, language) {
+    if (language === "av") {
+        const rules = [
+            [/\bsoftware engineer\b/gi, "инженер цифрового балета"],
+            [/\bdeveloper\b/gi, "созидатель прекрасного"],
+            [/\bteacher|lecturer\b/gi, "педагогическое величие"],
+            [/\bprojects?\b/gi, "блистательные проекты"],
+            [/\bskills?\b/gi, "таланты, дорогие мои"],
+            [/\bexperience\b/gi, "блистательный стаж"],
+            [/\bapplications?|apps?\b/gi, "приложения, просто песня"],
+            [/\bwebsites?|sites?\b/gi, "сайты, прекрасные как я"],
+            [/\bcontact\b/gi, "приглашаю к диалогу"],
+            [/\bdownload\b/gi, "забрать себе эту красоту"],
+            [/\bview\b/gi, "полюбоваться"],
+            [/\bloading\b/gi, "готовимся к выходу на сцену"],
+            [/\bfailed|failure|error\b/gi, "досадный технический антракт"],
+            [/\bplease\b/gi, "будьте любезны, дорогие мои"],
+            [/\bwelcome\b/gi, "добро пожаловать, прекрасные мои"],
+            [/\bthank you\b/gi, "благодарю, мои хорошие"]
+        ];
+        let result = value;
+        for (const [pattern, replacement] of rules) result = result.replace(pattern, replacement);
+        if (/[A-Za-z]{3,}/.test(result)) {
+            result = "Дорогие мои, " + result.charAt(0).toLocaleLowerCase("ru") + result.slice(1);
+            if (!/[.!?]$/.test(result)) result += "!";
+            return result + " Я в прекрасной форме, и это моё мнение!";
+        }
+        return result;
+    }
+
+    if (language === "cu") {
+        const rules = [
+            [/\babout\b/gi, "О себѣ"],
+            [/\bskills?\b/gi, "Искꙋсства"],
+            [/\bapplications?|apps?\b/gi, "Приложенїѧ"],
+            [/\bwebsites?|sites?\b/gi, "Сайты"],
+            [/\bexperience\b/gi, "Опытъ и дѣла"],
+            [/\bcontact\b/gi, "Глаголи съ мною"],
+            [/\bprojects?\b/gi, "дѣла"],
+            [/\bsoftware|development|developer\b/gi, "программное дѣло"],
+            [/\bteacher|teaching|lecturer\b/gi, "учительство"],
+            [/\bpublished|available|live\b/gi, "явлено"],
+            [/\bloading\b/gi, "Грѧдетъ"],
+            [/\berror|failed|failure\b/gi, "Погрѣшенье"],
+            [/\bview|open\b/gi, "Узри"],
+            [/\bthank you\b/gi, "Благодарю"],
+            [/\bwelcome\b/gi, "Добро пожаловати"]
+        ];
+        let result = value;
+        for (const [pattern, replacement] of rules) result = result.replace(pattern, replacement);
+        return result;
+    }
+
+    return value;
+}
+
 export function translateString(value, language) {
     const dictionary = TRANSLATIONS[language];
     if (!dictionary) return value;
@@ -2602,6 +2658,9 @@ export function translateString(value, language) {
         .sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
+    }
+    if (language === "av" || language === "cu") {
+        translated = translateExperimentalFallback(translated, language);
     }
     return translated;
 }
