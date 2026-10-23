@@ -89,7 +89,6 @@ function Nav() {
                             aria-haspopup="menu"
                         >
                             <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "ko-KP" ? "kp" : language === "zh" ? "cn" : language === "ar" ? "sa" : language === "sa" ? "in" : language === "ja" ? "jp" : language === "de" ? "de" : language === "hv" ? "hv" : language === "od" ? "od" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "ko-KP" ? "조선민주주의인민공화국 국기" : language === "zh" ? "Chinese flag" : language === "ar" ? "علم المملكة العربية السعودية" : language === "sa" ? "India" : language === "ja" ? "日本の国旗" : language === "hv" ? "Three-headed dragon" : language === "od" ? "Флаг города Одессы" : "United States flag"} />
-                            <span className="language-switcher__current">{({"en":"EN","hv":"HV","cu":"CU","av":"AV","qya":"QY","ja":"日本語","de":"DE","fr":"FR","es":"ES","ru":"RU","zh":"中文","ko-KP":"조선말","ar":"AR","sa":"संस्कृत","od":"Од","pt-BR":"PT"})[language] || "EN"}</span>
                         </button>
 
                         {languageMenuOpen && (
