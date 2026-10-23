@@ -1,7 +1,7 @@
 export const BIO = "Orléans-based software engineer and lecturer building native Android applications end to end — " +
     "from first sketch to a live listing on Google Play. " +
     "Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. " +
-    "Six published apps so far — just the beginning. " +
+    "Five+ published apps so far — just the beginning. " +
     "Over nineteen years of writing and teaching code.";
 
 export const NAV_LINKS = [
@@ -13,8 +13,8 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "9", label: "Published sites"},
-    {value: "6", label: "Published Android apps"},
+    {value: "10", label: "Published sites"},
+    {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "241+", label: "GitHub repositories"},
 ];
