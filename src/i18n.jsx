@@ -2367,7 +2367,6 @@ const HV = {
     "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Dārys se ȳdragon: aōha sȳz, music sȳz.",
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Duolingo vēzos: XP, sȳz, se courses. PNG urnegon, login daor."
 };
-\n
 const AV = {
     "About": "Обо мне, о моей невероятности!",
     "Skills": "Мои таланты, дорогие мои!",
