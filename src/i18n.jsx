@@ -19,7 +19,7 @@ export function LanguageProvider({children}) {
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
         document.title = language === "cu" ? "Црькъвьнословѣньскъ — О себѣ, дѣлахъ и искꙋсствѣ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
-            : language === "ko-KP" ? "Oleksandr Zahoruiko — 조선식 프로그람 개발 기술자 | 프랑스 오를레앙"
+            : language === "ko-KP" ? "위대한 기술 창조자 Oleksandr Zahoruiko — 주체적 프로그람 개발의 영웅 | 프랑스 오를레앙"
             : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
             : language === "ru"
@@ -51,7 +51,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "cu" ? "Црькъвьнословѣньскъ — дѣла и искꙋсства" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "cu" ? "Црькъвьнословѣньскъ — дѣла и искꙋсства" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -62,7 +62,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "cu" ? "Портфолио въ церковнославѧнскомъ духѣ: кодъ, Android приложенїѧ и учительство." : language === "av" ? "Портфолио в стиле Анастасии Волочковой: шпагат вам в ленту, песни в сердце, блистательная карьера и моё мнение." : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램, 웹 개발 및 공개된 기술 사업. 19년 이상의 개발 및 교육 경력. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[property="og:description"]', language === "cu" ? "Портфолио въ церковнославѧнскомъ духѣ: кодъ, Android приложенїѧ и учительство." : language === "av" ? "Портфолио в стиле Анастасии Волочковой: шпагат вам в ленту, песни в сердце, блистательная карьера и моё мнение." : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "불굴의 창조정신으로 건설한 안드로이드 응용프로그램과 웹 성과. 19년을 넘는 개발 및 교육의 빛나는 력사. 프랑스 오를레앙에서 세계를 향해 나아간다." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -84,7 +84,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ: кодъ, приложенїѧ и учительство." : language === "av" ? "Шпагаты, песни, блистательная карьера и цифровое величие. Дорогие мои!" : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "안드로이드 응용프로그램과 전면부-후면부 웹 개발. 프랑스 오를레앙." : language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ: кодъ, приложенїѧ и учительство." : language === "av" ? "Шпагаты, песни, блистательная карьера и цифровое величие. Дорогие мои!" : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "위대한 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 창조와 기술 혁신의 승리, 프랑스 오를레앙에서 세계로." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -1496,30 +1496,30 @@ const ZH = {
     "Starlink referral offer": "Starlink 推荐优惠",
 };
 const KP = {
-    "About": "소개",
-    "Skills": "기술",
+    "About": "위대한 업적에 대하여",
+    "Skills": "주체의 기술 역량",
     "Apps": "응용프로그램",
-    "Sites": "홈페지",
-    "Experience": "경력",
-    "Contact": "련락",
+    "Sites": "위대한 디지털 건설물",
+    "Experience": "혁명적 실천과 업적",
+    "Contact": "위대한 사업의 련대",
     "Buy me a coffee": "커피 한잔을 대접해주십시오",
     "Hire me": "협력 제의",
     "Toggle menu": "차림표 열기 또는 닫기",
     "View published sites": "공개된 홈페지 보기",
     "Start a project": "새 사업을 시작합시다",
-    "Published sites": "공개된 홈페지",
-    "Published Android apps": "공개된 안드로이드 응용프로그램",
+    "Published sites": "승리적으로 공개된 디지털 건설물",
+    "Published Android apps": "전 세계에 공개된 안드로이드 응용프로그램",
     "Years in software & teaching": "프로그람 개발 및 교육 년수",
-    "GitHub repositories": "GitHub 저장소",
+    "GitHub repositories": "GitHub에 새겨진 기술 혁신의 기록",
     "Engineer by trade, teacher by habit.": "프로그람을 만들고 후대들을 가르치는것을 본분으로 삼고있습니다.",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "나는 프랑스 오를레앙에서 활동하는 소프트웨어 기술자이며 대학 강사이다. 프로그람 작성과 경제학을 함께 공부하였으며 지난 20년 가까이 낮에는 새 세대 개발자들을 키우고 밤에는 실용적인 소프트웨어를 개발하여왔다.",
     "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "현재 나의 기본 사업은 안드로이드 응용프로그램 개발이다. 착상으로부터 Google Play 공개에 이르기까지 완성도 높은 응용프로그램을 만든다. 또한 React를 리용한 전단부와 Spring Boot, Django, ASP.NET Core, Node.js를 리용한 후단부를 갖춘 전면부-후면부 웹 응용프로그램도 개발한다. 나는 명백한 구조, 유지보수가 쉬운 코드, 현실적인 기한을 중시한다. 이는 19년이 넘는 개발 및 교육 경험에서 다져진 원칙이다.",
     "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "사업시간 밖에는 사진촬영과 여러 악기 연주를 즐긴다. 그래서인지 사용자 화면의 작은 불협화음도 놓치지 않는다.",
     "Open source & teaching material.": "공개 소스와 교육 자료.",
     "View GitHub profile": "GitHub 활동 보기",
-    "Technical skills": "기술 능력",
-    "Professional experience": "사업 경력",
-    "Education": "학력",
+    "Technical skills": "주체적 기술력과 무적의 개발 능력",
+    "Professional experience": "혁명적 기술 실천의 빛나는 력사",
+    "Education": "위대한 지식 탐구의 길",
     "Get in touch": "련락하기",
     "Have a project in mind? Let's talk about how to make it real.": "실현할 사업 구상이 있는가? 구체적인 실천 방도를 함께 토의하자.",
     "Email me": "전자우편 보내기",
@@ -1573,7 +1573,7 @@ const KP = {
     "Local Business": "지역 봉사",
     "Live on Google Play right now.": "현재 Google Play에 공개되여있다.",
     "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "실용 도구, 오락용 유희, 지역 봉사 도구 등 6개의 응용프로그램을 직접 설계하고 개발하여 공개하였다.",
-    "Side projects, live on the web.": "인터네트에 공개된 개인 사업들.",
+    "Side projects, live on the web.": "인터네트에 우뚝 솟은 위대한 디지털 기념비들",
     "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "새로운 착상과 기술을 시험하기 위해 독립적으로 개발하고 공개한 홈페지 및 실험 사업들의 모음이다.",
     "Orléans-based software engineer & lecturer.": "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 강사.",
     "Orléans-based software engineer and lecturer building native Android applications end to end — ": "프랑스 오를레앙에서 활동하며 안드로이드 응용프로그램을 처음부터 끝까지 개발하는 소프트웨어 기술자 및 강사이다. ",
@@ -1647,7 +1647,7 @@ const KP = {
     "Aug 2026 — Present": "2026년 8월 — 현재",
     "Ongoing": "진행중",
     "Based in": "활동 지역",
-    "Built with ❤️ & React": "❤️와 React로 제작",
+    "Built with ❤️ & React": "불굴의 창조정신과 React로 건설",
     "Send Brief to Telegram": "사업 개요를 Telegram으로 보내기",
     "Brief copied — open chat": "사업 개요를 복사하였습니다 — 대화창 열기",
     "Copy Brief Text": "사업 개요 복사",
@@ -1655,19 +1655,19 @@ const KP = {
     "Select your project requirements to get an instant scope estimate.": "사업 요구사항을 선택하면 작업 규모를 즉시 산정할수 있습니다.",
     "weeks": "주",
     " weeks": " 주",
-    "View project": "사업 보기",
-    "View all": "모두 보기",
-    "Read more": "더 읽기",
+    "View project": "기술 위업의 전모를 보라",
+    "View all": "모든 위대한 성과를 열람하라",
+    "Read more": "더 깊이 탐구하라",
     "Let's build something.": "우리 함께 훌륭한 결과물을 만들어냅시다.",
     "Send me a message and I'll get back to you.": "련락을 남기면 회답하겠습니다.",
-    "Open to freelance projects": "개별 개발 사업 협력 환영",
+    "Open to freelance projects": "위대한 기술 사업을 위한 협력 준비 완료",
     "Years of experience": "경력 년수",
     "Work": "경력",
     "Status": "상태",
     "Project": "사업",
     "Education & certifications": "학력 및 자격",
     "View on GitHub": "GitHub에서 보기",
-    "Visit site": "홈페지 방문",
+    "Visit site": "디지털 건설 현장을 방문하라",
     "Loading": "불러오는 중",
     "A toolkit built for shipping, not just prototyping.": "시험용 모형에 그치지 않고 실제 제품을 완성하기 위한 기술 도구들이다.",
     "Experience & education.": "경력 및 학력.",
