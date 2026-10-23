@@ -2386,7 +2386,7 @@ const AV = {
     "Engineer by trade, teacher by habit.": "По профессии инженер, по призванию преподаватель. И всё это с балетной осанкой!",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Дорогие мои, я инженер-программист и преподаватель. Почти два десятилетия соединяю обучение и разработку. Дисциплина, талант и растяжка, разумеется, во всём важны!",
     "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Сегодня я создаю нативные Android-приложения и full-stack-проекты. Люблю чистую архитектуру, понятный код и реальные сроки. Всё должно быть красиво и профессионально, дорогие мои. Это моё мнение!",
-    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "В свободное время фотографирую и играю на музыкальных инструментах. Ритм должен быть безупречным, а шпагат интерфейсу не повредит!",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "В свободное время фотографирую и играю на музыкальных инструментах. А после трудов, дорогие мои, бокал Просекко и свежая клубника! Вся страна отдыхает по-своему, а я культурно дегустирую. И шпагат, разумеется, безупречен!",
     "Live on Google Play right now.": "Уже доступны в Google Play",
     "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Шесть приложений созданы и опубликованы самостоятельно. Талант, труд и немного сценического блеска!",
     "Side projects, live on the web.": "Мои проекты уже в сети",
@@ -2591,22 +2591,22 @@ function normalize(value) {
 function translateExperimentalFallback(value, language) {
     if (language === "av") {
         const rules = [
-            [/\\bsoftware engineer\\b/gi, "инженер цифрового балета"],
-            [/\\bdeveloper\\b/gi, "созидатель прекрасного"],
-            [/\\bteacher|lecturer\\b/gi, "преподаватель с артистизмом"],
-            [/\\bprojects?\\b/gi, "проекты"],
-            [/\\bskills?\\b/gi, "таланты"],
-            [/\\bexperience\\b/gi, "опыт"],
-            [/\\bapplications?|apps?\\b/gi, "приложения"],
-            [/\\bwebsites?|sites?\\b/gi, "сайты"],
-            [/\\bcontact\\b/gi, "контакты"],
-            [/\\bdownload\\b/gi, "скачать"],
-            [/\\bview\\b/gi, "посмотреть"],
-            [/\\bloading\\b/gi, "загрузка"],
-            [/\\bfailed|failure|error\\b/gi, "техническая ошибка"],
-            [/\\bplease\\b/gi, "пожалуйста"],
-            [/\\bwelcome\\b/gi, "добро пожаловать"],
-            [/\\bthank you\\b/gi, "благодарю"]
+            [/\bsoftware engineer\b/gi, "инженер цифрового балета"],
+            [/\bdeveloper\b/gi, "созидатель прекрасного"],
+            [/\bteacher|lecturer\b/gi, "преподаватель с артистизмом"],
+            [/\bprojects?\b/gi, "проекты"],
+            [/\bskills?\b/gi, "таланты"],
+            [/\bexperience\b/gi, "опыт"],
+            [/\bapplications?|apps?\b/gi, "приложения"],
+            [/\bwebsites?|sites?\b/gi, "сайты"],
+            [/\bcontact\b/gi, "контакты"],
+            [/\bdownload\b/gi, "скачать"],
+            [/\bview\b/gi, "посмотреть"],
+            [/\bloading\b/gi, "загрузка"],
+            [/\bfailed|failure|error\b/gi, "техническая ошибка"],
+            [/\bplease\b/gi, "пожалуйста"],
+            [/\bwelcome\b/gi, "добро пожаловать"],
+            [/\bthank you\b/gi, "благодарю"]
         ];
         let result = value;
         for (const [pattern, replacement] of rules) result = result.replace(pattern, replacement);
