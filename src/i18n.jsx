@@ -2997,6 +2997,26 @@ function translateExperimentalFallback(value, language) {
         let result = value;
         for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
         for (const [pattern, replacement] of technologyNames) result = result.replace(pattern, replacement);
+
+        // No Latin-script words may remain in visible Church Slavonic text.
+        const transliterationRules = [
+            [/sch/gi, "щ"], [/shch/gi, "щ"], [/zh/gi, "ж"], [/kh/gi, "х"],
+            [/ts/gi, "ц"], [/ch/gi, "ч"], [/sh/gi, "ш"], [/sh/gi, "ш"],
+            [/yu/gi, "ю"], [/ya/gi, "я"], [/yo/gi, "ё"], [/ye/gi, "е"],
+            [/yo/gi, "ё"], [/th/gi, "т"], [/ph/gi, "ф"], [/ck/gi, "к"],
+            [/qu/gi, "кв"], [/w/gi, "в"], [/x/gi, "кс"], [/j/gi, "дж"],
+            [/a/gi, "а"], [/b/gi, "б"], [/c/gi, "к"], [/d/gi, "д"],
+            [/e/gi, "е"], [/f/gi, "ф"], [/g/gi, "г"], [/h/gi, "х"],
+            [/i/gi, "и"], [/k/gi, "к"], [/l/gi, "л"], [/m/gi, "м"],
+            [/n/gi, "н"], [/o/gi, "о"], [/p/gi, "п"], [/q/gi, "к"],
+            [/r/gi, "р"], [/s/gi, "с"], [/t/gi, "т"], [/u/gi, "у"],
+            [/v/gi, "в"], [/y/gi, "и"], [/z/gi, "з"]
+        ];
+        result = result.replace(/[A-Za-z]+(?:[.-][A-Za-z0-9]+)*/g, (word) => {
+            let translated = word;
+            for (const [pattern, replacement] of transliterationRules) translated = translated.replace(pattern, replacement);
+            return translated;
+        });
         return result.replace(/\s{2,}/g, " ").replace(/\s+([,.!?;:])/g, "$1").trim();
     }
     return value;
