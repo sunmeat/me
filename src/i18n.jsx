@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "cu" ? "Александръ Загоруйко — О дѣлахъ и дарованїяхъ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "cu" ? "Александр Загоруйко — О дѣлахъ и дарованїяхъ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "위대한 기술 창조자 Oleksandr Zahoruiko — 주체적 프로그람 개발의 영웅 | 프랑스 오를레앙"
             : language === "zh"
@@ -52,7 +52,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "cu" ? "Александръ Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -2482,7 +2482,7 @@ const AV = {
 };
 
 const CU = {
-    "Oleksandr Zahoruiko": "Александръ Загоруйко",
+    "Oleksandr Zahoruiko": "Александр Загоруйко",
     "About": "О себѣ",
     "Skills": "Дарованїѧ и умѣнїѧ",
     "Apps": "Дѣла рукъ моихъ",
