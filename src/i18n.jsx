@@ -2591,7 +2591,6 @@ const CU = {
     "LIMITED OFFER": "ДАРЪ НА МАЛОЕ ВРЕМѦ",
     "Activate Starlink": "Благослови связь Старлинкъ",
     "Activate Starlink through my referral link and get one month of service free.": "Чрезъ мою связь со Старлинкомъ прїими единъ мѣсяцъ служенїѧ даромъ.",
-    "Activate Starlink through my referral link and get one month of service free.": "Чрезъ мою связь со Старлинкомъ прїими единъ мѣсяцъ служенїѧ даромъ.",
     "France": "Францїѧ"
 };
 
