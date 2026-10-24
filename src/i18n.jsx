@@ -3073,7 +3073,7 @@ function translateExperimentalFallback(value, language) {
         for (const [pattern, replacement] of [...technologyNames].sort((a, b) => b[0].source.length - a[0].source.length)) result = result.replace(pattern, replacement);
 
         // Church Slavonic copy is curated semantically; never disguise untranslated English through transliteration.
-        if (language === "cu") return result.replace(/\\s{2,}/g, " ").replace(/\\s+([,.!?;:])/g, "$1").trim();
+        if (language === "cu") return result.replace(/\s{2,}/g, " ").replace(/\s+([,.!?;:])/g, "$1").trim();
 
         const transliterationRules = [
             [/sch/gi, "щ"], [/shch/gi, "щ"], [/zh/gi, "ж"], [/kh/gi, "х"],
