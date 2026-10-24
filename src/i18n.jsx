@@ -74,7 +74,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Црькъвьнословѣньскъ — дѣла и искꙋсства" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -2486,7 +2486,7 @@ const CU = {
     "About": "О себѣ",
     "Skills": "Дарованїѧ и умѣнїѧ",
     "Apps": "Дѣла рукъ моихъ",
-    "Sites": "Сайты",
+    "Sites": "Сѣтевыя творенїѧ",
     "Experience": "Лѣта трудовъ и дѣланїй",
     "Contact": "Къ бесѣдѣ призыванїе",
     "Buy me a coffee": "Подаждь ми горячительнаго пойла",
