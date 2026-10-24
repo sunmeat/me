@@ -3059,7 +3059,7 @@ function translateExperimentalFallback(value, language) {
         ];
         let result = value;
         for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
-        for (const [pattern, replacement] of technologyNames) result = result.replace(pattern, replacement);
+        for (const [pattern, replacement] of [...technologyNames].sort((a, b) => b[0].source.length - a[0].source.length)) result = result.replace(pattern, replacement);
 
         // No Latin-script words may remain in visible Church Slavonic text.
         const transliterationRules = [
