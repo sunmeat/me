@@ -1114,7 +1114,7 @@ const RU = {
     "About": "Обо мне",
     "Skills": "Навыки",
     "Apps": "Приложения",
-    "Sites": "Сайты",
+    "Sites": "Сѣтевыя творенїѧ",
     "Experience": "Опыт",
     "Contact": "Контакты",
     "Buy me a coffee": "Поддержать проект",
@@ -2482,22 +2482,24 @@ const AV = {
 };
 
 const CU = {
+    "Oleksandr Zahoruiko": "Александръ Загоруйко",
     "About": "О себѣ",
-    "Skills": "Искꙋсства",
-    "Apps": "Приложенїѧ",
+    "Skills": "Дарованїѧ и умѣнїѧ",
+    "Apps": "Дѣла рукъ моихъ",
     "Sites": "Сайты",
-    "Experience": "Опытъ и дѣла",
-    "Contact": "Съ нами глаголати",
-    "Buy me a coffee": "Кꙋпити ми кафїѧ",
-    "Hire me": "Призови мя на дѣло",
-    "Toggle menu": "Отверзи или затвори меню",
-    "View published sites": "Видѣти явленыѧ сайты",
-    "Start a project": "Начати дѣло",
-    "Published sites": "Явленыѧ сайты",
-    "Published Android apps": "Явленыѧ приложенїѧ для Андроїда",
-    "Years in software & teaching": "Лѣта въ твореніи программъ и учительствѣ",
-    "GitHub repositories": "Хранилища исходныхъ писанїй",
-    "Engineer by trade, teacher by habit.": "Творецъ программъ по ремеслꙋ, учитель по призванїю.",
+    "Experience": "Лѣта трудовъ и дѣланїй",
+    "Contact": "Къ бесѣдѣ призыванїе",
+    "Buy me a coffee": "Подаждь ми горячительнаго пойла",
+    "Buy me one more coffee": "Подаждь ми паки горячительнаго пойла",
+    "Hire me": "Призови мя на служеніе",
+    "Toggle menu": "Отверзи или затвори врата",
+    "View published sites": "Узри сѣтевыя творенїѧ, въ свѣтъ явленныя",
+    "Start a project": "Да положимъ начало новому дѣлу",
+    "Published sites": "Сѣтевыя творенїѧ, въ свѣтъ явленныя",
+    "Published Android apps": "Приложенїѧ для Андроїда, въ свѣтъ явленныя",
+    "Years in software & teaching": "Лѣта въ созиданїи программъ и наставленїи учениковъ",
+    "GitHub repositories": "Сокровищницы исходныхъ писанїй",
+    "Engineer by trade, teacher by habit.": "Программъ созидатель по ремеслу, наставникъ по призванїю.",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Азъ есмь творецъ программъ и учитель высшаго училища, живꙋ въ Орлеанѣ, во Францїи. Почти двадесять лѣтъ дѣлю время междꙋ ученьемъ и писанїемъ программъ: днемъ учꙋ новыя поколѣнїѧ творити программы, нощїю же довожу дѣла до совершенства.",
     "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Нынѣ паче всего творю природныя приложенїѧ для Андроїда, отъ первыя мысли до явленїѧ въ Гуглъ Плэй. Сѣтевыя дѣла устрояю отъ лица до сокровеннаго нутра. Люблю стройное устроеніе, кодъ ясный, сроки правдивыя и дѣла, которыя легко разумѣти и по прошествїи года. Сїѧ начала утвердихъ за болѣе нежели девѧтнадцать лѣтъ писанїемъ программъ и учительствомъ.",
     "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Внѣ службы люблю творити свѣтовыя образы и играти на многыхъ музыкальныхъ орудїѧхъ. Того ради примѣчаю, егда лицевая часть дѣла сбивается съ полтакта.",
@@ -2507,16 +2509,17 @@ const CU = {
     "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Сборъ сайтовъ и опытовъ растетъ: кождꙑй сотворенъ ради мысли, искꙋсства или веселїѧ.",
     "Open source & teaching material.": "Открытыя писанїѧ и наставленїѧ къ ученью",
     "View GitHub profile": "Узри собраніе моихъ писанїй",
-    "Technical skills": "Искꙋсства техническаѧ",
-    "A toolkit shaped by production work, teaching, and constant experimentation.": "Орудїѧ мои испытаны дѣломъ, учительствомъ и многыми опытꙑ.",
-    "Professional experience": "Дѣла профессиональнаѧ",
-    "Education": "Ученье",
-    "Get in touch": "Глаголи съ мною",
-    "Have a project in mind? Let's talk about how to make it real.": "Имаши ли помꙑселъ о дѣлѣ? Да совѣщаемъ, како его сотворити.",
-    "Email me": "Писати ми грамоту",
+    "Technical skills": "Умѣнїѧ и дарованїѧ",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Сїи умѣнїѧ возросли въ трудахъ, въ наставленїи учениковъ и въ непрестанномъ исканїи лучшаго.",
+    "Professional experience": "Свидѣтельство многолѣтнихъ трудовъ",
+    "Education": "Путь ученїѧ",
+    "Get in touch": "Возгласи, и отвѣщаю ти",
+    "Have a project in mind? Let's talk about how to make it real.": "Аще въ сердцѣ твоемъ зрѣетъ замыселъ, да сядемъ въ совѣтъ и поможемъ ему во плоти явитися.",
+    "Email me": "Послати ми вѣсть писаную",
     "Message on Telegram": "Послати вѣсть чрезъ Телеграмъ",
-    "Orléans, France": "Орлеанъ, Францїѧ",
+    "Orléans, France": "Орлеанъ, во Францїи",
     "Name": "Имѧ",
+    "Android / Full-Stack Developer": "Созидатель программъ и сѣтевыхъ творенїй",
     "Add a comment...": "Приложи слово...",
     "Post": "Явити",
     "Like": "Люблю",
@@ -2529,9 +2532,9 @@ const CU = {
     "Guest": "Гость",
     "Couldn't load comments right now.": "Нынѣ не могохомъ коментарїѧ прочести.",
     "Couldn't post your comment. Please try again.": "Не могохомъ слово твое явити. Испытай паки.",
-    "Check out this portfolio": "Узри сие собраніе дѣлъ",
+    "Check out this portfolio": "Приди и узри собраніе трудовъ моихъ",
     "Loading news...": "Вѣсти грѧдꙋтъ...",
-    "Developer News Feed": "Вѣсти о творцѣхъ программъ",
+    "Developer News Feed": "Вѣсти о созидателѣхъ цифровыхъ дѣлъ",
     "Curated headlines from Google News. Swipe or use arrow keys.": "Избраныѧ вѣсти. Двигай перстомъ или стрелками.",
     "Click this card to read full article.": "Коснись сего листа, да прочтеши все слово.",
     "SOURCE": "ИСТОЧНИКЪ",
@@ -2571,8 +2574,8 @@ const CU = {
     "Cancel": "Остави",
     "Save changes": "Сохранити премѣны",
     "No projects yet.": "Дѣлъ еще нѣсть.",
-    "All rights reserved.": "Вьсѧ права сохранена.",
-    "Made with love.": "Сотворено съ любовїю.",
+    "All rights reserved.": "Вьсѧ права сохранена суть.",
+    "Made with love.": "Сотворено съ любовїю и усердїемъ.",
     "A little about me": "Мало о себѣ",
     "Let's connect": "Да съединимсѧ",
     "Get started": "Начни",
@@ -2580,6 +2583,11 @@ const CU = {
     "Thank you": "Благодарю",
     "You're welcome": "Не за что",
     "Orléans": "Орлеанъ",
+    "FREE": "ДАРОМЪ",
+    "1 MONTH": "ЕДИНЪ МѢСѦЦЪ",
+    "LIMITED OFFER": "ДАРЪ НА МАЛОЕ ВРЕМѦ",
+    "Activate Starlink": "Благослови связь Старлинкъ",
+    "Activate Starlink through my referral link and get one month of service free.": "Чрезъ мою связь со Старлинкомъ прїими единъ мѣсяцъ служенїѧ даромъ.",
     "France": "Францїѧ"
 };
 
@@ -3061,7 +3069,9 @@ function translateExperimentalFallback(value, language) {
         for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
         for (const [pattern, replacement] of [...technologyNames].sort((a, b) => b[0].source.length - a[0].source.length)) result = result.replace(pattern, replacement);
 
-        // No Latin-script words may remain in visible Church Slavonic text.
+        // Church Slavonic copy is curated semantically; never disguise untranslated English through transliteration.
+        if (language === "cu") return result.replace(/\\s{2,}/g, " ").replace(/\\s+([,.!?;:])/g, "$1").trim();
+
         const transliterationRules = [
             [/sch/gi, "щ"], [/shch/gi, "щ"], [/zh/gi, "ж"], [/kh/gi, "х"],
             [/ts/gi, "ц"], [/ch/gi, "ч"], [/sh/gi, "ш"], [/sh/gi, "ш"],
@@ -3090,7 +3100,7 @@ export function translateString(value, language) {
     if (!dictionary) return value;
     const normalized = normalize(value);
     if (dictionary[normalized]) {
-        return language === "hv" || language === "cu" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
+        return language === "hv" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
     }
 
     let translated = value;
@@ -3100,7 +3110,7 @@ export function translateString(value, language) {
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
     }
-    if (language === "av" || language === "cu" || language === "hv") {
+    if (language === "av" || language === "hv") {
         translated = translateExperimentalFallback(translated, language);
     }
     return translated;
