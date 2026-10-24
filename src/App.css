@@ -2770,3 +2770,111 @@ html[lang="hv"] :is(.btn, .hero__actions, .nav__links, .hero__stats, .estimator_
         font-size: 0.82rem;
     }
 }
+
+
+/* Church Slavonic edition: keep long ceremonial copy inside mobile cards. */
+html[lang="cu"],
+html[lang="cu"] body,
+html[lang="cu"] #root,
+html[lang="cu"] .page,
+html[lang="cu"] main {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+html[lang="cu"] :is(.container, section, article, .hero, .hero__inner, .hero__content,
+.about-card, .skill-card, .site-card, .app-card, .contact-card, .estimator__layout,
+.news__card, .starlink-offer, .starlink-offer__content, .footer__inner) {
+    min-width: 0;
+    max-width: 100%;
+}
+
+html[lang="cu"] :is(h1, h2, h3, h4, p, li, label, button, a, span, strong, small,
+.hero__title, .hero__lede, .hero__declaration, .section__title, .section__eyebrow,
+.skill-card *, .site-card *, .app-card *, .contact-card *, .news__card *) {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+html[lang="cu"] :is(.hero__title, .hero__lede, .hero__declaration, .section__title) {
+    width: 100%;
+    text-wrap: pretty;
+}
+
+html[lang="cu"] :is(.hero__actions, .hero__stats, .skills__grid, .sites__grid,
+.apps__grid, .contact__grid, .estimator__actions) {
+    min-width: 0;
+}
+
+@media (max-width: 720px) {
+    html[lang="cu"] .hero {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    html[lang="cu"] .hero__title {
+        font-size: clamp(1.75rem, 7.5vw, 2.65rem);
+        line-height: 1.22;
+        letter-spacing: -0.025em;
+    }
+
+    html[lang="cu"] .hero__title-accent {
+        display: inline;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    html[lang="cu"] .hero__lede,
+    html[lang="cu"] .hero__declaration {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
+    html[lang="cu"] :is(.about-card, .skill-card, .site-card, .app-card,
+    .contact-card, .news__card, .starlink-offer__content) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    html[lang="cu"] .hero__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    html[lang="cu"] .hero__stat,
+    html[lang="cu"] .hero__stat-label {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    html[lang="cu"] .starlink-offer__title {
+        font-size: clamp(1.65rem, 7vw, 2.25rem);
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+    }
+
+    html[lang="cu"] .footer__inner {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    html[lang="cu"] .btn,
+    html[lang="cu"] .coffee-btn {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    html[lang="cu"] .hero__title {
+        font-size: 1.65rem;
+    }
+
+    html[lang="cu"] :is(.about-card, .skill-card, .site-card, .app-card,
+    .contact-card, .news__card, .starlink-offer__content) {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+}
