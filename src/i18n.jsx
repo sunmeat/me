@@ -2737,7 +2737,7 @@ export function translateString(value, language) {
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
     }
-    if (language === "av" || language === "cu") {
+    if (language === "av" || language === "cu" || language === "hv") {
         translated = translateExperimentalFallback(translated, language);
     }
     return translated;
