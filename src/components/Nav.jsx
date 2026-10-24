@@ -292,7 +292,7 @@ function Nav() {
                 </nav>
 
                 <a className="btn btn--coffee" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
-                    <Icon name="coffee" size={15}/>
+                    <Icon name={language === "cu" ? "goblet" : "coffee"} size={15}/>
                     Buy me a coffee
                 </a>
 
