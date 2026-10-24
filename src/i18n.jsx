@@ -2675,7 +2675,7 @@ function translateExperimentalFallback(value, language) {
             "Telegram", "Email", "QR", "PNG", "XP", "Orléans", "France", "Odesa", "Kyiv",
             "Silpo", "Munchess", "Aerodion", "sunmeat.dev", "Vite", "Google News"
         ]);
-        const words = result.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-z]+)?/g) || [];
+        const words = value.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-z]+)?/g) || [];
         for (const word of [...new Set(words)].sort((a, b) => b.length - a.length)) {
             if (protectedTerms.has(word) || /^[A-Z0-9]{2,}$/.test(word) || /[A-Z].*[A-Z]/.test(word)) continue;
             const lower = word.toLowerCase();
