@@ -31,10 +31,11 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack | Orléans, França"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France";
+        if (language === "cu") document.title = translateExperimentalFallback(document.title, language);
 
         const updateMeta = (selector, content) => {
             const element = document.querySelector(selector);
-            if (element) element.setAttribute("content", content);
+            if (element) element.setAttribute("content", language === "cu" ? translateExperimentalFallback(content, language) : content);
         };
         updateMeta('meta[name="description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ портфолио: программированїе, Android и учительство." : language === "av" ? "Анастасиеволочковский: шпагаты, песни, балет и программистский шик. Дорогие мои, всё в прекрасной форме!" : language === "qya" ? "Quenya, the High-elven language created by J. R. R. Tolkien. A small experimental localization of a developer portfolio." : language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
