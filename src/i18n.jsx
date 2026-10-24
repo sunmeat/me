@@ -2993,7 +2993,7 @@ function translateExperimentalFallback(value, language) {
             [/\barticle\b/gi, "статья"],
             [/\bfull\b/gi, "полный"],
             [/\bstart\b/gi, "начни"],
-            [/Orléans, France/gi, "Орлеанъ, Францїѧ"]
+            [/Orléans, France/gi, "Орлеанъ, Францїѧ"],
             [/\bprimary focus\b/gi, "главное дѣло"],
             [/\bpolished\b/gi, "добре устроенныя"],
             [/\bfrontend\b/gi, "лицевая часть"],
