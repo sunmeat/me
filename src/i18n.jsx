@@ -2586,11 +2586,6 @@ const CU = {
     "Thank you": "Благодарю",
     "You're welcome": "Не за что",
     "Orléans": "Орлеанъ",
-    "FREE": "ДАРОМЪ",
-    "1 MONTH": "ЕДИНЪ МѢСѦЦЪ",
-    "LIMITED OFFER": "ДАРЪ НА МАЛОЕ ВРЕМѦ",
-    "Activate Starlink": "Благослови связь Старлинкъ",
-    "Activate Starlink through my referral link and get one month of service free.": "Чрезъ мою связь со Старлинкомъ прїими единъ мѣсяцъ служенїѧ даромъ.",
     "France": "Францїѧ"
 };
 
