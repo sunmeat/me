@@ -1,15 +1,16 @@
-import {withTranslation} from "../i18n.jsx";
+import {useLanguage, withTranslation} from "../i18n.jsx";
 import React from "react";
 import {COFFEE_URL} from "../data.js";
 import Icon from "./Icon.jsx";
 
 function Footer() {
+    const {language} = useLanguage();
     return (
         <footer className="footer">
             <div className="footer__inner">
                 <span>© 2019-{new Date().getFullYear()} • Oleksandr Zahoruiko • Built with ❤️ & React • Available for projects</span>
                 <a className="coffee-btn" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
-                    <Icon name="coffee" size={15}/>
+                    <Icon name={language === "cu" ? "goblet" : "coffee"} size={15}/>
                     Buy me one more coffee
                 </a>
                 <button
