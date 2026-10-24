@@ -3093,8 +3093,7 @@ function translateExperimentalFallback(value, language) {
         for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
         for (const [pattern, replacement] of [...technologyNames].sort((a, b) => b[0].source.length - a[0].source.length)) result = result.replace(pattern, replacement);
 
-        // Church Slavonic copy is curated semantically; never disguise untranslated English through transliteration.
-        if (language === "cu") return result.replace(/\s{2,}/g, " ").replace(/\s+([,.!?;:])/g, "$1").trim();
+        // Church Slavonic mode must not expose Latin-script text, including untranslated labels and brand names.
 
         const transliterationRules = [
             [/sch/gi, "щ"], [/shch/gi, "щ"], [/zh/gi, "ж"], [/kh/gi, "х"],
@@ -3124,7 +3123,7 @@ export function translateString(value, language) {
     if (!dictionary) return value;
     const normalized = normalize(value);
     if (dictionary[normalized]) {
-        return language === "hv" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
+        return language === "hv" || language === "cu" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
     }
 
     let translated = value;
