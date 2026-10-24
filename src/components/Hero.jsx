@@ -7,13 +7,14 @@ import Terminal from "./Terminal.jsx";
 function Hero() {
     const {language} = useLanguage();
     const isKorean = language === "ko-KP";
+    const isChurchSlavonic = language === "cu";
     return (
         <section className={"hero" + (isKorean ? " hero--epic" : "")} id="top">
             <div className="hero__inner">
                 <div className="hero__copy">
                     <Eyebrow>{isKorean ? "위대한 기술 창조의 력사 · 제1장" : "$ whoami"}</Eyebrow>
                     <h1 className="hero__title">
-                        {isKorean ? <>Oleksandr Zahoruiko<span className="hero__title-accent hero__title-accent--epic">기술 창조의 선구자</span></> : <>Oleksandr Zahoruiko —<br/><span className="hero__title-accent">Android / Full-Stack Developer</span></>}
+                        {isKorean ? <>Oleksandr Zahoruiko<span className="hero__title-accent hero__title-accent--epic">기술 창조의 선구자</span></> : isChurchSlavonic ? <>Александръ Загоруйко —<br/><span className="hero__title-accent hero__title-accent--epic">Созидатель программъ и сѣтевыхъ творенїй</span></> : <>Oleksandr Zahoruiko —<br/><span className="hero__title-accent">Android / Full-Stack Developer</span></>}
                     </h1>
                     <p className="hero__lede">{isKorean ? "19년을 넘는 개발과 교육의 력사. 여섯개의 안드로이드 응용프로그램과 세계를 향해 공개된 웹 건설물들. 위대한 구상은 코드가 되고, 코드는 현실을 변화시킨다." : BIO}</p>
                     {isKorean && <div className="hero__declaration"><span className="hero__declaration-mark">주체 · 창조 · 전진</span><span>불굴의 탐구정신으로 설계하고, 정밀한 기술로 건설하며, 세계를 향해 공개한다.</span></div>}
