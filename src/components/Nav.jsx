@@ -88,7 +88,7 @@ function Nav() {
                             aria-expanded={languageMenuOpen}
                             aria-haspopup="menu"
                         >
-                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "ko-KP" ? "kp" : language === "zh" ? "cn" : language === "ar" ? "sa" : language === "sa" ? "in" : language === "ja" ? "jp" : language === "de" ? "de" : language === "hv" ? "hv" : language === "od" ? "od" : "us"} label={language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "ko-KP" ? "조선민주주의인민공화국 국기" : language === "zh" ? "Chinese flag" : language === "ar" ? "علم المملكة العربية السعودية" : language === "sa" ? "India" : language === "ja" ? "日本の国旗" : language === "hv" ? "Three-headed dragon" : language === "od" ? "Флаг города Одессы" : "United States flag"} />
+                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "ko-KP" ? "kp" : language === "zh" ? "cn" : language === "ar" ? "sa" : language === "sa" ? "in" : language === "ja" ? "jp" : language === "de" ? "de" : language === "hv" ? "hv" : language === "od" ? "od" : language === "cu" ? "cu" : "us"} label={language === "cu" ? "Свиток церковнославянского языка" : language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "ko-KP" ? "조선민주주의인민공화국 국기" : language === "zh" ? "Chinese flag" : language === "ar" ? "علم المملكة العربية السعودية" : language === "sa" ? "India" : language === "ja" ? "日本の国旗" : language === "hv" ? "Three-headed dragon" : language === "od" ? "Флаг города Одессы" : "United States flag"} />
                         </button>
 
                         {languageMenuOpen && (
@@ -293,14 +293,14 @@ function Nav() {
 
                 <a className="btn btn--coffee" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
                     <Icon name={language === "cu" ? "goblet" : "coffee"} size={15}/>
-                    Buy me a coffee
+                    {language === "cu" ? "Подаяніе" : "Buy me a coffee"}
                 </a>
 
                 <a className="btn btn--ghost nav__cta" href="mailto:sunmeatrich@gmail.com">
                     Hire me
                 </a>
 
-                <button className="nav__toggle" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu">
+                <button className="nav__toggle" onClick={() => setOpen((o) => !o)} aria-label={language === "cu" ? "Отверзи или затвори врата" : "Toggle menu"}>
                     <Icon name={open ? "close" : "menu"}/>
                 </button>
             </div>
@@ -313,7 +313,7 @@ function Nav() {
                         </button>
                     ))}
                     <a className="btn btn--primary" href="mailto:sunmeatrich@gmail.com" onClick={() => setOpen(false)}>
-                        Hire me
+                        {language === "cu" ? "Призови мя на служеніе" : "Hire me"}
                     </a>
                 </div>
             )}
