@@ -2615,95 +2615,84 @@ function translateExperimentalFallback(value, language) {
 
     if (language === "hv") {
         const rules = [
-            [/\\bsoftware engineer\\b/gi, "dārys vala"],
-            [/\\bsoftware\\b/gi, "dārys"],
-            [/\\bengineer(?:ing)?\\b/gi, "vala"],
-            [/\\bdeveloper(?:s)?\\b/gi, "dārys vala"],
-            [/\\blecturer|teacher|teaching\\b/gi, "mandia"],
-            [/\\bexperience\\b/gi, "ānogar"],
-            [/\\beducation\\b/gi, "mandia"],
-            [/\\bskills?\\b/gi, "sȳz"],
-            [/\\bprojects?\\b/gi, "dārys"],
-            [/\\bapplications?|apps?\\b/gi, "vāedar"],
-            [/\\bwebsites?|sites?\\b/gi, "vēzos"],
-            [/\\bcontact|connect\\b/gi, "sȳrī"],
-            [/\\babout\\b/gi, "dārys"],
-            [/\\bpublished|available|live\\b/gi, "urnegon"],
-            [/\\bview|visit|open\\b/gi, "urnegon"],
-            [/\\bloading\\b/gi, "gīmigon"],
-            [/\\bfailed|failure|error|problem\\b/gi, "daor gīmigon"],
-            [/\\bplease\\b/gi, "sȳz"],
-            [/\\bthank you\\b/gi, "kirimvose"],
-            [/\\bwelcome\\b/gi, "rytsas"],
-            [/\\bname\\b/gi, "aōha"],
-            [/\\bmessage\\b/gi, "sȳrī"],
-            [/\\bsearch\\b/gi, "gīmigon"],
-            [/\\bchoose|select\\b/gi, "gīmigon"],
-            [/\\bplatform\\b/gi, "vēzos"],
-            [/\\bfeatures?\\b/gi, "sȳz"],
-            [/\\btimeline|timeframe|duration\\b/gi, "lunar"],
-            [/\\bbudget|price|cost\\b/gi, "ānogar"],
-            [/\\bcopy\\b/gi, "gīmigon"],
-            [/\\bsend|submit\\b/gi, "urnegon"],
-            [/\\bcancel\\b/gi, "daor"],
-            [/\\breset\\b/gi, "gīmigon"],
-            [/\\bback\\b/gi, "vȳs"],
-            [/\\bnext\\b/gi, "hen"],
-            [/\\bprevious\\b/gi, "bē"],
-            [/\\bclose\\b/gi, "daor"],
-            [/\\bmenu\\b/gi, "vēzos"],
-            [/\\bhome\\b/gi, "dōrī"],
-            [/\\bread\\b/gi, "sȳrī"],
-            [/\\bmore\\b/gi, "hen"],
-            [/\\bforever alive\\b/gi, "sȳrī hen"],
-            [/\\byears?\\b/gi, "lunar"],
-            [/\\bwork\\b/gi, "dārys"],
-            [/\\bstatus\\b/gi, "sȳz"],
-            [/\\bsource\\b/gi, "vēzos"],
-            [/\\bnews\\b/gi, "sȳrī"],
-            [/\\bloading\\b/gi, "gīmigon"],
-            [/\\bno results found\\b/gi, "daor dārys"],
-            [/\\ball rights reserved\\b/gi, "sȳz dārys"],
-            [/\\bmade with love\\b/gi, "sȳz kirimvose"]
+            [/\bsoftware engineer\b/gi, "dārys vala"],
+            [/\bsoftware\b/gi, "dārys"],
+            [/\bengineer(?:ing)?\b/gi, "vala"],
+            [/\bdeveloper(?:s)?\b/gi, "dārys vala"],
+            [/\blecturer|teacher|teaching\b/gi, "mandia"],
+            [/\bexperience\b/gi, "ānogar"],
+            [/\beducation\b/gi, "mandia"],
+            [/\bskills?\b/gi, "sȳz"],
+            [/\bprojects?\b/gi, "dārys"],
+            [/\bapplications?|apps?\b/gi, "vāedar"],
+            [/\bwebsites?|sites?\b/gi, "vēzos"],
+            [/\bcontact|connect\b/gi, "sȳrī"],
+            [/\babout\b/gi, "dārys"],
+            [/\bpublished|available|live\b/gi, "urnegon"],
+            [/\bview|visit|open\b/gi, "urnegon"],
+            [/\bloading\b/gi, "gīmigon"],
+            [/\bfailed|failure|error|problem\b/gi, "daor gīmigon"],
+            [/\bplease\b/gi, "sȳz"],
+            [/\bthank you\b/gi, "kirimvose"],
+            [/\bwelcome\b/gi, "rytsas"],
+            [/\bname\b/gi, "aōha"],
+            [/\bmessage\b/gi, "sȳrī"],
+            [/\bsearch\b/gi, "gīmigon"],
+            [/\bchoose|select\b/gi, "gīmigon"],
+            [/\bplatform\b/gi, "vēzos"],
+            [/\bfeatures?\b/gi, "sȳz"],
+            [/\btimeline|timeframe|duration\b/gi, "lunar"],
+            [/\bbudget|price|cost\b/gi, "ānogar"],
+            [/\bcopy\b/gi, "gīmigon"],
+            [/\bsend|submit\b/gi, "urnegon"],
+            [/\bcancel\b/gi, "daor"],
+            [/\breset\b/gi, "gīmigon"],
+            [/\bback\b/gi, "vȳs"],
+            [/\bnext\b/gi, "hen"],
+            [/\bprevious\b/gi, "bē"],
+            [/\bclose\b/gi, "daor"],
+            [/\bmenu\b/gi, "vēzos"],
+            [/\bread\b/gi, "sȳrī"],
+            [/\bmore\b/gi, "hen"],
+            [/\byears?\b/gi, "lunar"],
+            [/\bwork\b/gi, "dārys"],
+            [/\bstatus\b/gi, "sȳz"],
+            [/\bsource\b/gi, "vēzos"],
+            [/\bnews\b/gi, "sȳrī"],
+            [/\bno results found\b/gi, "daor dārys"],
+            [/\ball rights reserved\b/gi, "sȳz dārys"],
+            [/\bmade with love\b/gi, "sȳz kirimvose"]
         ];
         let result = value;
         for (const [pattern, replacement] of rules) result = result.replace(pattern, replacement);
 
-        // Keep product names, code identifiers and common technology names intact.
+        // Preserve brands and technical identifiers while giving other English words a Valyrian-like form.
         const protectedTerms = new Set([
             "Android", "Google", "Play", "GitHub", "React", "Spring", "Boot", "Django",
             "ASP.NET", "Core", "Node.js", "JavaScript", "TypeScript", "Python", "Kotlin",
             "Firebase", "PostgreSQL", "MySQL", "SQL", "API", "APIs", "UI", "UX", "CSS",
-            "HTML", "C++", "C#", "JWT", "Firebase", "Web", "Audio", "Duolingo", "Munchkin",
-            "Starlink", "Telegram", "Email", "QR", "PNG", "XP", "Orléans", "France",
-            "Odesa", "Kyiv", "Silpo", "Munchess", "Aerodion", "sunmeat.dev", "GitHub",
-            "React", "Vite", "Google News", "Web Audio API", "Google Play"
+            "HTML", "C++", "C#", "JWT", "Web", "Audio", "Duolingo", "Munchkin", "Starlink",
+            "Telegram", "Email", "QR", "PNG", "XP", "Orléans", "France", "Odesa", "Kyiv",
+            "Silpo", "Munchess", "Aerodion", "sunmeat.dev", "Vite", "Google News"
         ]);
         const words = result.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+(?:['’][A-Za-z]+)?/g) || [];
         for (const word of [...new Set(words)].sort((a, b) => b.length - a.length)) {
             if (protectedTerms.has(word) || /^[A-Z0-9]{2,}$/.test(word) || /[A-Z].*[A-Z]/.test(word)) continue;
             const lower = word.toLowerCase();
             const invented = lower
-                .replace(/tion\b/g, "sion")
-                .replace(/ing\b/g, "igon")
-                .replace(/ers?\b/g, "or")
-                .replace(/ies\b/g, "ī")
-                .replace(/y\b/g, "ȳ")
-                .replace(/th/g, "t")
-                .replace(/sh/g, "s")
-                .replace(/ch/g, "k")
-                .replace(/ph/g, "f")
-                .replace(/w/g, "v")
-                .replace(/c(?=[eiy])/g, "s")
-                .replace(/c/g, "k")
-                .replace(/q/g, "k")
-                .replace(/x/g, "ks")
-                .replace(/j/g, "y")
-                .replace(/z/g, "ȳ")
-                .replace(/e/g, "ē")
-                .replace(/o/g, "ō")
-                .replace(/u/g, "ū");
-            result = result.replace(new RegExp("\\b" + word.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\    if (language === "cu") {
+                .replace(/tion\b/g, "sion").replace(/ing\b/g, "igon")
+                .replace(/ers?\b/g, "or").replace(/ies\b/g, "ī").replace(/y\b/g, "ȳ")
+                .replace(/th/g, "t").replace(/sh/g, "s").replace(/ch/g, "k")
+                .replace(/ph/g, "f").replace(/w/g, "v")
+                .replace(/c(?=[eiy])/g, "s").replace(/c/g, "k")
+                .replace(/q/g, "k").replace(/x/g, "ks").replace(/j/g, "y")
+                .replace(/z/g, "ȳ").replace(/e/g, "ē").replace(/o/g, "ō").replace(/u/g, "ū");
+            result = result.split(word).join(invented);
+        }
+        return result;
+    }
+
+    if (language === "cu") {
         const rules = [") + "\\b", "g"), invented);
         }
         return result;
