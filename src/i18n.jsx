@@ -2815,6 +2815,7 @@ function translateExperimentalFallback(value, language) {
             [/\bNode\b/gi, "Ноудъ"],
             [/\bHTML5\b/gi, "ЭйчТиЭмЭлъ пять"],
             [/\bCSS3\b/gi, "ЦСС три"],
+            [/\bFirebase Auth\b/gi, "Файрбейсъ Аѳъ"],
             [/\bFirebase\b/gi, "Файрбейсъ"],
             [/\bGoogle Play\b/gi, "Гуглъ Плей"],
             [/\bGoogle News\b/gi, "Гуглъ Вѣсти"],
