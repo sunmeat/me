@@ -2756,9 +2756,14 @@ function translateExperimentalFallback(value, language) {
             "xUnit", "FluentAssertions", "NSubstitute", "WebApplicationFactory", "Windows API",
             "Big O", "Hamiltonian", "EET", "EEST", "UTC", "iOS", "Android Native"
         ]);
-        const knownValyrian = new Set(
-            Object.values(HV).join(" ").match(/[A-Za-zĀ-žȳāēīōū]+/g)?.map((word) => word.toLowerCase()) || []
-        );
+        const knownValyrian = new Set([
+            "ñuha", "dārys", "sȳz", "vāedar", "vēzos", "sȳrī", "jēda", "gīmigon",
+            "urnegon", "mandia", "ānogar", "rytsas", "kirimvose", "aōha", "lēkia",
+            "ȳdragon", "lykirī", "lunar", "hen", "vȳs", "bē", "issa", "daor",
+            "nyke", "ao", "enka", "ziry", "kesy", "skoros", "jelmy", "brōzi",
+            "qrinun", "kostōba", "vēdrȳ", "ābra", "jelmāzma", "morghon", "vala",
+            "sȳrī", "vēdar", "dōrī", "jēda", "ānogar", "sȳz", "mandia"
+        ]);
         const tokens = result.match(/[A-Za-zÀ-ÖØ-öø-ÿĀ-žȳāēīōū]+(?:['’][A-Za-z]+)?/g) || [];
         for (const token of [...new Set(tokens)].sort((a, b) => b.length - a.length)) {
             if (protectedTerms.has(token) || knownValyrian.has(token.toLowerCase())) continue;
