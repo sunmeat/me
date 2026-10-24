@@ -2698,3 +2698,75 @@ html[lang="ko-KP"] .terminal--epic .terminal__seal { padding: 12px 18px; border-
     html[lang="ko-KP"] .hero__stat-label { font-size: 0.76rem; }
 }
 @media (max-width: 420px) { html[lang="ko-KP"] .hero__declaration { font-size: 0.84rem; } html[lang="ko-KP"] .hero__seal { font-size: 0.68rem; letter-spacing: 0.02em; } }
+
+/* High Valyrian edition: contain long experimental words on narrow screens. */
+html[lang="hv"] body,
+html[lang="hv"] #root {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
+}
+html[lang="hv"] main,
+html[lang="hv"] section,
+html[lang="hv"] .container,
+html[lang="hv"] .hero,
+html[lang="hv"] .hero__inner,
+html[lang="hv"] .hero__content,
+html[lang="hv"] .about-card,
+html[lang="hv"] .skill-card,
+html[lang="hv"] .site-card,
+html[lang="hv"] .app-card,
+html[lang="hv"] .contact-card,
+html[lang="hv"] .estimator__layout {
+    min-width: 0;
+    max-width: 100%;
+}
+html[lang="hv"] :is(h1, h2, h3, h4, p, li, label, button, a, span, strong, small) {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+html[lang="hv"] :is(.hero__title, .section__title, .hero__lede, .hero__declaration) {
+    max-width: 100%;
+    text-wrap: balance;
+}
+html[lang="hv"] :is(.btn, .hero__actions, .nav__links, .hero__stats, .estimator__actions) {
+    min-width: 0;
+    flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+    html[lang="hv"] .hero {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+    html[lang="hv"] .hero__title {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+    }
+    html[lang="hv"] .hero__title-accent {
+        overflow-wrap: anywhere;
+        font-size: clamp(1.35rem, 6vw, 2rem);
+        line-height: 1.3;
+    }
+    html[lang="hv"] .hero__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    html[lang="hv"] .hero__stat,
+    html[lang="hv"] .site-card,
+    html[lang="hv"] .app-card,
+    html[lang="hv"] .skill-card {
+        min-width: 0;
+    }
+    html[lang="hv"] .language-switcher__menu {
+        max-width: calc(100vw - 24px);
+    }
+}
+@media (max-width: 380px) {
+    html[lang="hv"] .hero__title {
+        font-size: clamp(1.65rem, 7.6vw, 2.1rem);
+    }
+    html[lang="hv"] .hero__declaration {
+        padding: 12px;
+        font-size: 0.82rem;
+    }
+}
