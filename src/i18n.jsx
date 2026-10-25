@@ -2964,7 +2964,7 @@ function translateExperimentalFallback(value, language) {
             [/Express/gi, "Ускоренный"],
             [/Balanced pace, full QA cycle/gi, "Ровный ходъ работъ и полное испытанїе качества"],
             [/Priority slot, ~30% faster/gi, "Преимущественная очередь, приблизительно на 30% скорѣе"],
-            [/weeks?/gi, "недѣли"],
+            [/\\bweeks?\\b/gi, "недѣли"],
             [/^platform$/i, "среда"],
             [/^features$/i, "свойства"],
             [/^timeline$/i, "срокъ"],
