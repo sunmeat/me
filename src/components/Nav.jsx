@@ -20,7 +20,6 @@ function Flag({country, label}) {
 }
 
 function Nav() {
-    const [open, setOpen] = useState(false);
     const [active, setActive] = useState("about");
     const [scrolled, setScrolled] = useState(false);
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
@@ -66,7 +65,6 @@ function Nav() {
     }, []);
 
     const go = (id) => {
-        setOpen(false);
         document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
     };
 
@@ -300,23 +298,7 @@ function Nav() {
                     Hire me
                 </a>
 
-                <button className="nav__toggle" onClick={() => setOpen((o) => !o)} aria-label={language === "cu" ? "Отверзи или затвори врата" : "Toggle menu"}>
-                    <Icon name={open ? "close" : "menu"}/>
-                </button>
             </div>
-
-            {open && (
-                <div className="nav__mobile">
-                    {NAV_LINKS.map((l) => (
-                        <button key={l.id} className="nav__mobile-link" onClick={() => go(l.id)}>
-                            {l.label}
-                        </button>
-                    ))}
-                    <a className="btn btn--primary" href="mailto:sunmeatrich@gmail.com" onClick={() => setOpen(false)}>
-                        {language === "cu" ? "Призови мя на служеніе" : "Hire me"}
-                    </a>
-                </div>
-            )}
         </header>
     );
 }
