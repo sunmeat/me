@@ -277,14 +277,14 @@ function NewsFeed() {
                                     <span className="news__card-date">{currentItem.formattedDate}</span>
                                 </div>
 
-                                <h3 className="news__card-title">{currentItem.title}</h3>
+                                <h3 className="news__card-title" translate="no">{currentItem.title}</h3>
                                 <p className="news__card-excerpt">Click this card to read full article.</p>
 
                                 <div className="news__card-footer">
                                     <div className="news__divider"></div>
                                     <div className="news__source">
                                         <span className="news__source-label">SOURCE</span>
-                                        <span className="news__source-name">{currentItem.source}</span>
+                                        <span className="news__source-name" translate="no">{currentItem.source}</span>
                                     </div>
                                 </div>
                             </article>

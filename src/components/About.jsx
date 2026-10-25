@@ -22,8 +22,12 @@ const TELEGRAM_URL = "https://t.me/sunmeat";
 const COMMENTS_COLLECTION = "about_comments";
 const GUEST_NAME_STORAGE_KEY = "about-card-guest-name";
 
+function dateLocale(language) {
+    return language === "fr" ? "fr-FR" : language === "av" ? "ru-RU" : "en-US";
+}
+
 function formatTimestamp(date, language = "en") {
-    const formatted = date.toLocaleString(language === "fr" ? "fr-FR" : "en-US", {
+    const formatted = date.toLocaleString(dateLocale(language), {
         month: "short",
         day: "numeric",
         hour: "2-digit",
@@ -40,10 +44,15 @@ function formatRelative(date, language = "en") {
     const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
     if (mins < 1) return "just now";
+    if (language === "av") {
+        if (mins < 60) return `${mins} мин.`;
+        if (hours < 24) return `${hours} ч`;
+        if (days < 7) return `${days} дн.`;
+    }
     if (mins < 60) return `${mins}m`;
     if (hours < 24) return `${hours}h`;
     if (days < 7) return `${days}d`;
-    return date.toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", { month: "short", day: "numeric" });
+    return date.toLocaleDateString(dateLocale(language), { month: "short", day: "numeric" });
 }
 
 function loadStoredGuestName() {
@@ -236,7 +245,7 @@ function About() {
                             </button>
                         </div>
 
-                        <div className="about-card__likes">{likeCount.toLocaleString()} likes</div>
+                        <div className="about-card__likes">{likeCount.toLocaleString()}{" "}likes</div>
 
                         <div className="about-card__caption">
                             <span className="about-card__username">{USERNAME}</span>
@@ -256,8 +265,8 @@ function About() {
                             <div className="about-card__comments-list">
                                 {comments.map((c) => (
                                     <div className="about-card__comment-item" key={c.id}>
-                                        <strong>{c.name}</strong>
-                                        {c.text}
+                                        <strong translate="no">{c.name}</strong>
+                                        <span translate="no">{c.text}</span>
                                         {c.createdAt && (
                                             <span className="about-card__comment-time">
                                                 {formatRelative(c.createdAt, language)}

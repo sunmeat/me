@@ -2385,7 +2385,7 @@ const AV = {
     "Years in software & teaching": "Лет в разработке и преподавании",
     "GitHub repositories": "Собрания программного кода",
     "Engineer by trade, teacher by habit.": "По профессии инженер, по призванию преподаватель. И всё это с балетной осанкой!",
-    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Five+ published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Из Орлеана, где Луарой сияет заря,\nЯ творю цифровые балеты не зря!\nПриложенья для Андроида веду от мечты\nДо Гугл Плей, где их встретят огни высоты.\nРеакт выступает, серверный строй\nСпринг Бут, Джанго, АСП.НЕТ и Ноуд ведут за собой.\nПять с лишним творений уже на виду,\nНо это лишь первый поклон на балу!\nДевятнадцать лет с лишним: и код, и урок,\nПреподаю элегантно, держа шпагатный рывок.\nПросекко искрится, бокал мой звенит,\nПока цифровое искусство творит!",
+    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Five+ published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Дорогие мои, я инженер-программист и преподаватель из Орлеана, и без шпагата я не я! Создаю родные приложения для «Андроида» от первого эскиза до блистательной публикации в «Гугл Плей», а ещё сайты полного состава: на видимой части — Реакт, на серверной — Спринг Бут, Джанго, АСП.НЕТ Кор и Ноуд. Больше пяти приложений уже опубликовано, и это только начало: я живу красивой, открытой жизнью, зачастую наотмашь, но очень смело и честно. Больше девятнадцати лет пишу код и учу других, а мозоли на пальцах — лучшее доказательство многолетнего труда. Ну а завистникам и балетному тупью — просекко со свежей клубникой, и работаем дальше!",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Дорогие мои, я инженер-программист и преподаватель. Почти два десятилетия соединяю обучение и разработку. Дисциплина, талант и растяжка, разумеется, во всём важны!",
     "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Сегодня я создаю приложения для «Андроида» от первой задумки до публикации в «Гугл Плее», а также разрабатываю сайты и серверные системы. Ценю стройную архитектуру, понятный код и честные сроки. Каждая программа должна быть изящна, как безупречный шпагат, и надёжна, как бокал просекко в руке примадонны. Дорогие мои, это моё мнение!",
     "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "В свободное время я фотографирую и играю на музыкальных инструментах. Но истинное искусство, дорогие мои, это бокал просекко, клубника и шпагат такой глубины, что даже горизонт теряет самообладание! Утром растяжка, днём программирование, вечером просекко. И так до полного совершенства!",
@@ -2518,7 +2518,7 @@ const AV = {
     "*Offer subject to Starlink eligibility and terms.": "*Предложение действует с учётом условий и допустимости подключения к «Старлинк».",
     "LOW EARTH ORBIT · 550 KM": "НИЗКАЯ ОКОЛОЗЕМНАЯ ОРБИТА · 550 КМ",
     "Android / Full-Stack Developer": "Созидатель приложений для «Андроида» и сайтов полного состава",
-    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Six published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Из Орлеана, где Луарой сияет заря,\nЯ творю цифровые балеты не зря!\nПриложенья для Андроида веду от мечты\nДо Гугл Плей, где их встретят огни высоты.\nРеакт выступает, серверный строй\nСпринг Бут, Джанго, АСП.НЕТ и Ноуд ведут за собой.\nШесть творений уже на виду,\nНо это лишь первый поклон на балу!\nДевятнадцать лет с лишним: и код, и урок,\nПреподаю элегантно, держа шпагатный рывок.\nПросекко искрится, бокал мой звенит,\nПока цифровое искусство творит!",
+    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Six published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Дорогие мои, я инженер-программист и преподаватель из Орлеана, и без шпагата я не я! Создаю родные приложения для «Андроида» от первого эскиза до блистательной публикации в «Гугл Плей», а ещё сайты полного состава: на видимой части — Реакт, на серверной — Спринг Бут, Джанго, АСП.НЕТ Кор и Ноуд. Больше пяти приложений уже опубликовано, и это только начало: я живу красивой, открытой жизнью, зачастую наотмашь, но очень смело и честно. Больше девятнадцати лет пишу код и учу других, а мозоли на пальцах — лучшее доказательство многолетнего труда. Ну а завистникам и балетному тупью — просекко со свежей клубникой, и работаем дальше!",
     "primary focus": "главное направление",
     "core toolkit": "основной арсенал",
     "backend & web": "серверная часть и сайты",
@@ -2534,7 +2534,7 @@ const AV = {
     "Independent Software Engineer & R&D": "Независимый инженер-программист и исследователь",
     "Building and maintaining custom developer tooling, exploratory mobile modules, and open-source utility libraries. Experimenting with modern web frameworks, algorithm optimization, and UI/UX patterns.": "Создание и поддержка собственных инструментов разработчика, пробных мобильных модулей и открытых вспомогательных библиотек. Опыты с современными веб-системами, ускорением алгоритмов и приёмами оформления интерфейсов, и всё это с артистизмом!",
     "Leading Teacher Specialist": "Ведущий преподаватель-специалист",
-    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Обучаю и наставляю будущих инженеров-программистов: С++ / С# / Пайтон для сайтов / разработка для «Андроида» / базы данных; объектно-ориентированное программирование, алгоритмы, структуры данных, шаблоны проектирования / SOLID. Создаю собственные учебные материалы, разбираю студенческий код и руковожу выпускными программными проектами по методике СКРАМ.",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Обучаю и наставляю будущих инженеров-программистов: С++ / С# / Пайтон для сайтов / разработка для «Андроида» / базы данных; объектно-ориентированное программирование, алгоритмы, структуры данных, шаблоны проектирования / СОЛИД. Создаю собственные учебные материалы, разбираю студенческий код и руковожу выпускными программными проектами по методике СКРАМ.",
     "Master's degree, Programming": "Магистр, программирование",
     "Bachelor's degree, Economics": "Бакалавр, экономика",
     "Continuous Education & Professional Certifications": "Непрерывное обучение и профессиональные сертификаты",
@@ -2575,7 +2575,7 @@ const AV = {
     "Experience & education.": "Опыт и образование.",
     "Let's build your own app.": "Создадим ваше собственное приложение!",
     "Open to freelance projects, long-term collaborations and consulting work. Based in": "Открыто для вольных проектов, долгосрочного сотрудничества и консультаций. Нахожусь в",
-    "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Орлеане, Франция (EET/EEST, UTC+1) — обычно отвечаю в течение рабочего дня, дорогие мои.",
+    "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Орлеане, Франция (часовой пояс Гринвич +1) — обычно отвечаю в течение рабочего дня, дорогие мои.",
     "Buy me one more coffee": "Угостите меня ещё одним кофе",
     "Back to top": "Взлететь наверх",
     "Built with ❤️ & React • Available for projects": "Создано с ❤️ и Реакт • Открыто для проектов",
@@ -2601,11 +2601,11 @@ const AV = {
     "Timeline:": "Сроки:",
     "Estimated scope:": "Ориентировочный объём:",
     "Suggested stack:": "Рекомендуемый набор:",
-    "Sent via sunmeat.dev project estimator.": "Отправлено из оценщика проектов sunmeat.dev.",
-    "Project Brief — sunmeat.dev": "Описание проекта — sunmeat.dev",
+    "Sent via sunmeat.dev project estimator.": "Отправлено из оценщика проектов санмит.дев.",
+    "Project Brief — sunmeat.dev": "Описание проекта — санмит.дев",
     "A personal poetry blog with a minimal reading experience and a simple admin CMS for managing poems, built with React, Vite and Firebase.": "Личный поэтический салон с неторопливым чтением и простой панелью управления для стихов, создан на Реакт, Вайт и Файрбейс.",
     "Source code of my personal single-page portfolio website.": "Исходный код моего личного одностраничного портфолио.",
-    "My interactive digital business card (npx sunmeat) right in your terminal": "Моя интерактивная цифровая визитка (npx sunmeat) прямо в вашем терминале",
+    "My interactive digital business card (npx sunmeat) right in your terminal": "Моя интерактивная цифровая визитка (запустить санмит) прямо в вашем терминале",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Динамичная классическая текстовая игра-блуждание на С++ с использованием оконной системы Виндовс: ведите героя по случайно созданному лабиринту 40×10, собирайте золотые монеты, уворачивайтесь от бродячих врагов, отнимающих здоровье, и ищите выход, пока не стало слишком поздно. Шоу должно продолжаться!",
     "Practical React component examples and patterns prepared for student groups.": "Практические примеры и шаблоны компонентов Реакт, подготовленные для студенческих групп.",
     "A C# console Snake game that uses Hamiltonian cycles to generate perfect, non-colliding paths across the entire board.": "Консольная змейка на С# с гамильтоновыми циклами: безупречные пути без единого столкновения по всему полю.",
@@ -2614,7 +2614,7 @@ const AV = {
     "C++ examples demonstrating algorithmic complexity and Big O Notation.": "Примеры на С++ о сложности алгоритмов и нотации «О большое».",
     "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Учебный проект на АСП.НЕТ Кор МВС: как работает встроенный контейнер внедрения зависимостей.",
     "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Учебный проект на АСП.НЕТ Кор Веб-АПИ: проверка подлинности и права доступа через Файрбейс и токены ДЖВТ.",
-    "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Учебный проект на АСП.НЕТ Кор Веб-АПИ: модульные и сквозные проверки с xUnit, FluentAssertions, NSubstitute и WebApplicationFactory.",
+    "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Учебный проект на АСП.НЕТ Кор Веб-АПИ: модульные и сквозные проверки с ИксЮнит, ФлюэнтАссершнс, ЭнСабститьют и ВебАпликейшнФэктори.",
     "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Проектирование, создание и выпуск законченных программных продуктов. Родные приложения для «Андроида» и сайты полного состава на Реакт + Спринг Бут / Джанго / АСП.НЕТ Кор / Ноуд + Файрбейс / ПостгреСКЬЮЭЛ / МайЭсКьюЭл: от настройки баз данных и подключения внешних служб до публикации в «Гугл Плей».",
     "Streamlining night-shift venue logistics, rapid floor management, and deep sanitation protocols for high-capacity hard techno events. Maintaining strict operational safety and hygiene standards, optimizing post-event cleanup workflows under tight turnaround times, and ensuring high-throughput venue readiness during peak operations.": "Упорядочивание ночной работы площадки, быстрое управление залом и глубокая санитарная обработка на вместительных мероприятиях жёсткой техно-музыки. Строгие нормы безопасности и чистоты, быстрая уборка после праздника в сжатые сроки и полная готовность площадки в самые горячие часы. Порядок — тоже искусство!",
     "React": "Реакт",
@@ -2651,7 +2651,7 @@ const AV = {
     "Built with ❤️ & React": "Создано с ❤️ и Реакт",
     "JavaScript Library": "Библиотека языка Джаваскрипт",
     "My Android Apps": "Мои приложения для «Андроида»",
-    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\"": "Обучаю и наставляю будущих инженеров-программистов: С++ / С# / Пайтон для сайтов / разработка для «Андроида» / базы данных; объектно-ориентированное программирование, алгоритмы, структуры данных, шаблоны проектирования / SOLID. Создаю собственные учебные материалы, разбираю студенческий код и руковожу выпускными программными проектами по методике СКРАМ.\"",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\"": "Обучаю и наставляю будущих инженеров-программистов: С++ / С# / Пайтон для сайтов / разработка для «Андроида» / базы данных; объектно-ориентированное программирование, алгоритмы, структуры данных, шаблоны проектирования / СОЛИД. Создаю собственные учебные материалы, разбираю студенческий код и руковожу выпускными программными проектами по методике СКРАМ.\"",
     "Jul 2023 — Present": "Июль 2023 — по сей блистательный день",
     "May 2017 — Dec 2017": "Май 2017 — декабрь 2017",
     "Jun 2022 — Present": "Июнь 2022 — по сей блистательный день",
@@ -2720,7 +2720,194 @@ const AV = {
     "Bandera de España": "Флаг Испании",
     "Bandeira do Brasil": "Флаг Бразилии",
     "Français": "Французский",
-    "Drapeau français": "Флаг Франции"
+    "Drapeau français": "Флаг Франции",
+    // Имена, технологии, команды терминала и подписи: на сайте не должно остаться латиницы.
+    "$ whoami": "$ кто_я",
+    "$ cat about.md": "$ прочесть обо_мне.текст",
+    "$ ls skills/": "$ показать таланты/",
+    "$ ls apps/ --published": "$ показать приложения/ --опубликованные",
+    "$ ls websites/ --deployed": "$ показать сайты/ --развёрнутые",
+    "$ git log --stat": "$ журнал_достижений --итоги",
+    "$ cat experience.log": "$ прочесть путь.журнал",
+    "$ contact --init": "$ связь --начать",
+    "$ estimate --init": "$ оценка --начать",
+    "$ ls news/ --fresh": "$ показать новости/ --свежие",
+    "zsh — sunmeat": "оболочка — санмит",
+    "npx sunmeat": "запустить санмит",
+    "brief.json": "описание.джейсон",
+    "sunmeat": "санмит",
+    ".dev": ".дев",
+    "Oleksandr Zahoruiko": "Александр Загоруйко",
+    "bonjour, epta": "бонжур, дорогие мои!",
+    "Jetpack Compose": "Джетпак Компоуз",
+    "Flutter": "Флаттер",
+    "ML Kit / MediaPipe": "МЛ Кит / МедиаПайп",
+    "Material Design": "Материал Дизайн",
+    "React Native": "Реакт Нейтив",
+    "Room": "Рум",
+    ".NET MAUI": ".НЕТ МАУИ",
+    "MVI / MVVM": "МВИ / МВВМ",
+    "C++": "С++",
+    "C#": "С#",
+    "Java": "Джава",
+    "Python": "Пайтон",
+    "JavaScript": "Джаваскрипт",
+    "TypeScript": "Тайпскрипт",
+    "SQL": "ЭсКьюЭл",
+    "PHP": "ПиЭйчПи",
+    "Kotlin": "Котлин",
+    "ASP.NET Core": "АСП.НЕТ Кор",
+    "Blazor": "Блейзор",
+    "Spring Boot": "Спринг Бут",
+    "Django": "Джанго",
+    "Node.js": "Ноуд",
+    "Next.js": "Некст",
+    "Electron.js": "Электрон",
+    "FastAPI": "ФастАПИ",
+    "Git & GitHub": "Гит и ГитХаб",
+    "Docker": "Докер",
+    "PostgreSQL": "ПостгреСКЬЮЭЛ",
+    "REST APIs": "РЕСТ-интерфейсы",
+    "CI/CD": "Непрерывная сборка и выпуск",
+    "Figma": "Фигма",
+    "GraphQL / gRPC": "ГрафКьюЭл / джиАрПиСи",
+    "Redis": "Редис",
+    "Postman": "Постман",
+    "Webpack / Vite": "Вебпак / Вайт",
+    "Material 3": "Материал 3",
+    "Jetpack Navigation": "Джетпак Навигация",
+    "ViewModel": "Модель представления",
+    "Hilt / Dagger": "Хилт / Даггер",
+    "DataStore": "Хранилище данных",
+    "WorkManager": "Менеджер работ",
+    "Paging 3": "Постраничная загрузка 3",
+    "MVVM": "МВВМ",
+    "MVI": "МВИ",
+    "Kotlin Multiplatform": "Котлин Мультиплатформа",
+    "Compose Multiplatform": "Компоуз Мультиплатформа",
+    "Ktor": "Ктор",
+    "Firebase": "Файрбейс",
+    "Supabase": "Супабейс",
+    "GraphQL": "ГрафКьюЭл",
+    "REST API": "РЕСТ-интерфейс",
+    "gRPC": "джиАрПиСи",
+    "OAuth2 JWT": "ОАвт2 ДЖВТ",
+    "Google Cloud / Firebase": "Гугл Клауд / Файрбейс",
+    "AWS Amplify": "ЭйДаблъюЭс Эмплифай",
+    "Gradle": "Грейдл",
+    "Kotlin DSL": "Котлин ДиЭсЭл",
+    "Play Console": "Плей Консоль",
+    "ML Kit": "МЛ Кит",
+    "Gemini Nano": "Джемини Нано",
+    "TensorFlow Lite": "ТензорФлоу Лайт",
+    "Vertex AI": "Вертекс ИИ",
+    "Google AI Studio": "Гугл ИИ Студия",
+    "Benchmarking": "Замеры быстродействия",
+    "Compose Compiler": "Компилятор Компоуз",
+    "JUnit5": "ДжейЮнит 5",
+    "Compose Testing": "Проверка Компоуз",
+    "Espresso": "Эспрессо",
+    "MockK": "МокКей",
+    "Wear OS": "Веар ОС",
+    "Android TV / Auto": "Андроид ТВ / Авто",
+    "Privacy Sandbox": "Песочница приватности",
+    "Media3": "Медиа3",
+    "Android SDK": "Андроид СДК",
+    "JWT": "ДЖВТ",
+    "Vzhuh Cat": "Кот Вжух",
+    "Alex FM": "Алекс ФМ",
+    "Solenya": "Соленья",
+    "Pisanina": "Писанина",
+    "Aerodion": "Аэродион",
+    "Duo Stats": "Дуо-статистика",
+    "Happy Lena": "Счастливая Лена",
+    "Freya": "Фрейя",
+    "No Rent": "Без аренды",
+    "ShrimpWatch": "Креветочный дозор",
+    "Natadenium": "Натаденум",
+    "VR": "ЗЗ",
+    "ML": "СМ",
+    "QR": "КР",
+    "VC": "КВ",
+    "GT": "ПД",
+    "MK": "МК",
+    "FM": "ФМ",
+    "UV": "СО",
+    "SP": "ПИ",
+    "AM": "АЭ",
+    "DS": "ДС",
+    "HB": "СЛ",
+    "FR": "ФР",
+    "NR": "БА",
+    "SW": "КД",
+    "ND": "НД",
+    "GastroLab": "ГастроЛаб",
+    "IT Step Academy, Odesa": "Компьютерная академия «ШАГ», Одесса",
+    "IT Academy Step, Odesa": "Компьютерная академия «ШАГ», Одесса",
+    "ASTRA Club, Orléans": "Клуб «Астра», Орлеан",
+    "Open International University of Human Development “Ukraine”, Mykolaiv": "Открытый международный университет развития человека «Украина», Николаев",
+    "Cisco, Microsoft, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank, etc.": "Сиско, Майкрософт, Академия Гугл Плей, АйБиЭм, Прометеус, АйТиВиДиЭн, ХакерРэнк и другие",
+    "LinkedIn": "ЛинкедИн",
+    "Credly": "Кредли",
+    "Microsoft Learn": "Майкрософт Лёрн",
+    "HackerRank": "ХакерРэнк",
+    "Duolingo": "Дуолинго",
+    "Linktree": "Линктри",
+    "poetry-blog": "поэтический-салон",
+    "me": "я",
+    "card": "визитка",
+    "maze": "лабиринт",
+    "react_samples": "примеры_реакт",
+    "HamiltonianSnake": "Гамильтонова_змейка",
+    "oop": "ооп",
+    "STL": "СТЛ",
+    "O-Notation": "О-нотация",
+    "aspnetcore_services": "аспнеткор_службы",
+    "aspnetcore_auth2.0": "аспнеткор_вход2.0",
+    "aspnetcore_testing": "аспнеткор_проверки",
+    "platform": "платформа",
+    "features": "возможности",
+    "timeline": "сроки",
+    "estimate_weeks": "оценка_в_неделях",
+    "Valyrian": "Валирийский",
+    "Quenya": "Квенья",
+    "日本語": "Японский",
+    "Deutsch": "Немецкий",
+    "Español": "Испанский",
+    "中文": "Китайский",
+    "조선말": "Северокорейский",
+    "العربية": "Арабский",
+    "संस्कृतम्": "Санскрит",
+    "Português": "Португальский",
+    "Three-headed dragon": "Трёхглавый дракон",
+    "Quenya leaf symbol": "Лист квенья",
+    "日本の国旗": "Флаг Японии",
+    "Flagge Deutschlands": "Флаг Германии",
+    "조선민주주의인민공화국 국기": "Флаг КНДР",
+    "علم المملكة العربية السعودية": "Флаг Саудовской Аравии",
+    "India": "Флаг Индии",
+    "Балетная туфелька": "Балетная туфелька",
+    "sunmeat.recorder": "санмит.запись",
+    "sunmeat.munchkin": "санмит.манчкин",
+    "com.sunmeat.qr": "ком.санмит.куар",
+    "com.sunmeat.vzhuh": "ком.санмит.вжух",
+    "alex.gullibility": "алекс.доверчивость",
+    "massage.kyiv": "массаж.киев",
+    "Kotlin · Java · React · Node.js": "Котлин · Джава · Реакт · Ноуд",
+    "Kotlin / Java": "Котлин / Джава",
+    "Google Developer": "Разработчик Гугл",
+    "GitHub": "ГитХаб",
+    "Telegram": "Телеграм",
+    "auth": "вход",
+    "offline": "без_сети",
+    "iap": "покупки",
+    "hardware": "оборудование",
+    "admin": "панель",
+    "custom-ui": "оформление",
+    "standard": "стандартно",
+    "express": "экспресс",
+    "android": "Андроид",
+    "fullstack": "Полный состав"
 };
 
 const CU = {
@@ -3618,7 +3805,29 @@ function translateExperimentalFallback(value, language) {
     return value;
 }
 
-export function translateString(value, language) {
+// Волочковский язык: ни одного английского слова на странице. Почту и адреса сайтов
+// не трогаем, иначе ссылки и адреса перестанут быть настоящими.
+const AV_PROTECTED = /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+|https?:\/\/[^\s"')]+|\b[a-z0-9-]+(?:\.[a-z0-9-]+)*\.(?:dev|app|com|io|org|ua|fr)\b(?:\/[^\s"')]*)?/gi;
+
+const AV_LETTERS = {a: "а", b: "б", c: "к", d: "д", e: "е", f: "ф", g: "г", h: "х", i: "и", j: "дж", k: "к", l: "л", m: "м", n: "н", o: "о", p: "п", q: "к", r: "р", s: "с", t: "т", u: "у", v: "в", w: "в", x: "кс", y: "и", z: "з"};
+const AV_SPELLED = {a: "эй", b: "би", c: "си", d: "ди", e: "и", f: "эф", g: "джи", h: "эйч", i: "ай", j: "джей", k: "кей", l: "эль", m: "эм", n: "эн", o: "оу", p: "пи", q: "кью", r: "ар", s: "эс", t: "ти", u: "ю", v: "ви", w: "дабл-ю", x: "икс", y: "уай", z: "зед"};
+
+function transliterateAvWord(word) {
+    if (word.length > 1 && word === word.toUpperCase()) {
+        return word.split("").map((letter) => (AV_SPELLED[letter.toLowerCase()] || letter).toUpperCase()).join("");
+    }
+    let lower = word.toLowerCase();
+    const digraphs = [[/tch/g, "ч"], [/sch/g, "ск"], [/sh/g, "ш"], [/ch/g, "ч"], [/zh/g, "ж"], [/kh/g, "х"], [/th/g, "т"], [/ph/g, "ф"], [/ck/g, "к"], [/qu/g, "кв"], [/ee/g, "и"], [/oo/g, "у"], [/ou/g, "ау"], [/ea/g, "и"], [/c(?=[eiy])/g, "с"]];
+    for (const [pattern, replacement] of digraphs) lower = lower.replace(pattern, replacement);
+    lower = lower.replace(/[a-z]/g, (letter) => AV_LETTERS[letter]);
+    return word[0] === word[0].toUpperCase() ? lower.charAt(0).toUpperCase() + lower.slice(1) : lower;
+}
+
+function transliterateAv(value) {
+    return value.replace(/[A-Za-z]+/g, transliterateAvWord);
+}
+
+export function translateString(value, language, textual = true) {
     const dictionary = TRANSLATIONS[language];
     if (!dictionary) return value;
     const normalized = normalize(value);
@@ -3627,6 +3836,15 @@ export function translateString(value, language) {
     }
 
     let translated = value;
+    let restore = (text) => text;
+    if (language === "av") {
+        const saved = [];
+        translated = value.replace(AV_PROTECTED, (match) => {
+            saved.push(match);
+            return "\u0001" + (saved.length - 1) + "\u0002";
+        });
+        restore = (text) => text.replace(/\u0001(\d+)\u0002/g, (_, index) => saved[Number(index)]);
+    }
     const entries = Object.entries(dictionary)
         .filter(([source]) => source.includes(" ") || source.length >= 6)
         .sort((a, b) => b[0].length - a[0].length);
@@ -3636,13 +3854,17 @@ export function translateString(value, language) {
     if (language === "av" || language === "hv" || language === "cu" || language === "qya") {
         translated = translateExperimentalFallback(translated, language);
     }
-    return translated;
+    if (language === "av" && textual) translated = transliterateAv(translated);
+    return restore(translated);
 }
+
+// Служебные свойства компонентов: транслитерировать их нельзя, иначе сломаются type="button", language="av" и т. п.
+const TECHNICAL_PROPS = ["type", "role", "language", "target", "rel", "method", "loading", "value", "name", "inputMode", "autoComplete", "crossOrigin", "referrerPolicy", "tabIndex", "htmlFor", "translate", "aria-checked", "aria-expanded", "aria-haspopup", "aria-current", "aria-live", "aria-hidden", "aria-controls", "data-theme"];
 
 function translateValue(value, language, key = "") {
     if (typeof value === "string") {
         if (["href", "src", "srcSet", "id", "className", "key", "ref", "style", "url", "link", "date", "mono", "icon", "country"].includes(key)) return value;
-        return translateString(value, language);
+        return translateString(value, language, !TECHNICAL_PROPS.includes(key));
     }
     if (Array.isArray(value)) return value.map((item) => translateValue(item, language, key));
     if (value && typeof value === "object" && !React.isValidElement(value)) {
@@ -3672,6 +3894,7 @@ function translateProps(props, language) {
 
 function translateNode(node, language) {
     if (typeof node === "string") return translateString(node, language);
+    if (React.isValidElement(node) && node.props && node.props.translate === "no") return node;
     if (Array.isArray(node)) return node.map((child) => translateNode(child, language));
     if (!React.isValidElement(node)) return node;
     return React.cloneElement(node, translateProps(node.props, language));
