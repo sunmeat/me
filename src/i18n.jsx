@@ -2646,6 +2646,74 @@ function normalize(value) {
 }
 
 function translateExperimentalFallback(value, language) {
+    if (language === "qya") {
+        const phraseRules = [
+            [/Engineer by trade, teacher by habit\./gi, "Nér i carmë, nótima i enquë."],
+            [/Published sites/gi, "Nóri tyernë"],
+            [/Published Android apps/gi, "Android mentaner tyernë"],
+            [/Years in software & teaching/gi, "Loar i maquetarë ar ñolmë"],
+            [/GitHub repositories/gi, "GitHub nórë"],
+            [/Technical skills/gi, "Nérë isilmë"],
+            [/Professional experience/gi, "Carmë oiencarmë"],
+            [/Open source & teaching material\./gi, "Lá mapaina maquetarë ar ñolmë."],
+            [/Live on Google Play right now\./gi, "Sí ëa i Google Play."],
+            [/Side projects, live on the web\./gi, "Meldor carmë, ëar i nórë."],
+            [/Let's connect/gi, "Ámen omentië"],
+            [/Get in touch/gi, "Ámen omentië"],
+            [/Have a project in mind\? Let's talk about how to make it real\./gi, "Manca carmë? Áquetë, manen caritas."],
+            [/View GitHub profile/gi, "Cenë GitHub Parma"],
+            [/View project/gi, "Cenë carmë"],
+            [/View on GitHub/gi, "Cenë i GitHub"],
+            [/Read more/gi, "Cenë enta"],
+            [/Learn more/gi, "Ñolë enta"],
+            [/Loading news\.\.\./gi, "Lá carë i quettar..."],
+            [/Developer News Feed/gi, "Quettar i mahtar"],
+            [/Choose your platform/gi, "Cesta i nórë"],
+            [/Pick your core features/gi, "Cesta i turë"],
+            [/Set your timeline/gi, "Panya i lúmë"],
+            [/Estimated timeframe/gi, "Lúmë nótina"],
+            [/Recommended stack/gi, "Cesta maquetarë"],
+            [/Estimate Your App Project/gi, "Nóte i carmë mentaner"],
+            [/Select your project requirements to get an instant scope estimate\./gi, "Cesta i carmë nómë, an nótë i carmë sí."],
+            [/Let's build your own apps?\.?/gi, "Á carë mentaner ólya."],
+            [/Start a project/gi, "Yesta carmë"],
+            [/Contact/gi, "Ómen"],
+            [/About/gi, "Námen"],
+            [/Skills/gi, "Isilmë"],
+            [/Experience/gi, "Oiencarmë"],
+            [/Sites/gi, "Nórë"],
+            [/Apps/gi, "Mentaner"],
+            [/Hire me/gi, "Mecarë"],
+            [/Buy me a coffee/gi, "Mecarë coivie"],
+            [/Email me/gi, "Mentanë"],
+            [/Name/gi, "Essë"],
+            [/Education/gi, "Parma"],
+            [/All rights reserved\./gi, "Ilquen haryar i hresta."],
+            [/Made with love\./gi, "Cárina melmënen."],
+            [/\bPublished\b/gi, "Tyernë"],
+            [/\bLoading\b/gi, "Lá carë"],
+            [/\bContact\b/gi, "Ómen"],
+            [/\bAbout\b/gi, "Námen"],
+            [/\bSkills\b/gi, "Isilmë"],
+            [/\bExperience\b/gi, "Oiencarmë"],
+            [/\bSites\b/gi, "Nórë"],
+            [/\bApps\b/gi, "Mentaner"],
+            [/\bProjects?\b/gi, "Carmë"],
+            [/\bDeveloper\b/gi, "Mahtar"],
+            [/\bEngineer\b/gi, "Nér"],
+            [/\bTeacher|Lecturer\b/gi, "Ñolmo"],
+            [/\bExperience\b/gi, "Oiencarmë"],
+            [/\bSkills\b/gi, "Isilmë"],
+            [/\bApplications?\b/gi, "Mentaner"],
+            [/\bWebsites?\b/gi, "Nóri"],
+            [/\bPublished\b/gi, "Tyernë"],
+            [/\bContact\b/gi, "Ómen"],
+            [/\bLoading\.\.\.\b/gi, "Lá carë..."]
+        ];
+        let result = value;
+        for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
+        return result;
+    }
     if (language === "av") {
         const rules = [
             [/\bsoftware engineer\b/gi, "инженер цифрового балета"],
@@ -3284,7 +3352,7 @@ export function translateString(value, language) {
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
     }
-    if (language === "av" || language === "hv" || language === "cu") {
+    if (language === "av" || language === "hv" || language === "cu" || language === "qya") {
         translated = translateExperimentalFallback(translated, language);
     }
     return translated;
