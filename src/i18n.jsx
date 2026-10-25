@@ -2480,6 +2480,40 @@ const AV = {
     "Ballet is my life": "Балет это моя жизнь!",
     "A song of boundless beauty": "Песня о красоте и вдохновении",
     "My creative universe": "Моя творческая вселенная"
+    // Сайты: описания в стиле цифровой примадонны.
+    "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.": "Радио-салон прямо в браузере, дорогие мои! Музыка звучит, визуализатор в такт кружится, а звуковые волны перед примадонной искрятся. Частоты танцуют, графика сияет, и даже тишина аплодирует, когда эфир играет!",
+    "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.": "Яркая витрина корейских солений в Одессе, дорогие мои! Баночки красуются, вкусы соблазняют, рынки указаны, а доставка по всей стране шагает. Капуста хрустит, эстетика цветёт, и каждый огурчик достойно выходит на подиумный ход!",
+    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Личная обитель стихов, где каждая строка выходит на сцену без лишней мишуры. Читайте легко, дорогие мои, а за кулисами удобное управление хранит поэтические сокровища. Реакт и Файрбейс трудятся в такт, пока рифмы расправляют свой крылатый плащ!",
+    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Музыкальное волшебство кончиков пальцев! Взмах руки рождает ноту, жест выводит аккорд, а инструмент вовсе не нужен, дорогие мои. Аэродион превращает движения в мелодию, и даже шпагат может стать началом симфонии!",
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Статистика Дуолинго во всей своей красе! Аватар, очки опыта, серия занятий и любимые курсы выходят на свет, а карточка-картинка готова к светскому распространению. Без входа и лишних поклонов, дорогие мои: цифры сияют, достижения блистают!",
+    "A personal interactive birthday greeting page with playful animations and a small surprise built in.": "Именинное поздравление с анимацией, улыбкой и сюрпризом за кулисами! Страничка кружится, поздравляет от души, а маленькая неожиданность ждёт своего торжественного выхода. Дорогие мои, день рождения обязан быть красивым!",
+    "A lightweight interactive page built as a personal project — a playground for small UI and animation ideas.": "Небольшая интерактивная сцена для смелых идей, тонких движений и изящных анимаций. Личный творческий этюд, где каждый элемент репетирует выход, а интерфейс держит осанку и не теряет блеска!",
+    "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.": "Калькулятор судьбоносного выбора: снимать жильё или покупать собственное! Показывает, как сбережения от аренды могли бы подрасти со временем, если вложить их с умом. Считаем, сравниваем, дорогие мои, и пусть финансовый шпагат будет безупречен!",
+    "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.": "Креветочный радар для Сильпо, дорогие мои! Как только королевская креветка падает ниже сорока гривен за сто граммов, весточка мчится по электронной почте. Внутри факты, рецепты и одесский юмор: цена снижается, настроение взлетает, примадонна наблюдает!",
+    "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.": "Ботаническая сцена, посвящённая розам пустыни! Коллекция раскрывает свои лепестки, атлас цветения назначает свидания бутонам, а советы по уходу помогают каждой красавице блистать. Несколько языков, одна страсть: пусть адениумы цветут, как примадонны на премьере!",
+    // Приложения: описания с артистизмом, рифмой и просекко.
+    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Изящный звукозаписыватель для заметок, лекций и бесед! Все записи собраны в аккуратный список, ничто не отвлекает от главного, а каждая важная мысль бережно хранится. Дорогие мои, даже вдохновение любит порядок!",
+    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table.": "Цифровой счётчик уровней и сокровищ для игры «Манчкин»! Перо и бумага уходят за кулисы: уровни растут, добыча учитывается, а за игровым столом царят стратегия и театральное достоинство. Дорогие мои, каждый клад заслуживает точного подсчёта!",
+    "A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards.": "Молниеносный считыватель куар-кодов, который ещё и создаёт собственные коды для ссылок, текста и визиток. Никаких лишних поклонов: навели, считали, создали! Всё быстро, элегантно и с осанкой балетной примадонны.",
+    "A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun.": "Кошачья мини-игра для коротких игровых выходов и хорошего настроения! Усатое величество приглашает на сцену, минуты отдыха превращаются в маленький праздник, а веселье помещается даже в кармане. Мяу, дорогие мои, занавес открывается!",
+    "A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions.": "Весёлое испытание доверчивости с каверзными вопросами и тонкой иронией! Проверьте, кто распознает подвох, а кто поверит с невинным видом. Дорогие мои, наивность тоже выходит на сцену, но аплодисменты достанутся самым проницательным!",
+    "A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio.": "Приложение-витрина массажной студии в Киеве: услуги, цены и сведения для записи собраны с безупречной аккуратностью. Всё ясно, удобно и достойно примадонны: выбирайте процедуру, назначайте визит и входите в релакс с королевской осанкой!",
+    // Категории карточек.
+    "Utility": "Полезное орудие примадонны",
+    "Board Games": "Настольные баталии",
+    "Casual Game": "Игра для отдыха",
+    "Quiz": "Испытание проницательности",
+    "Local Business": "Местное дело",
+    "Web Audio": "Музыкальная сцена",
+    "Korean Pickles": "Корейские соленья",
+    "Poetry Blog": "Поэтический салон",
+    "Music Learning": "Музыкальное искусство",
+    "Stats Card": "Карточка достижений",
+    "Interactive": "Интерактивная сцена",
+    "Pet Memorial": "Память о любимце",
+    "Calculator": "Калькулятор решений",
+    "Price Tracker": "Ценовой радар",
+    "Plant Collection": "Ботаническая коллекция",
 };
 
 const CU = {
