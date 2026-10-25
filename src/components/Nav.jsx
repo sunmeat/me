@@ -293,7 +293,7 @@ function Nav() {
 
                 <a className="btn btn--coffee" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
                     <Icon name={language === "cu" ? "goblet" : "coffee"} size={15}/>
-                    {language === "cu" ? "подаяние" : "Buy me a coffee"}
+                    {language === "cu" ? "милостыня" : "Buy me a coffee"}
                 </a>
 
                 <a className="btn btn--ghost nav__cta" href="mailto:sunmeatrich@gmail.com">
