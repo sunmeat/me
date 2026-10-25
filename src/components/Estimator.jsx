@@ -234,7 +234,7 @@ function buildBrief(estimate, language = "en") {
     ].join("\n");
 }
 
-function JsonBlock({ payload }) {
+function JsonBlock({ payload, language }) {
     const lines = JSON.stringify(payload, null, 2).split("\n");
     return (
         <>
@@ -248,10 +248,26 @@ function JsonBlock({ payload }) {
                     );
                 }
                 const [, indent, key, rest] = match;
+                const translatedKey = translateString(key, language);
+                const translatedRest = rest.replace(/"([^"]*)"/g, (full, value) => {
+                    if (key === "platform") {
+                        const platform = PLATFORMS.find((item) => item.id === value);
+                        return JSON.stringify(platform ? translateString(platform.label, language) : translateString(value, language));
+                    }
+                    if (key === "features") {
+                        const feature = FEATURES.find((item) => item.id === value);
+                        return JSON.stringify(feature ? translateString(feature.label, language) : translateString(value, language));
+                    }
+                    if (key === "timeline") {
+                        const timeline = TIMELINES.find((item) => item.id === value);
+                        return JSON.stringify(timeline ? translateString(timeline.label, language) : translateString(value, language));
+                    }
+                    return JSON.stringify(translateString(value, language));
+                });
                 return (
                     <div className="estimator__json-line" key={i}>
                         {indent}
-                        <span className="estimator__json-key">"{key}"</span>: <span className="estimator__json-val">{rest}</span>
+                        <span className="estimator__json-key">"{translatedKey}"</span>: <span className="estimator__json-val">{translatedRest}</span>
                     </div>
                 );
             })}
@@ -443,7 +459,7 @@ function Estimator() {
                                 <span className="terminal__title">brief.json</span>
                             </div>
                             <div className="terminal__body estimator__json">
-                                <JsonBlock payload={payload} />
+                                <JsonBlock payload={payload} language={language} />
                             </div>
                         </div>
                     </aside>
