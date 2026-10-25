@@ -2928,7 +2928,8 @@ function translateExperimentalFallback(value, language) {
         ];
         const phraseRules = [
             [/Let's build your own app\./gi, "Сотворимъ приложенїѧ по твоему замыслу."],
-            [/Open to freelance projects, long-term collaborations and consulting work\.\s*Based in\s*Orléans, France \(EET\/EEST, UTC\+1\) — I typically reply within a business day\./gi, "Открытъ къ вольнымъ дѣловымъ трудамъ, долговременному сотрудничеству и совѣтническому служенїю. Пребываю въ Орлеанѣ, во Францїи; обыкновенно отвѣщаю въ теченїе одного рабочаго дня."],
+            [/Open to freelance projects, long-term collaborations and consulting work\.\s*Based in/gi, "Открытъ къ вольнымъ дѣловымъ трудамъ, долговременному сотрудничеству и совѣтническому служенїю. Пребываю"],
+            [/Orléans, France \(EET\/EEST, UTC\+1\) — I typically reply within a business day\./gi, "въ Орлеанѣ, во Францїи; обыкновенно отвѣщаю въ теченїе одного рабочаго дня."],
             [/Orléans, France/g, "Орлеанъ, во Францїи"],
             [/Email me/gi, "Послати ми вѣсть писаную"],
             [/Message on Telegram/gi, "Послати вѣсть чрезъ Телеграмъ"],
@@ -2963,7 +2964,11 @@ function translateExperimentalFallback(value, language) {
             [/Express/gi, "Ускоренный"],
             [/Balanced pace, full QA cycle/gi, "Ровный ходъ работъ и полное испытанїе качества"],
             [/Priority slot, ~30% faster/gi, "Преимущественная очередь, приблизительно на 30% скорѣе"],
-            [/weeks?/gi, "недѣль"],
+            [/weeks?/gi, "недѣли"],
+            [/^platform$/i, "среда"],
+            [/^features$/i, "свойства"],
+            [/^timeline$/i, "срокъ"],
+            [/^estimate_weeks$/i, "оцѣнка_недѣль"],
             [/brief\.json/gi, "краткое_описанїе.json"],
             [/Send Brief to Telegram/gi, "Послати описанїе дѣла въ Телеграмъ"],
             [/Brief copied — open chat/gi, "Описанїе скопировано, отверзи бесѣду"],
