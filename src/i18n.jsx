@@ -2903,6 +2903,12 @@ function translateExperimentalFallback(value, language) {
             [/\bsunmeat\.dev\b/gi, "санмитъ.девъ"]
         ];
         const phraseRules = [
+            [/A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings\./gi, "Легкое средство для записи кратких заметок, лекций и собеседованій; всѣ записи собраны въ ясномъ спискѣ, ничто не отвлекаетъ отъ дѣла."],
+            [/A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table\./gi, "Счетъ уровней и сокровищъ въ карточной игрѣ «Манчкинъ», дабы вести счетъ безъ пера и бумаги прямо за столомъ."],
+            [/A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards\./gi, "Быстрый чтецъ куар-кодовъ, творящій также особые коды для ссылокъ, простаго текста и карточекъ контактовъ."],
+            [/A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun\./gi, "Забавная малая игра о котѣ, созданная для короткихъ непринужденныхъ партій и веселія въ пути."],
+            [/A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions\./gi, "Легкая викторина, испытывающая доверчивость играющихъ хитрыми вопросами съ тонкою насмешкою."],
+            [/A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio\./gi, "Приложеніе киевской массажной обители, представляющее ея служенїя, цѣны и свѣдѣнія о записи на сеансъ."],
             [/\bservices?\b/gi, "служенїѧ"],
             [/\bsoftware engineer\b/gi, "инженеръ программнаго дѣла"],
             [/\bsoftware engineering\b/gi, "искусство программнаго дѣла"],
