@@ -2927,6 +2927,56 @@ function translateExperimentalFallback(value, language) {
             [/\bsunmeat\.dev\b/gi, "санмитъ.девъ"]
         ];
         const phraseRules = [
+            [/Let's build your own app\./gi, "Сотворимъ приложенїѧ по твоему замыслу."],
+            [/Open to freelance projects, long-term collaborations and consulting work\.\s*Based in\s*Orléans, France \(EET\/EEST, UTC\+1\) — I typically reply within a business day\./gi, "Открытъ къ вольнымъ дѣловымъ трудамъ, долговременному сотрудничеству и совѣтническому служенїю. Пребываю въ Орлеанѣ, во Францїи; обыкновенно отвѣщаю въ теченїе одного рабочаго дня."],
+            [/Orléans, France/g, "Орлеанъ, во Францїи"],
+            [/Email me/gi, "Послати ми вѣсть писаную"],
+            [/Message on Telegram/gi, "Послати вѣсть чрезъ Телеграмъ"],
+            [/Microsoft Learn/gi, "Майкрософтъ: ученіе"],
+            [/Google Developer/gi, "Гуглъ: творцамъ программъ"],
+            [/HackerRank/gi, "ХакерРанкъ"],
+            [/LinkedIn/gi, "ЛинкедИнъ"],
+            [/Credly/gi, "Кредли"],
+            [/Linktree/gi, "Линктри"],
+            [/My Android Apps/gi, "Мои приложенїѧ для Андроїда"],
+            [/Estimate Your App Project/gi, "Оцѣни замыселъ приложенїя"],
+            [/Select your project requirements to get an instant scope estimate\./gi, "Избери потребы твоего дѣла, дабы немедля оцѣнити объемъ трудовъ."],
+            [/Step 01/gi, "Ступень 01"],
+            [/Step 02/gi, "Ступень 02"],
+            [/Step 03/gi, "Ступень 03"],
+            [/Choose your platform/gi, "Избери среду для твоего дѣла"],
+            [/Pick your core features/gi, "Избери главныя свойства"],
+            [/Set your timeline/gi, "Установи срокъ исполненїя"],
+            [/Estimated timeframe/gi, "Предполагаемый срокъ"],
+            [/Recommended stack/gi, "Рекомендуемое собраніе орудїй"],
+            [/Android Native/gi, "Приложенїе, сотворенное особливо для Андроїда"],
+            [/Full-Stack/gi, "Сѣтевое приложенїе полнаго состава"],
+            [/Backend API \+ Web App/gi, "Служебное АПИ и сѣтевое приложенїе"],
+            [/Kotlin \/ Java/gi, "Котлинъ / Джава"],
+            [/Authentication/gi, "Удостовѣренїе личности"],
+            [/Offline Mode/gi, "Режимъ безъ сѣти"],
+            [/In-App Purchases/gi, "Покупки внутри приложенїя"],
+            [/Hardware \/ Sensors/gi, "Устройства и датчики"],
+            [/Admin Panel/gi, "Панель управленїя"],
+            [/Custom UI\/UX/gi, "Особый обликъ и удобство"],
+            [/Standard/gi, "Обычный"],
+            [/Express/gi, "Ускоренный"],
+            [/Balanced pace, full QA cycle/gi, "Ровный ходъ работъ и полное испытанїе качества"],
+            [/Priority slot, ~30% faster/gi, "Преимущественная очередь, приблизительно на 30% скорѣе"],
+            [/weeks?/gi, "недѣль"],
+            [/brief\.json/gi, "краткое_описанїе.json"],
+            [/Send Brief to Telegram/gi, "Послати описанїе дѣла въ Телеграмъ"],
+            [/Brief copied — open chat/gi, "Описанїе скопировано, отверзи бесѣду"],
+            [/Copy Brief Text/gi, "Копировать текстъ описанїя"],
+            [/Copied to clipboard/gi, "Скопировано въ буферъ обмѣна"],
+            [/Project Brief — sunmeat\.dev/gi, "Описанїе дѣла — санмитъ.девъ"],
+            [/Platform:/gi, "Среда:"],
+            [/Features:/gi, "Свойства:"],
+            [/Timeline:/gi, "Срокъ:"],
+            [/Estimated scope:/gi, "Предполагаемый объемъ трудовъ:"],
+            [/Suggested stack:/gi, "Предлагаемое собраніе орудїй:"],
+            [/Not specified/gi, "Не указано"],
+            [/Sent via sunmeat\.dev project estimator\./gi, "Послано чрезъ оцѣнщикъ дѣлъ на санмитъ.девъ."],
             [/Jul 2023 — Present/gi, "Июль 2023 — понынѣ"],
             [/May 2017 — Dec 2017/gi, "Май 2017 — декабрь 2017"],
             [/Jun 2022 — Present/gi, "Июнь 2022 — понынѣ"],
@@ -3203,7 +3253,8 @@ function translateExperimentalFallback(value, language) {
             [/r/gi, "р"], [/s/gi, "с"], [/t/gi, "т"], [/u/gi, "у"],
             [/v/gi, "в"], [/y/gi, "и"], [/z/gi, "з"]
         ];
-        result = result.replace(/[A-Za-z]+(?:[.-][A-Za-z0-9]+)*/g, (word) => {
+        result = result.replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}|[A-Za-z]+(?:[.-][A-Za-z0-9]+)*/gi, (word) => {
+            if (word.includes("@")) return word;
             let translated = word;
             for (const [pattern, replacement] of transliterationRules) translated = translated.replace(pattern, replacement);
             return translated;
