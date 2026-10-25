@@ -2864,3 +2864,57 @@ html[lang="cu"] :is(.hero__actions, .hero__stats, .skills__grid, .sites__grid,
         padding-right: 13px;
     }
 }
+
+
+/* Keep long experimental-language labels inside the viewport on narrow screens. */
+@media (max-width: 600px) {
+    .btn,
+    .coffee-btn,
+    .contact__actions a,
+    .contact__actions button,
+    .hero__actions a,
+    .hero__actions button {
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .hero__actions,
+    .contact__actions {
+        min-width: 0;
+        align-items: stretch;
+    }
+
+    .hero__actions > .btn,
+    .contact__actions > .btn {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+
+    .section__inner,
+    .hero,
+    .footer__inner {
+        min-width: 0;
+    }
+
+    .nav__mobile .btn {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero,
+    .section__inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .btn {
+        padding: 11px 14px;
+        font-size: 0.9rem;
+    }
+}
