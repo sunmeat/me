@@ -3258,7 +3258,7 @@ function translateExperimentalFallback(value, language) {
             [/r/gi, "р"], [/s/gi, "с"], [/t/gi, "т"], [/u/gi, "у"],
             [/v/gi, "в"], [/y/gi, "и"], [/z/gi, "з"]
         ];
-        result = result.replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}|[A-Za-z]+(?:[.-][A-Za-z0-9]+)*/gi, (word) => {
+        result = result.replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|[A-Za-z]+(?:[.-][A-Za-z0-9]+)*/gi, (word) => {
             if (word.includes("@")) return word;
             let translated = word;
             for (const [pattern, replacement] of transliterationRules) translated = translated.replace(pattern, replacement);
