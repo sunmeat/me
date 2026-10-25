@@ -11,7 +11,7 @@ function Footer() {
                 <span>{language === "cu" ? `© 2019-${new Date().getFullYear()} • Александр Загоруйко • Сотворено съ усердїемъ • Къ новымъ трудамъ готовъ` : `© 2019-${new Date().getFullYear()} • Oleksandr Zahoruiko • Built with ❤️ & React • Available for projects`}</span>
                 <a className="coffee-btn" href={COFFEE_URL} target="_blank" rel="noopener noreferrer">
                     <Icon name={language === "cu" ? "goblet" : "coffee"} size={15}/>
-                    {language === "cu" ? "подаяние" : "Buy me one more coffee"}
+                    {language === "cu" ? "милостыня" : "Buy me one more coffee"}
                 </a>
                 <button
                     className="footer__top"
