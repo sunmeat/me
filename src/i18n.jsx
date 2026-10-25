@@ -2507,7 +2507,7 @@ const CU = {
     "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Шесть приложенїй сотворены и явлены самостоѧтельно: полезныѧ вещи, игры и орудїѧ дѣловыѧ.",
     "Side projects, live on the web.": "Малыѧ дѣла въ сѣти",
     "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Сборъ сайтовъ и опытовъ растетъ: кождꙑй сотворенъ ради мысли, искꙋсства или веселїѧ.",
-    "Open source & teaching material.": "Открытыя писанїѧ и наставленїѧ къ ученью",
+    "Open source & teaching material.": "Общедоступныя писанїѧ программъ и наставленїѧ къ ученью",
     "View GitHub profile": "Узри собраніе моихъ писанїй",
     "Technical skills": "Умѣнїѧ и дарованїѧ",
     "A toolkit shaped by production work, teaching, and constant experimentation.": "Сїи умѣнїѧ возросли въ трудахъ, въ наставленїи учениковъ и въ непрестанномъ исканїи лучшаго.",
