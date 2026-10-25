@@ -188,7 +188,7 @@ button {
 }
 
 .nav {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 40;
     border-bottom: 1px solid transparent;
@@ -2436,20 +2436,6 @@ a.contact__row:hover {
     }
 }
 
-@media (min-width: 861px) {
-    .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 9999;
-    }
-
-    .page {
-        padding-top: 72px;
-    }
-}
 
 /* Language selector */
 .language-switcher {
