@@ -2903,6 +2903,14 @@ function translateExperimentalFallback(value, language) {
             [/\bsunmeat\.dev\b/gi, "санмитъ.девъ"]
         ];
         const phraseRules = [
+            [/Jul 2023 — Present/gi, "Июль 2023 — понынѣ"],
+            [/May 2017 — Dec 2017/gi, "Май 2017 — декабрь 2017"],
+            [/Jun 2022 — Present/gi, "Июнь 2022 — понынѣ"],
+            [/Sep 2007 — Present \(Remote\)/gi, "Сентябрь 2007 — понынѣ (удаленно)"],
+            [/Aug 2026 — Present/gi, "Августъ 2026 — понынѣ"],
+            [/2005 — 2010/gi, "2005 — 2010"],
+            [/Ongoing/gi, "непрестанно"],
+
             [/Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play\. Also developing full-stack web applications with React on the frontend and Spring Boot \/ Django \/ ASP\.NET Core \/ Node\.js on the backend\. Five\+ published apps so far — just the beginning\. Over nineteen years of writing and teaching code\./gi, "Изъ Орлеана есмь, творецъ программъ и наставникъ. Созидаю приложенїѧ для Андроїда отъ перваго замысла до публикацїи въ Гуглъ Плэй; также творю сѣтевыя приложенїѧ, устрояя и видимую часть, и сокровенное основанїе. Пять и болѣе приложенїй уже явлены, но се токмо начало. Болѣе девятнадцати лѣтъ пишу программы и учу учениковъ."],
             [/Designing, building, and deploying end-to-end software products\. Developing native Android apps and full-stack web applications using React \+ Spring Boot \/ Django \/ ASP\.NET Core \/ Node\.js \+ Firebase \/ PostgreSQL \/ MySQL, including database setup, API integrations, and Google Play publishing\./gi, "Замышляю, созидаю и ввожу въ употребленїе программныя творенїѧ отъ начала до конца. Разрабатываю приложенїѧ для Андроїда и сѣтевыя приложенїѧ полнаго состава; устрояю хранилища данныхъ, соединяю службы чрезъ программныя связи и публикую приложенїѧ въ Гуглъ Плэй."],
             [/Provided architectural guidance, code reviews, and technical consulting for web and mobile solutions\. Assisted in optimizing system performance, streamlining API design, and advising engineering teams on best software practices\./gi, "Наставлялъ въ устроенїи программныхъ системъ, разбиралъ писанїѧ программъ и давалъ совѣты о сѣтевыхъ и подвижныхъ приложенїяхъ. Помогалъ ускоряти работу системъ, упрощати программныя связи и утверждати добрыя правила созиданїя программъ."],
@@ -2934,7 +2942,7 @@ function translateExperimentalFallback(value, language) {
             [/Independent Software Engineer & R&D/gi, "Самостоятельный творецъ программъ и изыскатель новыхъ способовъ"],
             [/Leading Teacher Specialist/gi, "Ведущїй наставникъ-преподаватель"],
             [/Night Shift Venue Logistics & Facility Specialist/gi, "Распорядитель ночныхъ дѣлъ и устроенїя заведенїя"],
-            [/Independent/gi, "Самостоятельное дѣло"],
+            [/\bIndependent\b/gi, "Самостоятельное дѣло"],
             [/GastroLab/gi, "ГастроЛабъ"],
             [/Open Source \/ Side Projects/gi, "Общедоступныя писанїѧ программъ и личныя дѣла"],
             [/IT Step Academy, Odesa/gi, "Академїѧ АйТи Степъ, Одесса"],
