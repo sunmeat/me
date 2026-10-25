@@ -12,7 +12,7 @@ function Hero() {
         <section className={"hero" + (isKorean ? " hero--epic" : "")} id="top">
             <div className="hero__inner">
                 <div className="hero__copy">
-                    <Eyebrow>{isKorean ? "위대한 기술 창조의 력사 · 제1장" : "$ whoami"}</Eyebrow>
+                    <Eyebrow>{isKorean ? "위대한 기술 창조의 력사 · 제1장" : isChurchSlavonic ? "$ азъесмь" : "$ whoami"}</Eyebrow>
                     <h1 className="hero__title">
                         {isKorean ? <>Oleksandr Zahoruiko<span className="hero__title-accent hero__title-accent--epic">기술 창조의 선구자</span></> : isChurchSlavonic ? <>Александр Загоруйко —<br/><span className="hero__title-accent hero__title-accent--epic">Созидатель программъ и сѣтевыхъ творенїй</span></> : <>Oleksandr Zahoruiko —<br/><span className="hero__title-accent">Android / Full-Stack Developer</span></>}
                     </h1>
