@@ -3706,7 +3706,7 @@ const CU = {
     "AI Ecosystem": "AI技術群",
     "Git & GitHub": "GitとGitHub",
     "Material Design": "マテリアルデザイン",
-    "Curated headlines from Google News. Swipe or use arrow keys.": "Google ニュースから選んだ見出しです。スワイプまたは矢印キーで移動できます。"
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "C++、C#、Pythonによるウェブ開発、Android開発、データベース、オブジェクト指向設計、アルゴリズム、データ構造、デザインパターン、SOLID原則について、次世代のソフトウェア技術者を指導しています。独自の教材を開発し、学生のコードレビューを行い、スクラムを用いた卒業制作のソフトウェアプロジェクトを指導しています。",\n    "Curated headlines from Google News. Swipe or use arrow keys.": "Google ニュースから選んだ見出しです。スワイプまたは矢印キーで移動できます。"
 };
 
 const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
