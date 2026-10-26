@@ -102,7 +102,8 @@ function cleanContent(rawHtml, title) {
 }
 
 function NewsFeed() {
-    const { language } = useLanguage();\n    const isJapanese = language === "ja";
+    const { language } = useLanguage();
+    const isJapanese = language === "ja";
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [activeTopic, setActiveTopic] = useState("AI Machine Learning");
