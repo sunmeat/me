@@ -4418,6 +4418,31 @@ function localizeJapaneseTerms(value) {
         [/\bLocation & Maps\b/gi, "位置情報と地図"],
         [/\bOffline-First\b/gi, "オフライン優先設計"],
         [/\bAI Machine Learning\b/gi, "人工知能と機械学習"],
+        [/\bJetpack Compose Architecture\b/gi, "ジェットパック・コンポーズの設計"],
+        [/\bClean Architecture\b/gi, "クリーンアーキテクチャ"],
+        [/\bAdaptive Layouts\b/gi, "適応型レイアウト"],
+        [/\bFoldables & Large Screens\b/gi, "折りたたみ端末と大画面"],
+        [/\bBiometric Authentication\b/gi, "生体認証"],
+        [/\bAuthentication\b/gi, "認証"],
+        [/\bModularization\b/gi, "モジュール化"],
+        [/\bArchitecture\b/gi, "設計"],
+        [/\bPerformance Optimization\b/gi, "性能最適化"],
+        [/\bPrivacy Sandbox\b/gi, "プライバシーサンドボックス"],
+        [/\bLocation & Maps\b/gi, "位置情報と地図"],
+        [/\bOffline-First\b/gi, "オフライン優先設計"],
+        [/\bApp Security\b/gi, "アプリのセキュリティ"],
+        [/\bMemory Profiling\b/gi, "メモリ解析"],
+        [/\bScreenshot Testing\b/gi, "スクリーンショットテスト"],
+        [/\bUI Testing\b/gi, "UIテスト"],
+        [/\bApp Startup\b/gi, "アプリ起動処理"],
+        [/\bBaseline Profiles\b/gi, "ベースラインプロファイル"],
+        [/\bLLM Integration in Apps\b/gi, "アプリへの大規模言語モデル統合"],
+        [/\bApp Distribution\b/gi, "アプリ配布"],
+        [/\bAndroid SDK\b/gi, "アンドロイド開発キット"],
+        [/\bREST API\b/gi, "REST API"],
+        [/\bBackend API\b/gi, "バックエンドAPI"],
+        [/\bWeb App\b/gi, "ウェブアプリ"],
+        [/\bGoogle News\b/gi, "グーグルニュース"],
         [/\bNews Feed\b/gi, "ニュース一覧"],
         [/\bDeveloper\b/gi, "開発者"],
         [/\bNews\b/gi, "ニュース"],
@@ -4430,7 +4455,7 @@ function localizeJapaneseTerms(value) {
         [/\bEducation\b/gi, "学歴"],
         [/\bAbout\b/gi, "概要"]
     ];
-    return terms.reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), value);
+    return [...terms].sort((a, b) => b[0].source.length - a[0].source.length).reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), value);
 }
 
 export function translateString(value, language, textual = true) {
