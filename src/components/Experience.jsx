@@ -6,7 +6,7 @@ function Experience() {
     return (
         <section className="section" id="experience">
             <div className="section__inner">
-                <Eyebrow>$ cat experience.log</Eyebrow>
+                <Eyebrow>職務経歴.log</Eyebrow>
                 <h2 className="section__title">Experience &amp; education.</h2>
 
                 <div className="timeline">
