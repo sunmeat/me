@@ -6,7 +6,8 @@ import Terminal from "./Terminal.jsx";
 
 function Hero() {
     const {language} = useLanguage();
-    const isKorean = language === "ko-KP";\n    const isJapanese = language === "ja";
+    const isKorean = language === "ko-KP";
+    const isJapanese = language === "ja";
     const isChurchSlavonic = language === "cu";
     return (
         <section className={"hero" + (isKorean ? " hero--epic" : "")} id="top">
