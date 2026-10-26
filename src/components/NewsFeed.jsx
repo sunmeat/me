@@ -102,7 +102,7 @@ function cleanContent(rawHtml, title) {
 }
 
 function NewsFeed() {
-    const { language } = useLanguage();
+    const { language } = useLanguage();\n    const isJapanese = language === "ja";
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [activeTopic, setActiveTopic] = useState("AI Machine Learning");
@@ -284,20 +284,20 @@ function NewsFeed() {
                                     <span className="news__card-date">{currentItem.formattedDate}</span>
                                 </div>
 
-                                <h3 className="news__card-title" translate="no">{currentItem.title}</h3>
-                                <p className="news__card-excerpt">Click this card to read full article.</p>
+                                <h3 className="news__card-title" translate="no">{isJapanese ? `「${currentItem.topic}」に関する最新ニュース` : currentItem.title}</h3>
+                                <p className="news__card-excerpt">{isJapanese ? "カードを選択すると、配信元の記事全文を開きます。" : "Click this card to read full article."}</p>
 
                                 <div className="news__card-footer">
                                     <div className="news__divider"></div>
                                     <div className="news__source">
-                                        <span className="news__source-label">SOURCE</span>
-                                        <span className="news__source-name" translate="no">{currentItem.source}</span>
+                                        <span className="news__source-label">{isJapanese ? "情報提供元" : "SOURCE"}</span>
+                                        <span className="news__source-name" translate="no">{isJapanese ? "外部ニュース配信元" : currentItem.source}</span>
                                     </div>
                                 </div>
                             </article>
                         )}
 
-                        {loading && <div className="news__skeleton">Loading news...</div>}
+                        {loading && <div className="news__skeleton">{isJapanese ? "ニュースを読み込み中…" : "Loading news..."}</div>}
                     </div>
 
                     <button className="news__arrow news__arrow--next" onClick={goNext}>→</button>
