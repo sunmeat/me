@@ -2243,7 +2243,89 @@ const JA = {
     "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper bookkeeping with a simple mobile companion.": "カードゲーム「マンチキン」のレベルと財宝を管理するアプリです。紙とペンでの記録をシンプルなモバイルツールに置き換えます。",
     "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "読みやすさを重視したミニマルな個人詩ブログです。ReactとFirebaseを使ったシンプルな管理システムを備えています。",
     "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "手の動きを認識し、指のジェスチャーを音符や和音に変換するインタラクティブな音楽アプリです。楽器がなくても演奏できます。",
-    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "公開されているDuolingoプロフィールの統計を表示・共有するシンプルなツールです。アバター、XP、連続学習日数、主なコースを表示し、共有用PNGカードを生成します。ログインは不要です。"
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "公開されているDuolingoプロフィールの統計を表示・共有するシンプルなツールです。アバター、XP、連続学習日数、主なコースを表示し、共有用PNGカードを生成します。ログインは不要です。",
+    "Projects": "制作実績",
+    "All projects": "すべての制作実績",
+    "Featured projects": "注目の制作実績",
+    "View project": "制作実績を見る",
+    "Open project": "制作実績を開く",
+    "Source code": "ソースコード",
+    "Live demo": "公開ページ",
+    "Visit website": "ウェブサイトを見る",
+    "View all": "すべて見る",
+    "Show more": "さらに表示",
+    "Show less": "折りたたむ",
+    "Read more": "続きを読む",
+    "Learn more": "詳しく見る",
+    "Loading...": "読み込み中…",
+    "Loading": "読み込み中",
+    "Error": "エラー",
+    "Retry": "再試行",
+    "Close": "閉じる",
+    "Open": "開く",
+    "Back": "戻る",
+    "Next": "次へ",
+    "Previous": "前へ",
+    "Search": "検索",
+    "Filter": "絞り込み",
+    "All": "すべて",
+    "Send": "送信",
+    "Submit": "送信する",
+    "Cancel": "キャンセル",
+    "Download": "ダウンロード",
+    "Copy": "コピー",
+    "Copied": "コピーしました",
+    "Email": "メールアドレス",
+    "Message": "メッセージ",
+    "Your name": "お名前",
+    "Your email": "メールアドレス",
+    "Your message": "お問い合わせ内容",
+    "Send message": "メッセージを送信",
+    "Get in touch": "お問い合わせ",
+    "Let's talk": "ぜひご相談ください",
+    "Available for freelance": "フリーランスのご依頼を受付中",
+    "Open to work": "お仕事のご相談を受付中",
+    "Present": "現在",
+    "Current": "現在",
+    "Technologies": "使用技術",
+    "Technology stack": "技術構成",
+    "Frontend": "フロントエンド",
+    "Backend": "バックエンド",
+    "Database": "データベース",
+    "Infrastructure": "インフラ",
+    "Testing": "テスト",
+    "Architecture": "設計・アーキテクチャ",
+    "Featured": "注目",
+    "Experimental": "実験的な作品",
+    "Personal projects": "個人制作",
+    "Personal website": "個人ウェブサイト",
+    "Made with love": "心を込めて制作",
+    "All rights reserved": "無断転載・複製を禁じます",
+    "Privacy policy": "プライバシーポリシー",
+    "Terms of service": "利用規約",
+    "Guest": "ゲスト",
+    "Write a comment...": "コメントを書く…",
+    "Post a comment": "コメントを投稿",
+    "No comments yet.": "まだコメントはありません。",
+    "Loading comments...": "コメントを読み込み中…",
+    "Share": "共有",
+    "Share this project": "この制作実績を共有",
+    "Copy link": "リンクをコピー",
+    "Back to top": "ページ上部へ戻る",
+    "Scroll to explore": "スクロールしてご覧ください",
+    "Years of experience": "経験年数",
+    "View resume": "履歴書を見る",
+    "Download resume": "履歴書をダウンロード",
+    "Work experience": "職務経験",
+    "Certificates": "資格・認定",
+    "Certifications": "資格・認定",
+    "Achievements": "実績",
+    "Interests": "関心分野",
+    "Hobbies": "趣味",
+    "Music": "音楽",
+    "Photography": "写真撮影",
+    "Orléans": "オルレアン",
+    "France": "フランス"
 };
 
 // Quenya (qya). Goal: no English left on the page.
@@ -4125,12 +4207,43 @@ function transliterateAv(value) {
     return value.replace(/[A-Za-z]+/g, transliterateAvWord);
 }
 
+function localizeJapaneseTerms(value) {
+    const terms = [
+        [/\\bAndroid\\b/gi, "アンドロイド"],
+        [/\\bGoogle Play\\b/gi, "グーグルプレイ"],
+        [/\\bGoogle News\\b/gi, "グーグルニュース"],
+        [/\\bGoogle\\b/gi, "グーグル"],
+        [/\\bGitHub\\b/gi, "ギットハブ"],
+        [/\\bTelegram\\b/gi, "テレグラム"],
+        [/\\bReact\\b/gi, "リアクト"],
+        [/\\bJavaScript\\b/gi, "ジャバスクリプト"],
+        [/\\bTypeScript\\b/gi, "タイプスクリプト"],
+        [/\\bPython\\b/gi, "パイソン"],
+        [/\\bKotlin\\b/gi, "コトリン"],
+        [/\\bJava\\b/gi, "ジャバ"],
+        [/\\bDjango\\b/gi, "ジャンゴ"],
+        [/\\bSpring Boot\\b/gi, "スプリングブート"],
+        [/\\bASP\\.?NET Core\\b/gi, "エーエスピー・ドットネット・コア"],
+        [/\\bNode\\.js\\b/gi, "ノード・ジェイエス"],
+        [/\\bWeb\\b/gi, "ウェブ"],
+        [/\\bFull-Stack\\b/gi, "フルスタック"],
+        [/\\bfull-stack\\b/gi, "フルスタック"],
+        [/\\bXP\\b/g, "経験値"],
+        [/\\bPNG\\b/g, "画像"],
+        [/\\bCMS\\b/g, "コンテンツ管理システム"],
+        [/\\bUI\\b/g, "ユーザーインターフェース"],
+        [/\\bAPI\\b/g, "エーピーアイ"]
+    ];
+    return terms.reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), value);
+}
+
 export function translateString(value, language, textual = true) {
     const dictionary = TRANSLATIONS[language];
     if (!dictionary) return value;
     const normalized = normalize(value);
     if (dictionary[normalized]) {
-        return language === "hv" || language === "cu" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
+        const exact = language === "hv" || language === "cu" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
+        return language === "ja" ? localizeJapaneseTerms(exact) : exact;
     }
 
     let translated = value;
