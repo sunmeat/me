@@ -5,6 +5,7 @@ import Icon from "./Icon.jsx";
 
 function Footer() {
     const {language} = useLanguage();
+    const isJapanese = language === "ja";
     return (
         <footer className="footer">
             <div className="footer__inner">
