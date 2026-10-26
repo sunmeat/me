@@ -298,7 +298,7 @@ export const EXPERIENCE = [
         org: "IT Step Academy, Odesa",
         time: "Sep 2007 — Present (Remote)",
         desc:
-            "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\""
+            "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM."
     },
     {
         role: "Night Shift Venue Logistics & Facility Specialist",
