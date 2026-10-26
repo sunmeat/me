@@ -4266,7 +4266,8 @@ export function translateString(value, language, textual = true) {
         translated = translateExperimentalFallback(translated, language);
     }
     if (language === "av" && textual) translated = transliterateAv(translated);
-    return restore(translated);
+    const result = restore(translated);
+    return language === "ja" ? localizeJapaneseTerms(result) : result;
 }
 
 // Служебные свойства компонентов: транслитерировать их нельзя, иначе сломаются type="button", language="av" и т. п.
