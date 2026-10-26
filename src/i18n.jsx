@@ -17,7 +17,7 @@ export function LanguageProvider({children}) {
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-        document.title = language === "cu" ? "Александр Загоруйко — О дѣлахъ и дарованїяхъ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
+        document.title = language === "cu" ? "Александр Загоруйко — О дѣлахъ и дарованїяхъ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "Oleksandr Zahoruiko — सङ्गणकविद्यायाः कर्मयोगी | ओरलेआँ, फ्रान्स"
             : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
             : language === "ko-KP" ? "위대한 기술 창조자 Oleksandr Zahoruiko — 주체적 프로그람 개발의 영웅 | 프랑스 오를레앙"
             : language === "zh"
@@ -37,7 +37,7 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", language === "cu" ? translateExperimentalFallback(content, language) : content);
         };
-        updateMeta('meta[name="description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ портфолио: программированїе, Android и учительство." : language === "av" ? "Анастасиеволочковский: шпагаты, песни, балет и программистский шик. Дорогие мои, всё в прекрасной форме!" : language === "qya" ? "Quenya, the High-elven language created by J. R. R. Tolkien. A small experimental localization of a developer portfolio." : language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
+        updateMeta('meta[name="description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ портфолио: программированїе, Android и учительство." : language === "av" ? "Анастасиеволочковский: шпагаты, песни, балет и программистский шик. Дорогие мои, всё в прекрасной форме!" : language === "qya" ? "Carmatano ar peantar Orléansessë. Nórëa Andróida carmar ar quanta-tambë ramë-carmar. Latyaine carmar ar ara-carmi, manwa erinqua carmain." : language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
             : language === "ko-KP"
             ? "프랑스 오를레앙에서 활동하는 소프트웨어 기술자 및 대학 강사. 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 공개된 기술 성과와 협력 사업."
@@ -52,7 +52,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -63,7 +63,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[property="og:description"]', language === "cu" ? "Портфолио въ церковнославѧнскомъ духѣ: кодъ, Android приложенїѧ и учительство." : language === "av" ? "Портфолио в стиле Анастасии Волочковой: шпагат вам в ленту, песни в сердце, блистательная карьера и моё мнение." : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "불굴의 창조정신으로 건설한 안드로이드 응용프로그램과 웹 성과. 19년을 넘는 개발 및 교육의 빛나는 력사. 프랑스 오를레앙에서 세계를 향해 나아간다." : language === "zh"
+        updateMeta('meta[property="og:description"]', language === "cu" ? "Портфолио въ церковнославѧнскомъ духѣ: кодъ, Android приложенїѧ и учительство." : language === "av" ? "Портфолио в стиле Анастасии Волочковой: шпагат вам в ленту, песни в сердце, блистательная карьера и моё мнение." : language === "qya" ? "Carmatano ar peantar Orléansessë. Nórëa Andróida carmar ar quanta-tambë ramë-carmar. Latyaine carmar ar ara-carmi, manwa erinqua carmain." : language === "hv" ? "Android vāedar, full-stack vēzos se urnegtos dārys." : language === "ja" ? "ネイティブAndroidアプリ、フルスタックWeb開発、公開済みプロジェクト。開発と教育の経験は19年以上。" : language === "de" ? "Native Android-Apps, Full-Stack-Webentwicklung und veröffentlichte Projekte. Mehr als 19 Jahre Erfahrung in Entwicklung und Lehre." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل ومشاريع منشورة. أكثر من 19 عامًا في البرمجة والتدريس. أورليان، فرنسا." : language === "ko-KP" ? "불굴의 창조정신으로 건설한 안드로이드 응용프로그램과 웹 성과. 19년을 넘는 개발 및 교육의 빛나는 력사. 프랑스 오를레앙에서 세계를 향해 나아간다." : language === "zh"
             ? "原生 Android 应用、全栈 Web 开发与已上线项目。拥有超过 19 年开发与教学经验。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения, full-stack веб-разработка и опубликованные проекты. Более 19 лет в разработке и преподавании. Орлеан, Франция."
@@ -74,7 +74,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Oleksandr Zahoruiko — Quenya · Elda Parma" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -85,7 +85,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer");
-        updateMeta('meta[name="twitter:description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ: кодъ, приложенїѧ и учительство." : language === "av" ? "Шпагаты, песни, блистательная карьера и цифровое величие. Дорогие мои!" : language === "qya" ? "An experimental portfolio localization in Quenya, the High-elven language of Tolkien’s legendarium." : language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "위대한 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 창조와 기술 혁신의 승리, 프랑스 오를레앙에서 세계로." : language === "zh"
+        updateMeta('meta[name="twitter:description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ: кодъ, приложенїѧ и учительство." : language === "av" ? "Шпагаты, песни, блистательная карьера и цифровое величие. Дорогие мои!" : language === "qya" ? "Carmatano ar peantar Orléansessë. Nórëa Andróida carmar ar quanta-tambë ramë-carmar. Latyaine carmar ar ara-carmi, manwa erinqua carmain." : language === "hv" ? "Android vāedar se full-stack vēzos." : language === "ja" ? "ネイティブAndroidアプリとフルスタックWeb開発。公開済みプロジェクト。フランス・オルレアン。" : language === "de" ? "Native Android-Apps und Full-Stack-Webentwicklung. Veröffentlichte Projekte. Orléans, Frankreich." : language === "ar" ? "تطبيقات أندرويد أصلية وتطوير ويب متكامل. مشاريع منشورة. أورليان، فرنسا." : language === "ko-KP" ? "위대한 안드로이드 응용프로그램과 전면부-후면부 웹 개발. 창조와 기술 혁신의 승리, 프랑스 오를레앙에서 세계로." : language === "zh"
             ? "原生 Android 应用与全栈 Web 开发。已上线的个人项目。法国奥尔良。"
             : language === "ru"
             ? "Нативные Android-приложения и full-stack веб-разработка. Опубликованные проекты. Орлеан, Франция."
@@ -2246,103 +2246,396 @@ const JA = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "公開されているDuolingoプロフィールの統計を表示・共有するシンプルなツールです。アバター、XP、連続学習日数、主なコースを表示し、共有用PNGカードを生成します。ログインは不要です。"
 };
 
-// Quenya (qya). Words attested in Tolkien's writings are used wherever they exist.
-// Where no word exists, terms are coined from attested roots with regular Quenya suffixes:
+// Quenya (qya). Goal: no English left on the page.
+// Words attested in Tolkien's writings are used wherever they exist. Where none exists, terms are
+// coined from attested roots with regular Quenya suffixes:
 //   carma "app/program" (car- "make" + -ma), carmatano "software engineer" (carma + tano "craftsman"),
-//   peantar "teacher", marcarmë "economics" (mar "home" + carmë), cilmë "menu" (cil- "choose" + -më),
-//   Tulmo "guest" (tul- "come" + -mo), harma "repository" (harma "treasure").
-// Product and technology names (Android, GitHub, React, Telegram, ...) stay in their original form.
+//   peantar "teacher", marcarmë "economics", cilmë "menu" (cil- "choose" + -më), Tulmo "guest",
+//   harma "repository/hoard", nótil "counter/calculator", tirmo "tracker", istalë "experience".
+// Brand and technology names are respelled in Quenya orthography (no k, g, b, d, z, w, j):
+//   Android > Andróida, Google > Cúcolë, GitHub > Cithapa, React > Riactë, Kotlin > Cotlin, ...
+// Pure acronyms and symbols (C++, C#, SQL, PHP, API, CI/CD, JWT, XP, PNG, QR, UI/UX) stay as they are.
 const QUENYA = {
+    // Navigation
     "About": "Quenta",
     "Skills": "Curwi",
     "Apps": "Carmar",
     "Sites": "Nóri",
     "Experience": "Istalë",
     "Contact": "Omentië",
-    "Buy me a coffee": "Á anta nin yulma cafëo",
-    "Hire me": "Á yuhta ni",
     "Toggle menu": "Latya i cilmë",
     "Open menu": "Latya i cilmë",
     "Close menu": "Holta i cilmë",
-    "View published sites": "Á cena i latyaine nóri",
+    "Choose language": "Á cile i lambë",
+    "Language": "Lambë",
+    "Quenya": "Quenya",
+    "Quenya leaf symbol": "Lassë Quenyava",
+    "English": "Inglisë",
+    "United States flag": "Tanwë Hyarmentirëo",
+    "Three-headed dragon": "Lókë nelcarana",
+    "Valyrian": "Valyrin",
+    "Buy me a coffee": "Á anta nin yulma cafëo",
+    "Buy me one more coffee": "Á anta nin ata yulma cafëo",
+    "Back to top": "Nanwen mir i tarma",
+    "Built with love.": "Carna melmenen.",
+    "Hire me": "Á yuhta ni",
     "Start a project": "Á yesta carmë",
+    "View published sites": "Á cena i latyaine nóri",
+
+    // Hero and statistics
+    "$ whoami": "$ man nanyë",
+    "Oleksandr Zahoruiko": "Olexandar Sahoruico",
+    "Oleksandr Zahoruiko —": "Olexandar Sahoruico —",
+    "Android / Full-Stack Developer": "Andróida / Quanta-tambë carmatano",
+    "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Five+ published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Carmatano ar peantar Orléansessë, ya carë nórëa Andróida carmar ho yestë tenna metta — ho minya tecië tenna coirë tanwë Cúcolë Peilessë. Ar carë quanta-tambë ramë-carmar: Riactë i cennallo, Sperin Mutë / Yancó / ASP.NET Corë / Nódë.Yas i nutallo. Lempë ar ambë latyaine carmar sí — rië i yestë. Ambë nertë ar quain loar tecien ar peantien tengwi.",
     "Published sites": "Latyaine nóri",
-    "Published Android apps": "Latyaine Android-carmar",
+    "Published Android apps": "Latyaine Andróida carmar",
     "Years in software & teaching": "Loar mi carmar ar peantië",
-    "GitHub repositories": "GitHub harmar",
-    "Engineer by trade, teacher by habit.": "Carmatano ve curwë, peantar ve melmë.",
-    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Nanyë carmatano ar peantar parmaostiva mi Orléans, Francia, ar istan i carmar ar i marcarmë. Atta quaini loaron ammapa nin: aureldessë peantan i vinya carmatanor, lómissë menta i carmar.",
-    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Síra i minya cantanya ná i Android-carmar nostalë: carin vanimë carmar, ullumë mapi, ho sámë tenna Google Play. Ara Android carin nóri ar carmar ilyë: React i cennallo, Spring Boot / Django / ASP.NET Core / Node.js i mardallo. Mi lamba hya mi nórë, melin vanda carmë, minda tengwi, nanwë lúmë, ar carmar ya mi loa apa nás ve mi minya aurë manya hanya. Sine nóti ni aprestë ambë nertë ar quain loar tecien ar peantien tengwi.",
-    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Pella i carmë nanyë tanwë-carmo ar lindelë-tano ya rimbë lambar, ar sina nás mannen cenin írë i tanwë lanta lemba lúmenen.",
-    "Live on Google Play right now.": "Coirë Google Playessë sí.",
-    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Enquë carmar: tanwi, cílë ocarmi ar nórëa mancalë-carmar — ilya cárina, tambina ar latyaina ni erinqua.",
-    "Side projects, live on the web.": "Hyarmenya carmi, coirë i ramessë.",
-    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Orë harmë pityë nórion ar tyastaron — ilya erinqua latyaina, tambina tyasta sáma, curwë, hya yalta alassenen.",
-    "Open source & teaching material.": "Latyaina tengwi ar peantië tengwi.",
-    "View GitHub profile": "Á cena GitHub-essë",
-    "Technical skills": "Curwi tanoiva",
-    "A toolkit shaped by production work, teaching, and constant experimentation.": "Carmaparma tampina carmenen, peantiënen ar oira tyastalenen.",
-    "Professional experience": "Istalë tanoiva",
-    "Education": "Peantië",
-    "Get in touch": "Á omenta ni",
-    "Have a project in mind? Let's talk about how to make it real.": "Ma ëa carmë mi sámalya? Nai quetuvalmë manen carë sa nanwa.",
-    "Email me": "Á tece nin",
-    "Message on Telegram": "Á tece nin Telegramessë",
+    "GitHub repositories": "Cithapa harmar",
+    "Estimate Your App Project": "Á nota carmalya carmë",
+    "Select your project requirements to get an instant scope estimate.": "Á cile i maurë carmaryo ar mapa nótië lintiva.",
+    "Choose your platform": "Á cile talmalya",
+    "Pick your core features": "Á cile i ondo tanwi",
+    "Set your timeline": "Á panya lúmelya",
+
+    // Terminal card
+    "zsh — sunmeat": "quenta — sunmeat",
+    "name": "essë",
+    "role": "carmë",
+    "base": "mar",
+    "focus": "tirmë",
+    "status": "lemmë",
+    "available for freelance work": "lertan carë carmar erinqua",
+    "Kotlin · Java · React · Node.js": "Cotlin · Yava · Riactë · Nódë.Yas",
     "Orléans, France": "Orléans, Francia",
     "Orléans": "Orléans",
     "France": "Francia",
-    "Name": "Essë",
-    "Add a comment...": "Á tece quetta...",
-    "Post": "Menta",
+
+    // About
+    "$ cat about.md": "$ henta quenta.md",
+    "Engineer by trade, teacher by habit.": "Carmatano ve curwë, peantar ve melmë.",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Nanyë carmatano ar peantar parmaostiva mi Orléans, Francia, ar istan i carmar ar i marcarmë. Atta quaini loaron ammapa nin: aureldessë peantan i vinya carmatanor, lómissë menta i carmar.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Síra i minya tirmë nin ná i nórëa Andróida carmë: carin vanimë carmar ullumë mapi, ho sámë tenna Cúcolë Peilë. Ara Andróida carin quanta-tambë ramë-carmar: Riactë i cennallo, Sperin Mutë / Yancó / ASP.NET Corë / Nódë.Yas i nutallo. Mi lamba hya mi ramë, melin minda tambë, tirima tengwi, nanwë lúmi, ar carmar yar mi loa apa nar ve mi minya aurë manya hanya. Sine nóti ni aprestë ambë nertë ar quain loar tecien ar peantien tengwi.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Pella i carmë nanyë hrávelo tanwë-carmo ar rimbë lindelë-ormeron, ar sina ná sa manen cenin írë i tanwë lanta lemba lúmenen.",
+    "bonjour, epta": "Aiya!",
+    "Check out this portfolio": "Á cenë sina carmaparma!",
     "Like": "Melmë",
     "Unlike": "Áva mele",
     "Comment": "Quetta",
+    "Message on Telegram": "Á tece nin Telecramessë",
     "Save": "Á tire",
     "Remove from saved": "Áva tire",
     "likes": "melmi",
     "just now": "sí",
+    "Name": "Essë",
+    "Add a comment...": "Á tece quetta...",
+    "Post": "Menta",
     "Guest": "Tulmo",
     "Couldn't load comments right now.": "Lá polin tulta i quetta sí.",
     "Couldn't post your comment. Please try again.": "Lá polin menta quettalya. Á yesta ata.",
-    "Check out this portfolio": "Á cenë sina carmaparma!",
+
+    // Skills
+    "$ ls skills/": "$ cena curwi/",
+    "A toolkit built for shipping, not just prototyping.": "Carmaparma tambina latyalen, lá rië minya tyastalen.",
+    "Technical skills": "Curwi tanoiva",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Carmaparma tampina carmenen, peantiënen ar oira tyastalenen.",
+    "Mobile": "Móla",
+    "Languages": "Lambi",
+    "Frameworks": "Tambar",
+    "Tooling": "Cilmar",
+    "primary focus": "minya tirmë",
+    "core toolkit": "ondo carmaparma",
+    "backend & web": "nu-tambë ar ramë",
+    "day to day": "ilya aurë",
+    "Jetpack Compose": "Yetpaca Comosë",
+    "Flutter": "Flutar",
+    "ML Kit / MediaPipe": "ML Cit / Mediapaipë",
+    "Material Design": "Materia Tesainë",
+    "React Native": "Riactë Nórëa",
+    "Room": "Rúmë",
+    ".NET MAUI": ".NET Mauí",
+    "Clean Architecture": "Minda tambë",
+    "MVI / MVVM": "MVI / MVVM",
+    "Java": "Yava",
+    "Python": "Paiton",
+    "JavaScript": "Yavascripta",
+    "TypeScript": "Taipascripta",
+    "Kotlin": "Cotlin",
+    "ASP.NET Core": "ASP.NET Corë",
+    "Blazor": "Plasor",
+    "Spring Boot": "Sperin Mutë",
+    "Django": "Yancó",
+    "Node.js": "Nódë.Yas",
+    "Next.js": "Nectë.Yas",
+    "React": "Riactë",
+    "Electron.js": "Elecrón.Yas",
+    "FastAPI": "Lintë API",
+    "Git & GitHub": "Cit ar Cithapa",
+    "Docker": "Tocar",
+    "PostgreSQL": "Postcres SQL",
+    "REST APIs": "REST API",
+    "Figma": "Ficma",
+    "GraphQL / gRPC": "Crafcuel / cRPC",
+    "AI Ecosystem": "Carnasáma-mar",
+    "Redis": "Retís",
+    "Postman": "Postmano",
+    "Webpack / Vite": "Vepaca / Vitë",
+
+    // Apps
+    "$ ls apps/ --published": "$ cena carmar/ --latyaine",
+    "Live on Google Play right now.": "Coirë Cúcolë Peilessë sí.",
+    "Voice Recorder": "Ómatengwilë",
+    "Munchkin Level Counter": "Mancin Tapa-nótil",
+    "QR Code Reader: Scan & Create!": "QR Tengwi-hentil: Á cenë ar á carë!",
+    "Vzhuh Cat": "Hwesta-meawa",
+    "Gullibility Test": "Tyastië i lehta-sámo",
+    "Massage Kyiv": "Hrávetyalmë Kíyev",
+    "Utility": "Tanwi",
+    "Board Games": "Parmar-cílë",
+    "Casual Game": "Cílë ocarmë",
+    "Quiz": "Maquetië",
+    "Local Business": "Nórëa mancalë",
+    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Pitya tengwilë lintë nótaron, peantiëron ar maquetiëron, tambina or minda lista ú ñwalmë i tirinë tengwion.",
+    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table.": "Nótëa tapa- ar harma-tirmo i Mancin tengwë-cílë, ya nutya tecil ar parma-nótë ara i sambë.",
+    "A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards.": "Lintë QR-henta ya ú ñwalmë, ar ya caris immo tengwi tellain, sinta quettain ar omentië-tengwessen.",
+    "A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun.": "Alassëa pitya cílë pa meawar, tanwa lintë ocarmë lúmin ar pitya alassë i mallessë.",
+    "A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions.": "Alya maquetië ya tyasta i cílaron hroa lehta-sámë rimbë curunir ar yelwa maquetier.",
+    "A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio.": "Nórëa mancalë-carma ya tana carmar, maquë ar tangwi hrávetyalmë-coaiva mi Kíyev.",
+
+    // Websites
+    "$ ls websites/ --deployed": "$ cena nóri/ --latyaine",
+    "Side projects, live on the web.": "Ara-carmi, coirë i ramessë.",
+    "Alex FM": "Alex FM",
+    "Solenya": "Solenya",
+    "Pisanina": "Pisanina",
+    "Aerodion": "Aerodion",
+    "Duo Stats": "Duo Nótar",
+    "Happy Lena": "Alassëa Lena",
+    "Freya": "Freya",
+    "No Rent": "Lá Mastië",
+    "ShrimpWatch": "Pityalingwe-tirië",
+    "Natadenium": "Natadenium",
+    "Web Audio": "Ramë-ómar",
+    "Korean Pickles": "Corëa sulyaina matsë",
+    "Poetry Blog": "Lírë-parma",
+    "Music Learning": "Lindelë istalë",
+    "Stats Card": "Nótar tengwë",
+    "Interactive": "Ovacarya",
+    "Pet Memorial": "Hravan enyalië",
+    "Calculator": "Nótil",
+    "Price Tracker": "Mancatirmo",
+    "Plant Collection": "Olvaron harmë",
+    "live": "coirë",
+    "Forever alive": "Oi coirë",
+    "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.": "Ómë-tala mi ramë-henda yo coirë tanwë ya vista ómenen, tambina or i Ramë-ómar API cenien i ómë tulwa coirë lúmessë.",
+    "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.": "Cala ramë-nórë Corëa sulyaina matsëo anto Odessessë, ya tana i matsi, i mancalë-nórë ar ilya-nórëo antië.",
+    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Pitya immo lírë-parma yo minda hentalë ar sinta turmo-carma tyárina Riactënen ar Nar-talmanen.",
+    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Lindelë-carma ya cenë i má ar vistë i leperi mir nótë ar lindelë, ya lertas tyé care lindelë ú hrávëa ormë.",
+    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Pitya yulma cenien ar antien ilyain Duolinco i lië-mannëo nótar. Tanas ehtë, XP, auri-tengwi ar i tarya cilmar, ar caris PNG-tengwë — lá maurë ennalë.",
+    "A personal interactive birthday greeting page with playful animations and a small surprise built in.": "Immo ovacarya coller-aiya pantë yo alassëa vilmar ar pitya quenë tambina mir sa.",
+    "A lightweight interactive page built as a personal project — a playground for small UI and animation ideas.": "Pitya ovacarya pantë carna ve immo carmë — cílë-nórë pitya UI ar vilma sanwennar.",
+    "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.": "Nótil i hostalëo — mastië hya mancalë — ya tana manen telpë hostana i mastiessë polë alta lúmenen qui nas panyaina.",
+    "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.": "Pityalingwe maquë-tirië Silpon yo tecë-tirmar írë i arani pityalingwi lantar nu 40 UAH ter 100 g, ar nyarnar, matsë-parmar ar pitya Odessa-nostalë nyérë.",
+    "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.": "Rimbalambëa olvar-tanwë ya ná antaina i erumë lossi, yo harmë-parma, lótië-parma ar tyalma olvaron tirmë-tengwi.",
+
+    // Open source
+    "$ git log --stat": "$ git henta --nótë",
+    "Open source & teaching material.": "Latyaine tengwi ar peantië tengwi.",
+    "View GitHub profile": "Á cena Cithapa-essë",
+    "A personal poetry blog with a minimal reading experience and a simple admin CMS for managing poems, built with React, Vite and Firebase.": "Immo lírë-parma yo pitya hentalë ar sinta turmo-carma i lirinen turien, tambina Riactënen, Vitënen ar Nar-talmanen.",
+    "Source code of my personal single-page portfolio website.": "Ninya immo erya-lassëa carmaparmo ramë-nórëo óre-tengwi.",
+    "My interactive digital business card (npx sunmeat) right in your terminal": "Ninya ovacarya nótëa mancalë-tengwë (npx sunmeat) ara i tengwilë lyo",
+    "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Vilya, haimë tengwi-tambina roguelike cílë carna C++-nen ar Windows API i vanta mir 40x10 vinquë-mallë carna carmanen. Á tura i hérolya ar á comya laurë telpi, á útya i ranco-ñottor yar mulë coivielya, ar á hire i etelë nó haryas lúmë.",
+    "Practical React component examples and patterns prepared for student groups.": "Tyalmë Riactë-ranta tanwi ar tamba-tanwi manwaine i hínalion hostainen.",
+    "A C# console Snake game that uses Hamiltonian cycles to generate perfect, non-colliding paths across the entire board.": "C# tengwilë-lúmë Leva-cílë ya yuhta Hamiltonëa círar carien vanima, ú ovrámë mallar ter i quanta parma.",
+    "A comprehensive collection of clean Object-Oriented Programming examples in C++: classes, inheritance, polymorphism, abstract classes and more.": "Quanta harmë minda Nattirë-Tulyaina Carmë tanwion C++-essë: nostari, aryonë, rimbë-nostalë, hanyainë nostari ar ambë.",
+    "Practical C++ Standard Template Library examples covering containers, iterators, algorithms, adapters and functors.": "Tyalmë C++ Tanwa Tanwë-Parma tanwi: hostar, vantili, nótinwi, ovanwar ar carmar.",
+    "C++ examples demonstrating algorithmic complexity and Big O Notation.": "C++ tanwi ya tanar i nótinwëo úvanima ar i Alta O Nótë.",
+    "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Istalë-carmë pa ASP.NET Corë MVC ya tana i carmë i mir-tambina Tulyaina-Panyalë hostëo.",
+    "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Istalë-carmë pa ASP.NET Corë Ramë API ya tana tanwë-essëo ar lerië Nar-talma tanwënen ar JWT tengwinen.",
+    "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Istalë-carmë pa ASP.NET Corë Ramë API ya tana erya ar ovanwa tyastië xUnit, FluentAssertions, NSubstitute ar WebApplicationFactory-nen.",
+    "JavaScript Library": "Yavascripta Parma",
+
+    // Experience and education
+    "$ cat experience.log": "$ henta istalë.parma",
+    "Experience & education.": "Istalë ar peantië.",
+    "Education": "Peantië",
+    "Freelance Full-Stack & Android Developer": "Erinqua quanta-tambë ar Andróida carmatano",
+    "Independent": "Erinqua",
+    "Technical Project Consultant": "Tanoiva carmëo ñolmo",
+    "GastroLab": "Matsë-tyastarmë",
+    "Independent Software Engineer & R&D": "Erinqua carmatano ar hentalë-tamië",
+    "Open Source / Side Projects": "Latyaine tengwi / Ara-carmi",
+    "Leading Teacher Specialist": "Minya peantar ar curwo",
+    "IT Step Academy, Odesa": "IT Stepa Peantarmë, Odesa",
+    "Night Shift Venue Logistics & Facility Specialist": "Lómëa lúmë: ostiëo yestarmë ar coalmo curwo",
+    "ASTRA Club, Orléans": "ASTRA Ocombë, Orléans",
+    "Master's degree, Programming": "Turco-parma, Carmatië",
+    "IT Academy Step, Odesa": "IT Peantarmë Stepa, Odesa",
+    "Bachelor's degree, Economics": "Minya-parma, Marcarmë",
+    "Open International University of Human Development “Ukraine”, Mykolaiv": "Latyaina Ilquenwa Parmaosta Atanion Alyalëo “Ucraina”, Mycolaiv",
+    "Continuous Education & Professional Certifications": "Oira peantië ar tanoiva tanwi",
+    "Cisco, Microsoft, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank, etc.": "Cisco, Maicrosoft, Cúcolë Peilë Peantarmë, IBM, Prometeo, ITVDN, Haccar Ranco, ar ambë.",
+    "Constantly expanding technical expertise through specialized courses, hands-on skill validations, and industry certifications in software engineering, networking, and cloud services.": "Oira alyan tanoiva curwi ter ongwë cilmar, tyalmë curwëo tanwi ar tanoiva tanwi mi carmatië, ramë-tambë ar lumbo-carmar.",
+    "Jul 2023 — Present": "Cermië 2023 — Sí",
+    "May 2017 — Dec 2017": "Lótessë 2017 — Ringarë 2017",
+    "Jun 2022 — Present": "Nárië 2022 — Sí",
+    "Sep 2007 — Present (Remote)": "Yavannië 2007 — Sí (haira)",
+    "Aug 2026 — Present": "Urimë 2026 — Sí",
+    "Ongoing": "Oira",
+    "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Sanin, carin ar latyan carmar ho yestë tenna metta. Carin nórëa Andróida carmar ar quanta-tambë ramë-carmar yuhtala Riactë + Sperin Mutë / Yancó / ASP.NET Corë / Nódë.Yas + Nar-talma / Postcres SQL / MySQL, ar i harmë-sambë, API-ovanwar ar Cúcolë Peilessë latyalë.",
+    "Provided architectural guidance, code reviews, and technical consulting for web and mobile solutions. Assisted in optimizing system performance, streamlining API design, and advising engineering teams on best software practices.": "Antanen tambë-tulya, tengwi-hentalë ar tanoiva ñolmë ramë- ar móla-nanwienen. Tyulden mára carmë tambëo, sinta API-sanwë ar antanen aure carmatanoin pa i arya carmaparmo haimë.",
+    "Building and maintaining custom developer tooling, exploratory mobile modules, and open-source utility libraries. Experimenting with modern web frameworks, algorithm optimization, and UI/UX patterns.": "Carin ar tirin immo carmatano-cilmar, hentala móla ormar ar latyaine tengwi tanwi-parmar. Tyastan vinya ramë-tambar, nótinwi mára-carë ar UI/UX tanwi.",
+    "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.\"": "Peantan ar tulyan i tulila carmatanor mi C++ / C# / Paiton Ramë / Andróida carmë / Nótë-harmar; OOP, nótinwi, nótë-tambar, sanwë-tanwi / SOLID. Carin immo peantië tengwi, hentan hínaron tengwi, ar tirin metta-carmar SCRUM-nen.\"",
+    "Streamlining night-shift venue logistics, rapid floor management, and deep sanitation protocols for high-capacity hard techno events. Maintaining strict operational safety and hygiene standards, optimizing post-event cleanup workflows under tight turnaround times, and ensuring high-throughput venue readiness during peak operations.": "Sintan lómëa lúmëo ostië-yestarmë, lintë talan-turië ar núra poitië-vanda altarë-ostion tarya lindë-ocombessen. Tirin tanwa carmëo varnë ar poitië vanda, mára-carin apa-ocombë poitië carmar nu lintë lúmi, ar tanin i ostë manwa mi alta carmë lúmi.",
+
+    // Contact
+    "$ contact --init": "$ omentië --yesta",
+    "Let's build your own app.": "Nai carvalmë carmalya.",
+    "Open to freelance projects, long-term collaborations and consulting work. Based in Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Latya erinqua carmin, anda ovacarmin ar ñolmë-carmin. Mánan Orléansessë, Francia (EET/EEST, UTC+1) — i lúmessë minya aurëo hanquentan.",
+    "Email me": "Á tece nin",
+    "Telegram": "Telecramë",
+    "GitHub": "Cithapa",
+    "LinkedIn": "Lincetin",
+    "Credly": "Crelë",
+    "Microsoft Learn": "Maicrosoft Ñolmë",
+    "Google Developer": "Cúcolë Carmatano",
+    "HackerRank": "Haccar Ranco",
+    "Duolingo": "Duolinco",
+    "Linktree": "Linctelë",
+    "My Android Apps": "Andróida carmar ninya",
+
+    // Comments, news
     "Loading news...": "Tultalë i vinyar...",
     "Developer News Feed": "Carmatanoron vinyar",
-    "Curated headlines from Google News. Swipe or use arrow keys.": "Cilnë vinyar Google Vinyallo. Á lanta hya yuhta pilmar.",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Cilnë vinyar Cúcolë Vinyallo. Á lanta hya yuhta pilmar.",
     "Click this card to read full article.": "Á panya sinë tengwë ar á henta i quetta quanta.",
     "SOURCE": "ÓRË",
     "News Source": "Vinyaron óre",
     "Read the full article for more details.": "Á henta i quetta quanta ar ista ambë.",
     "No articles for": "Lá ëa quettar pa",
     "Failed to load news.": "Lá polin tulta i vinyar.",
-    "Server-side problem. Switching topic...": "Ñwalmë i mardallo. Vistan i quetië...",
+    "News request timed out. Please try again.": "I maquetië anda ná. Á yesta ata.",
+    "Server-side problem. Switching topic...": "Ñwalmë i nu-tambeo. Vistan i quetië...",
     "Rate limit exceeded. Please wait a few minutes.": "Rimbë maquetier. Á termar ar á lemya pitya lúmë.",
-    "STARLINK REFERRAL": "STARLINK TELLË",
+
+    // Starlink
+    "STARLINK REFERRAL": "ELENTELLË TELLË",
     "LIMITED OFFER": "TÁMA ANTO",
-    "1 MONTH": "1 RASSË",
-    "FREE": "LÁ HÁTA",
-    "Activate Starlink through my referral link and get one month of service free.": "Á latya Starlink tellënen ninya ar mapa erya rassë cariëo hequa.",
-    "Activate Starlink": "Á latya Starlink",
-    "*Offer subject to Starlink eligibility and terms.": "*I anto ná Starlink-va ar i lacarë.",
-    "LOW EARTH ORBIT · 550 KM": "NUMEN KIRYA · 550 KM",
-    "Android / Full-Stack Developer": "Android / Full-Stack carmatano",
-    "primary focus": "minya cantanya",
-    "core toolkit": "ondo carmaparma",
-    "backend & web": "mardallo ar ramë",
-    "day to day": "ilya aurë",
-    "Mobile": "Móla",
-    "Languages": "Lambi",
-    "Frameworks": "Tambar",
-    "Tooling": "Cilmar",
-    "Utility": "Tanwi",
-    "Board Games": "Parmar-cílë",
-    "Casual Game": "Cílë ocarmë",
-    "Quiz": "Maquetië",
-    "Local Business": "Nórëa mancalë",
-    "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Pitya tengwilë-carma lintë nótaron, peantiëron ar maquetier, tambina ar minda, lá ñwalmenen, tiriéno tengwi-lista.",
-    "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper bookkeeping with a simple mobile companion.": "Nótëa tapar ar harma-tirë i Munchkin tengwi-cílë, ya nutya parma-tengwi ar tecil ar yestë sinta lamba-meldo.",
-    "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Pitya immo lindë-parma ar mindë hentalë, ar sinta turmo-carma tyárina React ar Firebase.",
-    "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Lindelë-carma ya cenë i má ar vistë i leperi mir nótë ar lindelë, ya lertas tyé care lindelë ú ranta-ormë.",
-    "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Pitya yulma cenien ar antien ilyain Duolingo i lië-mannëo nótar. Tanas ehtë, XP, auri-tengwi ar i tarya cilmar, ar caris PNG-tengwë — lá maurë ennalë."
+    "1 MONTH": "1 ASTA",
+    "FREE": "ANTO",
+    "Activate Starlink through my referral link and get one month of service free.": "Á latya Elentellë tellënen ninya ar mapa erya asta cariëo hequa.",
+    "Activate Starlink": "Á latya Elentellë",
+    "*Offer subject to Starlink eligibility and terms.": "*I anto ná Elentellëva ar i lacarë.",
+    "LOW EARTH ORBIT · 550 KM": "NUMEN KIRYA · 550 lár",
+
+    // Estimator
+    "Android Native": "Andróida nórëa",
+    "Kotlin / Java": "Cotlin / Yava",
+    "Full-Stack": "Quanta-tambë",
+    "Backend API + Web App": "Nu-tambë API + Ramë-carma",
+    "Authentication": "Tanwë essëo",
+    "Offline Mode": "Ú ramëo",
+    "In-App Purchases": "Mancalë mi carma",
+    "Hardware / Sensors": "Ondo-carmar / Tirmar",
+    "Admin Panel": "Turmo-palma",
+    "Custom UI/UX": "Immo UI/UX",
+    "Standard": "Tanwa",
+    "Express": "Lintë",
+    "Balanced pace, full QA cycle": "Mintya lintië, quanta tyastië",
+    "Priority slot, ~30% faster": "Minya sendë, ~30% ambë lintë",
+    "Estimated timeframe": "Nótina lúmë",
+    "Recommended stack": "Cílina tambë",
+    "Send Brief to Telegram": "Á menta i nótië Telecramenna",
+    "Brief copied — open chat": "I nótië ná panyaina — á latya i quetië",
+    "Copy Brief Text": "Á panya i nótië",
+    "Copied to clipboard": "Panyaina ná",
+    "Project Brief — sunmeat.dev": "Carmëo nótië — sunmeat.dev",
+    "Platform:": "Talma:",
+    "Features:": "Tanwi:",
+    "Timeline:": "Lúmë:",
+    "Estimated scope:": "Nótina anda:",
+    "Suggested stack:": "Cílina tambë:",
+    "Not specified": "Lá tecina",
+    "Sent via sunmeat.dev project estimator.": "Mentaina ter sunmeat.dev carmë-nótil.",
+
+    // Footer
+    "All rights reserved.": "Ilyë hérë hépaina.",
+    "Made with love.": "Carna melmenen.",
+    "Built with ❤️ & React • Available for projects": "Carna ❤️ ar Riactenen • Manwa carmain",
+    "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France": "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia",
+
+    // News topics
+    "AI Machine Learning": "Carnasáma ar tamnë-istalë",
+    "Kotlin Coroutines": "Cotlin Cororutini",
+    "Kotlin Flow": "Cotlin Rávë",
+    "Jetpack Compose Architecture": "Yetpaca Comosë Tambë",
+    "Material 3": "Materia 3",
+    "Adaptive Layouts": "Vistala panyar",
+    "Jetpack Navigation": "Yetpaca Vantalë",
+    "ViewModel": "Cenë-tamnë",
+    "Hilt / Dagger": "Hilta / Tacar",
+    "DataStore": "Nótë-harmë",
+    "WorkManager": "Carmë-turmo",
+    "Paging 3": "Lassi 3",
+    "MVVM": "MVVM",
+    "MVI": "MVI",
+    "Modularization": "Ranyë-carmë",
+    "Kotlin Multiplatform": "Cotlin Rimbatalma",
+    "Compose Multiplatform": "Comosë Rimbatalma",
+    "Ktor": "Ctor",
+    "Supabase": "Supamasë",
+    "GraphQL": "Crafcuel",
+    "REST API": "REST API",
+    "gRPC": "cRPC",
+    "OAuth2 JWT": "OAuth2 JWT",
+    "Google Cloud / Firebase": "Cúcolë Lumbo / Nar-talma",
+    "AWS Amplify": "AWS Alyalë",
+    "Gradle": "Cratelë",
+    "Kotlin DSL": "Cotlin DSL",
+    "App Distribution": "Carmaron antië",
+    "Play Console": "Peilë Turmatalma",
+    "ML Kit": "ML Cit",
+    "Gemini Nano": "Yeminë Nanó",
+    "TensorFlow Lite": "Tensorfló Lintë",
+    "Vertex AI": "Vertex AI",
+    "Google AI Studio": "Cúcolë AI Carmarmë",
+    "LLM Integration in Apps": "LLM ovanwa mi carmar",
+    "Performance Optimization": "Carmë mára-carië",
+    "Baseline Profiles": "Ondo tanwi",
+    "App Startup": "Carmaron yestë",
+    "Memory Profiling": "Enyalë-tanwë",
+    "Benchmarking": "Tyastië ar nótë",
+    "Compose Compiler": "Comosë Comahtil",
+    "JUnit5": "YUnit5",
+    "Compose Testing": "Comosë Tyastië",
+    "Espresso": "Espreso",
+    "MockK": "Moc-K",
+    "UI Testing": "UI Tyastië",
+    "Screenshot Testing": "Cenwë-tengwë tyastië",
+    "Wear OS": "Vesta OS",
+    "Android TV / Auto": "Andróida TV / Auto",
+    "Foldables & Large Screens": "Lehtima ar alta cenwi",
+    "App Security": "Carmaron varnë",
+    "Biometric Authentication": "Coivië-tanwë essëo",
+    "Privacy Sandbox": "Immo-varnë ñurë-sambë",
+    "Media3": "Mediá3",
+    "Location & Maps": "Nómë ar mapar",
+    "Offline-First": "Ú ramëo minya",
+    "Jetpack": "Yetpaca",
+    "Android SDK": "Andróida SDK",
+    "Firebase Auth": "Nar-talma Tanwë",
+    "Room DB": "Rúmë Nótë-harmë",
+    "SQLite": "SQLitë",
+    "Play Billing": "Peilë Mancalë",
+    "CameraX": "Cenwë-X",
+    "Sensor API": "Tirmar API",
+    "React Admin": "Riactë Turmo",
+    "Design System": "Sanwë-tambë",
+    "Firebase": "Nar-talma",
+
+    // Terminal (Estimator JSON)
+    "brief.json": "nótië.json"
 };
 
 const HV = {
@@ -3141,72 +3434,12 @@ function normalize(value) {
 
 function translateExperimentalFallback(value, language) {
     if (language === "qya") {
-        const phraseRules = [
-            [/Engineer by trade, teacher by habit\./gi, "Nér i carmë, nótima i enquë."],
-            [/Published sites/gi, "Nóri tyernë"],
-            [/Published Android apps/gi, "Android mentaner tyernë"],
-            [/Years in software & teaching/gi, "Loar i maquetarë ar ñolmë"],
-            [/GitHub repositories/gi, "GitHub nórë"],
-            [/Technical skills/gi, "Nérë isilmë"],
-            [/Professional experience/gi, "Carmë oiencarmë"],
-            [/Open source & teaching material\./gi, "Lá mapaina maquetarë ar ñolmë."],
-            [/Live on Google Play right now\./gi, "Sí ëa i Google Play."],
-            [/Side projects, live on the web\./gi, "Meldor carmë, ëar i nórë."],
-            [/Let's connect/gi, "Ámen omentië"],
-            [/Get in touch/gi, "Ámen omentië"],
-            [/Have a project in mind\? Let's talk about how to make it real\./gi, "Manca carmë? Áquetë, manen caritas."],
-            [/View GitHub profile/gi, "Cenë GitHub Parma"],
-            [/View project/gi, "Cenë carmë"],
-            [/View on GitHub/gi, "Cenë i GitHub"],
-            [/Read more/gi, "Cenë enta"],
-            [/Learn more/gi, "Ñolë enta"],
-            [/Loading news\.\.\./gi, "Lá carë i quettar..."],
-            [/Developer News Feed/gi, "Quettar i mahtar"],
-            [/Choose your platform/gi, "Cesta i nórë"],
-            [/Pick your core features/gi, "Cesta i turë"],
-            [/Set your timeline/gi, "Panya i lúmë"],
-            [/Estimated timeframe/gi, "Lúmë nótina"],
-            [/Recommended stack/gi, "Cesta maquetarë"],
-            [/Estimate Your App Project/gi, "Nóte i carmë mentaner"],
-            [/Select your project requirements to get an instant scope estimate\./gi, "Cesta i carmë nómë, an nótë i carmë sí."],
-            [/Let's build your own apps?\.?/gi, "Á carë mentaner ólya."],
-            [/Start a project/gi, "Yesta carmë"],
-            [/Contact/gi, "Ómen"],
-            [/About/gi, "Námen"],
-            [/Skills/gi, "Isilmë"],
-            [/Experience/gi, "Oiencarmë"],
-            [/Sites/gi, "Nórë"],
-            [/Apps/gi, "Mentaner"],
-            [/Hire me/gi, "Mecarë"],
-            [/Buy me a coffee/gi, "Mecarë coivie"],
-            [/Email me/gi, "Mentanë"],
-            [/Name/gi, "Essë"],
-            [/Education/gi, "Parma"],
-            [/All rights reserved\./gi, "Ilquen haryar i hresta."],
-            [/Made with love\./gi, "Cárina melmënen."],
-            [/\bPublished\b/gi, "Tyernë"],
-            [/\bLoading\b/gi, "Lá carë"],
-            [/\bContact\b/gi, "Ómen"],
-            [/\bAbout\b/gi, "Námen"],
-            [/\bSkills\b/gi, "Isilmë"],
-            [/\bExperience\b/gi, "Oiencarmë"],
-            [/\bSites\b/gi, "Nórë"],
-            [/\bApps\b/gi, "Mentaner"],
-            [/\bProjects?\b/gi, "Carmë"],
-            [/\bDeveloper\b/gi, "Mahtar"],
-            [/\bEngineer\b/gi, "Nér"],
-            [/\bTeacher|Lecturer\b/gi, "Ñolmo"],
-            [/\bExperience\b/gi, "Oiencarmë"],
-            [/\bSkills\b/gi, "Isilmë"],
-            [/\bApplications?\b/gi, "Mentaner"],
-            [/\bWebsites?\b/gi, "Nóri"],
-            [/\bPublished\b/gi, "Tyernë"],
-            [/\bContact\b/gi, "Ómen"],
-            [/\bLoading\.\.\.\b/gi, "Lá carë..."]
-        ];
-        let result = value;
-        for (const [pattern, replacement] of phraseRules) result = result.replace(pattern, replacement);
-        return result;
+        // Only dynamic text that cannot be listed in the dictionary is handled here.
+        const months = {Jan: "Narvinyë", Feb: "Nénimë", Mar: "Súlimë", Apr: "Víressë", May: "Lótessë", Jun: "Nárië", Jul: "Cermië", Aug: "Urimë", Sep: "Yavannië", Oct: "Narquelië", Nov: "Hísimë", Dec: "Ringarë"};
+        return value
+            .replace(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)\s+weeks\b/g, "$1 - $2 enquier")
+            .replace(/\b(\d+(?:\.\d+)?)\s+weeks?\b/g, "$1 enquië")
+            .replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g, (m) => months[m]);
     }
     if (language === "av") {
         const rules = [

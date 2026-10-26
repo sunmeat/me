@@ -48,6 +48,13 @@ function formatDate(dateStr, language = "en") {
     const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
     if (mins < 1) return "just now";
+    if (language === "qya") {
+        const months = ["Narvinyë", "Nénimë", "Súlimë", "Víressë", "Lótessë", "Nárië", "Cermië", "Urimë", "Yavannië", "Narquelië", "Hísimë", "Ringarë"];
+        if (mins < 60) return `${mins} min. nó`;
+        if (hours < 24) return `${hours} lú nó`;
+        if (days < 7) return `${days} ré nó`;
+        return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    }
     if (mins < 60) return `${mins}m ago`;
     if (hours < 24) return `${hours}h ago`;
     if (days < 7) return `${days}d ago`;

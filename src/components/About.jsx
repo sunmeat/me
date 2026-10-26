@@ -26,7 +26,16 @@ function dateLocale(language) {
     return language === "fr" ? "fr-FR" : language === "av" ? "ru-RU" : "en-US";
 }
 
+const QUENYA_MONTHS = ["Narvinyë", "Nénimë", "Súlimë", "Víressë", "Lótessë", "Nárië", "Cermië", "Urimë", "Yavannië", "Narquelië", "Hísimë", "Ringarë"];
+
+function pad2(n) {
+    return String(n).padStart(2, "0");
+}
+
 function formatTimestamp(date, language = "en") {
+    if (language === "qya") {
+        return `${QUENYA_MONTHS[date.getMonth()]} ${date.getDate()}, ${pad2(date.getHours())}:${pad2(date.getMinutes())}`;
+    }
     const formatted = date.toLocaleString(dateLocale(language), {
         month: "short",
         day: "numeric",
@@ -48,6 +57,12 @@ function formatRelative(date, language = "en") {
         if (mins < 60) return `${mins} мин.`;
         if (hours < 24) return `${hours} ч`;
         if (days < 7) return `${days} дн.`;
+    }
+    if (language === "qya") {
+        if (mins < 60) return `${mins} min.`;
+        if (hours < 24) return `${hours} lú`;
+        if (days < 7) return `${days} ré`;
+        return `${QUENYA_MONTHS[date.getMonth()]} ${date.getDate()}`;
     }
     if (mins < 60) return `${mins}m`;
     if (hours < 24) return `${hours}h`;
