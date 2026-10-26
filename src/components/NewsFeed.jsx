@@ -47,7 +47,7 @@ function formatDate(dateStr, language = "en") {
     const mins = Math.floor(diff / 60000);
     const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
-    if (mins < 1) return "just now";
+    if (mins < 1) return language === "ja" ? "たった今" : "just now";
     if (language === "qya") {
         const months = ["Narvinyë", "Nénimë", "Súlimë", "Víressë", "Lótessë", "Nárië", "Cermië", "Urimë", "Yavannië", "Narquelië", "Hísimë", "Ringarë"];
         if (mins < 60) return `${mins} min. nó`;
@@ -55,10 +55,10 @@ function formatDate(dateStr, language = "en") {
         if (days < 7) return `${days} ré nó`;
         return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
     }
-    if (mins < 60) return `${mins}m ago`;
-    if (hours < 24) return `${hours}h ago`;
-    if (days < 7) return `${days}d ago`;
-    return d.toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", { month: "short", day: "numeric", year: "numeric" });
+    if (mins < 60) return language === "ja" ? `${mins}分前` : `${mins}m ago`;
+    if (hours < 24) return language === "ja" ? `${hours}時間前` : `${hours}h ago`;
+    if (days < 7) return language === "ja" ? `${days}日前` : `${days}d ago`;
+    return d.toLocaleDateString(language === "fr" ? "fr-FR" : language === "ja" ? "ja-JP" : "en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
 function cleanTitle(title) {
@@ -141,7 +141,7 @@ function NewsFeed() {
             return;
         }
 
-        const locale = language === "fr" ? "fr-FR" : "en-US";
+        const locale = language === "fr" ? "fr-FR" : language === "ja" ? "ja-JP" : "en-US";
         const url = `/api/news?topic=${encodeURIComponent(topic)}&locale=${locale}`;
 
         try {
