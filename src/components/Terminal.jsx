@@ -4,7 +4,8 @@ import {TERMINAL_LINES} from "../data.js";
 
 function Terminal() {
     const {language} = useLanguage();
-    const isKorean = language === "ko-KP";\n    const isJapanese = language === "ja";
+    const isKorean = language === "ko-KP";
+    const isJapanese = language === "ja";
     const ref = useRef(null);
     const [started, setStarted] = useState(false);
     const lines = isKorean ? [
@@ -14,7 +15,14 @@ function Terminal() {
         {k: "웹", v: "독립적으로 건설한 디지털 성과"},
         {k: "원칙", v: "명백한 구조 · 지속 가능한 코드"},
         {k: "목표", v: "다음 위대한 성과를 향하여"}
-    ] : isJapanese ? [\n        {k: "専門", v: "ソフトウェア開発と教育"},\n        {k: "経験", v: "19年以上の実務経験"},\n        {k: "Android", v: "アプリ6本を公開"},\n        {k: "ウェブ", v: "独自開発のウェブサイト"},\n        {k: "方針", v: "明快な設計と保守しやすいコード"},\n        {k: "目標", v: "次の成果を生み出す"}\n    ] : TERMINAL_LINES;
+    ] : isJapanese ? [
+        {k: "専門", v: "ソフトウェア開発と教育"},
+        {k: "経験", v: "19年以上の実務経験"},
+        {k: "Android", v: "アプリ6本を公開"},
+        {k: "ウェブ", v: "独自開発のウェブサイト"},
+        {k: "方針", v: "明快な設計と保守しやすいコード"},
+        {k: "目標", v: "次の成果を生み出す"}
+    ] : TERMINAL_LINES;
     useEffect(() => {
         const el = ref.current;
         if (!el) return;
