@@ -23,7 +23,7 @@ const COMMENTS_COLLECTION = "about_comments";
 const GUEST_NAME_STORAGE_KEY = "about-card-guest-name";
 
 function dateLocale(language) {
-    return language === "fr" ? "fr-FR" : language === "av" ? "ru-RU" : "en-US";
+    return language === "fr" ? "fr-FR" : language === "av" ? "ru-RU" : language === "ja" ? "ja-JP" : "en-US";
 }
 
 const QUENYA_MONTHS = ["Narvinyë", "Nénimë", "Súlimë", "Víressë", "Lótessë", "Nárië", "Cermië", "Urimë", "Yavannië", "Narquelië", "Hísimë", "Ringarë"];
