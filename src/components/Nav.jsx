@@ -91,6 +91,23 @@ function Nav() {
 
                         {languageMenuOpen && (
                             <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : language === "ru" ? "Язык" : language === "ko-KP" ? "언어" : language === "zh" ? "语言" : language === "ar" ? "اللغة" : language === "hv" ? "Vēzos" : language === "ja" ? "言語" : language === "sa" ? "भाषा" : language === "od" ? "Язык" : "Language"}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -102,30 +119,7 @@ function Nav() {
                                     <span className="language-switcher__label">English</span>
                                     {language === "en" && <Icon name="check" size={15}/>}
                                 </button>
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "hv"}
-                                    className={`language-switcher__option ${language === "hv" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("hv")}
-                                >
-                                    <Flag country="hv" label="Three-headed dragon" />
-                                    <span className="language-switcher__label">Valyrian</span>
-                                    {language === "hv" && <Icon name="check" size={15}/>}
-                                </button>
 
-
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "qya"}
-                                    className={`language-switcher__option ${language === "qya" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("qya")}
-                                >
-                                    <Flag country="qya" label="Quenya leaf symbol" />
-                                    <span className="language-switcher__label">Quenya</span>
-                                    {language === "qya" && <Icon name="check" size={15}/>}
-                                </button>
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -137,6 +131,7 @@ function Nav() {
                                     <span className="language-switcher__label">日本語</span>
                                     {language === "ja" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -148,6 +143,7 @@ function Nav() {
                                     <span className="language-switcher__label">Deutsch</span>
                                     {language === "de" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -159,6 +155,7 @@ function Nav() {
                                     <span className="language-switcher__label">Français</span>
                                     {language === "fr" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -174,6 +171,18 @@ function Nav() {
                                 <button
                                     type="button"
                                     role="menuitemradio"
+                                    aria-checked={language === "pt-BR"}
+                                    className={`language-switcher__option ${language === "pt-BR" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("pt-BR")}
+                                >
+                                    <Flag country="br" label="Bandeira do Brasil" />
+                                    <span className="language-switcher__label">Português</span>
+                                    {language === "pt-BR" && <Icon name="check" size={15}/>}
+                                </button>
+
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
                                     aria-checked={language === "zh"}
                                     className={`language-switcher__option ${language === "zh" ? "is-selected" : ""}`}
                                     onClick={() => chooseLanguage("zh")}
@@ -182,6 +191,7 @@ function Nav() {
                                     <span className="language-switcher__label">中文</span>
                                     {language === "zh" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -193,6 +203,7 @@ function Nav() {
                                     <span className="language-switcher__label">조선말</span>
                                     {language === "ko-KP" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -204,6 +215,7 @@ function Nav() {
                                     <span className="language-switcher__label">العربية</span>
                                     {language === "ar" && <Icon name="check" size={15}/>}
                                 </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -219,15 +231,27 @@ function Nav() {
                                 <button
                                     type="button"
                                     role="menuitemradio"
-                                    aria-checked={language === "pt-BR"}
-                                    className={`language-switcher__option ${language === "pt-BR" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("pt-BR")}
+                                    aria-checked={language === "hv"}
+                                    className={`language-switcher__option ${language === "hv" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("hv")}
                                 >
-                                    <Flag country="br" label="Bandeira do Brasil" />
-                                    <span className="language-switcher__label">Português</span>
-                                    {language === "pt-BR" && <Icon name="check" size={15}/>}
+                                    <Flag country="hv" label="Three-headed dragon" />
+                                    <span className="language-switcher__label">Valyrian</span>
+                                    {language === "hv" && <Icon name="check" size={15}/>}
                                 </button>
-                            </div>
+
+                                <button
+                                    type="button"
+                                    role="menuitemradio"
+                                    aria-checked={language === "qya"}
+                                    className={`language-switcher__option ${language === "qya" ? "is-selected" : ""}`}
+                                    onClick={() => chooseLanguage("qya")}
+                                >
+                                    <Flag country="qya" label="Quenya leaf symbol" />
+                                    <span className="language-switcher__label">Quenya</span>
+                                    {language === "qya" && <Icon name="check" size={15}/>}
+                                </button>
+</div>
                         )}
                     </div>
                     <button className="nav__brand" onClick={() => go("top")}>
