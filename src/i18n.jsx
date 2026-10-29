@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "ru", "zh", "ko-KP", "ar", "sa", "od", "de", "ja", "hv", "qya", "av", "cu"];
+const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "zh", "ko-KP", "ar", "sa", "de", "ja", "hv", "qya"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
