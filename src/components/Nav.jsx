@@ -113,28 +113,8 @@ function Nav() {
                                     <span className="language-switcher__label">Valyrian</span>
                                     {language === "hv" && <Icon name="check" size={15}/>}
                                 </button>
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "cu"}
-                                    className={`language-switcher__option ${language === "cu" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("cu")}
-                                >
-                                    <Flag country="cu" label="Свиток церковнославянского языка" />
-                                    <span className="language-switcher__label">Славянский</span>
-                                    {language === "cu" && <Icon name="check" size={15}/>}
-                                </button>
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "av"}
-                                    className={`language-switcher__option ${language === "av" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("av")}
-                                >
-                                    <Flag country="av" label="Балетная туфелька" />
-                                    <span className="language-switcher__label">Волочковский</span>
-                                    {language === "av" && <Icon name="check" size={15}/>}
-                                </button>
+
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -190,17 +170,7 @@ function Nav() {
                                     <span className="language-switcher__label">Español</span>
                                     {language === "es" && <Icon name="check" size={15}/>}
                                 </button>
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "ru"}
-                                    className={`language-switcher__option ${language === "ru" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("ru")}
-                                >
-                                    <Flag country="ru" label="Russian flag" />
-                                    <span className="language-switcher__label">Русский</span>
-                                    {language === "ru" && <Icon name="check" size={15}/>}
-                                </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
@@ -245,17 +215,7 @@ function Nav() {
                                     <span className="language-switcher__label">संस्कृतम्</span>
                                     {language === "sa" && <Icon name="check" size={15}/>}
                                 </button>
-                                <button
-                                    type="button"
-                                    role="menuitemradio"
-                                    aria-checked={language === "od"}
-                                    className={`language-switcher__option ${language === "od" ? "is-selected" : ""}`}
-                                    onClick={() => chooseLanguage("od")}
-                                >
-                                    <Flag country="od" label="Флаг города Одессы" />
-                                    <span className="language-switcher__label">Одесский</span>
-                                    {language === "od" && <Icon name="check" size={15}/>}
-                                </button>
+
                                 <button
                                     type="button"
                                     role="menuitemradio"
