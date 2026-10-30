@@ -13,7 +13,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "13", label: "Sites & projects"},
+    {value: "14", label: "Sites & projects"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "247", label: "GitHub repositories"},
@@ -294,10 +294,21 @@ export const SITES = [
         url: "https://munchess.vercel.app/",
         domain: "munchess.vercel.app",
         mono: "MC",
-        tag: "Chess Game",
-        status: "live",
-        desc: "A browser-based chess game for playing and practicing chess with an interactive board.",
+        tag: "Chess & Munchkin",
+        status: "wip",
+        desc: "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.",
     }
+    {
+        id: "aqualife",
+        name: "AquaLife",
+        url: "https://www.tiktok.com/@alex.stream.games",
+        domain: "tiktok.com/@alex.stream.games",
+        mono: "🐠",
+        tag: "TikTok LIVE Game",
+        status: "wip",
+        desc: "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.",
+    },
+
 ];
 
 export const EXPERIENCE = [
