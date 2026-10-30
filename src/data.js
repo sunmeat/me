@@ -13,10 +13,10 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "11", label: "Published sites"},
+    {value: "12", label: "Sites & projects"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
-    {value: "241+", label: "GitHub repositories"},
+    {value: "247", label: "GitHub repositories"},
 ];
 
 export const SKILL_GROUPS = [
@@ -169,6 +169,16 @@ export const REPOS = [
 ];
 
 export const SITES = [
+    {
+        id: "sunmeat-io",
+        name: "Sunmeat.io",
+        url: "https://sunmeat-io.vercel.app/",
+        domain: "sunmeat-io.vercel.app",
+        mono: "IO",
+        tag: "Browser Game",
+        status: "wip",
+        desc: "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.",
+    },
     {
         id: "alex-lessons",
         name: "Alex Lessons",
