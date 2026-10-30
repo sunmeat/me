@@ -3749,7 +3749,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Jeu d’échecs",
     "In development": "En développement",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Un jeu sur navigateur expérimental en cours de développement. De nouvelles fonctionnalités et améliorations sont prévues.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Un jeu d’échecs sur navigateur pour jouer et s’entraîner sur un échiquier interactif."
+    "Chess & Munchkin": "Échecs et Munchkin",
+    "TikTok LIVE Game": "Jeu TikTok LIVE",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Un jeu sur navigateur à ses débuts, mêlant la fantaisie déjantée de Munchkin à la stratégie des échecs. Encore très brut, avec beaucoup de travail à venir.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Une arène sous-marine interactive conçue pour TikTok LIVE Studio. Les spectateurs deviennent des poissons nommés et rivalisent grâce aux likes, cadeaux, évolutions et combats. En développement."
   },
   "pt-BR": {
     "Sites & projects": "Sites e projetos",
@@ -3757,7 +3760,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Jogo de xadrez",
     "In development": "Em desenvolvimento",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Um jogo experimental de navegador em desenvolvimento, com novos recursos e melhorias a caminho.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Um jogo de xadrez no navegador para jogar e praticar em um tabuleiro interativo."
+    "Chess & Munchkin": "Xadrez e Munchkin",
+    "TikTok LIVE Game": "Jogo TikTok LIVE",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Um jogo de navegador em estágio inicial que mistura a fantasia caótica de Munchkin com a estratégia do xadrez. Ainda muito experimental, com bastante trabalho pela frente.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Uma arena submarina interativa para o TikTok LIVE Studio. Os espectadores viram peixes com nomes e competem com curtidas, presentes, crescimento e batalhas. Em desenvolvimento."
   },
   "es": {
     "Sites & projects": "Sitios y proyectos",
@@ -3765,7 +3771,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Juego de ajedrez",
     "In development": "En desarrollo",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Un juego experimental para navegador en desarrollo, con nuevas funciones y mejoras por venir.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Un juego de ajedrez para navegador con tablero interactivo para jugar y practicar."
+    "Chess & Munchkin": "Ajedrez y Munchkin",
+    "TikTok LIVE Game": "Juego de TikTok LIVE",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Un juego de navegador en fase temprana que mezcla el caos fantástico de Munchkin con la estrategia del ajedrez. Todavía muy verde y con mucho trabajo por delante.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Una arena submarina interactiva para TikTok LIVE Studio. Los espectadores se convierten en peces con nombre y compiten con me gusta, regalos, crecimiento y batallas. En desarrollo."
   },
   "zh": {
     "Sites & projects": "网站与项目",
@@ -3773,7 +3782,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "国际象棋游戏",
     "In development": "开发中",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "一款正在开发的实验性浏览器游戏，未来将加入更多功能并持续改进。",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "一款带有交互式棋盘的网页国际象棋游戏，可用于对弈和练习。"
+    "Chess & Munchkin": "国际象棋与Munchkin",
+    "TikTok LIVE Game": "TikTok直播游戏",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "一款处于早期开发阶段的网页游戏，融合Munchkin式奇幻混战与国际象棋策略。目前仍很粗糙，还有大量开发工作。",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "专为TikTok LIVE Studio打造的互动海底竞技场。观众化身带名字的鱼儿，在动态珊瑚礁中通过点赞、礼物、成长与战斗展开竞争。仍在开发中。"
   },
   "ko-KP": {
     "Sites & projects": "웨브싸이트와 계획",
@@ -3781,7 +3793,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "체스유희",
     "In development": "개발중",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "현재 개발중인 실험적인 웨브유희로서 새로운 기능과 개선이 계속 추가됩니다.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "호상작용식 판에서 체스를 두고 련습할 수 있는 웨브유희입니다."
+    "Chess & Munchkin": "체스와 먼치킨",
+    "TikTok LIVE Game": "틱톡 생방송 유희",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "먼치킨식 환상 모험과 체스의 전략을 결합한 초기 웨브유희입니다. 아직 완성되지 않았으며 많은 개발사업이 남아 있습니다.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "틱톡 생방송 방송실을 위한 호상작용식 바다속 경기장입니다. 시청자들은 이름을 가진 물고기가 되어 좋아요와 선물, 성장과 전투로 경쟁합니다. 개발중입니다."
   },
   "ar": {
     "Sites & projects": "المواقع والمشاريع",
@@ -3789,7 +3804,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "لعبة شطرنج",
     "In development": "قيد التطوير",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "لعبة تجريبية للمتصفح قيد التطوير، مع ميزات وتحسينات إضافية قادمة.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "لعبة شطرنج عبر المتصفح للعب والتدرب على رقعة تفاعلية."
+    "Chess & Munchkin": "الشطرنج ومانشكين",
+    "TikTok LIVE Game": "لعبة بث تيك توك المباشر",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "لعبة متصفح في مراحلها الأولى تمزج فوضى مانشكين الخيالية باستراتيجية الشطرنج. ما زالت أولية وتحتاج إلى الكثير من العمل.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "ساحة تفاعلية تحت الماء مصممة لبث TikTok LIVE Studio. يتحول المشاهدون إلى أسماك تحمل أسماءهم ويتنافسون بالإعجابات والهدايا والنمو والمعارك. قيد التطوير."
   },
   "sa": {
     "Sites & projects": "जालस्थलानि परियोजनाश्च",
@@ -3797,7 +3815,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "शतरञ्जक्रीडा",
     "In development": "विकासाधीनम्",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "एषा प्रयोगात्मिका जालक्रीडा विकासाधीना अस्ति। नवीनाः सुविधाः सुधाराश्च आगमिष्यन्ति।",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "अन्तर्जाले शतरञ्जक्रीडा, यत्र चलपट्टिकायां क्रीडितुं अभ्यासं च शक्यते।"
+    "Chess & Munchkin": "शतरञ्जं मञ्च्किन् च",
+    "TikTok LIVE Game": "टिकटोक् सजीवक्रीडा",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "एषा आरम्भिकजालक्रीडा मञ्च्किन्-कल्पनां शतरञ्जनीतिं च संयोजयति। अद्यापि बहु कार्यम् अवशिष्टम्।",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "टिकटोक्-सजीवप्रसारणार्थं जलान्तर्गतक्रीडाङ्गणम्। दर्शकाः नामयुक्तमत्स्याः भवन्ति, प्रशंसाभिः उपहारैः वृद्ध्या युद्धैश्च स्पर्धन्ते। विकासाधीनम्।"
   },
   "de": {
     "Sites & projects": "Websites und Projekte",
@@ -3805,7 +3826,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Schachspiel",
     "In development": "In Entwicklung",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Ein experimentelles Browserspiel in Entwicklung. Weitere Funktionen und Verbesserungen sind geplant.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Ein Schachspiel im Browser zum Spielen und Üben auf einem interaktiven Brett."
+    "Chess & Munchkin": "Schach und Munchkin",
+    "TikTok LIVE Game": "TikTok-LIVE-Spiel",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Ein frühes Browserspiel, das Munchkin-inspiriertes Fantasy-Chaos mit Schachstrategie verbindet. Noch sehr unfertig, mit viel Entwicklungsarbeit vor sich.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Eine interaktive Unterwasserarena für TikTok LIVE Studio. Zuschauer werden zu Fischen mit Namen und konkurrieren durch Likes, Geschenke, Wachstum und Kämpfe. Noch in Entwicklung."
   },
   "ja": {
     "Sites & projects": "ウェブサイトとプロジェクト",
@@ -3813,7 +3837,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "チェスゲーム",
     "In development": "開発中",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "現在開発中の実験的なブラウザーゲームです。今後さらに機能を追加し、改善していきます。",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "インタラクティブな盤面で対局や練習ができるブラウザーチェスゲームです。"
+    "Chess & Munchkin": "チェスとマンチキン",
+    "TikTok LIVE Game": "TikTokライブゲーム",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "マンチキン風のファンタジー要素とチェスの戦略性を組み合わせた、開発初期のブラウザーゲームです。まだ未完成で、今後も多くの開発作業が必要です。",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "TikTokライブスタジオ向けのインタラクティブな海中アリーナ。視聴者は名前付きの魚になり、いいね、ギフト、成長、バトルを通じて競い合います。現在開発中です。"
   },
   "hv": {
     "Sites & projects": "Dārys se carmar",
@@ -3821,7 +3848,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Rūklon tymagon",
     "In development": "Dārys",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Vēzos tymagon iā dārys. Tolī kostōba se sȳz urnegon.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Rūklon tymagon vēzos hen ñuhor, se kirimvose."
+    "Chess & Munchkin": "Rūklon se Munchkin",
+    "TikTok LIVE Game": "TikTok LIVE tymagon",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Vēzos tymagon Munchkin se rūklon kostōba. Daor sȳrī dārys; tolī dārys issa.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "TikTok LIVE Studio naejot embar tymagon. Ābrar sȳz līr iksos, se tymagon se gēlȳn se jorrāelagon. Dārys."
   },
   "qya": {
     "Sites & projects": "Rámar ar carmar",
@@ -3829,7 +3859,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Tarwë tyalië",
     "In development": "Carmassë",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Vinya ráma-tyalië ná carmassë. Ambaron vinya tammar ar mára carmë tulir.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Ráma-tyalië tarwëo, yassë polil tyalë ar parë."
+    "Chess & Munchkin": "Tarwë ar Munchkin",
+    "TikTok LIVE Game": "TikTok coirë tyalië",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Yesta ráma-tyalië, Munchkin ohtië ar tarwë nolwë. Enqua carmë úva vanwa; rimbë carmar harir.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "TikTok LIVE Studio-n coirë ëar-tyalië. Tirindor nauvar lingwi esselyainen, ar tyalir melmënen, annainen, almiënen ar mahtiënen. Carmassë."
   },
   "ru": {
     "Sites & projects": "Сайты и проекты",
@@ -3837,7 +3870,10 @@ const PROJECT_TRANSLATIONS = {
     "Chess Game": "Шахматы",
     "In development": "В разработке",
     "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Экспериментальная браузерная игра в разработке. Впереди новые возможности и улучшения.",
-    "A browser-based chess game for playing and practicing chess with an interactive board.": "Браузерная шахматная игра с интерактивной доской для партий и тренировок."
+    "Chess & Munchkin": "Шахматы и Манчкин",
+    "TikTok LIVE Game": "Игра для TikTok LIVE",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Ранняя версия браузерной игры, сочетающей фэнтезийный хаос Манчкина со стратегией шахмат. Пока очень сырая, впереди ещё много работы.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Интерактивная подводная арена для TikTok LIVE Studio. Зрители становятся рыбками со своими именами, плавают по живому рифу и соревнуются благодаря лайкам, подаркам, росту и сражениям. Проект в разработке."
   }
 };
 for (const [language, entries] of Object.entries(PROJECT_TRANSLATIONS)) {
