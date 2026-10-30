@@ -122,6 +122,8 @@ export function useLanguage() {
 }
 
 const FR = {
+    "Learning Platform": "Plateforme pédagogique",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Une plateforme multilingue pour apprendre la programmation et l’intelligence artificielle, avec des cours structurés, des exercices interactifs et des diapositives de présentation.",
     "About": "À propos",
     "Skills": "Compétences",
     "Apps": "Applications",
@@ -522,6 +524,8 @@ const FR = {
 };
 
 const PT_BR = {
+    "Learning Platform": "Plataforma educacional",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Uma plataforma de aprendizagem multilíngue sobre programação e inteligência artificial, com aulas estruturadas, exercícios interativos e navegação por slides.",
     "About": "Sobre",
     "Skills": "Competências",
     "Apps": "Aplicativos",
@@ -817,6 +821,8 @@ const PT_BR = {
 
 
 const ES = {
+    "Learning Platform": "Plataforma educativa",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Una plataforma de aprendizaje multilingüe sobre programación e inteligencia artificial, con lecciones estructuradas, ejercicios interactivos y navegación por diapositivas.",
     "About": "Acerca de",
     "Skills": "Habilidades",
     "Apps": "Aplicaciones",
@@ -1111,6 +1117,8 @@ const ES = {
 };
 
 const RU = {
+    "Learning Platform": "Образовательная платформа",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Многоязычная образовательная платформа по программированию и искусственному интеллекту со структурированными уроками, интерактивными упражнениями и просмотром слайдов.",
     "About": "Обо мне",
     "Skills": "Навыки",
     "Apps": "Приложения",
@@ -1307,6 +1315,8 @@ const RU = {
 };
 
 const ZH = {
+    "Learning Platform": "学习平台",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "面向编程与人工智能的多语言学习平台，提供结构化课程、互动练习和演示文稿式幻灯片导航。",
 "About":"关于我","Skills":"技能","Apps":"应用","Sites":"网站","Experience":"工作经历","Contact":"联系","Education":"教育背景",
 "Buy me a coffee":"请我喝杯咖啡","Hire me":"联系合作","Toggle menu":"打开或关闭菜单","Choose language":"选择语言","Close language menu":"关闭语言菜单",
 "English":"英语","French":"法语","Spanish":"西班牙语","Russian":"俄语","Chinese":"中文","Chinese flag":"中国国旗","United States flag":"美国国旗",
@@ -1497,6 +1507,8 @@ const ZH = {
     "Starlink referral offer": "Starlink 推荐优惠",
 };
 const KP = {
+    "Learning Platform": "학습 교양 기지",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "프로그람 작성과 인공지능을 배우는 다국어 학습 기지로서 체계적인 강의, 호상작용 연습과 화면별 발표 기능을 제공한다.",
     "About": "위대한 업적에 대하여",
     "Skills": "주체의 기술 역량",
     "Apps": "응용프로그램",
@@ -1804,6 +1816,8 @@ const KP = {
 };
 
 const AR = {
+    "Learning Platform": "منصة تعليمية",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "منصة تعليمية متعددة اللغات للبرمجة والذكاء الاصطناعي، تضم دروسًا منظمة وتمارين تفاعلية وتنقّلًا بين الشرائح بأسلوب العروض التقديمية.",
     "About": "نبذة عني",
     "Skills": "المهارات",
     "Apps": "التطبيقات",
@@ -1907,6 +1921,8 @@ const AR = {
 };
 
 const SA = {
+    "Learning Platform": "अध्ययनमञ्चः",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "सङ्गणककार्यक्रमनिर्माणस्य कृत्रिमबुद्धेः च बहुभाषिकः अध्ययनमञ्चः, यत्र क्रमबद्धाः पाठाः, परस्परक्रियात्मकाः अभ्यासाः, प्रस्तुतीकरणपृष्ठानां दर्शनं च सन्ति।",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "फ्रान्सदेशस्य ओरलेआँ-नगरे वसामि, सङ्गणकविद्यायाः साधकः विश्वविद्यालयस्य आचार्यश्च। अर्थशास्त्रे प्रोग्रामलेखने च मम विद्या। विंशतेः वर्षाणां समीपे मम यात्रा द्वयोः क्षेत्रयोः मध्ये प्रवहति: दिवा नवपीढीं शिक्षयामि, निशि च लोकहिताय नूतनानि सॉफ्टवेयर्-रत्नानि निर्माय प्रकाशयामि।",
     "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "अद्य आन्ड्रॉइड्-जगति मम शिल्पं प्रफुल्लति: कल्पनाबीजात् Google Play-मञ्चपर्यन्तं सुशोभितान्, सिद्धान् अनुप्रयोगान् निर्मामि। React इत्यनेन अग्रभागं, Spring Boot, Django, ASP.NET Core, Node.js इत्येतैः पश्चाद्भागं च रचयामि। स्वच्छा रचना मम धर्मः, परिरक्षणयोग्यं कूटलेखनं मम व्रतम्, यथार्थः कालः मम नियमः। एकोनविंशत्यधिकवर्षाणि लेखनाध्यापनयोः तपसा एते आदर्शाः मयि दृढाः।",
     "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "कार्यविरामेषु चित्राणि गृह्णामि, अनेकवाद्यानि च वादयामि। अतः कस्यापि दृश्यपटस्य लयभङ्गः अर्धमात्रया अपि मम सूक्ष्मदृष्टेः न गुप्यते।",
@@ -1956,6 +1972,8 @@ const SA = {
     "Six apps across utilities, casual games and local business tools": "उपयोगसाधन-लघुक्रीडा-स्थानीयव्यापारसाधनरूपाः षट् अनुप्रयोगाः",
 };
 const OD = {
+    "Learning Platform": "Учебная площадка",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Многоязычный сайт про программирование и искусственный интеллект: уроки по полочкам, интерактивные задания и слайды, шоб учиться с удовольствием.",
     "About": "Про меня, та шо",
     "Skills": "Умения и вся эта техника",
     "Apps": "Приложения",
@@ -2058,6 +2076,8 @@ const OD = {
     "Six apps across utilities, casual games and local business tools": "Шесть приложений: утилиты, игры и инструменты для местного бизнеса"
 };
 const DE = {
+    "Learning Platform": "Lernplattform",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Eine mehrsprachige Lernplattform für Programmierung und künstliche Intelligenz mit strukturierten Lektionen, interaktiven Übungen und einer Präsentationsansicht mit Folien.",
     "About": "Über mich",
     "Skills": "Kenntnisse",
     "Apps": "Apps",
@@ -2157,6 +2177,8 @@ const DE = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Ein einfaches Tool zum Anzeigen und Teilen öffentlicher Duolingo-Profilstatistiken. Es zeigt Avatar, XP, Lernserie und Top-Kurse und erstellt eine teilbare PNG-Karte, ganz ohne Anmeldung."
 };
 const JA = {
+    "Learning Platform": "学習プラットフォーム",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "プログラミングと人工知能を学べる多言語対応の教育サイト。体系的な授業、体験型の演習、発表用のスライド表示を備えています。",
     "About": "概要",
     "Skills": "スキル",
     "Apps": "アプリ",
@@ -2415,6 +2437,8 @@ const JA = {
 //   Android > Andróida, Google > Cúcolë, GitHub > Cithapa, React > Riactë, Kotlin > Cotlin, ...
 // Pure acronyms and symbols (C++, C#, SQL, PHP, API, CI/CD, JWT, XP, PNG, QR, UI/UX) stay as they are.
 const QUENYA = {
+    "Learning Platform": "Nólë-talma",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Rimba-quetta nólë-talma i carmëo ar handë-carmëo. Nótinar sírë, carmië tyalië ar tengwë-lantar i quettaron.",
     // Navigation
     "About": "Quenta",
     "Skills": "Curwi",
@@ -2798,6 +2822,8 @@ const QUENYA = {
 };
 
 const HV = {
+    "Learning Platform": "Sȳz gīmigon",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Rȳbagon se dārys nūmāzma, programmi se arlie gīmigon. Sȳz kēli, drējī udra se lȳrī.",
     "About": "Ñuha dārys",
     "Skills": "Ñuha sȳz",
     "Apps": "Vāedar",
@@ -2886,6 +2912,8 @@ const HV = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Duolingo vēzos: XP, sȳz, se courses. PNG urnegon, login daor."
 };
 const AV = {
+    "Learning Platform": "Образовательная платформа",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Дорогие мои, многоязычная образовательная платформа: программирование, искусственный интеллект, уроки, интерактивные задания и великолепная презентация!",
     "About": "Обо мне, прекрасной",
     "Skills": "Мои таланты",
     "Apps": "Мои приложения",
@@ -3428,6 +3456,8 @@ const AV = {
 };
 
 const CU = {
+    "Learning Platform": "Училищный помостъ",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Многоязычный училищный помостъ о программированїи и искусственномъ разумѣ, съ поученїями, дѣятельными упражненїями и показомъ листовъ.",
     "Oleksandr Zahoruiko": "Александр Загоруйко",
     "name": "имѧ",
     "role": "служеніе",
