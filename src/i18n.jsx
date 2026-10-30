@@ -3742,6 +3742,108 @@ const CU = {
 
 const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
+const PROJECT_TRANSLATIONS = {
+  "fr": {
+    "Sites & projects": "Sites et projets",
+    "Browser Game": "Jeu sur navigateur",
+    "Chess Game": "Jeu d’échecs",
+    "In development": "En développement",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Un jeu sur navigateur expérimental en cours de développement. De nouvelles fonctionnalités et améliorations sont prévues.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Un jeu d’échecs sur navigateur pour jouer et s’entraîner sur un échiquier interactif."
+  },
+  "pt-BR": {
+    "Sites & projects": "Sites e projetos",
+    "Browser Game": "Jogo de navegador",
+    "Chess Game": "Jogo de xadrez",
+    "In development": "Em desenvolvimento",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Um jogo experimental de navegador em desenvolvimento, com novos recursos e melhorias a caminho.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Um jogo de xadrez no navegador para jogar e praticar em um tabuleiro interativo."
+  },
+  "es": {
+    "Sites & projects": "Sitios y proyectos",
+    "Browser Game": "Juego de navegador",
+    "Chess Game": "Juego de ajedrez",
+    "In development": "En desarrollo",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Un juego experimental para navegador en desarrollo, con nuevas funciones y mejoras por venir.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Un juego de ajedrez para navegador con tablero interactivo para jugar y practicar."
+  },
+  "zh": {
+    "Sites & projects": "网站与项目",
+    "Browser Game": "浏览器游戏",
+    "Chess Game": "国际象棋游戏",
+    "In development": "开发中",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "一款正在开发的实验性浏览器游戏，未来将加入更多功能并持续改进。",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "一款带有交互式棋盘的网页国际象棋游戏，可用于对弈和练习。"
+  },
+  "ko-KP": {
+    "Sites & projects": "웨브싸이트와 계획",
+    "Browser Game": "웨브유희",
+    "Chess Game": "체스유희",
+    "In development": "개발중",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "현재 개발중인 실험적인 웨브유희로서 새로운 기능과 개선이 계속 추가됩니다.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "호상작용식 판에서 체스를 두고 련습할 수 있는 웨브유희입니다."
+  },
+  "ar": {
+    "Sites & projects": "المواقع والمشاريع",
+    "Browser Game": "لعبة متصفح",
+    "Chess Game": "لعبة شطرنج",
+    "In development": "قيد التطوير",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "لعبة تجريبية للمتصفح قيد التطوير، مع ميزات وتحسينات إضافية قادمة.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "لعبة شطرنج عبر المتصفح للعب والتدرب على رقعة تفاعلية."
+  },
+  "sa": {
+    "Sites & projects": "जालस्थलानि परियोजनाश्च",
+    "Browser Game": "जालक्रीडा",
+    "Chess Game": "शतरञ्जक्रीडा",
+    "In development": "विकासाधीनम्",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "एषा प्रयोगात्मिका जालक्रीडा विकासाधीना अस्ति। नवीनाः सुविधाः सुधाराश्च आगमिष्यन्ति।",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "अन्तर्जाले शतरञ्जक्रीडा, यत्र चलपट्टिकायां क्रीडितुं अभ्यासं च शक्यते।"
+  },
+  "de": {
+    "Sites & projects": "Websites und Projekte",
+    "Browser Game": "Browserspiel",
+    "Chess Game": "Schachspiel",
+    "In development": "In Entwicklung",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Ein experimentelles Browserspiel in Entwicklung. Weitere Funktionen und Verbesserungen sind geplant.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Ein Schachspiel im Browser zum Spielen und Üben auf einem interaktiven Brett."
+  },
+  "ja": {
+    "Sites & projects": "ウェブサイトとプロジェクト",
+    "Browser Game": "ブラウザーゲーム",
+    "Chess Game": "チェスゲーム",
+    "In development": "開発中",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "現在開発中の実験的なブラウザーゲームです。今後さらに機能を追加し、改善していきます。",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "インタラクティブな盤面で対局や練習ができるブラウザーチェスゲームです。"
+  },
+  "hv": {
+    "Sites & projects": "Dārys se carmar",
+    "Browser Game": "Vēzos tymagon",
+    "Chess Game": "Rūklon tymagon",
+    "In development": "Dārys",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Vēzos tymagon iā dārys. Tolī kostōba se sȳz urnegon.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Rūklon tymagon vēzos hen ñuhor, se kirimvose."
+  },
+  "qya": {
+    "Sites & projects": "Rámar ar carmar",
+    "Browser Game": "Ráma tyalië",
+    "Chess Game": "Tarwë tyalië",
+    "In development": "Carmassë",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Vinya ráma-tyalië ná carmassë. Ambaron vinya tammar ar mára carmë tulir.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Ráma-tyalië tarwëo, yassë polil tyalë ar parë."
+  },
+  "ru": {
+    "Sites & projects": "Сайты и проекты",
+    "Browser Game": "Браузерная игра",
+    "Chess Game": "Шахматы",
+    "In development": "В разработке",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Экспериментальная браузерная игра в разработке. Впереди новые возможности и улучшения.",
+    "A browser-based chess game for playing and practicing chess with an interactive board.": "Браузерная шахматная игра с интерактивной доской для партий и тренировок."
+  }
+};
+for (const [language, entries] of Object.entries(PROJECT_TRANSLATIONS)) {
+    Object.assign(TRANSLATIONS[language], entries);
+}
+
 function normalize(value) {
     return value.replace(/\s+/g, " ").trim();
 }
