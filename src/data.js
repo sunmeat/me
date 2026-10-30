@@ -13,7 +13,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "10", label: "Published sites"},
+    {value: "11", label: "Published sites"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "241+", label: "GitHub repositories"},
@@ -170,6 +170,16 @@ export const REPOS = [
 
 export const SITES = [
     {
+        id: "alex-lessons",
+        name: "Alex Lessons",
+        url: "https://alex-lessons.me/",
+        domain: "alex-lessons.me",
+        mono: "AL",
+        tag: "Learning Platform",
+        status: "live",
+        desc: "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.",
+    },
+    {
         id: "alex-fm",
         name: "Alex FM",
         url: "https://alexfm.vercel.app/",
@@ -190,6 +200,15 @@ export const SITES = [
         desc: "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.",
     },
     {
+        id: "natadenium",
+        name: "Natadenium",
+        url: "https://natadenium.vercel.app/",
+        domain: "natadenium.vercel.app",
+        mono: "ND",
+        tag: "Plant Collection",
+        status: "live",
+        desc: "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.",
+    },    {
         id: "pisanina",
         name: "Pisanina",
         url: "https://pisanina.vercel.app/",
@@ -259,16 +278,7 @@ export const SITES = [
         status: "live",
         desc: "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.",
     },
-    {
-        id: "natadenium",
-        name: "Natadenium",
-        url: "https://natadenium.vercel.app/",
-        domain: "natadenium.vercel.app",
-        mono: "ND",
-        tag: "Plant Collection",
-        status: "live",
-        desc: "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.",
-    },
+
 ];
 
 export const EXPERIENCE = [
