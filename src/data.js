@@ -13,7 +13,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "12", label: "Sites & projects"},
+    {value: "13", label: "Sites & projects"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
     {value: "247", label: "GitHub repositories"},
@@ -288,7 +288,16 @@ export const SITES = [
         status: "live",
         desc: "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.",
     },
-
+    {
+        id: "munchess",
+        name: "Munchess",
+        url: "https://munchess.vercel.app/",
+        domain: "munchess.vercel.app",
+        mono: "MC",
+        tag: "Chess Game",
+        status: "live",
+        desc: "A browser-based chess game for playing and practicing chess with an interactive board.",
+    }
 ];
 
 export const EXPERIENCE = [
