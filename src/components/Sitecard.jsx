@@ -16,7 +16,7 @@ function SiteCard({site}) {
                 <span className="tag tag--soft">{site.tag}</span>
                 <span className={`site-card__status site-card__status--${site.status}`}>
                     <span className="site-card__status-dot" />
-                    {site.status === "live" ? "Live" : "Forever alive"}
+                    {site.status === "live" ? "Live" : site.status === "wip" ? "In development" : "Forever alive"}
                 </span>
                 <span className="site-card__link">
                     Visit <Icon name="external" size={13} />
