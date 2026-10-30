@@ -41,9 +41,9 @@ The interface combines a dark, terminal-inspired aesthetic with a clear responsi
 
 ### At a glance
 
-| 10 | 5+ | 19+ | 241+ |
+| 12 | 5+ | 19+ | 247 |
 |:--:|:--:|:--:|:--:|
-| Published websites | Android apps | Years in software & teaching | GitHub repositories |
+| Sites & projects | Android apps | Years in software & teaching | GitHub repositories |
 
 <sub>Portfolio figures reflect the currently published profile and may change over time.</sub>
 
@@ -178,9 +178,9 @@ All repository-level documents are linked below so they are easy to find and mai
 
 ### В цифрах
 
-| 10 | 5+ | 19+ | 241+ |
+| 12 | 5+ | 19+ | 247 |
 |:--:|:--:|:--:|:--:|
-| Опубликованных сайтов | Android-приложений | Лет в разработке и преподавании | Репозиториев GitHub |
+| Сайтов и проектов | Android-приложений | Лет в разработке и преподавании | Репозиториев GitHub |
 
 <sub>Цифры соответствуют текущим данным портфолио и могут меняться.</sub>
 
@@ -315,9 +315,9 @@ Son identité visuelle associe une esthétique sombre inspirée du terminal à u
 
 ### En quelques chiffres
 
-| 10 | 5+ | 19+ | 241+ |
+| 12 | 5+ | 19+ | 247 |
 |:--:|:--:|:--:|:--:|
-| Sites publiés | Applications Android | Années en développement et enseignement | Dépôts GitHub |
+| Sites et projets | Applications Android | Années en développement et enseignement | Dépôts GitHub |
 
 <sub>Ces chiffres correspondent aux informations actuellement présentées sur le portfolio et peuvent évoluer.</sub>
 
