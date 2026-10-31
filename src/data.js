@@ -297,7 +297,7 @@ export const SITES = [
         tag: "Chess & Munchkin",
         status: "wip",
         desc: "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.",
-    }
+    },
     {
         id: "aqualife",
         name: "AquaLife",
