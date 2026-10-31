@@ -3942,6 +3942,39 @@ Object.assign(UK, {
   "Ongoing": "Триває"
 });
 
+Object.assign(UK, {
+  "A lightweight recorder for quick memos, lectures and interviews, built around a clean, distraction-free list of saved recordings.": "Зручний диктофон для нотаток, лекцій та інтерв’ю з простим списком збережених записів.",
+  "A digital level and treasure tracker for the Munchkin card game, replacing pen-and-paper scorekeeping at the table.": "Цифровий лічильник рівнів і скарбів для карткової гри Munchkin, який замінює паперові записи.",
+  "A fast, no-friction QR scanner that also generates custom codes for links, plain text and contact cards.": "Швидкий сканер QR-кодів, який також створює коди для посилань, тексту та контактних даних.",
+  "A playful, cat-themed mini game designed for quick, casual sessions and a bit of on-the-go fun.": "Невелика гра з котиками для коротких веселих партій у вільну хвилину.",
+  "A lighthearted quiz that puts players' gullibility to the test with a series of tricky, tongue-in-cheek questions.": "Жартівлива вікторина, яка перевіряє довірливість гравців за допомогою підступних запитань.",
+  "A local-business app presenting services, pricing and booking details for a Kyiv-based massage studio.": "Застосунок київської масажної студії з інформацією про послуги, ціни та запис на сеанси.",
+  "An in-browser radio player with a live audio-reactive visualizer, built on the Web Audio API for real-time frequency analysis.": "Радіопрогравач у браузері з візуалізацією звуку в реальному часі на основі Web Audio API.",
+  "A bright website for an authentic Korean pickles brand in Odesa, featuring product showcases, market locations, and nationwide delivery details.": "Яскравий сайт автентичних корейських солінь з Одеси з каталогом продукції, адресами точок продажу та інформацією про доставку Україною.",
+  "A minimal personal poetry blog with a clean reading experience and a simple admin CMS powered by React and Firebase.": "Мінімалістичний авторський блог із поезією, зручним читанням та простою системою керування вмістом на React і Firebase.",
+  "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.": "Інтерактивний музичний застосунок, який відстежує рухи рук і перетворює жести пальців на ноти й акорди.",
+  "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Інструмент для перегляду відкритої статистики Duolingo: аватар, досвід, серії занять і курси. Створює PNG-картку без авторизації.",
+  "A personal interactive birthday greeting page with playful animations and a small surprise built in.": "Інтерактивна сторінка привітання з днем народження з веселими анімаціями та невеличким сюрпризом.",
+  "A lightweight interactive page built as a personal project — a playground for small UI and animation ideas.": "Невеликий інтерактивний проєкт для експериментів з інтерфейсами й анімацією.",
+  "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.": "Калькулятор оренди та купівлі житла, який показує потенційне зростання інвестованих заощаджень на оренді.",
+  "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.": "Моніторинг цін на королівські креветки в Сільпо з повідомленнями, коли ціна падає нижче 40 грн за 100 г. Також є цікаві факти, рецепти й одеський гумор.",
+  "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.": "Багатомовний ботанічний сайт про аденіуми з галереєю колекції, атласом цвітіння та порадами з догляду.",
+  "Provided architectural guidance, code reviews, and technical consulting for web and mobile solutions. Assisted in optimizing system performance, streamlining API design, and advising engineering teams on best software practices.": "Консультував щодо архітектури веб- і мобільних рішень, перевіряв код, допомагав оптимізувати продуктивність систем і проєктування API.",
+  "Building and maintaining custom developer tooling, exploratory mobile modules, and open-source utility libraries. Experimenting with modern web frameworks, algorithm optimization, and UI/UX patterns.": "Розробляю та підтримую інструменти для програмістів, експериментальні мобільні модулі й відкриті бібліотеки. Досліджую вебфреймворки, оптимізацію алгоритмів та проєктування інтерфейсів.",
+  "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "Навчаю майбутніх розробників C++, C#, Python, веброзробки, Android і баз даних. Викладаю ООП, алгоритми, структури даних, шаблони проєктування та SOLID. Створюю навчальні матеріали, перевіряю студентський код і керую підсумковими проєктами за SCRUM.",
+  "Constantly expanding technical expertise through specialized courses, hands-on skill validations, and industry certifications in software engineering, networking, and cloud services.": "Постійно поглиблюю технічні знання завдяки спеціалізованим курсам, практичному підтвердженню навичок і професійним сертифікаціям.",
+  "Source code of my personal single-page portfolio website.": "Вихідний код мого персонального односторінкового сайту-портфоліо.",
+  "My interactive digital business card (npx sunmeat) right in your terminal": "Моя інтерактивна цифрова візитівка (npx sunmeat) просто у вашому терміналі",
+  "Practical React component examples and patterns prepared for student groups.": "Практичні приклади компонентів React і шаблонів їх використання для студентів.",
+  "A C# console Snake game that uses Hamiltonian cycles to generate perfect, non-colliding paths across the entire board.": "Консольна гра «Змійка» на C#, яка використовує гамільтонові цикли для побудови маршрутів без зіткнень.",
+  "A comprehensive collection of clean Object-Oriented Programming examples in C++: classes, inheritance, polymorphism, abstract classes and more.": "Велика добірка прикладів об’єктноорієнтованого програмування на C++: класи, успадкування, поліморфізм, абстрактні класи тощо.",
+  "Practical C++ Standard Template Library examples covering containers, iterators, algorithms, adapters and functors.": "Практичні приклади стандартної бібліотеки шаблонів C++: контейнери, ітератори, алгоритми, адаптери та функціональні об’єкти.",
+  "C++ examples demonstrating algorithmic complexity and Big O Notation.": "Приклади на C++, які пояснюють алгоритмічну складність і нотацію Big O.",
+  "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "Навчальний проєкт на ASP.NET Core MVC, який демонструє роботу вбудованого контейнера впровадження залежностей.",
+  "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "Навчальний проєкт на ASP.NET Core Web API з автентифікацією та авторизацією через Firebase Authentication і JWT.",
+  "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "Навчальний проєкт на ASP.NET Core Web API з модульними та інтеграційними тестами на xUnit, FluentAssertions, NSubstitute і WebApplicationFactory."
+});
+
 const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
 const PROJECT_TRANSLATIONS = {
