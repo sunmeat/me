@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-const SUPPORTED_LANGUAGES = ["en", "fr", "pt-BR", "es", "zh", "ko-KP", "ar", "sa", "de", "ja", "hv", "qya"];
+const SUPPORTED_LANGUAGES = ["en", "uk", "fr", "pt-BR", "es", "zh", "ko-KP", "ar", "sa", "de", "ja", "hv", "qya"];
 
 const LanguageContext = createContext({language: "en", setLanguage: () => {}});
 
@@ -96,7 +96,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
-        updateMeta('meta[property="og:locale"]', language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : language === "ja" ? "ja_JP" : language === "hv" ? "en_US" : "en_US");
+        updateMeta('meta[property="og:locale"]', language === "uk" ? "uk_UA" : language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : language === "ja" ? "ja_JP" : language === "hv" ? "en_US" : "en_US");
     }, [language]);
 
     const changeLanguage = (next) => {
@@ -3740,7 +3740,105 @@ const CU = {
     "Curated headlines from Google News. Swipe or use arrow keys.": "Google ニュースから選んだ見出しです。スワイプまたは矢印キーで移動できます。"
 };
 
-const TRANSLATIONS = { fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
+const UK = {
+    "Learning Platform": "Освітня платформа",
+    "About": "Про мене",
+    "Skills": "Навички",
+    "Apps": "Застосунки",
+    "Sites": "Сайти",
+    "Experience": "Досвід",
+    "Contact": "Контакти",
+    "Buy me a coffee": "Пригостити мене кавою",
+    "Hire me": "Запропонувати співпрацю",
+    "Toggle menu": "Відкрити або закрити меню",
+    "View published sites": "Переглянути опубліковані сайти",
+    "Start a project": "Розпочати проєкт",
+    "Published sites": "Опубліковані сайти",
+    "Published Android apps": "Опубліковані Android-застосунки",
+    "Years in software & teaching": "Років у розробці та викладанні",
+    "GitHub repositories": "Репозиторії GitHub",
+    "Engineer by trade, teacher by habit.": "Розробник за професією, викладач за покликанням.",
+    "Live on Google Play right now.": "Уже доступні в Google Play.",
+    "Side projects, live on the web.": "Власні проєкти, доступні онлайн.",
+    "Open source & teaching material.": "Відкритий код і навчальні матеріали.",
+    "View GitHub profile": "Переглянути профіль GitHub",
+    "Technical skills": "Технічні навички",
+    "Professional experience": "Професійний досвід",
+    "Education": "Освіта",
+    "Get in touch": "Зв’язатися зі мною",
+    "Have a project in mind? Let's talk about how to make it real.": "Маєте ідею проєкту? Обговорімо, як втілити її в життя.",
+    "Email me": "Написати електронного листа",
+    "Message on Telegram": "Написати в Telegram",
+    "Orléans, France": "Орлеан, Франція",
+    "Name": "Ім’я",
+    "Add a comment...": "Додати коментар...",
+    "Post": "Опублікувати",
+    "Like": "Подобається",
+    "Unlike": "Скасувати вподобання",
+    "Comment": "Коментувати",
+    "Save": "Зберегти",
+    "Remove from saved": "Вилучити зі збереженого",
+    "likes": "вподобань",
+    "just now": "щойно",
+    "Guest": "Гість",
+    "Couldn't load comments right now.": "Не вдалося завантажити коментарі.",
+    "Couldn't post your comment. Please try again.": "Не вдалося опублікувати коментар. Спробуйте ще раз.",
+    "Check out this portfolio": "Перегляньте це портфоліо",
+    "Loading news...": "Завантаження новин…",
+    "Developer News Feed": "Новини для розробників",
+    "Curated headlines from Google News. Swipe or use arrow keys.": "Добірка новин із Google News. Гортайте або користуйтеся клавішами зі стрілками.",
+    "Click this card to read full article.": "Натисніть на картку, щоб прочитати статтю повністю.",
+    "SOURCE": "ДЖЕРЕЛО",
+    "News Source": "Джерело новини",
+    "Read the full article for more details.": "Докладніше читайте в повній статті.",
+    "No articles for": "Немає статей за темою",
+    "Failed to load news.": "Не вдалося завантажити новини.",
+    "Server-side problem. Switching topic...": "Помилка сервера. Змінюємо тему…",
+    "Rate limit exceeded. Please wait a few minutes.": "Перевищено ліміт запитів. Зачекайте кілька хвилин.",
+    "STARLINK REFERRAL": "РЕФЕРАЛЬНА ПРОПОЗИЦІЯ STARLINK",
+    "LIMITED OFFER": "ОБМЕЖЕНА ПРОПОЗИЦІЯ",
+    "1 MONTH": "1 МІСЯЦЬ",
+    "FREE": "БЕЗКОШТОВНО",
+    "Activate Starlink through my referral link and get one month of service free.": "Активуйте Starlink за моїм реферальним посиланням і отримайте місяць користування безкоштовно.",
+    "Activate Starlink": "Активувати Starlink",
+    "*Offer subject to Starlink eligibility and terms.": "*Пропозиція діє відповідно до умов Starlink.",
+    "LOW EARTH ORBIT · 550 KM": "НИЗЬКА НАВКОЛОЗЕМНА ОРБІТА · 550 КМ",
+    "Android / Full-Stack Developer": "Android-розробник і фулстек-розробник",
+    "primary focus": "основний напрям",
+    "core toolkit": "основні інструменти",
+    "backend & web": "серверна та веброзробка",
+    "day to day": "щодня",
+    "Mobile": "Мобільна розробка",
+    "Languages": "Мови програмування",
+    "Frameworks": "Фреймворки",
+    "Tooling": "Інструменти",
+    "Utility": "Утиліта",
+    "Board Games": "Настільні ігри",
+    "Casual Game": "Казуальна гра",
+    "Quiz": "Вікторина",
+    "Local Business": "Місцевий бізнес",
+    "Freelance Full-Stack & Android Developer": "Незалежний фулстек- та Android-розробник",
+    "Independent": "Незалежна діяльність",
+    "Technical Project Consultant": "Технічний консультант проєктів",
+    "Sites & projects": "Сайти та проєкти",
+    "Browser Game": "Браузерна гра",
+    "Chess Game": "Шахова гра",
+    "In development": "У розробці",
+    "Chess & Munchkin": "Шахи та Munchkin",
+    "TikTok LIVE Game": "Гра для TikTok LIVE",
+    "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "Я інженер-програміст і викладач університету в Орлеані, Франція. Маю освіту в галузях програмування та економіки. Уже майже два десятиліття поєдную викладання з розробкою: навчаю майбутніх фахівців і створюю програмні продукти, якими користуються люди.",
+    "Today my primary focus is native Android development, building polished, production-ready apps from idea to Google Play. Alongside Android, I develop full-stack web applications with React on the frontend and Spring Boot / Django / ASP.Net Core / Node.js on the backend. Whether it's mobile or web, I value clean architecture, maintainable code, realistic timelines, and software that's just as easy to understand a year later as it is on day one — principles I've refined through more than nineteen years of writing and teaching code.": "Сьогодні мій головний напрям роботи — нативна Android-розробка: від задуму до готового застосунку в Google Play. Також створюю повноцінні вебзастосунки з React на клієнтській стороні та Spring Boot, Django, ASP.NET Core або Node.js на серверній. Незалежно від платформи, ціную продуману архітектуру, зрозумілий код, реалістичні терміни й рішення, які залишаються зручними для підтримки навіть через роки. Ці принципи сформувалися за понад дев’ятнадцять років розробки та викладання.",
+    "Outside of work, I'm a keen photographer and a multi-instrumentalist, which is probably why I notice when an interface is a half-beat out of rhythm.": "Поза роботою захоплююся фотографією та грою на кількох музичних інструментах. Мабуть, тому одразу помічаю, коли інтерфейсу бракує гармонії.",
+    "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Багатомовна освітня платформа для вивчення програмування та штучного інтелекту зі структурованими уроками, інтерактивними вправами й режимом перегляду матеріалів у форматі презентації.",
+    "Six apps across utilities, casual games and local business tools — each one designed, built and published independently.": "Шість застосунків: від корисних інструментів і простих ігор до рішень для місцевого бізнесу. Кожен із них я самостійно спроєктував, розробив і опублікував.",
+    "A growing collection of small sites and experiments — deployed independently, each one built to try out an idea, a technique, or just for fun.": "Колекція невеликих сайтів та експериментальних проєктів, яка постійно зростає. Кожен із них створено, щоб випробувати ідею, опанувати технологію або просто отримати задоволення від розробки.",
+    "A toolkit shaped by production work, teaching, and constant experimentation.": "Набір технологій та інструментів, сформований практичною розробкою, викладанням і постійними експериментами.",
+    "An experimental browser game currently in development. Work in progress, with more features and improvements on the way.": "Експериментальна браузерна гра, над якою ще триває робота. Попереду нові можливості та вдосконалення.",
+    "An early-stage browser game blending Munchkin-inspired fantasy chaos with chess strategy. Still very rough, with plenty of development work ahead.": "Браузерна гра на ранньому етапі розробки, що поєднує фентезійний хаос у дусі Munchkin зі стратегією шахів. Проєкт поки що сирий, попереду багато роботи.",
+    "An interactive underwater arena built for TikTok LIVE Studio. Viewers become named fish, swim through a living reef, and compete through likes, gifts, growth and battles. Still in development.": "Інтерактивний підводний світ для TikTok LIVE Studio. Глядачі перетворюються на рибок зі своїми іменами, плавають серед живого рифу, зростають і змагаються завдяки вподобанням, подарункам та сутичкам. Проєкт ще розробляється."
+};
+
+const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
 const PROJECT_TRANSLATIONS = {
   "fr": {
