@@ -82,15 +82,15 @@ function Nav() {
                             type="button"
                             className={`language-switcher__trigger ${languageMenuOpen ? "is-open" : ""}`}
                             onClick={() => setLanguageMenuOpen((value) => !value)}
-                            aria-label={language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : language === "es" ? "Elegir idioma" : language === "ru" ? "Выбрать язык" : language === "ko-KP" ? "언어 선택" : language === "zh" ? "选择语言" : language === "ar" ? "اختر اللغة" : language === "hv" ? "Vēzos gōntan" : language === "ja" ? "言語を選択" : language === "sa" ? "भाषां वृणोतु" : language === "od" ? "Выбрать одесский язык" : "Choose language"}
+                            aria-label={language === "uk" ? "Обрати мову" : language === "fr" ? "Choisir la langue" : language === "pt-BR" ? "Escolher idioma" : language === "es" ? "Elegir idioma" : language === "ru" ? "Выбрать язык" : language === "ko-KP" ? "언어 선택" : language === "zh" ? "选择语言" : language === "ar" ? "اختر اللغة" : language === "hv" ? "Vēzos gōntan" : language === "ja" ? "言語を選択" : language === "sa" ? "भाषां वृणोतु" : language === "od" ? "Выбрать одесский язык" : "Choose language"}
                             aria-expanded={languageMenuOpen}
                             aria-haspopup="menu"
                         >
-                            <Flag country={language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "ko-KP" ? "kp" : language === "zh" ? "cn" : language === "ar" ? "sa" : language === "sa" ? "in" : language === "ja" ? "jp" : language === "de" ? "de" : language === "hv" ? "hv" : language === "av" ? "av" : language === "qya" ? "qya" : language === "od" ? "od" : language === "cu" ? "cu" : "us"} label={language === "qya" ? "Quenya leaf symbol" : language === "cu" ? "Свиток церковнославянского языка" : language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "ko-KP" ? "조선민주주의인민공화국 국기" : language === "zh" ? "Chinese flag" : language === "ar" ? "علم المملكة العربية السعودية" : language === "sa" ? "India" : language === "ja" ? "日本の国旗" : language === "hv" ? "Three-headed dragon" : language === "od" ? "Флаг города Одессы" : "United States flag"} />
+                            <Flag country={language === "uk" ? "ua" : language === "fr" ? "fr" : language === "pt-BR" ? "br" : language === "es" ? "es" : language === "ru" ? "ru" : language === "ko-KP" ? "kp" : language === "zh" ? "cn" : language === "ar" ? "sa" : language === "sa" ? "in" : language === "ja" ? "jp" : language === "de" ? "de" : language === "hv" ? "hv" : language === "av" ? "av" : language === "qya" ? "qya" : language === "od" ? "od" : language === "cu" ? "cu" : "us"} label={language === "qya" ? "Quenya leaf symbol" : language === "cu" ? "Свиток церковнославянского языка" : language === "uk" ? "Прапор України" : language === "fr" ? "Drapeau français" : language === "pt-BR" ? "Bandeira do Brasil" : language === "es" ? "Bandera de España" : language === "ru" ? "Russian flag" : language === "ko-KP" ? "조선민주주의인민공화국 국기" : language === "zh" ? "Chinese flag" : language === "ar" ? "علم المملكة العربية السعودية" : language === "sa" ? "India" : language === "ja" ? "日本の国旗" : language === "hv" ? "Three-headed dragon" : language === "od" ? "Флаг города Одессы" : "United States flag"} />
                         </button>
 
                         {languageMenuOpen && (
-                            <div className="language-switcher__menu" role="menu" aria-label={language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : language === "ru" ? "Язык" : language === "ko-KP" ? "언어" : language === "zh" ? "语言" : language === "ar" ? "اللغة" : language === "hv" ? "Vēzos" : language === "ja" ? "言語" : language === "sa" ? "भाषा" : language === "od" ? "Язык" : "Language"}>
+                            <div className="language-switcher__menu" role="menu" aria-label={language === "uk" ? "Мова" : language === "fr" ? "Langue" : language === "pt-BR" ? "Idioma" : language === "es" ? "Idioma" : language === "ru" ? "Язык" : language === "ko-KP" ? "언어" : language === "zh" ? "语言" : language === "ar" ? "اللغة" : language === "hv" ? "Vēzos" : language === "ja" ? "言語" : language === "sa" ? "भाषा" : language === "od" ? "Язык" : "Language"}>
 
 
 
@@ -118,6 +118,12 @@ function Nav() {
                                     <Flag country="us" label="United States flag" />
                                     <span className="language-switcher__label">English</span>
                                     {language === "en" && <Icon name="check" size={15}/>}
+                                </button>
+
+                                <button type="button" role="menuitemradio" aria-checked={language === "uk"} className={`language-switcher__option ${language === "uk" ? "is-selected" : ""}`} onClick={() => chooseLanguage("uk")}>
+                                    <Flag country="ua" label="Прапор України" />
+                                    <span className="language-switcher__label">Українська</span>
+                                    {language === "uk" && <Icon name="check" size={15}/>}
                                 </button>
 
                                 <button
