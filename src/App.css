@@ -2918,3 +2918,12 @@ html[lang="cu"] :is(.hero__actions, .hero__stats, .skills__grid, .sites__grid,
         font-size: 0.9rem;
     }
 }
+
+/* Keep longer localized labels inside the viewport without changing desktop layout. */
+html[lang="uk"] .page, html[lang="uk"] main, html[lang="uk"] section { min-width: 0; }
+html[lang="uk"] .btn, html[lang="uk"] button, html[lang="uk"] .nav__mobile-link { max-width: 100%; min-width: 0; overflow-wrap: anywhere; white-space: normal; text-align: center; }
+html[lang="uk"] .nav__links { min-width: 0; gap: clamp(8px, 1.5vw, 28px); }
+html[lang="uk"] .nav__link { font-size: clamp(.78rem, .9vw, .92rem); }
+html[lang="uk"] .nav__inner { gap: clamp(8px, 1.6vw, 32px); }
+html[lang="uk"] .language-switcher { flex-shrink: 0; }
+@media (max-width: 1100px) { html[lang="uk"] .nav__links, html[lang="uk"] .nav__cta { display: none; } html[lang="uk"] .nav__toggle { display: flex; margin-left: auto; } html[lang="uk"] .nav__mobile { display: flex; flex-direction: column; gap: 4px; padding: 8px 24px 24px; border-top: 1px solid var(--border); background: var(--bg-elevated); } }
