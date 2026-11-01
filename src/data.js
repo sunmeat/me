@@ -107,8 +107,9 @@ export const APPS = [
 
 export const REPOS = [
     {
-        name: "poetry-blog",
-        desc: "A personal poetry blog with a minimal reading experience and a simple admin CMS for managing poems, built with React, Vite and Firebase.",
+        name: "alex-lessons",
+        url: "https://alex-lessons.me/",
+        desc: "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.",
         lang: "React"
     },
     {
