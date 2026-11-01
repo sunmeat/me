@@ -5259,7 +5259,7 @@ export function translateString(value, language, textual = true) {
         restore = (text) => text.replace(/\u0001(\d+)\u0002/g, (_, index) => saved[Number(index)]);
     }
     const entries = Object.entries(dictionary)
-        .filter(([source]) => source.includes(" ") || source.length >= 6)
+        .filter(([source]) => language === "sa" ? source.length >= 8 : source.includes(" ") || source.length >= 6)
         .sort((a, b) => b[0].length - a[0].length);
     for (const [source, target] of entries) {
         translated = translated.split(source).join(target);
