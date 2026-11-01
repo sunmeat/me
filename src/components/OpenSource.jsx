@@ -24,7 +24,7 @@ function OpenSource() {
                     {REPOS.map((r) => (
                         <a
                             className="repo-card"
-                            href={`https://github.com/sunmeat/${r.name}`}
+                            href={r.url || `https://github.com/sunmeat/${r.name}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             key={r.name}
