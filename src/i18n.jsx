@@ -308,7 +308,7 @@ const FR = {
     "Suggested stack:": "Technologies suggérées :",
     "Sent via sunmeat.dev project estimator.": "Envoyé depuis le configurateur de projet sunmeat.dev.",
     "Project Brief — sunmeat.dev": "Cahier des charges — sunmeat.dev",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Une plateforme éducative interactive proposant des cours de programmation et d’IA, des présentations, des exercices pratiques et le suivi de la progression des étudiants.",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Une plateforme pédagogique interactive avec des cours de programmation et d’intelligence artificielle, des présentations, des exercices pratiques et un suivi de la progression des étudiants.",
     "Source code of my personal single-page portfolio website.": "Code source de mon portfolio personnel monopage.",
     "My interactive digital business card (npx sunmeat) right in your terminal": "Ma carte de visite numérique interactive (npx sunmeat), directement dans votre terminal.",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Un roguelike textuel classique en C++ utilisant l’API Windows et un labyrinthe 40 × 10 généré procéduralement. Récupérez les pièces d’or, évitez les ennemis qui épuisent votre santé et trouvez la sortie à temps.",
@@ -771,7 +771,7 @@ const PT_BR = {
     "Orléans-based software engineer and lecturer building native Android applications end to end — from first sketch to a live listing on Google Play. Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. Six published apps so far — just the beginning. Over nineteen years of writing and teaching code.": "Engenheiro de software e professor em Orléans, desenvolvo aplicativos Android nativos de ponta a ponta, da primeira ideia à publicação no Google Play. Também crio aplicações web full-stack com React no frontend e Spring Boot, Django, ASP.NET Core ou Node.js no backend. Seis aplicativos publicados até agora, e isso é só o começo. Mais de dezenove anos desenvolvendo e ensinando programação.",
     "Standard": "Padrão",
     "Open to freelance projects, long-term collaborations and consulting work. Based in": "Disponível para projetos freelance, colaborações de longo prazo e consultoria. Baseado em",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Uma plataforma educativa interativa com aulas de programação e IA, apresentações, exercícios práticos e acompanhamento do progresso dos alunos.",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Uma plataforma de ensino interativa com aulas de programação e inteligência artificial, apresentações, atividades práticas e acompanhamento do progresso dos alunos.",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Um roguelike clássico em modo texto, desenvolvido em C++ com a API do Windows, ambientado em um labirinto 40x10 gerado proceduralmente. Controle seu personagem, colete moedas de ouro, evite inimigos que reduzem sua vida e encontre a saída antes que seja tarde.",
     "Practical React component examples and patterns prepared for student groups.": "Exemplos práticos de componentes React e padrões preparados para turmas de estudantes.",
     "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Projeto, desenvolvimento e implantação de produtos de software completos. Desenvolvimento de aplicativos Android nativos e aplicações web full-stack com React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL e MySQL, incluindo configuração de bancos de dados, integração de APIs e publicação no Google Play.",
@@ -1002,7 +1002,7 @@ const ES = {
     "Suggested stack:": "Tecnologías sugeridas:",
     "Sent via sunmeat.dev project estimator.": "Enviado mediante el estimador de proyectos de sunmeat.dev.",
     "Project Brief — sunmeat.dev": "Resumen del proyecto — sunmeat.dev",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Una plataforma educativa interactiva con lecciones de programación e IA, presentaciones, ejercicios prácticos y seguimiento del progreso de los estudiantes.",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Una plataforma educativa interactiva con clases de programación e inteligencia artificial, presentaciones, ejercicios prácticos y seguimiento del progreso del alumnado.",
     "Source code of my personal single-page portfolio website.": "Código fuente de mi portafolio personal de una sola página.",
     "My interactive digital business card (npx sunmeat) right in your terminal": "Mi tarjeta de visita digital e interactiva (npx sunmeat) directamente en tu terminal.",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Un roguelike clásico de texto desarrollado en C++ con la API de Windows, ambientado en un laberinto de 40×10 generado proceduralmente. Controla al héroe, recoge monedas de oro, evita enemigos que reducen tu salud y encuentra la salida a tiempo.",
@@ -1481,7 +1481,7 @@ const ZH = {
     "Suggested stack:": "建议技术栈：",
     "Sent via sunmeat.dev project estimator.": "通过 sunmeat.dev 项目估算器发送。",
     "Project Brief — sunmeat.dev": "项目需求说明 — sunmeat.dev",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "一个互动教学平台，提供编程与人工智能课程、演示文稿、实践练习和学生学习进度跟踪。",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "互动式学习平台，提供编程与人工智能课程、演示文稿、实践练习和学生学习进度跟踪。",
     "Source code of my personal single-page portfolio website.": "我的个人单页作品集网站的源代码。",
     "My interactive digital business card (npx sunmeat) right in your terminal": "直接在终端中使用我的交互式数字名片（npx sunmeat）",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "一款使用 C++ 和 Windows API 编写的动态经典文字 Roguelike 游戏。玩家需要在程序生成的 40×10 迷宫中操控角色收集金币、躲避会消耗生命值的敌人，并及时找到出口。",
@@ -1797,7 +1797,7 @@ const KP = {
     "Live": "공개됨",
     "Forever alive": "영원히 기억하며",
     "Built with ❤️ & React • Available for projects": "❤️와 React로 제작 · 사업 협력 가능",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "프로그람작성과 인공지능 강의, 발표자료, 실습 및 학습 진도 관리 기능을 갖춘 쌍방향 교육 플랫폼.",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "프로그람작성과 인공지능 강의, 발표자료, 실습과 학생들의 학습 진도 관리 기능을 갖춘 쌍방향 교육 플랫폼.",
     "Source code of my personal single-page portfolio website.": "개인 기술 성과 홈페지의 원천코드이다.",
     "My interactive digital business card (npx sunmeat) right in your terminal": "단말기에서 직접 리용하는 상호작용형 디지털 명함 (npx sunmeat)",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Windows API와 C++로 만든 고전적인 문자식 로그라이크 유희이다. 자동 생성된 40×10 미궁에서 주인공을 조종하여 금화를 모으고 생명력을 빼앗는 적을 피하면서 출구를 찾아야 한다.",
@@ -1818,6 +1818,7 @@ const KP = {
 };
 
 const AR = {
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "منصة تعليمية تفاعلية تضم دروسًا في البرمجة والذكاء الاصطناعي، وعروضًا تقديمية، وتمارين عملية، وأدوات لمتابعة تقدم الطلاب.",
     "Learning Platform": "منصة تعليمية",
     "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "منصة تعليمية متعددة اللغات للبرمجة والذكاء الاصطناعي، تضم دروسًا منظمة وتمارين تفاعلية وتنقّلًا بين الشرائح بأسلوب العروض التقديمية.",
     "About": "نبذة عني",
@@ -1923,6 +1924,7 @@ const AR = {
 };
 
 const SA = {
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "अन्तःक्रियात्मकं शिक्षणमञ्चम्, यत्र सङ्गणकक्रमलेखनस्य कृत्रिमबुद्धेः च पाठाः, प्रस्तुतयः, व्यावहारिकाभ्यासाः, छात्राणाम् अध्ययनप्रगतेः निरीक्षणं च सन्ति।",
     "Learning Platform": "अध्ययनमञ्चः",
     "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "सङ्गणककार्यक्रमनिर्माणस्य कृत्रिमबुद्धेः च बहुभाषिकः अध्ययनमञ्चः, यत्र क्रमबद्धाः पाठाः, परस्परक्रियात्मकाः अभ्यासाः, प्रस्तुतीकरणपृष्ठानां दर्शनं च सन्ति।",
     "I'm a software engineer and university lecturer based in Orléans, France, with a background in both programming and economics. For close to two decades I've split my time between the classroom and the codebase — teaching the next generation of developers by day, and shipping production software by night.": "फ्रान्सदेशस्य ओरलेआँ-नगरे वसामि, सङ्गणकविद्यायाः साधकः विश्वविद्यालयस्य आचार्यश्च। अर्थशास्त्रे प्रोग्रामलेखने च मम विद्या। विंशतेः वर्षाणां समीपे मम यात्रा द्वयोः क्षेत्रयोः मध्ये प्रवहति: दिवा नवपीढीं शिक्षयामि, निशि च लोकहिताय नूतनानि सॉफ्टवेयर्-रत्नानि निर्माय प्रकाशयामि।",
@@ -2078,6 +2080,7 @@ const OD = {
     "Six apps across utilities, casual games and local business tools": "Шесть приложений: утилиты, игры и инструменты для местного бизнеса"
 };
 const DE = {
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Eine interaktive Lernplattform mit Kursen zu Programmierung und künstlicher Intelligenz, Präsentationen, praktischen Übungen und Lernfortschrittsverfolgung.",
     "Learning Platform": "Lernplattform",
     "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Eine mehrsprachige Lernplattform für Programmierung und künstliche Intelligenz mit strukturierten Lektionen, interaktiven Übungen und einer Präsentationsansicht mit Folien.",
     "About": "Über mich",
@@ -2179,6 +2182,7 @@ const DE = {
     "A minimal tool for viewing and sharing public Duolingo profile statistics. Displays avatar, XP, streaks and top courses, and generates a shareable PNG card — no login required.": "Ein einfaches Tool zum Anzeigen und Teilen öffentlicher Duolingo-Profilstatistiken. Es zeigt Avatar, XP, Lernserie und Top-Kurse und erstellt eine teilbare PNG-Karte, ganz ohne Anmeldung."
 };
 const JA = {
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "プログラミングとAIの講座、プレゼンテーション、実践課題、学習進捗管理を備えた対話型学習プラットフォーム。",
     "Learning Platform": "学習プラットフォーム",
     "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "プログラミングと人工知能を学べる多言語対応の教育サイト。体系的な授業、体験型の演習、発表用のスライド表示を備えています。",
     "About": "概要",
@@ -2627,7 +2631,7 @@ const QUENYA = {
     "$ git log --stat": "$ git henta --nótë",
     "Open source & teaching material.": "Latyaine tengwi ar peantië tengwi.",
     "View GitHub profile": "Á cena Cithapa-essë",
-    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "プログラミングとAIの講座、プレゼンテーション、実践課題、学習進捗管理を備えた対話型学習プラットフォーム。",
+    "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Peantiëa talan mi ya nar carmaquetta ar sanarómenórë peantier, tanwë-tengwi, cariëa tyastier ar hildië i peantaron nótië.",
     "Source code of my personal single-page portfolio website.": "Ninya immo erya-lassëa carmaparmo ramë-nórëo óre-tengwi.",
     "My interactive digital business card (npx sunmeat) right in your terminal": "Ninya ovacarya nótëa mancalë-tengwë (npx sunmeat) ara i tengwilë lyo",
     "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Vilya, haimë tengwi-tambina roguelike cílë carna C++-nen ar Windows API i vanta mir 40x10 vinquë-mallë carna carmanen. Á tura i hérolya ar á comya laurë telpi, á útya i ranco-ñottor yar mulë coivielya, ar á hire i etelë nó haryas lúmë.",
@@ -2824,6 +2828,7 @@ const QUENYA = {
 };
 
 const HV = {
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Sȳz ñuhon lenton hen dārys se qogralbar, syt ēdruta, ñuhon ānogri se jēdar qogralbar.",
     "Learning Platform": "Sȳz gīmigon",
     "A multilingual learning platform for programming and AI, featuring structured lessons, interactive exercises, and presentation-style slide navigation.": "Rȳbagon se dārys nūmāzma, programmi se arlie gīmigon. Sȳz kēli, drējī udra se lȳrī.",
     "About": "Ñuha dārys",
@@ -4013,7 +4018,7 @@ Object.assign(UK, {
   "Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "Орлеані, Франція. Зазвичай відповідаю протягом робочого дня.",
   "Built with ❤️ & React • Available for projects": "Зроблено з ❤️ та React • Буду радий співпраці",
   "Sent via sunmeat.dev project estimator.": "Надіслано через калькулятор проєктів на sunmeat.dev.",
-  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.",
+  "An interactive educational platform featuring programming and AI lessons, presentations, practical exercises, and student progress tracking.": "Інтерактивна освітня платформа з уроками програмування та штучного інтелекту, презентаціями, практичними завданнями й відстеженням навчального поступу студентів.",
   "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "Класична текстова пригода на C++ із Windows API. Щоразу на вас чекає новий лабіринт 40 × 10: збирайте золото, уникайте ворогів і встигніть знайти вихід, доки вистачає здоров’я.",
   "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "Створюю програмні продукти від задуму до запуску: Android-застосунки та вебсервіси на React, Spring Boot, Django, ASP.NET Core, Node.js, Firebase, PostgreSQL і MySQL. Налаштовую бази даних, підключаю API та публікую застосунки в Google Play.",
   "Streamlining night-shift venue logistics, rapid floor management, and deep sanitation protocols for high-capacity hard techno events. Maintaining strict operational safety and hygiene standards, optimizing post-event cleanup workflows under tight turnaround times, and ensuring high-throughput venue readiness during peak operations.": "Допомагав організовувати роботу великих музичних майданчиків у нічні зміни: координував підготовку приміщень, підтримував чистоту й безпеку та дбав, щоб усе було готове до наступного заходу навіть за щільного графіка.",
