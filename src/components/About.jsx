@@ -14,6 +14,7 @@ import Eyebrow from "./Eyebrow.jsx";
 
 const AVATAR_URL = "https://github.com/sunmeat/storage/blob/main/images/jpg/square-crop.jpg?raw=true";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
+const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
 const TELEGRAM_URL = "https://t.me/sunmeat";
@@ -82,6 +83,7 @@ function loadStoredGuestName() {
 function About() {
     const { language } = useLanguage();
     const isNorthKorean = language === "ko-KP";
+    const isQuenya = language === "qya";
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
@@ -210,7 +212,7 @@ function About() {
                                 <span className="about-card__username">{USERNAME}</span>
                                 <span className="about-card__location-tag">
                                     <Icon name="pin" size={11} />
-                                    {isNorthKorean ? "평양, 조선민주주의인민공화국" : "Orléans, France"}
+                                    {isNorthKorean ? "평양, 조선민주주의인민공화국" : isQuenya ? "Imladris, Endórë" : "Orléans, France"}
                                 </span>
                             </div>
                         </div>
@@ -218,7 +220,7 @@ function About() {
                         <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
                             <div className="about__frame">
                                 <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : AVATAR_URL}
+                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
                                     loading="lazy"
@@ -266,7 +268,7 @@ function About() {
 
                         <div className="about-card__caption">
                             <span className="about-card__username">{USERNAME}</span>
-                            {isNorthKorean ? "평양에서 인사를 보냅니다" : "bonjour, epta"}{" "}
+                            {isNorthKorean ? "평양에서 인사를 보냅니다" : isQuenya ? "Elen síla lúmenn’ omentielvo" : "bonjour, epta"}{" "}
                             <img
                                 src={isNorthKorean ? "https://flagcdn.com/16x12/kp.png" : "https://flagcdn.com/16x12/fr.png"}
                                 srcSet={isNorthKorean ? "https://flagcdn.com/32x24/kp.png 2x" : "https://flagcdn.com/32x24/fr.png 2x"}
@@ -274,6 +276,7 @@ function About() {
                                 height="12"
                                 alt={isNorthKorean ? "North Korea" : "France"}
                                 className="about-card__flag"
+                                style={isQuenya ? { display: "none" } : undefined}
                             />{" "}
                             {isNorthKorean ? "평양, 조선민주주의인민공화국" : "Orléans, France"}
                         </div>
