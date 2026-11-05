@@ -2958,3 +2958,52 @@ html[lang="qya"] .section__title::after {
         transition: none;
     }
 }
+
+
+/* Quenya ranger portrait: ornate, mobile-first frame */
+html[lang="qya"] .about-card {
+  border: 2px solid #c5a765;
+  border-radius: 18px;
+  background: linear-gradient(150deg,#193b2a,#0b1d16 65%);
+  box-shadow: 0 0 0 4px #10291e, 0 0 0 5px rgba(213,185,112,.55), 0 22px 55px rgba(0,0,0,.45), inset 0 0 28px rgba(108,180,119,.12);
+}
+html[lang="qya"] .about-card__photo-wrap {
+  margin: 9px;
+  border: 2px solid #d5bc7e;
+  border-radius: 7px;
+  box-shadow: 0 0 0 4px #153b28, 0 0 0 5px rgba(211,182,106,.6);
+}
+html[lang="qya"] .about-card__photo-wrap::before {
+  content:"";
+  position:absolute;
+  z-index:3;
+  inset:10px;
+  border:1px solid rgba(239,215,149,.8);
+  border-radius:3px;
+  pointer-events:none;
+}
+html[lang="qya"] .about__frame {padding:0;border:0;border-radius:0;background:transparent}
+html[lang="qya"] .about__photo {border-radius:0;filter:contrast(1.04) saturate(1.06)}
+html[lang="qya"] .about-card__header {
+  background:linear-gradient(90deg,#153a28,#2b5138,#153a28);
+  border-bottom:2px solid rgba(220,190,121,.7);
+}
+html[lang="qya"] .about-card__actions {
+  border-top:1px solid rgba(220,190,121,.4);
+  background:linear-gradient(90deg,rgba(44,101,64,.23),transparent,rgba(44,101,64,.23));
+}
+html[lang="qya"] .about-card__username {color:#e7d49e}
+html[lang="qya"] .section__title {font-family:Georgia,"Times New Roman",serif}
+html[lang="qya"] .hero__title-accent {
+  background:linear-gradient(110deg,#8fd4a6,#f0dca0,#7bc39a);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+@media(max-width:720px) {
+  html[lang="qya"] .about__media {width:100%;min-width:0;padding:14px 12px;display:flex;justify-content:center}
+  html[lang="qya"] .about-card {width:100%;max-width:440px}
+  html[lang="qya"] .about-card__photo-wrap {margin:8px}
+  html[lang="qya"] .about-card__photo-wrap::before {inset:7px}
+  html[lang="qya"] .about-card__header {padding-inline:20px}
+}
