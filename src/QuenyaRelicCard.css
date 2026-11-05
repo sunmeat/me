@@ -1,0 +1,263 @@
+/* Quenya Instagram relic card. A single coherent visual system, isolated from the site. */
+html[lang="qya"] .about__media {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 18px 10px 24px;
+  overflow: visible;
+}
+html[lang="qya"] .about-card.about-card--quenya {
+  --relic-gold: #d7b678;
+  --relic-light: #f2dba3;
+  --relic-shadow: #725932;
+  --relic-emerald: #0d7353;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 9px 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  overflow: visible;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(102, 146, 102, .15), transparent 48%) padding-box,
+    linear-gradient(180deg, #112e22 0%, #0b211a 48%, #102b20 100%) padding-box,
+    linear-gradient(135deg, #f1d99c 0%, #8b6b3c 20%, #e4c785 51%, #77592f 78%, #d8b574 100%) border-box;
+  box-shadow:
+    0 0 0 1px #071811,
+    0 0 0 4px rgba(149, 121, 63, .38),
+    0 22px 56px rgba(0, 0, 0, .48),
+    inset 0 0 0 3px #0b241a,
+    inset 0 0 0 4px rgba(236, 204, 135, .44);
+}
+html[lang="qya"] .about-card.about-card--quenya::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  width: auto;
+  height: auto;
+  top: 6px;
+  left: 6px;
+  z-index: 0;
+  transform: none;
+  border: 1px solid rgba(205, 177, 111, .23);
+  border-radius: 15px;
+  background: none;
+  box-shadow: none;
+  filter: none;
+  text-shadow: none;
+  opacity: 1;
+  pointer-events: none;
+}
+html[lang="qya"] .about-card.about-card--quenya::after { content: none; display: none; }
+html[lang="qya"] .about-card--quenya > * { position: relative; z-index: 1; }
+
+/* The heraldic crown is centered in the actual card, never attached to an offset header. */
+html[lang="qya"] .qya-relic__crown {
+  height: 35px;
+  margin: 0 12px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--relic-gold);
+  pointer-events: none;
+}
+html[lang="qya"] .qya-relic__crown svg {
+  display: block;
+  width: min(100%, 295px);
+  height: 35px;
+  overflow: visible;
+}
+html[lang="qya"] .about-card--quenya .about-card__header {
+  min-width: 0;
+  margin: 0 3px;
+  padding: 8px 13px 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(215, 182, 120, .38);
+  border-radius: 0;
+  background: linear-gradient(90deg, transparent, rgba(41, 87, 61, .20) 50%, transparent);
+  box-shadow: none;
+}
+html[lang="qya"] .about-card--quenya .about-card__header::after { content: none; display: none; }
+html[lang="qya"] .about-card--quenya .about-card__avatar {
+  background: linear-gradient(135deg, #f1ddaa, #688b69 45%, #b08b51 90%);
+  box-shadow: 0 0 0 1px #0b261c, 0 0 0 2px #bca16d;
+}
+html[lang="qya"] .about-card--quenya .about-card__username { color: #f0dfb4; }
+html[lang="qya"] .about-card--quenya .about-card__location-tag {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #b6ccaa;
+}
+
+/* Beveled antique-gold photo mount with four mathematically mirrored
+   botanical corner engravings and two centered, inset emerald stones. */
+html[lang="qya"] .about-card--quenya .about-card__photo-wrap {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: calc(100% - 12px) !important;
+  max-width: none;
+  min-width: 0;
+  margin: 12px auto 14px;
+  padding: 11px;
+  border: 2px solid transparent;
+  border-radius: 11px;
+  overflow: visible;
+  line-height: 0;
+  background:
+    linear-gradient(165deg, #18372a, #0b2018 50%, #19382a) padding-box,
+    linear-gradient(133deg, #ffe9ad 0%, #896435 17%, #cfac6e 43%, #f5d99c 52%, #8a693e 78%, #d6b679 100%) border-box;
+  box-shadow:
+    0 0 0 1px #071a13,
+    0 0 0 3px rgba(175, 145, 78, .72),
+    0 10px 24px rgba(0, 0, 0, .32),
+    inset 0 0 0 1px #e3ca8b,
+    inset 0 0 0 4px #24432e;
+}
+html[lang="qya"] .about-card--quenya .about-card__photo-wrap::before,
+html[lang="qya"] .about-card--quenya .about-card__photo-wrap::after {
+  content: none;
+  display: none;
+}
+html[lang="qya"] .about-card--quenya .about-card__photo-wrap .about__frame {
+  box-sizing: border-box;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(241, 215, 151, .5) !important;
+  border-radius: 3px !important;
+  background: #071a13;
+  overflow: hidden;
+}
+html[lang="qya"] .about-card--quenya .about-card__photo-wrap .about__photo {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  filter: none !important;
+}
+html[lang="qya"] .qya-relic__filigree {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+html[lang="qya"] .qya-relic__corner {
+  position: absolute;
+  display: block;
+  width: clamp(44px, 18%, 65px);
+  height: auto;
+  color: #c7a56b;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .6));
+}
+html[lang="qya"] .qya-relic__corner--nw { top: 1px; left: 1px; }
+html[lang="qya"] .qya-relic__corner--ne { top: 1px; right: 1px; transform: scaleX(-1); }
+html[lang="qya"] .qya-relic__corner--sw { bottom: 1px; left: 1px; transform: scaleY(-1); }
+html[lang="qya"] .qya-relic__corner--se { bottom: 1px; right: 1px; transform: scale(-1, -1); }
+html[lang="qya"] .qya-relic__gem {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 13px;
+  height: 21px;
+  margin-top: -10px;
+  border: 2px solid #d6ba7e;
+  border-radius: 55% 55% 55% 55%;
+  background:
+    radial-gradient(ellipse at 32% 19%, #b6f7d7 0%, #45bc91 18%, transparent 38%),
+    linear-gradient(145deg, #0b513e, #0b8866 48%, #08382b);
+  box-shadow: inset -2px -2px 3px rgba(0,0,0,.5), 0 0 0 1px #2d301e, 0 0 9px rgba(56,195,139,.16);
+}
+html[lang="qya"] .qya-relic__gem--left { left: 4px; }
+html[lang="qya"] .qya-relic__gem--right { right: 4px; }
+
+/* The social UI belongs to the same artifact, but remains the quiet supporting layer. */
+html[lang="qya"] .about-card--quenya .about-card__actions {
+  margin: 0 4px;
+  padding: 8px 7px 0;
+  border-top: 1px solid rgba(214, 181, 110, .34);
+  background: transparent;
+}
+html[lang="qya"] .about-card--quenya .about-card__actions :is(a, button) {
+  color: #ddc99c;
+}
+html[lang="qya"] .about-card--quenya .about-card__actions :is(a, button):hover {
+  color: #b2e5c4;
+}
+html[lang="qya"] .about-card--quenya .about-card__actions .about-card__like.is-liked {
+  color: #f27785;
+}
+html[lang="qya"] .about-card--quenya .about-card__likes {
+  margin: 4px 4px 0;
+  padding: 0 13px;
+  color: #f2e3bd;
+}
+html[lang="qya"] .about-card--quenya .about-card__caption {
+  margin: 0 4px;
+  padding: 8px 13px 0;
+  border: 0;
+  color: #c4cfb9;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+html[lang="qya"] .about-card--quenya .about-card__comments-list {
+  margin: 0 4px;
+  padding: 10px 13px 0;
+}
+html[lang="qya"] .about-card--quenya .about-card__timestamp {
+  margin: 0 4px;
+  padding: 10px 13px 0;
+  color: #adbb9c;
+}
+html[lang="qya"] .about-card--quenya .about-card__comment {
+  min-width: 0;
+  margin: 13px 4px 1px;
+  padding: 13px 9px 5px;
+  border-top: 1px solid rgba(214, 181, 110, .30);
+  gap: 7px;
+}
+html[lang="qya"] .about-card--quenya .about-card__comment-name {
+  flex: 0 0 clamp(56px, 23%, 80px) !important;
+}
+html[lang="qya"] .about-card--quenya .about-card__comment input { min-width: 0; }
+html[lang="qya"] .about-card--quenya :is(button, a, input):focus-visible {
+  outline: 2px solid #e4c785;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  html[lang="qya"] .about__media { padding: 14px 6px 20px; }
+  html[lang="qya"] .about-card.about-card--quenya {
+    width: 100%;
+    max-width: 100%;
+    padding: 7px 7px 11px;
+    border-radius: 19px;
+  }
+  html[lang="qya"] .qya-relic__crown { height: 30px; margin-inline: 8px; }
+  html[lang="qya"] .qya-relic__crown svg { height: 30px; }
+  html[lang="qya"] .about-card--quenya .about-card__header {
+    margin-inline: 3px;
+    padding: 8px 10px 12px;
+  }
+  html[lang="qya"] .about-card--quenya .about-card__photo-wrap {
+    width: calc(100% - 10px) !important;
+    padding: 9px;
+    margin-block: 11px 12px;
+  }
+  html[lang="qya"] .qya-relic__corner { width: clamp(38px, 17%, 52px); }
+  html[lang="qya"] .qya-relic__gem { width: 11px; height: 18px; margin-top: -9px; }
+  html[lang="qya"] .about-card--quenya .about-card__comment { padding-inline: 7px; }
+}
+@media (max-width: 360px) {
+  html[lang="qya"] .about__media { padding-inline: 3px; }
+  html[lang="qya"] .about-card--quenya .about-card__photo-wrap { padding: 8px; }
+  html[lang="qya"] .qya-relic__corner { width: 37px; }
+}
