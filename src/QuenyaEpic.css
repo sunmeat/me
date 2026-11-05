@@ -1,0 +1,110 @@
+/* Sylvan ranger edition: scoped to Quenya only. */
+html[lang="qya"] {
+ --bg:#07140f; --bg-elevated:#0b1e17; --surface:#10271e; --surface-2:#173528;
+ --border:#48684b; --border-soft:#284736; --text:#f3ebd4;
+ --text-muted:#c0cbb5; --text-faint:#9bac94;
+ --accent:#c4dca1; --accent-strong:#e4d39a;
+ --accent-dim:rgba(180,214,144,.18); --accent-dimmer:rgba(180,214,144,.08);
+ --elven-gold:#d9bc78; --elven-mint:#b2d9b1;
+}
+html[lang="qya"] .page {
+ isolation:isolate;
+ background:
+ radial-gradient(ellipse 65% 24% at 50% 0%,rgba(109,159,96,.23),transparent 85%),
+ radial-gradient(ellipse 55% 18% at 100% 42%,rgba(185,147,72,.12),transparent 90%),
+ repeating-linear-gradient(125deg,transparent 0 135px,rgba(175,205,143,.022) 136px 137px),
+ linear-gradient(180deg,#06110d,#0d2118 45%,#06130e);
+}
+html[lang="qya"] .page::before {
+ opacity:.36; background-image:
+ radial-gradient(circle,rgba(234,212,139,.7) 1px,transparent 2px),
+ radial-gradient(circle,rgba(180,229,160,.6) 1px,transparent 2px);
+ background-size:173px 211px,251px 283px;
+ mask-image:linear-gradient(#000,transparent 85%);
+}
+html[lang="qya"] .nav {border-bottom:1px solid rgba(216,187,117,.36);background:rgba(6,21,15,.85);backdrop-filter:blur(18px)}
+html[lang="qya"] .nav__brand-mark {border:1px solid #d9bc78;border-radius:3px;transform:rotate(45deg);box-shadow:0 0 0 4px rgba(217,188,120,.08)}
+html[lang="qya"] .nav__brand-mark > * {transform:rotate(-45deg)}
+html[lang="qya"] .hero {position:relative;padding-top:105px}
+html[lang="qya"] .hero::before {
+ content:"✧  ❧  ✦  ❧  ✧";display:block;width:max-content;max-width:100%;
+ margin:0 auto 34px;color:#d9bc78;letter-spacing:clamp(.5rem,2vw,1.5rem);
+ font:clamp(1.2rem,2vw,1.9rem) Georgia,serif;
+ text-shadow:0 0 25px rgba(231,206,126,.45);
+}
+html[lang="qya"] .hero::after {
+ content:"";display:block;height:38px;margin:40px auto 0;max-width:750px;
+ background:linear-gradient(90deg,transparent,#d9bc78 25%,transparent 50%,#d9bc78 75%,transparent) center/100% 1px no-repeat;
+ opacity:.75;
+}
+html[lang="qya"] :is(.hero__title,.section__title) {
+ font-family:Georgia,"Times New Roman",serif;letter-spacing:.015em;
+ color:#f7eed3;text-shadow:0 2px 26px rgba(165,207,125,.23);
+}
+html[lang="qya"] .hero__title {font-size:clamp(2.2rem,4.7vw,4.3rem);line-height:1.17}
+html[lang="qya"] .hero__title-accent {
+ color:#e9d59a;background:linear-gradient(105deg,#b3d6a4,#fff0b8 45%,#c7a45f 70%,#b3d6a4);
+ background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+html[lang="qya"] .eyebrow,html[lang="qya"] .section__eyebrow {color:#e0c783;letter-spacing:.16em;text-transform:uppercase}
+html[lang="qya"] .section {position:relative}
+html[lang="qya"] .section::before {
+ content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+ width:min(85%,1000px);height:1px;pointer-events:none;
+ background:linear-gradient(90deg,transparent,rgba(218,185,106,.55),transparent);
+}
+html[lang="qya"] .section__title::after {content:" ❧";font-size:.7em;color:#d9bc78}
+html[lang="qya"] :is(.terminal,.about-card,.skill-card,.app-card,.site-card,.contact-card,.news__card,.repo-card,.social-row) {
+ position:relative;border:1px solid rgba(199,168,99,.46);
+ background:linear-gradient(145deg,rgba(29,66,46,.87),rgba(9,30,22,.97) 70%);
+ box-shadow:inset 0 1px rgba(255,240,179,.13),inset 0 0 28px rgba(3,14,10,.25),0 14px 35px rgba(0,0,0,.22);
+}
+html[lang="qya"] :is(.skill-card,.app-card,.site-card,.contact-card,.repo-card)::before {
+ content:"";position:absolute;inset:6px;border:1px solid rgba(211,184,112,.19);
+ border-radius:inherit;pointer-events:none;
+}
+html[lang="qya"] .about-card {border:2px solid #b89b5e;box-shadow:0 0 0 5px rgba(195,161,86,.1),0 30px 65px rgba(0,0,0,.4)}
+html[lang="qya"] .about-card::before,html[lang="qya"] .about-card::after {
+ content:"❧";position:absolute;z-index:3;top:6px;font:38px Georgia,serif;color:#f2d899;
+ text-shadow:0 0 16px rgba(231,197,111,.5);pointer-events:none;
+}
+html[lang="qya"] .about-card::before {left:10px}
+html[lang="qya"] .about-card::after {right:10px;transform:scaleX(-1)}
+html[lang="qya"] .about-card__photo-wrap {border-block:2px solid rgba(218,187,112,.75)}
+html[lang="qya"] .about-card__photo-wrap::after {box-shadow:inset 0 0 0 3px rgba(220,190,116,.65),inset 0 0 60px rgba(4,30,17,.4)}
+html[lang="qya"] .hero__stats {border:1px solid rgba(218,187,112,.48);background:linear-gradient(90deg,rgba(22,56,35,.8),rgba(59,69,38,.35),rgba(22,56,35,.8));box-shadow:0 16px 45px rgba(0,0,0,.18)}
+html[lang="qya"] .hero__stat {border-color:rgba(218,187,112,.25)}
+html[lang="qya"] .hero__stat-value {font-family:Georgia,serif;color:#efd79c}
+html[lang="qya"] .btn--primary {background:linear-gradient(115deg,#a6c893,#e3d397 50%,#9ebc86);color:#102317;border:1px solid #e5d59b;box-shadow:0 5px 22px rgba(160,202,117,.18)}
+html[lang="qya"] .btn--ghost {border-color:#a88c55;background:rgba(20,48,31,.6);color:#f0e1ba}
+html[lang="qya"] .terminal__bar {background:linear-gradient(90deg,#294b35,#12271e);border-color:rgba(218,187,112,.4)}
+html[lang="qya"] .terminal__dot {background:#bda16a}
+html[lang="qya"] .tag {border-color:rgba(208,180,111,.35);background:rgba(69,96,59,.23);color:#e0ddc2}
+html[lang="qya"] :is(.timeline__marker,.repo-card__dot) {background:#d9bc78;box-shadow:0 0 0 4px rgba(217,188,120,.14)}
+html[lang="qya"] :is(.timeline__item,.app-card__foot) {border-color:rgba(217,188,120,.3)}
+html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row):hover {
+ transform:translateY(-4px);border-color:#e5c987;
+ box-shadow:inset 0 1px rgba(255,240,179,.16),0 22px 45px rgba(0,0,0,.3),0 0 24px rgba(184,219,139,.1);
+ }
+}
+@media (max-width:860px) {
+ html[lang="qya"] .hero {padding-top:54px}
+ html[lang="qya"] .hero::before {margin-bottom:22px}
+ html[lang="qya"] .hero__inner {gap:32px}
+ html[lang="qya"] .section {padding-block:70px}
+}
+@media (max-width:600px) {
+ html[lang="qya"] .hero {padding:38px 16px 0}
+ html[lang="qya"] .hero__title {font-size:clamp(2rem,9vw,3rem)}
+ html[lang="qya"] .hero::before {font-size:1rem;letter-spacing:.55rem}
+ html[lang="qya"] .hero__stats {grid-template-columns:repeat(2,minmax(0,1fr))}
+ html[lang="qya"] .section__inner {padding-inline:16px}
+ html[lang="qya"] .about-card {max-width:100%}
+ html[lang="qya"] .about-card::before,html[lang="qya"] .about-card::after {font-size:25px}
+ html[lang="qya"] .section__title {font-size:clamp(1.5rem,7vw,2rem)}
+}
+@media (prefers-reduced-motion:reduce) {
+ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {transition:none}
+}
