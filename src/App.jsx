@@ -1,6 +1,7 @@
 import React from "react";
 import {LanguageProvider} from "./i18n.jsx";
 import "./App.css";
+import "./QuenyaEpic.css";
 
 import Estimator from "./components/Estimator.jsx";
 import Nav from "./components/Nav.jsx";
