@@ -2,24 +2,42 @@ import {useEffect, useRef, useState} from "react";
 import {useLanguage} from "../i18n.jsx";
 
 const TRACK = "/1666401420.mp3";
+const POSITION_KEY = "sunmeat-korean-march-position";
 
 export default function KoreanMarch() {
     const {language} = useLanguage();
     const audioRef = useRef(null);
     const [playing, setPlaying] = useState(false);
 
+    const savePosition = () => {
+        const audio = audioRef.current;
+        if (!audio || !Number.isFinite(audio.currentTime)) return;
+        try { localStorage.setItem(POSITION_KEY, String(audio.currentTime)); } catch { /* Storage unavailable */ }
+    };
+
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
         if (language !== "ko-KP") {
+            savePosition();
+            savePosition();
             audio.pause();
-            audio.currentTime = 0;
             setPlaying(false);
             return;
         }
+        try {
+            const saved = Number(localStorage.getItem(POSITION_KEY));
+            if (Number.isFinite(saved) && saved > 0) audio.currentTime = saved;
+        } catch { /* Storage unavailable */ }
         // Browsers may block audible autoplay until the first user gesture.
         audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
     }, [language]);
+
+    useEffect(() => {
+        const onPageHide = () => savePosition();
+        window.addEventListener("pagehide", onPageHide);
+        return () => window.removeEventListener("pagehide", onPageHide);
+    }, []);
 
     const toggle = async () => {
         const audio = audioRef.current;
@@ -39,7 +57,7 @@ export default function KoreanMarch() {
 
     return (
         <>
-            <audio ref={audioRef} src={TRACK} loop preload="none" onEnded={() => setPlaying(false)} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} />
+            <audio ref={audioRef} src={TRACK} loop preload="metadata" onTimeUpdate={savePosition} onEnded={() => setPlaying(false)} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} />
             {language === "ko-KP" && (
                 <button
                     type="button"
