@@ -15,10 +15,12 @@ import Footer from "./components/Footer.jsx";
 import Websites from "./components/Websites.jsx";
 import NewsFeed from "./components/NewsFeed.jsx";
 import StarlinkOffer from "./components/StarlinkOffer.jsx";
+import KoreanMarch from "./components/KoreanMarch.jsx";
 
 export default function App() {
     return (
         <LanguageProvider>
+        <KoreanMarch/>
         <div className="page">
             <Nav/>
             <main>
