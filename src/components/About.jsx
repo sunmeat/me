@@ -11,6 +11,7 @@ import {
 import { db } from "../firebase.js";
 import Icon from "./Icon.jsx";
 import Eyebrow from "./Eyebrow.jsx";
+import { QuenyaRelicCrest, QuenyaPhotoFiligree } from "./QuenyaRelicOrnaments.jsx";
 
 const AVATAR_URL = "https://github.com/sunmeat/storage/blob/main/images/jpg/square-crop.jpg?raw=true";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
@@ -203,7 +204,8 @@ function About() {
         <section className="section" id="about">
             <div className="section__inner about">
                 <div className="about__media">
-                    <div className="about-card">
+                    <div className={isQuenya ? "about-card about-card--quenya" : "about-card"}>
+                        {isQuenya && <QuenyaRelicCrest />}
                         <div className="about-card__header">
                             <div className="about-card__avatar">
                                 <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" />
@@ -226,6 +228,7 @@ function About() {
                                     loading="lazy"
                                 />
                             </div>
+                            {isQuenya && <QuenyaPhotoFiligree />}
                             <div key={burstKey} className={`about-card__burst${showBurst ? " is-active" : ""}`}>
                                 <Icon name="heart" size={72} />
                             </div>
@@ -278,7 +281,7 @@ function About() {
                                 className="about-card__flag"
                                 style={isQuenya ? { display: "none" } : undefined}
                             />{" "}
-                            {isNorthKorean ? "평양, 조선민주주의인민공화국" : "Orléans, France"}
+                            {isNorthKorean ? "평양, 조선민주주의인민공화국" : isQuenya ? "Imladris, Endórë" : "Orléans, France"}
                         </div>
 
                         {comments.length > 0 && (
