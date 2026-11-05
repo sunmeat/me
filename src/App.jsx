@@ -16,11 +16,13 @@ import Websites from "./components/Websites.jsx";
 import NewsFeed from "./components/NewsFeed.jsx";
 import StarlinkOffer from "./components/StarlinkOffer.jsx";
 import KoreanMarch from "./components/KoreanMarch.jsx";
+import QuenyaMusic from "./components/QuenyaMusic.jsx";
 
 export default function App() {
     return (
         <LanguageProvider>
         <KoreanMarch/>
+        <QuenyaMusic/>
         <div className="page">
             <Nav/>
             <main>
