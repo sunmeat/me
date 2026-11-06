@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
+import {MEDITATION_TRANSLATIONS} from "./meditation-i18n.js";
 
 const SUPPORTED_LANGUAGES = ["en", "uk", "fr", "pt-BR", "es", "zh", "ko-KP", "ar", "sa", "de", "ja", "hv", "qya"];
 
@@ -4610,6 +4611,9 @@ const PROJECT_TRANSLATIONS = {
 };
 for (const [language, entries] of Object.entries(PROJECT_TRANSLATIONS)) {
     Object.assign(TRANSLATIONS[language], entries);
+}
+for (const [language, entries] of Object.entries(MEDITATION_TRANSLATIONS)) {
+    if (TRANSLATIONS[language]) Object.assign(TRANSLATIONS[language], entries);
 }
 
 function normalize(value) {

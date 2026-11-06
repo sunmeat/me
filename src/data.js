@@ -13,10 +13,10 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-    {value: "14", label: "Sites & projects"},
+    {value: "15", label: "Sites & projects"},
     {value: "5+", label: "Published Android apps"},
     {value: "19+", label: "Years in software & teaching"},
-    {value: "247", label: "GitHub repositories"},
+    {value: "250+", label: "GitHub repositories"},
 ];
 
 export const SKILL_GROUPS = [
@@ -228,6 +228,16 @@ export const SITES = [
         tag: "Music Learning",
         status: "live",
         desc: "An interactive hand-tracking music app that turns finger gestures into notes and chords, letting you make music without a physical instrument.",
+    },
+    {
+        id: "tykho-poruch",
+        name: "Тихо поруч",
+        url: "https://tyho.vercel.app/",
+        domain: "tyho.vercel.app",
+        mono: "✨",
+        tag: "Mindfulness",
+        status: "live",
+        desc: "A gentle 60-second pause for people living through the war in Ukraine. Write down a worry, watch a glowing star drift away, and listen to calming music. No account required.",
     },
     {
         id: "duo-stats",
