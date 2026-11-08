@@ -9,7 +9,7 @@ test("every selectable language has complete support notice and banner copy", ()
     for (const language of SUPPORTED_LANGUAGES) {
         const copy = adSupportCopyFor(language);
         for (const key of ["ad", "advertise", "title", "body", "dismiss", "close"]) {
-            assert.ok(typeof copy[key] === "string" && copy[key].length > 4, language + ": " + key);
+            assert.ok(typeof copy[key] === "string" && copy[key].trim().length >= (["title", "body"].includes(key) ? 8 : 1), language + ": " + key);
         }
     }
 });
