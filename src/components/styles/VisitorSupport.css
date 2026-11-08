@@ -1,109 +1,112 @@
-/* A quiet, dismissible reminder. Never covers or disables page content. */
-.visitor-support {
+/* Accessible, user-dismissible ad support dialog. No permanent content gate. */
+.visitor-support__overlay {
     position: fixed;
-    z-index: 65;
-    inset-inline-end: clamp(12px, 2.5vw, 28px);
-    bottom: max(16px, env(safe-area-inset-bottom, 0px));
-    display: flex;
-    align-items: flex-start;
-    gap: 13px;
-    width: min(420px, calc(100vw - 24px));
-    padding: 18px 42px 18px 18px;
-    border-radius: var(--radius-m, 14px);
-    border: 1px solid var(--border, #262d38);
-    border-inline-start: 3px solid var(--accent, #3ddc84);
-    background: var(--surface, #171c24);
-    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.48);
-    color: var(--text, #ecedef);
-    text-align: start;
-    isolation: isolate;
-    font-family: var(--font-body, sans-serif);
-}
-.visitor-support__icon {
-    color: var(--accent, #3ddc84);
-    background: var(--accent-dim, rgba(61, 220, 132, .12));
+    inset: 0;
+    z-index: 2147483646;
     display: grid;
     place-items: center;
-    flex: 0 0 33px;
-    height: 33px;
+    padding: max(18px, env(safe-area-inset-top, 0px)) 14px max(18px, env(safe-area-inset-bottom, 0px));
+    background: rgba(4, 9, 6, 0.56);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.visitor-support {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    width: min(525px, 100%);
+    max-height: calc(100dvh - 36px);
+    overflow-y: auto;
+    padding: 29px 54px 27px 27px;
     border: 1px solid var(--border, #262d38);
-    border-radius: 10px;
-    font-size: 17px;
+    border-block-start: 3px solid var(--accent, #3ddc84);
+    border-radius: var(--radius-l, 20px);
+    background: var(--surface, #171c24);
+    color: var(--text, #ecedef);
+    box-shadow: 0 36px 90px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255,255,255,.04);
+    font-family: var(--font-body, sans-serif);
+    text-align: start;
+    isolation: isolate;
+}
+.visitor-support__icon {
+    display: grid;
+    place-items: center;
+    color: var(--accent, #3ddc84);
+    background: var(--accent-dim, rgba(61,220,132,.12));
+    border: 1px solid var(--border, #262d38);
+    border-radius: 13px;
+    flex: 0 0 48px;
+    height: 48px;
+    font-size: 26px;
 }
 .visitor-support__content { min-width: 0; flex: 1; }
 .visitor-support__title {
-    display: block;
-    margin: 1px 0 8px;
-    font-size: 0.94rem;
-    line-height: 1.4;
+    margin: 1px 0 12px;
+    color: var(--text, #ecedef);
+    font-size: clamp(1.04rem, 2.5vw, 1.27rem);
+    font-family: var(--font-display, sans-serif);
     font-weight: 700;
+    line-height: 1.4;
 }
 .visitor-support__description {
+    margin: 0 0 19px;
     color: var(--text-muted, #9aa3af);
-    margin: 0 0 13px;
-    font-size: 0.83rem;
-    line-height: 1.65;
+    font-size: .9rem;
+    line-height: 1.75;
     overflow-wrap: anywhere;
 }
 .visitor-support__continue {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    border: 1px solid var(--border, #262d38);
-    background: var(--accent-dim, rgba(61, 220, 132, .12));
-    color: var(--accent, #3ddc84);
+    min-height: 43px;
+    padding: 10px 16px;
+    background: var(--accent, #3ddc84);
+    color: var(--bg, #0e1116);
+    border: 1px solid var(--accent, #3ddc84);
+    border-radius: 10px;
     font: inherit;
-    font-size: .8rem;
-    font-weight: 650;
-    min-height: 35px;
-    padding: 8px 12px;
+    font-size: .85rem;
+    font-weight: 700;
     cursor: pointer;
+    transition: filter .15s ease;
 }
-.visitor-support__continue:hover {
-    border-color: var(--accent, #3ddc84);
-}
+.visitor-support__continue:hover { filter: brightness(1.08); }
 .visitor-support__close {
     position: absolute;
-    inset-inline-end: 9px;
-    top: 8px;
-    width: 30px;
-    height: 30px;
+    inset-inline-end: 13px;
+    top: 13px;
     display: grid;
     place-items: center;
+    width: 34px;
+    height: 34px;
     border: 0;
-    border-radius: 8px;
-    color: var(--text-muted, #9aa3af);
+    border-radius: 9px;
     background: transparent;
+    color: var(--text-muted, #9aa3af);
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 25px;
     line-height: 1;
 }
-.visitor-support__close:hover { color: var(--text, #ecedef); background: var(--accent-dimmer, rgba(61, 220, 132, .06)); }
-.visitor-support__continue:focus-visible,
-.visitor-support__close:focus-visible {
+.visitor-support__close:hover { background: var(--accent-dimmer, rgba(61,220,132,.06)); color: var(--text, #ecedef); }
+.visitor-support__close:focus-visible, .visitor-support__continue:focus-visible {
     outline: 2px solid var(--accent, #3ddc84);
     outline-offset: 3px;
 }
-html[lang="ko-KP"] .visitor-support { border-color: rgba(230, 75, 75, .35); }
+html[lang="ko-KP"] .visitor-support { border-color: rgba(230,75,75,.38); }
 html[lang="qya"] .visitor-support {
-    border-color: rgba(201, 173, 112, .55);
-    border-inline-start-color: var(--elven-gold, #d9bc78);
     font-family: Georgia, serif;
+    border-color: rgba(201,173,112,.60);
+    border-block-start-color: var(--elven-gold, #d9bc78);
 }
 html[lang="qya"] .visitor-support__icon { color: var(--elven-gold, #d9bc78); }
-@media (max-width: 520px) {
-    .visitor-support {
-        inset-inline: 12px;
-        bottom: max(12px, env(safe-area-inset-bottom, 0px));
-        width: auto;
-        padding: 14px 39px 14px 12px;
-        gap: 10px;
-    }
-    .visitor-support__icon { flex-basis: 28px; height: 28px; }
-    .visitor-support__title { font-size: .87rem; }
-    .visitor-support__description { font-size: .78rem; }
+@media(max-width:520px){
+    .visitor-support { padding: 23px 43px 22px 19px; gap: 12px; }
+    .visitor-support__icon { flex-basis: 36px; height: 36px; font-size: 21px; }
+    .visitor-support__description { font-size: .84rem; }
 }
-@media (prefers-reduced-motion: reduce) {
-    .visitor-support { transition: none; }
+@media(prefers-reduced-motion:reduce){
+    .visitor-support__overlay { backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .visitor-support__continue { transition: none; }
 }

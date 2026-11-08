@@ -39,3 +39,45 @@ test("hidden ad iframe triggers, but unavailable iframe alone does not", () => {
 test("off-screen content-visibility must not be mistaken for ad blocking", () => {
     assert.equal(detectsAdBlocking({bait: item(), frame: item({height: 0}), styleOf}), false);
 });
+
+
+import {AD_NETWORK_PROBE_URL, detectsNetworkAdBlocking} from "../src/ad-support-detection.js";
+
+test("ad-network probe only checks a non-ad asset, never an ad impression", async () => {
+    let checked;
+    const blocked = await detectsNetworkAdBlocking((url) => {
+        checked = url;
+        return Promise.resolve({type: "opaque"});
+    }, true);
+    assert.equal(blocked, false);
+    assert.equal(checked, AD_NETWORK_PROBE_URL);
+    assert.match(checked, /favicon\\.ico$/);
+});
+
+test("network-blocked AADS with a working site triggers a notice", async () => {
+    const calls = [];
+    const blocked = await detectsNetworkAdBlocking((url) => {
+        calls.push(url);
+        return url === AD_NETWORK_PROBE_URL
+            ? Promise.reject(new TypeError("ERR_BLOCKED_BY_CLIENT"))
+            : Promise.resolve({ok: true});
+    }, true);
+    assert.equal(blocked, true);
+    assert.deepEqual(calls, [AD_NETWORK_PROBE_URL, "/favicon.svg"]);
+});
+
+test("offline or failed site connectivity never triggers a false adblock notice", async () => {
+    let count = 0;
+    const offline = await detectsNetworkAdBlocking(() => { count++; return Promise.reject(); }, false);
+    assert.equal(offline, false);
+    assert.equal(count, 0);
+    const unreachable = await detectsNetworkAdBlocking(() => Promise.reject(new Error("network down")), true);
+    assert.equal(unreachable, false);
+});
+
+test("aborted probing does not report a blocker", async () => {
+    const controller = new AbortController();
+    controller.abort();
+    const value = await detectsNetworkAdBlocking(() => Promise.reject(), true, controller.signal);
+    assert.equal(value, false);
+});
