@@ -13,8 +13,19 @@ function Hero() {
     return (
         <section className={"hero" + (isKorean ? " hero--epic" : "")} id="top">
             {isQuenya && (
-                <div className="hero__ring-inscription" aria-label="Inscription of the One Ring">
-                    <span lang="art">Ash nazg durbatulûk, ash nazg gimbatul, ash nazg thrakatulûk agh burzum-ishi krimpatul</span>
+                <div className="hero__ring-inscription">
+                    <span className="hero__ring-inscription-art" aria-hidden="true"/>
+                    <span className="hero__ring-inscription-copy" lang="art">
+                        Ash nazg durbatulûk, ash nazg gimbatul, ash nazg thrakatulûk agh burzum-ishi krimpatul
+                    </span>
+                    <a
+                        className="hero__ring-inscription-credit"
+                        href="https://commons.wikimedia.org/wiki/File:One_Ring_inscription.svg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Tengwar artwork: Ssolbergj · CC BY-SA 4.0
+                    </a>
                 </div>
             )}
             <div className="hero__inner">
