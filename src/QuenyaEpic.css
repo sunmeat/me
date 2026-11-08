@@ -28,22 +28,31 @@ html[lang="qya"] .nav__brand-mark > * {transform:rotate(-45deg)}
 html[lang="qya"] .hero {position:relative;padding-top:105px}
 /* Real Black Speech lettering replaces the five generic ornamental glyphs. */
 html[lang="qya"] .hero::before { content:none; display:none; }
+/* The authentic two-line Tengwar engraving is a vector mask, not italic Latin text.
+   The original Black Speech wording remains accessible in the DOM. */
 html[lang="qya"] .hero__ring-inscription {
- display:flex;align-items:center;justify-content:center;gap:clamp(12px,2.5vw,28px);
- max-width:100%;margin:0 auto 34px;padding:0 16px;
- text-align:center;color:#d9bc78;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+ max-width:100%;margin:0 auto 30px;padding:0 16px;
+ text-align:center;
 }
-html[lang="qya"] .hero__ring-inscription::before,
-html[lang="qya"] .hero__ring-inscription::after {
- content:"";flex:1 1 30px;max-width:96px;height:1px;
- background:linear-gradient(90deg,transparent,rgba(217,188,120,.62));
+html[lang="qya"] .hero__ring-inscription-art {
+ display:block;width:min(100%,760px);aspect-ratio:453.764/127.499;
+ background:linear-gradient(180deg,#fff0b7 1%,#ddb66d 42%,#ffebac 58%,#b9873e 100%);
+ -webkit-mask:url("/one-ring-inscription.svg") center/contain no-repeat;
+ mask:url("/one-ring-inscription.svg") center/contain no-repeat;
+ filter:drop-shadow(0 0 10px rgba(230,175,75,.55));
 }
-html[lang="qya"] .hero__ring-inscription::after { transform:rotate(180deg); }
-html[lang="qya"] .hero__ring-inscription span {
- font-family:Georgia,"Times New Roman",serif;font-style:italic;
- font-size:clamp(.74rem,1.15vw,1.04rem);line-height:1.75;
- letter-spacing:clamp(.055em,.16vw,.15em);text-wrap:balance;
- color:#edd498;text-shadow:0 0 15px rgba(231,206,126,.24);
+html[lang="qya"] .hero__ring-inscription-copy {
+ position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+ clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
+html[lang="qya"] .hero__ring-inscription-credit {
+ color:#bdaa7b;font-size:.64rem;line-height:1.3;letter-spacing:.04em;
+ text-decoration:none;opacity:.78;
+}
+html[lang="qya"] .hero__ring-inscription-credit:hover,
+html[lang="qya"] .hero__ring-inscription-credit:focus-visible {
+ color:#fff0bb;text-decoration:underline;opacity:1;
 }
 html[lang="qya"] .hero::after {
  content:"";display:block;height:38px;margin:40px auto 0;max-width:750px;
@@ -111,9 +120,9 @@ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {t
 @media (max-width:600px) {
  html[lang="qya"] .hero {padding:38px 16px 0}
  html[lang="qya"] .hero__title {font-size:clamp(2rem,9vw,3rem)}
- html[lang="qya"] .hero__ring-inscription {gap:10px;padding-inline:4px;margin-bottom:24px}
- html[lang="qya"] .hero__ring-inscription span {font-size:.78rem;letter-spacing:.06em;line-height:1.6}
- html[lang="qya"] .hero__ring-inscription::before,html[lang="qya"] .hero__ring-inscription::after {flex-basis:12px;min-width:0}
+ html[lang="qya"] .hero__ring-inscription {padding-inline:2px;margin-bottom:24px}
+ html[lang="qya"] .hero__ring-inscription-art {width:100%}
+ html[lang="qya"] .hero__ring-inscription-credit {font-size:.6rem}
  html[lang="qya"] .hero__stats {grid-template-columns:repeat(2,minmax(0,1fr))}
  html[lang="qya"] .section__inner {padding-inline:16px}
  html[lang="qya"] .about-card {max-width:100%}
