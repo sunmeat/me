@@ -17,6 +17,7 @@ const AVATAR_URL = "/profile-photo.jpg";
 const ENGLISH_PHOTO_URL = "/3040b08e-60cf-4135-9e08-b9488c39fbd4.png";
 const UKRAINIAN_PHOTO_URL = "/d56f81e4-57ff-436b-8b3f-9e7d4b784329.png";
 const JAPANESE_PHOTO_URL = "/Неоновый самурай среди дождливого Токио.png";
+const GERMAN_PHOTO_URL = "/39d2c09e-2982-4516-a791-b86496d10b8a.png";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
 const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
@@ -318,7 +319,7 @@ function About() {
                         <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
                             <div className="about__frame">
                                 <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : AVATAR_URL}
+                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
                                     width="512"
