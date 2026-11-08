@@ -21,6 +21,90 @@ const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
 const TELEGRAM_URL = "https://t.me/sunmeat";
+ 
+// The label, caption and flag describe the photo shown in this edition,
+// not necessarily the author's permanent place of residence.
+const PHOTO_EDITION = {
+    en: {
+        location: "New York, USA",
+        caption: "A New York frame, a head full of ideas. Great projects begin with curiosity. 🗽",
+        flag: "us",
+        country: "United States",
+    },
+    uk: {
+        location: "Одеса, Україна",
+        caption: "Між морем і рядками коду. Одеса завжди нагадує, заради чого варто творити. 🌊",
+        flag: "ua",
+        country: "Україна",
+    },
+    fr: {
+        location: "Orléans, France",
+        caption: "Un instant entre deux projets, des idées plein la tête. ✨",
+        flag: "fr",
+        country: "France",
+    },
+    es: {
+        location: "Orléans, Francia",
+        caption: "Una pausa entre proyectos, con nuevas ideas por delante. ✨",
+        flag: "fr",
+        country: "Francia",
+    },
+    "pt-BR": {
+        location: "Orléans, França",
+        caption: "Uma pausa entre projetos, com novas ideias pela frente. ✨",
+        flag: "fr",
+        country: "França",
+    },
+    de: {
+        location: "Orléans, Frankreich",
+        caption: "Ein Moment zwischen Projekten. Die nächste Idee wartet schon. ✨",
+        flag: "fr",
+        country: "Frankreich",
+    },
+    ja: {
+        location: "オルレアン、フランス",
+        caption: "次のアイデアが形になるまで、少しだけひと休み。 ✨",
+        flag: "fr",
+        country: "フランス",
+    },
+    zh: {
+        location: "法国奥尔良",
+        caption: "在项目与灵感之间，留一点时间看看世界。 ✨",
+        flag: "fr",
+        country: "法国",
+    },
+    ar: {
+        location: "أورليان، فرنسا",
+        caption: "استراحة قصيرة بين المشاريع، وأفكار جديدة في الطريق. ✨",
+        flag: "fr",
+        country: "فرنسا",
+    },
+    sa: {
+        location: "ओर्लेआँ, फ्रान्सदेशः",
+        caption: "नवाः विचाराः, नूतनानि कार्याणि। ✨",
+        flag: "fr",
+        country: "फ्रान्सदेशः",
+    },
+    hv: {
+        location: "Orléans, France",
+        caption: "Ideas, code, and new horizons. ✨",
+        flag: "fr",
+        country: "France",
+    },
+    "ko-KP": {
+        location: "평양, 조선민주주의인민공화국",
+        caption: "새로운 구상과 창조의 길은 계속됩니다. ✨",
+        flag: "kp",
+        country: "조선민주주의인민공화국",
+    },
+    qya: {
+        location: "Imladris, Endórë",
+        caption: "Elen síla lúmenn’ omentielvo ✧",
+        flag: null,
+        country: null,
+    },
+};
+
 
 // All editions use same-origin assets. Keep a themed local fallback if a file fails.
 function handlePhotoError(event) {
@@ -95,6 +179,7 @@ function About() {
     const { language } = useLanguage();
     const isNorthKorean = language === "ko-KP";
     const isQuenya = language === "qya";
+    const photoEdition = PHOTO_EDITION[language] || PHOTO_EDITION.en;
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
@@ -224,7 +309,7 @@ function About() {
                                 <span className="about-card__username">{USERNAME}</span>
                                 <span className="about-card__location-tag">
                                     <Icon name="pin" size={11} />
-                                    {isNorthKorean ? "평양, 조선민주주의인민공화국" : isQuenya ? "Imladris, Endórë" : "Orléans, France"}
+                                    <span translate="no">{photoEdition.location}</span>
                                 </span>
                             </div>
                         </div>
@@ -285,17 +370,18 @@ function About() {
 
                         <div className="about-card__caption">
                             <span className="about-card__username">{USERNAME}</span>
-                            {isNorthKorean ? "평양에서 인사를 보냅니다" : isQuenya ? "Elen síla lúmenn’ omentielvo" : "bonjour, epta"}{" "}
-                            <img
-                                src={isNorthKorean ? "https://flagcdn.com/16x12/kp.png" : "https://flagcdn.com/16x12/fr.png"}
-                                srcSet={isNorthKorean ? "https://flagcdn.com/32x24/kp.png 2x" : "https://flagcdn.com/32x24/fr.png 2x"}
-                                width="16"
-                                height="12"
-                                alt={isNorthKorean ? "North Korea" : "France"}
-                                className="about-card__flag"
-                                style={isQuenya ? { display: "none" } : undefined}
-                            />{" "}
-                            {isNorthKorean ? "평양, 조선민주주의인민공화국" : isQuenya ? "Imladris, Endórë" : "Orléans, France"}
+                            <span translate="no">{photoEdition.caption}</span>{" "}
+                            {photoEdition.flag && (
+                                <img
+                                    src={`https://flagcdn.com/16x12/${photoEdition.flag}.png`}
+                                    srcSet={`https://flagcdn.com/32x24/${photoEdition.flag}.png 2x`}
+                                    width="16"
+                                    height="12"
+                                    alt={photoEdition.country}
+                                    className="about-card__flag"
+                                />
+                            )}{" "}
+                            <span translate="no">{photoEdition.location}</span>
                         </div>
 
                         {comments.length > 0 && (
