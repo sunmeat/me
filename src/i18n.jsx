@@ -4602,6 +4602,23 @@ Object.assign(AR, {
   "Constantly expanding technical expertise through specialized courses, hands-on skill validations, and industry certifications in software engineering, networking, and cloud services.": "تطوير الخبرات التقنية باستمرار من خلال الدورات المتخصصة والتقييمات العملية والشهادات المهنية في هندسة البرمجيات والشبكات والخدمات السحابية.",
   "available for freelance work": "متاح للعمل الحر"
 });
+
+// Final interface phrases for fluent Arabic presentation.
+Object.assign(AR, {
+  "A toolkit built for shipping, not just prototyping.": "مجموعة أدوات صُمّمت لإنجاز منتجات حقيقية، لا للاكتفاء بالنماذج التجريبية.",
+  "Experience & education.": "الخبرة المهنية والتعليم.",
+  "Let's build your own app.": "لنحوّل فكرتك إلى تطبيق حقيقي.",
+  "Open to freelance projects, long-term collaborations and consulting work. Based in Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.": "أرحّب بالمشاريع المستقلة والتعاون طويل الأمد والاستشارات التقنية. أتواجد في أورليان بفرنسا، وأردّ عادةً خلال يوم عمل واحد.",
+  "Select your project requirements to get an instant scope estimate.": "حدّد متطلبات مشروعك للحصول على تقدير أولي لحجم العمل فورًا.",
+  "Built with ❤️ & React • Available for projects": "صُنع بمحبة وباستخدام رياكت • متاح للتعاون في المشاريع",
+  "Visit": "زيارة",
+  "Experience": "الخبرة",
+  "Education": "التعليم",
+  "Technical skills": "المهارات التقنية",
+  "A toolkit shaped by production work, teaching, and constant experimentation.": "مجموعة أدوات نمت عبر المشاريع الحقيقية والتدريس والتجربة المستمرة.",
+  "Get in touch": "تواصل معي",
+  "Orléans, France": "أورليان، فرنسا"
+});
 const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
 const PROJECT_TRANSLATIONS = {
