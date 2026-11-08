@@ -16,6 +16,7 @@ import { QuenyaRelicCrest, QuenyaPhotoFiligree } from "./QuenyaRelicOrnaments.js
 const AVATAR_URL = "/profile-photo.jpg";
 const ENGLISH_PHOTO_URL = "/3040b08e-60cf-4135-9e08-b9488c39fbd4.png";
 const UKRAINIAN_PHOTO_URL = "/d56f81e4-57ff-436b-8b3f-9e7d4b784329.png";
+const JAPANESE_PHOTO_URL = "/Неоновый самурай среди дождливого Токио.png";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
 const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
@@ -62,10 +63,10 @@ const PHOTO_EDITION = {
         country: "Frankreich",
     },
     ja: {
-        location: "オルレアン、フランス",
-        caption: "次のアイデアが形になるまで、少しだけひと休み。 ✨",
-        flag: "fr",
-        country: "フランス",
+        location: "東京、日本",
+        caption: "雨の東京、ネオンに浮かぶ侍。未来は、まだ書かれていない。🌧️⚡",
+        flag: "jp",
+        country: "日本",
     },
     zh: {
         location: "法国奥尔良",
@@ -317,7 +318,7 @@ function About() {
                         <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
                             <div className="about__frame">
                                 <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : AVATAR_URL}
+                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
                                     width="512"
