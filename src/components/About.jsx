@@ -18,6 +18,7 @@ const ENGLISH_PHOTO_URL = "/3040b08e-60cf-4135-9e08-b9488c39fbd4.png";
 const UKRAINIAN_PHOTO_URL = "/d56f81e4-57ff-436b-8b3f-9e7d4b784329.png";
 const JAPANESE_PHOTO_URL = "/Неоновый самурай среди дождливого Токио.png";
 const GERMAN_PHOTO_URL = "/39d2c09e-2982-4516-a791-b86496d10b8a.png";
+const SPANISH_PHOTO_URL = "/Матадор с гитарой на арене.png";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
 const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
@@ -46,10 +47,10 @@ const PHOTO_EDITION = {
         country: "France",
     },
     es: {
-        location: "Orléans, Francia",
-        caption: "Una pausa entre proyectos, con nuevas ideas por delante. ✨",
-        flag: "fr",
-        country: "Francia",
+        location: "España",
+        caption: "Entre acordes y arena, un matador cambia la espada por una guitarra. Algunas historias se cuentan mejor con música. 🎸✨",
+        flag: "es",
+        country: "España",
     },
     "pt-BR": {
         location: "Orléans, França",
@@ -58,10 +59,10 @@ const PHOTO_EDITION = {
         country: "França",
     },
     de: {
-        location: "Orléans, Frankreich",
-        caption: "Ein Moment zwischen Projekten. Die nächste Idee wartet schon. ✨",
-        flag: "fr",
-        country: "Frankreich",
+        location: "Deutschland",
+        caption: "Ein neuer Blickwinkel, ein neuer Gedanke. Manchmal beginnt die spannendste Geschichte mit einem einzigen Bild. ✨",
+        flag: "de",
+        country: "Deutschland",
     },
     ja: {
         location: "東京、日本",
@@ -319,7 +320,7 @@ function About() {
                         <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
                             <div className="about__frame">
                                 <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : AVATAR_URL}
+                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : language === "es" ? SPANISH_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
                                     width="512"
