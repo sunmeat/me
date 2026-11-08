@@ -19,6 +19,11 @@ const UKRAINIAN_PHOTO_URL = "/d56f81e4-57ff-436b-8b3f-9e7d4b784329.png";
 const JAPANESE_PHOTO_URL = "/Неоновый самурай среди дождливого Токио.png";
 const GERMAN_PHOTO_URL = "/39d2c09e-2982-4516-a791-b86496d10b8a.png";
 const SPANISH_PHOTO_URL = "/Матадор с гитарой на арене.png";
+const BRAZILIAN_PHOTO_URL = "/Солнечный Рио с видом на Христа-Искупителя.png";
+const CHINESE_PHOTO_URL = "/Будівничий Великої Китайської стіни з тигреням.png";
+const ARABIC_PHOTO_URL = "/Роскошный балкон с видом на Дубай.png";
+const SANSKRIT_PHOTO_URLS = ["/Бенгалуру_ гуру кода среди технологий и традиций-1.png", "/Бенгалуру_ код и традиции-2.png"];
+const HIGH_VALYRIAN_PHOTO_URL = "/47f878cc-5125-4ca5-9775-6b7c70ee2a2b.png";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
 const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
@@ -53,10 +58,10 @@ const PHOTO_EDITION = {
         country: "España",
     },
     "pt-BR": {
-        location: "Orléans, França",
-        caption: "Uma pausa entre projetos, com novas ideias pela frente. ✨",
-        flag: "fr",
-        country: "França",
+        location: "Rio de Janeiro, Brasil",
+        caption: "Sol, mar e o Cristo Redentor lá no alto. No Rio, até a criatividade entra no ritmo da cidade. ☀️🌴",
+        flag: "br",
+        country: "Brasil",
     },
     de: {
         location: "Deutschland",
@@ -71,28 +76,28 @@ const PHOTO_EDITION = {
         country: "日本",
     },
     zh: {
-        location: "法国奥尔良",
-        caption: "在项目与灵感之间，留一点时间看看世界。 ✨",
-        flag: "fr",
-        country: "法国",
+        location: "中国·长城",
+        caption: "杜罗夫，墙我给你修回来了！还请来一只小老虎当监工。🐯🧱",
+        flag: "cn",
+        country: "中国",
     },
     ar: {
-        location: "أورليان، فرنسا",
-        caption: "استراحة قصيرة بين المشاريع، وأفكار جديدة في الطريق. ✨",
-        flag: "fr",
-        country: "فرنسا",
+        location: "دبي، الإمارات العربية المتحدة",
+        caption: "من شرفة تطل على دبي، تبدو أضواء المدينة كأنها شيفرة تكتب حكاية جديدة كل ليلة. 🌃✨",
+        flag: "ae",
+        country: "الإمارات العربية المتحدة",
     },
     sa: {
-        location: "ओर्लेआँ, फ्रान्सदेशः",
-        caption: "नवाः विचाराः, नूतनानि कार्याणि। ✨",
-        flag: "fr",
-        country: "फ्रान्सदेशः",
+        location: "बेङ्गलूरु, भारतम्",
+        caption: "तन्त्रज्ञानस्य परम्परायाश्च सुन्दरः सङ्गमः। कूटलेखनं मम साधना। 🪷💻",
+        flag: "in",
+        country: "भारतम्",
     },
     hv: {
-        location: "Orléans, France",
-        caption: "Ideas, code, and new horizons. ✨",
-        flag: "fr",
-        country: "France",
+        location: "Sōdrurlion, Vesteros",
+        caption: "Sōnar amāzis. ❄️",
+        flag: null,
+        country: null,
     },
     "ko-KP": {
         location: "평양, 조선민주주의인민공화국",
@@ -108,6 +113,15 @@ const PHOTO_EDITION = {
     },
 };
 
+const SANSKRIT_PHOTO_EDITION = [
+    PHOTO_EDITION.sa,
+    {
+        location: "बेङ्गलूरु, भारतम्",
+        caption: "नूतनं कूटलेखनं प्राचीना च परम्परा। बेङ्गलूरुनगरे उभयोः सङ्गमः। 💻✨",
+        flag: "in",
+        country: "भारतम्",
+    },
+];
 
 // All editions use same-origin assets. Keep a themed local fallback if a file fails.
 function handlePhotoError(event) {
@@ -182,7 +196,9 @@ function About() {
     const { language } = useLanguage();
     const isNorthKorean = language === "ko-KP";
     const isQuenya = language === "qya";
-    const photoEdition = PHOTO_EDITION[language] || PHOTO_EDITION.en;
+    // Select once per page visit; never reroll the photo during ordinary re-renders.
+    const [sanskritPhotoIndex] = useState(() => Math.floor(Math.random() * SANSKRIT_PHOTO_URLS.length));
+    const photoEdition = language === "sa" ? SANSKRIT_PHOTO_EDITION[sanskritPhotoIndex] : (PHOTO_EDITION[language] || PHOTO_EDITION.en);
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
@@ -320,7 +336,7 @@ function About() {
                         <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
                             <div className="about__frame">
                                 <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : language === "es" ? SPANISH_PHOTO_URL : AVATAR_URL}
+                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : language === "es" ? SPANISH_PHOTO_URL : language === "pt-BR" ? BRAZILIAN_PHOTO_URL : language === "zh" ? CHINESE_PHOTO_URL : language === "ar" ? ARABIC_PHOTO_URL : language === "sa" ? SANSKRIT_PHOTO_URLS[sanskritPhotoIndex] : language === "hv" ? HIGH_VALYRIAN_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
                                     width="512"
