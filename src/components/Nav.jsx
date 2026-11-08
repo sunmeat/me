@@ -25,6 +25,7 @@ function Nav() {
     const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
     const languageSwitcherRef = useRef(null);
     const {language, setLanguage} = useLanguage();
+    const isArabic = language === "ar";
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 12);
@@ -116,13 +117,13 @@ function Nav() {
                                     onClick={() => chooseLanguage("en")}
                                 >
                                     <Flag country="us" label="United States flag" />
-                                    <span className="language-switcher__label">English</span>
+                                    <span className="language-switcher__label">{isArabic ? "الإنجليزية" : "English"}</span>
                                     {language === "en" && <Icon name="check" size={15}/>}
                                 </button>
 
                                 <button type="button" role="menuitemradio" aria-checked={language === "uk"} className={`language-switcher__option ${language === "uk" ? "is-selected" : ""}`} onClick={() => chooseLanguage("uk")}>
                                     <Flag country="ua" label="Прапор України" />
-                                    <span className="language-switcher__label">Українська</span>
+                                    <span className="language-switcher__label">{isArabic ? "الأوكرانية" : "Українська"}</span>
                                     {language === "uk" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -134,7 +135,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("ja")}
                                 >
                                     <Flag country="jp" label="日本の国旗" />
-                                    <span className="language-switcher__label">日本語</span>
+                                    <span className="language-switcher__label">{isArabic ? "اليابانية" : "日本語"}</span>
                                     {language === "ja" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -146,7 +147,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("de")}
                                 >
                                     <Flag country="de" label="Flagge Deutschlands" />
-                                    <span className="language-switcher__label">Deutsch</span>
+                                    <span className="language-switcher__label">{isArabic ? "الألمانية" : "Deutsch"}</span>
                                     {language === "de" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -158,7 +159,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("fr")}
                                 >
                                     <Flag country="fr" label="Drapeau français" />
-                                    <span className="language-switcher__label">Français</span>
+                                    <span className="language-switcher__label">{isArabic ? "الفرنسية" : "Français"}</span>
                                     {language === "fr" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -170,7 +171,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("es")}
                                 >
                                     <Flag country="es" label="Bandera de España" />
-                                    <span className="language-switcher__label">Español</span>
+                                    <span className="language-switcher__label">{isArabic ? "الإسبانية" : "Español"}</span>
                                     {language === "es" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -182,7 +183,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("pt-BR")}
                                 >
                                     <Flag country="br" label="Bandeira do Brasil" />
-                                    <span className="language-switcher__label">Português</span>
+                                    <span className="language-switcher__label">{isArabic ? "البرتغالية البرازيلية" : "Português"}</span>
                                     {language === "pt-BR" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -194,7 +195,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("zh")}
                                 >
                                     <Flag country="cn" label="Chinese flag" />
-                                    <span className="language-switcher__label">中文</span>
+                                    <span className="language-switcher__label">{isArabic ? "الصينية" : "中文"}</span>
                                     {language === "zh" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -206,7 +207,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("ko-KP")}
                                 >
                                     <Flag country="kp" label="조선민주주의인민공화국 국기" />
-                                    <span className="language-switcher__label">조선말</span>
+                                    <span className="language-switcher__label">{isArabic ? "الكورية الشمالية" : "조선말"}</span>
                                     {language === "ko-KP" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -218,7 +219,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("ar")}
                                 >
                                     <Flag country="sa" label="علم المملكة العربية السعودية" />
-                                    <span className="language-switcher__label">العربية</span>
+                                    <span className="language-switcher__label">{isArabic ? "العربية" : "العربية"}</span>
                                     {language === "ar" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -230,7 +231,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("sa")}
                                 >
                                     <Flag country="in" label="India" />
-                                    <span className="language-switcher__label">संस्कृतम्</span>
+                                    <span className="language-switcher__label">{isArabic ? "السنسكريتية" : "संस्कृतम्"}</span>
                                     {language === "sa" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -242,7 +243,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("hv")}
                                 >
                                     <Flag country="hv" label="Three-headed dragon" />
-                                    <span className="language-switcher__label">Valyrian</span>
+                                    <span className="language-switcher__label">{isArabic ? "الفاليرية العليا" : "Valyrian"}</span>
                                     {language === "hv" && <Icon name="check" size={15}/>}
                                 </button>
 
@@ -254,7 +255,7 @@ function Nav() {
                                     onClick={() => chooseLanguage("qya")}
                                 >
                                     <Flag country="qya" label="Quenya leaf symbol" />
-                                    <span className="language-switcher__label">Quenya</span>
+                                    <span className="language-switcher__label">{isArabic ? "كوينيا" : "Quenya"}</span>
                                     {language === "qya" && <Icon name="check" size={15}/>}
                                 </button>
 </div>
