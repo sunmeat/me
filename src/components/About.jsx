@@ -13,12 +13,20 @@ import Icon from "./Icon.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import { QuenyaRelicCrest, QuenyaPhotoFiligree } from "./QuenyaRelicOrnaments.jsx";
 
-const AVATAR_URL = "https://github.com/sunmeat/storage/blob/main/images/jpg/square-crop.jpg?raw=true";
+const AVATAR_URL = "/profile-photo.jpg";
 const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
 const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
 const TELEGRAM_URL = "https://t.me/sunmeat";
+
+// All editions use same-origin assets. Keep a themed local fallback if a file fails.
+function handlePhotoError(event) {
+    const photo = event.currentTarget;
+    if (photo.getAttribute("src") !== QUENYA_PHOTO_URL) {
+        photo.setAttribute("src", QUENYA_PHOTO_URL);
+    }
+}
 
 // Separate Firestore collection just for this card — does not touch
 // the existing "poems" / "comments" collections used elsewhere.
@@ -208,7 +216,7 @@ function About() {
                         {isQuenya && <QuenyaRelicCrest />}
                         <div className="about-card__header">
                             <div className="about-card__avatar">
-                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" />
+                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" width="512" height="512" loading="lazy" decoding="async" onError={handlePhotoError} />
                             </div>
                             <div className="about-card__meta">
                                 <span className="about-card__username">{USERNAME}</span>
@@ -225,6 +233,10 @@ function About() {
                                     src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : AVATAR_URL}
                                     alt="Oleksandr Zahoruiko"
                                     className="about__photo"
+                                    width="512"
+                                    height="512"
+                                    decoding="async"
+                                    onError={handlePhotoError}
                                     loading="lazy"
                                 />
                             </div>

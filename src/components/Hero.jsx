@@ -7,10 +7,16 @@ import Terminal from "./Terminal.jsx";
 function Hero() {
     const {language} = useLanguage();
     const isKorean = language === "ko-KP";
+    const isQuenya = language === "qya";
     const isJapanese = language === "ja";
     const isChurchSlavonic = language === "cu";
     return (
         <section className={"hero" + (isKorean ? " hero--epic" : "")} id="top">
+            {isQuenya && (
+                <div className="hero__ring-inscription" aria-label="Inscription of the One Ring">
+                    <span lang="art">Ash nazg durbatulûk, ash nazg gimbatul, ash nazg thrakatulûk agh burzum-ishi krimpatul</span>
+                </div>
+            )}
             <div className="hero__inner">
                 <div className="hero__copy">
                     <Eyebrow>{isKorean ? "위대한 기술 창조의 력사 · 제1장" : isChurchSlavonic ? "$ азъесмь" : isJapanese ? "技術者プロフィール" : "$ whoami"}</Eyebrow>

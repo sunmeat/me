@@ -26,11 +26,24 @@ html[lang="qya"] .nav {border-bottom:1px solid rgba(216,187,117,.36);background:
 html[lang="qya"] .nav__brand-mark {border:1px solid #d9bc78;border-radius:3px;transform:rotate(45deg);box-shadow:0 0 0 4px rgba(217,188,120,.08)}
 html[lang="qya"] .nav__brand-mark > * {transform:rotate(-45deg)}
 html[lang="qya"] .hero {position:relative;padding-top:105px}
-html[lang="qya"] .hero::before {
- content:"✧  ❧  ✦  ❧  ✧";display:block;width:max-content;max-width:100%;
- margin:0 auto 34px;color:#d9bc78;letter-spacing:clamp(.5rem,2vw,1.5rem);
- font:clamp(1.2rem,2vw,1.9rem) Georgia,serif;
- text-shadow:0 0 25px rgba(231,206,126,.45);
+/* Real Black Speech lettering replaces the five generic ornamental glyphs. */
+html[lang="qya"] .hero::before { content:none; display:none; }
+html[lang="qya"] .hero__ring-inscription {
+ display:flex;align-items:center;justify-content:center;gap:clamp(12px,2.5vw,28px);
+ max-width:100%;margin:0 auto 34px;padding:0 16px;
+ text-align:center;color:#d9bc78;
+}
+html[lang="qya"] .hero__ring-inscription::before,
+html[lang="qya"] .hero__ring-inscription::after {
+ content:"";flex:1 1 30px;max-width:96px;height:1px;
+ background:linear-gradient(90deg,transparent,rgba(217,188,120,.62));
+}
+html[lang="qya"] .hero__ring-inscription::after { transform:rotate(180deg); }
+html[lang="qya"] .hero__ring-inscription span {
+ font-family:Georgia,"Times New Roman",serif;font-style:italic;
+ font-size:clamp(.74rem,1.15vw,1.04rem);line-height:1.75;
+ letter-spacing:clamp(.055em,.16vw,.15em);text-wrap:balance;
+ color:#edd498;text-shadow:0 0 15px rgba(231,206,126,.24);
 }
 html[lang="qya"] .hero::after {
  content:"";display:block;height:38px;margin:40px auto 0;max-width:750px;
@@ -91,14 +104,16 @@ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {t
 }
 @media (max-width:860px) {
  html[lang="qya"] .hero {padding-top:54px}
- html[lang="qya"] .hero::before {margin-bottom:22px}
+ html[lang="qya"] .hero__ring-inscription {margin-bottom:22px}
  html[lang="qya"] .hero__inner {gap:32px}
  html[lang="qya"] .section {padding-block:70px}
 }
 @media (max-width:600px) {
  html[lang="qya"] .hero {padding:38px 16px 0}
  html[lang="qya"] .hero__title {font-size:clamp(2rem,9vw,3rem)}
- html[lang="qya"] .hero::before {font-size:1rem;letter-spacing:.55rem}
+ html[lang="qya"] .hero__ring-inscription {gap:10px;padding-inline:4px;margin-bottom:24px}
+ html[lang="qya"] .hero__ring-inscription span {font-size:.78rem;letter-spacing:.06em;line-height:1.6}
+ html[lang="qya"] .hero__ring-inscription::before,html[lang="qya"] .hero__ring-inscription::after {flex-basis:12px;min-width:0}
  html[lang="qya"] .hero__stats {grid-template-columns:repeat(2,minmax(0,1fr))}
  html[lang="qya"] .section__inner {padding-inline:16px}
  html[lang="qya"] .about-card {max-width:100%}
@@ -107,4 +122,24 @@ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {t
 }
 @media (prefers-reduced-motion:reduce) {
  html[lang="qya"] :is(.skill-card,.app-card,.site-card,.repo-card,.social-row) {transition:none}
+}
+
+/* Desktop scroll budget: avoid viewport-wide blur/masks on every frame.
+   Decorative colors, engravings and hover affordances stay intact. */
+@media (min-width:861px) {
+ html[lang="qya"] body {background-attachment:scroll}
+ html[lang="qya"] .page::before {content:none;display:none}
+ html[lang="qya"] :is(.nav,.nav--scrolled) {
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+  background:rgba(7,24,16,.97);
+ }
+ /* Skip painting long, off-screen sections until they approach the viewport. */
+ html[lang="qya"] .section {
+  content-visibility:auto;
+  contain-intrinsic-size:auto 760px;
+ }
+ html[lang="qya"] :is(.skill-card,.app-card,.site-card,.contact-card,.news__card,.repo-card,.social-row) {
+  box-shadow:inset 0 1px rgba(255,240,179,.09),0 10px 26px rgba(0,0,0,.19);
+ }
+ html[lang="qya"] .site-card__status--live .site-card__status-dot {animation:none}
 }
