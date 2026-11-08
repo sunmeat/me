@@ -51,7 +51,7 @@ test("ad-network probe only checks a non-ad asset, never an ad impression", asyn
     }, true);
     assert.equal(blocked, false);
     assert.equal(checked, AD_NETWORK_PROBE_URL);
-    assert.match(checked, /favicon\\.ico$/);
+    assert.equal(checked.endsWith("/favicon.ico"), true);
 });
 
 test("network-blocked AADS with a working site triggers a notice", async () => {

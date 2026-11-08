@@ -26,7 +26,7 @@ function previewRequested() {
 export default function VisitorSupport() {
     const {language} = useLanguage();
     const copy = adSupportCopyFor(language);
-    const [dismissed, setDismissed] = useState(wasDismissed);
+    const [dismissed, setDismissed] = useState(() => previewRequested() ? false : wasDismissed());
     const [blocked, setBlocked] = useState(false);
     const [preview] = useState(previewRequested);
     const titleId = useId();
