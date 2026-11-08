@@ -1,4 +1,5 @@
 import {useLanguage, withTranslation} from "../i18n.jsx";
+import {arabizeVisibleText} from "../arabic-localization.js";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const TOPICS = [
@@ -104,6 +105,7 @@ function cleanContent(rawHtml, title) {
 function NewsFeed() {
     const { language } = useLanguage();
     const isJapanese = language === "ja";
+    const isArabic = language === "ar";
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [activeTopic, setActiveTopic] = useState("AI Machine Learning");
@@ -285,14 +287,14 @@ function NewsFeed() {
                                     <span className="news__card-date">{currentItem.formattedDate}</span>
                                 </div>
 
-                                <h3 className="news__card-title" translate="no">{isJapanese ? `「${currentItem.topic}」に関する最新ニュース` : currentItem.title}</h3>
+                                <h3 className="news__card-title" translate="no">{isJapanese ? `「${currentItem.topic}」に関する最新ニュース` : isArabic ? `آخر الأخبار عن ${arabizeVisibleText(currentItem.topic)}` : currentItem.title}</h3>
                                 <p className="news__card-excerpt">{isJapanese ? "カードを選択すると、配信元の記事全文を開きます。" : "Click this card to read full article."}</p>
 
                                 <div className="news__card-footer">
                                     <div className="news__divider"></div>
                                     <div className="news__source">
                                         <span className="news__source-label">{isJapanese ? "情報提供元" : "SOURCE"}</span>
-                                        <span className="news__source-name" translate="no">{isJapanese ? "外部ニュース配信元" : currentItem.source}</span>
+                                        <span className="news__source-name" translate="no">{isJapanese ? "外部ニュース配信元" : isArabic ? "مصدر إخباري خارجي" : currentItem.source}</span>
                                     </div>
                                 </div>
                             </article>
