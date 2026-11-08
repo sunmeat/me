@@ -15,6 +15,7 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import Websites from "./components/Websites.jsx";
 import AadsBanner from "./components/AadsBanner.jsx";
+import VisitorSupport from "./components/VisitorSupport.jsx";
 import NewsFeed from "./components/NewsFeed.jsx";
 import StarlinkOffer from "./components/StarlinkOffer.jsx";
 import KoreanMarch from "./components/KoreanMarch.jsx";
@@ -31,10 +32,11 @@ export default function App() {
                 <Hero/>
                 <StarlinkOffer/>
                 <About/>
+                <AadsBanner/>
+                <VisitorSupport/>
                 <Skills/>
                 <Apps/>
                 <Websites/>
-                <AadsBanner/>
                 <OpenSource/>
                 <Experience/>
                 <Contact/>
