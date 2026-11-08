@@ -1,6 +1,7 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 import {MEDITATION_TRANSLATIONS} from "./meditation-i18n.js";
 import {DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES, getLanguageFromPath, getLanguagePath} from "./language-routing.js";
+import {arabizeVisibleText} from "./arabic-localization.js";
 
 const LanguageContext = createContext({language: DEFAULT_LANGUAGE, setLanguage: () => {}});
 
@@ -24,7 +25,7 @@ export function LanguageProvider({children}) {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
         document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
         document.title = language === "cu" ? "Александр Загоруйко — О дѣлахъ и дарованїяхъ" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Dārys se Android | Orléans" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者 | フランス・オルレアン" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler | Orléans, Frankreich" : language === "od" ? "Oleksandr Zahoruiko — одесский программист, таки да" : language === "sa" ? "अलेक्सान्द्रः ज़होरुइको — सङ्गणकविद्यायाः कर्मयोगी"
-            : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة | أورليان، فرنسا"
+            : language === "ar" ? "أوليكساندر زاهورويكو — مطوّر تطبيقات أندرويد والويب | أورليان، فرنسا"
             : language === "ko-KP" ? "위대한 기술 창조자 Oleksandr Zahoruiko — 주체적 프로그람 개발의 영웅 | 프랑스 오를레앙"
             : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师 | 法国奥尔良"
@@ -40,10 +41,11 @@ export function LanguageProvider({children}) {
                 ? "Oleksandr Zahoruiko — Desenvolvedor Android e Full-stack | Orléans, França"
                 : "Oleksandr Zahoruiko — Android & Full-Stack Developer | Orléans, France";
         if (language === "cu") document.title = translateExperimentalFallback(document.title, language);
+        if (language === "ar") document.title = arabizeVisibleText(document.title);
 
         const updateMeta = (selector, content) => {
             const element = document.querySelector(selector);
-            if (element) element.setAttribute("content", language === "cu" ? translateExperimentalFallback(content, language) : content);
+            if (element) element.setAttribute("content", language === "cu" ? translateExperimentalFallback(content, language) : language === "ar" && !/url/i.test(selector) ? arabizeVisibleText(content) : content);
         };
         const canonicalUrl = window.location.origin + getLanguagePath(language);
         const canonical = document.querySelector('link[rel="canonical"]');
@@ -66,7 +68,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Engenheiro de software e professor em Orléans. Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados e disponível para trabalhos freelance."
                 : "Orléans-based software engineer & lecturer. Native Android apps end-to-end (Jetpack Compose, Kotlin) + full-stack web (React, Spring Boot, .NET, Node.js). Live side projects and open for freelance collaborations.");
-        updateMeta('meta[property="og:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
+        updateMeta('meta[property="og:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, примадонна цифрового балета" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "أوليكساندر زاهورويكو — مطوّر تطبيقات أندرويد والويب" : language === "ko-KP" ? "Oleksandr Zahoruiko — 위대한 안드로이드 및 웹 기술 창조자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -88,7 +90,7 @@ export function LanguageProvider({children}) {
             : language === "pt-BR"
                 ? "Aplicativos Android nativos, desenvolvimento web full-stack e projetos publicados. Mais de 19 anos de experiência. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. 19+ years in software & teaching. Based in Orléans, France. Open for projects.");
-        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "Oleksandr Zahoruiko — مطوّر أندرويد وبرمجيات متكاملة" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
+        updateMeta('meta[name="twitter:title"]', language === "cu" ? "Александр Загоруйко — труды и дарованїя" : language === "av" ? "Анастасиеволочковский — дорогие мои, я в прекрасной форме!" : language === "qya" ? "Olexandar Sahoruico — Andróida ar Quanta-tambë carmatano | Orléans, Francia" : language === "hv" ? "Oleksandr Zahoruiko — Android se Full-Stack dārys" : language === "ja" ? "Oleksandr Zahoruiko — Android・フルスタック開発者" : language === "de" ? "Oleksandr Zahoruiko — Android- und Full-Stack-Entwickler" : language === "ar" ? "أوليكساندر زاهورويكو — مطوّر تطبيقات أندرويد والويب" : language === "ko-KP" ? "Oleksandr Zahoruiko — 안드로이드 및 웹 개발 기술자" : language === "zh"
             ? "Oleksandr Zahoruiko — Android 与全栈开发工程师"
             : language === "ru"
             ? "Oleksandr Zahoruiko — Android- и Full-stack-разработчик"
@@ -4489,6 +4491,76 @@ Object.assign(UK, {
   "Massage Kyiv": "Масаж у Києві"
 });
 
+// Contextual Arabic strings for forms, estimators and frequently visible terms.
+Object.assign(AR, {
+ "Estimate Your App Project": "قدّر مشروع تطبيقك",
+ "Choose your platform": "اختر المنصة المناسبة",
+ "Pick your core features": "اختر الميزات الأساسية",
+ "Set your timeline": "حدّد الجدول الزمني",
+ "Core features": "الميزات الأساسية",
+ "Platform": "المنصة",
+ "Timeline": "الجدول الزمني",
+ "Estimated timeframe": "المدة الزمنية المقدّرة",
+ "Recommended stack": "التقنيات الموصى بها",
+ "Backend API + Web App": "واجهة خلفية وتطبيق ويب",
+ "Android Native": "تطبيق أندرويد أصلي",
+ "Full-Stack": "تطوير ويب متكامل",
+ "Authentication": "التحقق من الهوية",
+ "Offline Mode": "العمل دون اتصال بالإنترنت",
+ "In-App Purchases": "المشتريات داخل التطبيق",
+ "Hardware / Sensors": "الأجهزة والمستشعرات",
+ "Admin Panel": "لوحة الإدارة",
+ "Custom UI/UX": "واجهة وتجربة مستخدم مخصّصتان",
+ "Standard": "قياسي",
+ "Express": "سريع",
+ "Balanced pace, full QA cycle": "وتيرة متوازنة واختبارات جودة شاملة",
+ "Priority slot, ~30% faster": "أولوية في التنفيذ، أسرع بنحو ٣٠٪",
+ "Not specified": "غير محدّد",
+ "Platform:": "المنصة:",
+ "Features:": "الميزات:",
+ "Timeline:": "الجدول الزمني:",
+ "Estimated scope:": "النطاق المقدّر:",
+ "Suggested stack:": "التقنيات المقترحة:",
+ "Project Brief — sunmeat.dev": "ملخص المشروع",
+ "Sent via sunmeat.dev project estimator.": "أُرسل بواسطة أداة تقدير المشاريع.",
+ "Brief copied — open chat": "نُسخ الملخص، افتح المحادثة",
+ "Send Brief to Telegram": "إرسال الملخص عبر تلغرام",
+ "Copied to clipboard": "نُسخ إلى الحافظة",
+ "Copy Brief Text": "نسخ نص الملخص",
+ "Step 01": "الخطوة الأولى",
+ "Step 02": "الخطوة الثانية",
+ "Step 03": "الخطوة الثالثة",
+ "English": "الإنجليزية",
+ "French": "الفرنسية",
+ "Portuguese": "البرتغالية",
+ "Spanish": "الإسبانية",
+ "Chinese": "الصينية",
+ "German": "الألمانية",
+ "Choose language": "اختر اللغة",
+ "Read article": "اقرأ المقال",
+ "Google News": "أخبار غوغل",
+ "News Feed": "موجز الأخبار",
+ "News Source": "مصدر الأخبار",
+ "Android / Full-Stack Developer": "مطوّر أندرويد والويب المتكامل",
+ "GitHub repositories": "مستودعات غيت هاب",
+ "View GitHub profile": "عرض ملفي على غيت هاب",
+ "Message on Telegram": "مراسلتي عبر تلغرام",
+ "Live on Google Play right now.": "متاحة الآن في متجر غوغل بلاي.",
+ "STARLINK REFERRAL": "عرض إحالة ستارلينك",
+ "Activate Starlink": "تفعيل ستارلينك",
+ "React": "رياكت",
+ "GitHub": "غيت هاب",
+ "Google": "غوغل",
+ "Google Play": "متجر غوغل بلاي",
+ "Telegram": "تلغرام",
+ "Starlink": "ستارلينك",
+ "Android": "أندرويد",
+ "JavaScript": "جافاسكريبت",
+ "Kotlin": "كوتلن",
+ "Firebase": "فايربيس",
+ "Python": "بايثون",
+ "Node.js": "نود"
+});
 const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
 const PROJECT_TRANSLATIONS = {
@@ -5440,7 +5512,7 @@ export function translateString(value, language, textual = true) {
     const normalized = normalize(value);
     if (dictionary[normalized]) {
         const exact = language === "hv" || language === "cu" ? translateExperimentalFallback(dictionary[normalized], language) : dictionary[normalized];
-        return language === "ja" ? localizeJapaneseTerms(exact) : exact;
+        return language === "ja" ? localizeJapaneseTerms(exact) : language === "ar" && textual ? arabizeVisibleText(exact) : exact;
     }
 
     let translated = value;
@@ -5464,7 +5536,7 @@ export function translateString(value, language, textual = true) {
     }
     if (language === "av" && textual) translated = transliterateAv(translated);
     const result = restore(translated);
-    return language === "ja" ? localizeJapaneseTerms(result) : result;
+    return language === "ja" ? localizeJapaneseTerms(result) : language === "ar" && textual ? arabizeVisibleText(result) : result;
 }
 
 // Служебные свойства компонентов: транслитерировать их нельзя, иначе сломаются type="button", language="av" и т. п.
