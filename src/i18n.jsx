@@ -4561,6 +4561,47 @@ Object.assign(AR, {
  "Python": "بايثون",
  "Node.js": "نود"
 });
+
+// Additional full-sentence translations: avoid phonetic fallbacks in profile copy.
+Object.assign(AR, {
+  "Orléans-based software engineer and lecturer building native Android applications end to end — ": "مهندس برمجيات ومحاضر مقيم في أورليان، أعمل على تطوير تطبيقات أندرويد الأصلية من البداية حتى الإطلاق، ",
+  "from first sketch to a live listing on Google Play. ": "بدءًا من الرسم الأول للفكرة وصولًا إلى نشر التطبيق في متجر غوغل بلاي. ",
+  "Also developing full-stack web applications with React on the frontend and Spring Boot / Django / ASP.NET Core / Node.js on the backend. ": "كما أطور تطبيقات ويب متكاملة باستخدام رياكت للواجهة الأمامية، وسبرينغ بوت وجانغو وإيه إس بي دوت نت كور ونود للخادم. ",
+  "Five+ published apps so far — just the beginning. ": "نشرت أكثر من خمسة تطبيقات حتى الآن، وما زالت هذه مجرد بداية. ",
+  "Over nineteen years of writing and teaching code.": "أكثر من تسعة عشر عامًا من البرمجة وتدريسها.",
+  "QR Code Reader: Scan & Create!": "قارئ رموز الاستجابة السريعة: امسح وأنشئ!",
+  "A dynamic, classic text-based roguelike game implemented in C++ using the Windows API to navigate a procedurally generated 40x10 maze. Control your hero to collect gold coins, evade roaming enemies that drain your health, and find the exit before it's too late.": "لعبة مغامرات كلاسيكية تعتمد على النصوص، طُوّرت بلغة سي بلس بلس باستخدام واجهة ويندوز البرمجية. تستكشف متاهة تتولد تلقائيًا، وتجمع العملات الذهبية، وتتجنب الأعداء الذين يستنزفون صحتك، وتحاول العثور على المخرج قبل فوات الأوان.",
+  "A comprehensive collection of clean Object-Oriented Programming examples in C++: classes, inheritance, polymorphism, abstract classes and more.": "مجموعة شاملة من أمثلة البرمجة كائنية التوجه بلغة سي بلس بلس، تشمل الأصناف والوراثة وتعدد الأشكال والأصناف المجرّدة وغيرها.",
+  "Practical C++ Standard Template Library examples covering containers, iterators, algorithms, adapters and functors.": "أمثلة عملية للمكتبة القياسية للقوالب في سي بلس بلس، تتناول الحاويات والمكرّرات والخوارزميات والمحوّلات والكائنات الدالّية.",
+  "A learning project on ASP.NET Core MVC demonstrating the operation of the built-in Dependency Injection container.": "مشروع تعليمي يشرح كيفية عمل حاوية حقن الاعتماديات المدمجة في إطار إيه إس بي دوت نت كور وفق نمط النموذج والعرض والمتحكّم.",
+  "A learning project on ASP.NET Core Web API demonstrating authentication and authorization with Firebase Authentication and JWT tokens.": "مشروع تعليمي لواجهة برمجية ويب يوضح المصادقة والتحقق من الصلاحيات باستخدام فايربيس ورموز الويب الآمنة.",
+  "A learning project on ASP.NET Core Web API demonstrating unit and integration testing with xUnit, FluentAssertions, NSubstitute, and WebApplicationFactory.": "مشروع تعليمي يشرح الاختبارات الوحدوية واختبارات التكامل لواجهات الويب باستخدام إكس يونت وفلونت أسيرشنز وإن سبستيتيوت وويب أبليكيشن فاكتوري.",
+  "A multilingual botanical showcase dedicated to desert roses, featuring a collection gallery, flowering atlas, and practical plant-care guidance.": "معرض نباتي متعدد اللغات مخصص لورود الصحراء، يضم معرضًا للمجموعات ودليلًا للأزهار وإرشادات عملية للعناية بالنباتات.",
+  "A gentle 60-second pause for people living through the war in Ukraine. Write down a worry, watch a glowing star drift away, and listen to calming music. No account required.": "لحظة هدوء مدتها ستون ثانية لمن يعيشون ظروف الحرب في أوكرانيا. اكتب ما يشغلك، وشاهد نجمة مضيئة تبتعد، واستمع إلى موسيقى مريحة. لا حاجة لإنشاء حساب.",
+  "A personal interactive birthday greeting page with playful animations and a small surprise built in.": "صفحة شخصية تفاعلية للتهنئة بعيد الميلاد، تضم رسومًا متحركة مرحة ومفاجأة صغيرة.",
+  "A lightweight interactive page built as a personal project — a playground for small UI and animation ideas.": "صفحة تفاعلية خفيفة صُنعت بوصفها مشروعًا شخصيًا لتجربة أفكار الواجهات والرسوم المتحركة.",
+  "A rent-vs-buy savings calculator that visualizes how money saved on rent could grow over time if invested instead.": "حاسبة تقارن بين استئجار المنزل وشرائه، وتوضح كيف يمكن أن تنمو المدخرات مع مرور الوقت إذا استُثمرت بدلًا من دفع الإيجار.",
+  "A shrimp price radar for Silpo with email alerts when royal shrimp drop below 40 UAH per 100 g, plus shrimp facts, recipes, and a little Odesa-style humor.": "أداة تراقب أسعار الروبيان الملكي في متاجر سيلبو، وترسل تنبيهًا بالبريد الإلكتروني عندما ينخفض السعر إلى أقل من أربعين هريفنيا لكل مئة غرام. تتضمن معلومات ووصفات ولمسة من الدعابة الأوديسية.",
+  "Freelance Full-Stack & Android Developer": "مطوّر مستقل لتطبيقات أندرويد والويب المتكامل",
+  "Designing, building, and deploying end-to-end software products. Developing native Android apps and full-stack web applications using React + Spring Boot / Django / ASP.NET Core / Node.js + Firebase / PostgreSQL / MySQL, including database setup, API integrations, and Google Play publishing.": "تصميم منتجات برمجية متكاملة وتطويرها وإطلاقها. إنشاء تطبيقات أندرويد أصلية ومواقع ويب متكاملة باستخدام رياكت وأطر عمل الخادم وقواعد البيانات، مع ربط الواجهات البرمجية ونشر التطبيقات في متجر غوغل بلاي.",
+  "Technical Project Consultant": "مستشار للمشاريع التقنية",
+  "Provided architectural guidance, code reviews, and technical consulting for web and mobile solutions. Assisted in optimizing system performance, streamlining API design, and advising engineering teams on best software practices.": "تقديم استشارات في هندسة البرمجيات ومراجعة الشيفرات وتصميم حلول الويب والهواتف المحمولة، والمساهمة في تحسين الأداء وتبسيط تصميم الواجهات البرمجية ومساعدة الفرق على اعتماد أفضل الممارسات.",
+  "Independent Software Engineer & R&D": "مهندس برمجيات مستقل وباحث في التطوير",
+  "Open Source / Side Projects": "مشاريع مفتوحة المصدر ومبادرات جانبية",
+  "Building and maintaining custom developer tooling, exploratory mobile modules, and open-source utility libraries. Experimenting with modern web frameworks, algorithm optimization, and UI/UX patterns.": "تطوير أدوات مخصّصة للمبرمجين ووحدات تجريبية للهواتف ومكتبات مفتوحة المصدر وصيانتها، إلى جانب تجربة تقنيات الويب الحديثة وتحسين الخوارزميات وأنماط تصميم الواجهات وتجربة المستخدم.",
+  "Leading Teacher Specialist": "مدرّس متخصص أول",
+  "Sep 2007 — Present (Remote)": "سبتمبر ٢٠٠٧ حتى الآن (عن بُعد)",
+  "Educating and mentoring future software engineers in C++ / C# / Python Web / Android development / Databases; OOP, algorithms, data structures, design patterns / SOLID. Developing custom proprietary educational materials, conducting student code reviews, and supervising capstone software projects using SCRUM.": "تدريس البرمجة والإشراف على المطوّرين الناشئين في لغات البرمجة وتطوير الويب وأندرويد وقواعد البيانات، مع التركيز على البرمجة كائنية التوجه والخوارزميات وهياكل البيانات وأنماط التصميم ومبادئ التصميم المتين. إعداد مواد تعليمية أصلية ومراجعة مشاريع الطلاب والإشراف على مشاريع التخرّج بأسلوب سكرم.",
+  "Night Shift Venue Logistics & Facility Specialist": "متخصص في الخدمات اللوجستية والتشغيل الليلي للفعاليات",
+  "Streamlining night-shift venue logistics, rapid floor management, and deep sanitation protocols for high-capacity hard techno events. Maintaining strict operational safety and hygiene standards, optimizing post-event cleanup workflows under tight turnaround times, and ensuring high-throughput venue readiness during peak operations.": "تنظيم العمليات اللوجستية الليلية وإدارة المرافق وإجراءات النظافة المكثّفة في فعاليات موسيقية كبيرة. ضمان الالتزام بمعايير السلامة والنظافة وتحسين عمليات تجهيز المكان وتنظيفه بسرعة وكفاءة خلال فترات الضغط.",
+  "Master's degree, Programming": "درجة الماجستير في البرمجة",
+  "Bachelor's degree, Economics": "درجة البكالوريوس في الاقتصاد",
+  "Open International University of Human Development “Ukraine”, Mykolaiv": "الجامعة الدولية المفتوحة للتنمية البشرية «أوكرانيا»، ميكولايف",
+  "Continuous Education & Professional Certifications": "تعليم مستمر وشهادات مهنية",
+  "Cisco, Microsoft, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank, etc.": "سيسكو ومايكروسوفت وأكاديمية غوغل بلاي وآي بي إم وبروميثيوس وآي تي في دي إن وهاكر رانك وغيرها.",
+  "Constantly expanding technical expertise through specialized courses, hands-on skill validations, and industry certifications in software engineering, networking, and cloud services.": "تطوير الخبرات التقنية باستمرار من خلال الدورات المتخصصة والتقييمات العملية والشهادات المهنية في هندسة البرمجيات والشبكات والخدمات السحابية.",
+  "available for freelance work": "متاح للعمل الحر"
+});
 const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
 const PROJECT_TRANSLATIONS = {
