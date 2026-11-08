@@ -1,0 +1,60 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/uk",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/en",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/fr",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/pt-BR",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/es",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/zh",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ko-KP",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ar",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sa",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/de",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ja",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/hv",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/qya",
+      "destination": "/index.html"
+    }
+  ]
+}

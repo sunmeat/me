@@ -1,19 +1,24 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 import {MEDITATION_TRANSLATIONS} from "./meditation-i18n.js";
+import {DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES, getLanguageFromPath, getLanguagePath} from "./language-routing.js";
 
-const SUPPORTED_LANGUAGES = ["en", "uk", "fr", "pt-BR", "es", "zh", "ko-KP", "ar", "sa", "de", "ja", "hv", "qya"];
-
-const LanguageContext = createContext({language: "en", setLanguage: () => {}});
+const LanguageContext = createContext({language: DEFAULT_LANGUAGE, setLanguage: () => {}});
 
 export function LanguageProvider({children}) {
-    const [language, setLanguage] = useState(() => {
-        try {
-            const storedLanguage = localStorage.getItem("sunmeat-language");
-            return SUPPORTED_LANGUAGES.includes(storedLanguage) ? storedLanguage : "en";
-        } catch {
-            return "en";
-        }
-    });
+    const [language, setLanguageState] = useState(() => getLanguageFromPath(window.location.pathname));
+
+    // URL has priority over any old stored preference. Restore it on Back/Forward.
+    useEffect(() => {
+        const syncFromLocation = () => {
+            if (window.location.pathname === "/uk" || window.location.pathname === "/uk/") {
+                window.history.replaceState(window.history.state, "", "/" + window.location.search + window.location.hash);
+            }
+            setLanguageState(getLanguageFromPath(window.location.pathname));
+        };
+        syncFromLocation();
+        window.addEventListener("popstate", syncFromLocation);
+        return () => window.removeEventListener("popstate", syncFromLocation);
+    }, []);
 
     useEffect(() => {
         document.documentElement.lang = language === "ko-KP" ? "ko-KP" : language;
@@ -40,6 +45,12 @@ export function LanguageProvider({children}) {
             const element = document.querySelector(selector);
             if (element) element.setAttribute("content", language === "cu" ? translateExperimentalFallback(content, language) : content);
         };
+        const canonicalUrl = window.location.origin + getLanguagePath(language);
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute("href", canonicalUrl);
+        updateMeta('meta[property="og:url"]', canonicalUrl);
+        updateMeta('meta[name="twitter:url"]', canonicalUrl);
+        updateMeta('meta[name="title"]', document.title);
         updateMeta('meta[name="description"]', language === "cu" ? "Опытнаѧ церковнославѧнскаѧ стилизацїѧ портфолио: программированїе, Android и учительство." : language === "av" ? "Анастасиеволочковский: шпагаты, песни, балет и программистский шик. Дорогие мои, всё в прекрасной форме!" : language === "qya" ? "Carmatano ar peantar Orléansessë. Nórëa Andróida carmar ar quanta-tambë ramë-carmar. Latyaine carmar ar ara-carmi, manwa erinqua carmain." : language === "hv" ? "Dārys, Android se vēzos. Sȳz urnegon." : language === "ja" ? "フランス・オルレアンを拠点とするソフトウェアエンジニア兼講師。ネイティブAndroidアプリとフルスタックWeb開発。19年以上の開発・教育経験。" : language === "de" ? "Android- und Full-Stack-Entwickler sowie Hochschuldozent mit mehr als 19 Jahren Erfahrung in Entwicklung und Lehre. Orléans, Frankreich." : language === "od" ? "Одессит в третьем поколении, программист и преподаватель: Android, full-stack, открытые проекты и работа с душой. Нынче в Орлеане, Франция." : language === "ar"
             ? "مهندس برمجيات ومحاضر في أورليان، فرنسا. تطوير تطبيقات أندرويد الأصلية والويب المتكامل. مشاريع منشورة ومتاحة للتعاون المستقل."
             : language === "ko-KP"
@@ -100,17 +111,22 @@ export function LanguageProvider({children}) {
                 ? "Aplicativos Android nativos e desenvolvimento web full-stack. Projetos publicados. Em Orléans, França."
                 : "Native Android apps end-to-end + full-stack web. Live side projects. Based in Orléans, France.");
         updateMeta('meta[property="og:locale"]', language === "uk" ? "uk_UA" : language === "fr" ? "fr_FR" : language === "pt-BR" ? "pt_BR" : language === "es" ? "es_ES" : language === "ru" ? "ru_RU" : language === "ko-KP" ? "ko_KP" : language === "zh" ? "zh_CN" : language === "ar" ? "ar_AR" : language === "de" ? "de_DE" : language === "ja" ? "ja_JP" : language === "hv" ? "en_US" : "en_US");
+        if (language === "uk") {
+            updateMeta('meta[name="description"]', "Інженер-програміст і викладач в Орлеані. Створюю Android-застосунки та full-stack вебпроєкти. Понад 19 років у розробці й освіті. Відкритий до співпраці.");
+            updateMeta('meta[property="og:title"]', "Олександр Загоруйко — Android та Full-Stack розробник");
+            updateMeta('meta[property="og:description"]', "Android-застосунки, веброзробка та реалізовані проєкти. Понад 19 років у програмуванні та викладанні. Орлеан, Франція.");
+            updateMeta('meta[name="twitter:title"]', "Олександр Загоруйко — Android та Full-Stack розробник");
+            updateMeta('meta[name="twitter:description"]', "Android-застосунки та full-stack веброзробка. Реальні проєкти й досвід викладання. Орлеан, Франція.");
+        }
     }, [language]);
 
     const changeLanguage = (next) => {
         if (!SUPPORTED_LANGUAGES.includes(next)) return;
-        setLanguage(next);
-        try {
-            localStorage.setItem("sunmeat-language", next);
-        } catch {
-            // Storage may be unavailable.
+        const pathname = getLanguagePath(next);
+        if (window.location.pathname !== pathname) {
+            window.history.pushState(window.history.state, "", pathname + window.location.search + window.location.hash);
         }
-        document.documentElement.lang = next;
+        setLanguageState(next);
     };
 
     return (
