@@ -1,14 +1,19 @@
-name: Publish Ukrainian ATS CV
+name: Publish English Senior Full-Stack CV
 on:
   push:
     branches: [master]
     paths:
+      - "public/resume.html"
       - "scripts/resume.mjs"
+      - "scripts/resume-pdf.mjs"
+      - "src/resume-asset.js"
+      - "tests/helpers/offlineBrowser.mjs"
       - ".github/workflows/publish-resume.yml"
   workflow_dispatch:
 permissions:
   contents: write
 concurrency:
+  # Retain the existing group so a new run supersedes an older CV publication.
   group: ukrainian-cv-main
   cancel-in-progress: true
 jobs:
@@ -17,62 +22,40 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Generate semantic HTML
-        run: node scripts/resume.mjs
-      - name: Install PDF renderer
-        run: python -m pip install "weasyprint==66.0"
-      - name: Render selectable-text PDF
+          node-version: "24"
+      - name: Prepare Chromium and PDF inspection tools
         run: |
-          weasyprint public/resume.html public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
-          cp public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf public/resume.pdf
-      - name: Install PDF inspection utilities
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
-      - name: ATS and page-count checks
-        shell: bash
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils fonts-liberation
+          echo "CHROMIUM_BIN=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          test -x "$(command -v google-chrome)"
+      - name: Export and validate exactly two English A4 pages
+        run: npm run resume:build
+      - name: Check contacts and compatibility downloads
         run: |
-          set -euo pipefail
-          test -s public/resume.html
-          test -s public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
-          test -s public/resume.pdf
-          grep -q 'lang="uk"' public/resume.html
-          grep -q 'https://www.linkedin.com/in/sunmeat/' public/resume.html
+          grep -q 'lang="en"' public/resume.html
           grep -q 'zahoruiko@sunmeat.dev' public/resume.html
           grep -q 'tel:+380630300035' public/resume.html
-          pdfinfo public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
-          pages=$(pdfinfo public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf | awk '/^Pages:/ {print $2}')
-          test "$pages" -ge 1 && test "$pages" -le 2
-          pdftotext -layout public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf /tmp/resume.txt
-          sed -n '1,65p' /tmp/resume.txt
-          grep -q 'Олександр' /tmp/resume.txt
-          grep -Eq 'Досвід роботи|ДОСВІД РОБОТИ' /tmp/resume.txt
-          grep -Eq 'Освіта|ОСВІТА' /tmp/resume.txt
-          grep -q 'linkedin.com/in/sunmeat' /tmp/resume.txt
-          grep -q 'zahoruiko@sunmeat.dev' /tmp/resume.txt
-          grep -q '+380 63 030 00 35' /tmp/resume.txt
-          grep -q 'Англійська' /tmp/resume.txt
-          grep -q 'B2' /tmp/resume.txt
-          grep -qi 'французька' /tmp/resume.txt
-          grep -q 'A2' /tmp/resume.txt
-          grep -q 'Українська' /tmp/resume.txt
-          grep -q 'російська' /tmp/resume.txt
-      - name: Commit generated HTML and PDF
-        shell: bash
+          cmp public/resume.pdf public/Oleksandr_Zahoruiko_Senior_FullStack_Developer_CV_EN.pdf
+          cmp public/resume.pdf public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: english-cv-proof
+          path: |
+            public/Oleksandr_Zahoruiko_Senior_FullStack_Developer_CV_EN.pdf
+            work/resume/page-*.png
+            work/resume/extracted.txt
+      - name: Publish generated PDF and compatibility copies
         run: |
-          set -euo pipefail
-          git add public/resume.html public/resume.pdf public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
+          git add public/resume.pdf public/Oleksandr_Zahoruiko_Senior_FullStack_Developer_CV_EN.pdf public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
           if git diff --cached --quiet; then
             echo "No generated CV changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Publish Ukrainian ATS-friendly resume HTML and PDF"
+          git commit -m "Publish verified English Senior Full-Stack CV PDF"
+          # A normal push refuses to overwrite any newer portfolio changes.
           git push origin HEAD:master

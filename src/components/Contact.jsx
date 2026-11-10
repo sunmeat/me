@@ -1,3 +1,4 @@
+import {RESUME_URL, RESUME_FILENAME} from '../resume-asset.js';
 import {withTranslation} from "../i18n.jsx";
 import {
     SOCIALS,
@@ -47,7 +48,7 @@ function Contact() {
                         >
                             Message on Telegram
                         </a>
-                        <a className="btn btn--ghost" href="/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf" download="Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf">Download résumé (PDF)</a>
+                        <a className="btn btn--ghost" href={RESUME_URL} download={RESUME_FILENAME}>Download résumé (PDF)</a>
                     </div>
                 </div>
 
