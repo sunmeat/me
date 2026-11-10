@@ -21,8 +21,9 @@ export function getPhotoLabels(language) {
     return LABELS[language] || LABELS.en;
 }
 
-export default function PhotoLightbox({source, alt, language, hasMultiple, onPrevious, onNext, onClose}) {
+export default function PhotoLightbox({source, alt, language, hasMultiple, onPrevious, onNext, onDoubleClick, onClose}) {
     const [closing, setClosing] = useState(false);
+    const [heartBurst, setHeartBurst] = useState(0);
     const closeButton = useRef(null);
     const dialog = useRef(null);
     const previousFocus = useRef(null);
@@ -101,8 +102,15 @@ export default function PhotoLightbox({source, alt, language, hasMultiple, onPre
                 {hasMultiple && (
                     <button className="photo-lightbox__previous" type="button" onClick={onPrevious} aria-label={labels[2]} title={labels[2]}>‹</button>
                 )}
-                <div className="photo-lightbox__image-area">
+                <div
+                    className="photo-lightbox__image-area"
+                    onDoubleClick={() => {
+                        onDoubleClick?.();
+                        setHeartBurst((count) => count + 1);
+                    }}
+                >
                     <PhotoDisplay key={source} src={source} alt={alt} fullscreen />
+                    {heartBurst > 0 && <span key={heartBurst} className="photo-lightbox__heart" aria-hidden="true">♥</span>}
                 </div>
                 {hasMultiple && (
                     <button className="photo-lightbox__next" type="button" onClick={onNext} aria-label={labels[3]} title={labels[3]}>›</button>
