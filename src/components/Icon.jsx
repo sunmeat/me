@@ -167,6 +167,15 @@ function Icon({name, size = 18}) {
                     <polyline points="12 5 19 12 12 19"/>
                 </svg>
             );
+        case "maximize":
+            return (
+                <svg {...common}>
+                    <polyline points="8 3 3 3 3 8"/>
+                    <polyline points="16 3 21 3 21 8"/>
+                    <polyline points="3 16 3 21 8 21"/>
+                    <polyline points="21 16 21 21 16 21"/>
+                </svg>
+            );
         case "external":
             return (
                 <svg {...common}>

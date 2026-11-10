@@ -12,20 +12,10 @@ import { db } from "../firebase.js";
 import Icon from "./Icon.jsx";
 import Eyebrow from "./Eyebrow.jsx";
 import { QuenyaRelicCrest, QuenyaPhotoFiligree } from "./QuenyaRelicOrnaments.jsx";
+import { AVATAR_URL, getEditionPhotos, getEditionPhotoUrl, nextPhotoIndex } from "../photo-editions.js";
+import PhotoDisplay from "./PhotoDisplay.jsx";
+import PhotoLightbox, { getPhotoLabels } from "./PhotoLightbox.jsx";
 
-const AVATAR_URL = "/profile-photo.jpg";
-const ENGLISH_PHOTO_URL = "/3040b08e-60cf-4135-9e08-b9488c39fbd4.png";
-const UKRAINIAN_PHOTO_URL = "/d56f81e4-57ff-436b-8b3f-9e7d4b784329.png";
-const JAPANESE_PHOTO_URL = "/Неоновый самурай среди дождливого Токио.png";
-const GERMAN_PHOTO_URL = "/39d2c09e-2982-4516-a791-b86496d10b8a.png";
-const SPANISH_PHOTO_URL = "/Матадор с гитарой на арене.png";
-const BRAZILIAN_PHOTO_URL = "/Солнечный Рио с видом на Христа-Искупителя.png";
-const CHINESE_PHOTO_URL = "/Будівничий Великої Китайської стіни з тигреням.png";
-const ARABIC_PHOTO_URL = "/Роскошный балкон с видом на Дубай.png";
-const SANSKRIT_PHOTO_URLS = ["/Бенгалуру_ гуру кода среди технологий и традиций-1.png", "/Бенгалуру_ код и традиции-2.png"];
-const HIGH_VALYRIAN_PHOTO_URL = "/47f878cc-5125-4ca5-9775-6b7c70ee2a2b.png";
-const PYONGYANG_PHOTO_URL = "/file_000000000e6082438350c0b79cfda177.png";
-const QUENYA_PHOTO_URL = "/file_000000009cc88243ba4264c215d39b35.png";
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
 const TELEGRAM_URL = "https://t.me/sunmeat";
@@ -123,14 +113,6 @@ const SANSKRIT_PHOTO_EDITION = [
     },
 ];
 
-// All editions use same-origin assets. Keep a themed local fallback if a file fails.
-function handlePhotoError(event) {
-    const photo = event.currentTarget;
-    if (photo.getAttribute("src") !== QUENYA_PHOTO_URL) {
-        photo.setAttribute("src", QUENYA_PHOTO_URL);
-    }
-}
-
 // Separate Firestore collection just for this card — does not touch
 // the existing "poems" / "comments" collections used elsewhere.
 const COMMENTS_COLLECTION = "about_comments";
@@ -196,9 +178,12 @@ function About() {
     const { language } = useLanguage();
     const isNorthKorean = language === "ko-KP";
     const isQuenya = language === "qya";
-    // Select once per page visit; never reroll the photo during ordinary re-renders.
-    const [sanskritPhotoIndex] = useState(() => Math.floor(Math.random() * SANSKRIT_PHOTO_URLS.length));
-    const photoEdition = language === "sa" ? SANSKRIT_PHOTO_EDITION[sanskritPhotoIndex] : (PHOTO_EDITION[language] || PHOTO_EDITION.en);
+    // Ordered Indian gallery, starting at the first image on each visit.
+    const [sequence, setSequence] = useState({ language: "", index: 0 });
+    const [photoOpen, setPhotoOpen] = useState(false);
+    const photoIndex = sequence.language === language ? sequence.index : 0;
+    const photoUrl = getEditionPhotoUrl(language, photoIndex);
+    const photoEdition = language === "sa" ? SANSKRIT_PHOTO_EDITION[photoIndex] : (PHOTO_EDITION[language] || PHOTO_EDITION.en);
     const [liked, setLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(BASE_LIKES);
     const [burstKey, setBurstKey] = useState(0);
@@ -211,6 +196,34 @@ function About() {
     const [posting, setPosting] = useState(false);
     const [timestamp, setTimestamp] = useState(() => formatTimestamp(new Date(), language));
     const burstTimeout = useRef(null);
+
+    // Reset immediately when changing editions; don't reuse the previous photo.
+    useEffect(() => {
+        setSequence({ language, index: 0 });
+        setPhotoOpen(false);
+    }, [language]);
+
+    // In the Indian edition show photo 1, then 2, then 1 again.
+    // Pause while the fullscreen viewer is open so visitors can browse manually.
+    useEffect(() => {
+        if (language !== "sa" || photoOpen) return undefined;
+        const timer = window.setInterval(() => {
+            setSequence((previous) => ({
+                language: "sa",
+                index: nextPhotoIndex(previous.language === "sa" ? previous.index : 0, getEditionPhotos("sa").length),
+            }));
+        }, 8500);
+        return () => window.clearInterval(timer);
+    }, [language, photoOpen]);
+
+    const stepPhoto = (direction) => {
+        if (language !== "sa") return;
+        setSequence((previous) => {
+            const count = getEditionPhotos("sa").length;
+            const current = previous.language === "sa" ? previous.index : 0;
+            return { language: "sa", index: (current + direction + count) % count };
+        });
+    };
 
     // Live-sync real comments from Firebase — every visitor sees the same feed.
     useEffect(() => {
@@ -322,7 +335,7 @@ function About() {
                         {isQuenya && <QuenyaRelicCrest />}
                         <div className="about-card__header">
                             <div className="about-card__avatar">
-                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" width="512" height="512" loading="lazy" decoding="async" onError={handlePhotoError} />
+                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" width="512" height="512" loading="lazy" decoding="async" onError={(event) => { const img = event.currentTarget; if (!img.src.endsWith("/s.jpg")) img.src = "/s.jpg"; else img.style.visibility = "hidden"; }} />
                             </div>
                             <div className="about-card__meta">
                                 <span className="about-card__username">{USERNAME}</span>
@@ -333,19 +346,18 @@ function About() {
                             </div>
                         </div>
 
-                        <div className="about-card__photo-wrap" onDoubleClick={handleDoubleClick}>
-                            <div className="about__frame">
-                                <img
-                                    src={isNorthKorean ? PYONGYANG_PHOTO_URL : isQuenya ? QUENYA_PHOTO_URL : language === "en" ? ENGLISH_PHOTO_URL : language === "uk" ? UKRAINIAN_PHOTO_URL : language === "ja" ? JAPANESE_PHOTO_URL : language === "de" ? GERMAN_PHOTO_URL : language === "es" ? SPANISH_PHOTO_URL : language === "pt-BR" ? BRAZILIAN_PHOTO_URL : language === "zh" ? CHINESE_PHOTO_URL : language === "ar" ? ARABIC_PHOTO_URL : language === "sa" ? SANSKRIT_PHOTO_URLS[sanskritPhotoIndex] : language === "hv" ? HIGH_VALYRIAN_PHOTO_URL : AVATAR_URL}
-                                    alt="Oleksandr Zahoruiko"
-                                    className="about__photo"
-                                    width="512"
-                                    height="512"
-                                    decoding="async"
-                                    onError={handlePhotoError}
-                                    loading="lazy"
-                                />
-                            </div>
+                        <div className="about-card__photo-wrap">
+                            <button
+                                type="button"
+                                className="about-card__photo-trigger"
+                                onClick={() => setPhotoOpen(true)}
+                                aria-label={getPhotoLabels(language)[0]}
+                            >
+                                <div className="about__frame">
+                                    <PhotoDisplay key={language + ":" + photoUrl} src={photoUrl} alt="Oleksandr Zahoruiko" />
+                                </div>
+                                <span className="about-card__photo-zoom" aria-hidden="true"><Icon name="maximize" size={18} /></span>
+                            </button>
                             {isQuenya && <QuenyaPhotoFiligree />}
                             <div key={burstKey} className={`about-card__burst${showBurst ? " is-active" : ""}`}>
                                 <Icon name="heart" size={72} />
@@ -475,6 +487,18 @@ function About() {
                     </p>
                 </div>
             </div>
+            {photoOpen && (
+                <PhotoLightbox
+                    source={photoUrl}
+                    alt="Oleksandr Zahoruiko"
+                    language={language}
+                    hasMultiple={language === "sa"}
+                    onPrevious={() => stepPhoto(-1)}
+                    onNext={() => stepPhoto(1)}
+                    onDoubleClick={handleDoubleClick}
+                    onClose={() => setPhotoOpen(false)}
+                />
+            )}
         </section>
     );
 }
