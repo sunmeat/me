@@ -1,5 +1,6 @@
 import {useLanguage, withTranslation} from "../i18n.jsx";
 import { BIO, STATS } from "../data.js";
+import {HERO_BIO} from "../hero-bio.js";
 import Eyebrow from "./Eyebrow.jsx";
 import Icon from "./Icon.jsx";
 import Terminal from "./Terminal.jsx";
@@ -34,7 +35,7 @@ function Hero() {
                     <h1 className="hero__title">
                         {isKorean ? <>Oleksandr Zahoruiko<span className="hero__title-accent hero__title-accent--epic">기술 창조의 선구자</span></> : isChurchSlavonic ? <>Александр Загоруйко —<br/><span className="hero__title-accent hero__title-accent--epic">Созидатель программъ и сѣтевыхъ творенїй</span></> : isJapanese ? <>Oleksandr Zahoruiko —<br/><span className="hero__title-accent">アンドロイド／フルスタック開発者</span></> : language === "sa" ? <>अलेक्सान्द्रः ज़होरुइको —<br/><span className="hero__title-accent">चलदूरभाषानुप्रयोग-जालविकासकः</span></> : language === "uk" ? <>Олександр Загоруйко —<br/><span className="hero__title-accent">Android та фулстек-розробник</span></> : <>Oleksandr Zahoruiko —<br/><span className="hero__title-accent">Android / Full-Stack Developer</span></>}
                     </h1>
-                    <p className="hero__lede">{isKorean ? "19년을 넘는 개발과 교육의 력사. 여섯개의 안드로이드 응용프로그램과 세계를 향해 공개된 웹 건설물들. 위대한 구상은 코드가 되고, 코드는 현실을 변화시킨다." : isJapanese ? "開発と教育に19年以上携わり、Androidアプリを6本公開。アイデアをコードに変え、実際に使えるソフトウェアとして世界へ届けています。" : BIO}</p>
+                    <p className="hero__lede" translate={HERO_BIO[language] ? "no" : undefined}>{isKorean ? "19년을 넘는 개발과 교육의 력사. 여섯개의 안드로이드 응용프로그램과 세계를 향해 공개된 웹 건설물들. 위대한 구상은 코드가 되고, 코드는 현실을 변화시킨다." : isJapanese ? "開発と教育に19年以上携わり、Androidアプリを6本公開。アイデアをコードに変え、実際に使えるソフトウェアとして世界へ届けています。" : (HERO_BIO[language] || BIO)}</p>
                     {isKorean && <div className="hero__declaration"><span className="hero__declaration-mark">주체 · 창조 · 전진</span><span>불굴의 탐구정신으로 설계하고, 정밀한 기술로 건설하며, 세계를 향해 공개한다.</span></div>}
                     <div className="hero__actions">
                         <a className="btn btn--primary" href="#websites" onClick={(e) => { e.preventDefault(); document.getElementById("websites")?.scrollIntoView({behavior: "smooth"}); }}>{isKorean ? "위대한 디지털 성과를 보라" : isChurchSlavonic ? "Узри сѣтевыя творенїя" : isJapanese ? "公開中のウェブサイトを見る" : "View published sites"}<Icon name="arrow" size={16}/></a>
