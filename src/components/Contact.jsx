@@ -42,7 +42,7 @@ function Contact() {
                         >
                             Message on Telegram
                         </a>
-                        <a className="btn btn--ghost" href="/resume.pdf" download="Oleksandr-Zahoruiko-Resume.pdf">Download résumé (PDF)</a>
+                        <a className="btn btn--ghost" href="/resume.pdf" download="Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf">Download résumé (PDF)</a>
                     </div>
                 </div>
 
