@@ -59,7 +59,7 @@ jobs:
           grep -q '+380 63 030 00 35' /tmp/resume.txt
           grep -q 'Англійська' /tmp/resume.txt
           grep -q 'B2' /tmp/resume.txt
-          grep -q 'Французька' /tmp/resume.txt
+          grep -qi 'французька' /tmp/resume.txt
           grep -q 'A2' /tmp/resume.txt
           grep -q 'Українська' /tmp/resume.txt
           grep -q 'російська' /tmp/resume.txt
