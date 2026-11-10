@@ -4,11 +4,12 @@ const CV={
   "name": "Олександр Загоруйко",
   "role": "Android-розробник · Full-Stack Software Engineer · IT-ментор",
   "location": "Орлеан, Франція",
-  "email": "sunmeatrich@gmail.com",
+  "email": "zahoruiko@sunmeat.dev",
+  "phone": "+380630300035",
   "linkedin": "https://www.linkedin.com/in/sunmeat/",
   "github": "https://github.com/sunmeat",
   "site": "https://sunmeat.dev/",
-  "profile": "Інженер-програміст і викладач із понад 19 роками досвіду в розробці та IT-освіті. Створюю Android-застосунки й повноцінні вебпродукти: від архітектури, інтерфейсу та API до тестування й публікації. У портфоліо понад 5 опублікованих Android-застосунків, 15 вебпроєктів і цифрових продуктів. Поєдную інженерну практику, технічне менторство та продуктовий підхід.",
+  "profile": "Android- та Full-Stack розробник із понад 19 роками досвіду в програмуванні й IT-освіті. Створюю програмні продукти повного циклу: від архітектури, інтерфейсів і API до тестування та публікації. У портфоліо — понад 5 Android-застосунків у Google Play і 15 вебпроєктів. Допомагаю командам будувати підтримувані рішення, поєднуючи інженерну практику, наставництво та увагу до потреб користувачів.",
   "experience": [
     {
       "period": "07.2023 – дотепер",
@@ -17,7 +18,7 @@ const CV={
       "bullets": [
         "Розробляю нативні Android-застосунки й вебсервіси: UI, бізнес-логіка, REST API, інтеграції, бази даних, розгортання.",
         "Використовую Kotlin / Java, React, ASP.NET Core, Spring Boot, Node.js, Firebase та PostgreSQL відповідно до потреб продукту.",
-        "Опублікував Android-застосунки в Google Play; підтримую портфоліо працюючих вебпроєктів."
+        "Опублікував понад 5 Android-застосунків у Google Play; розробив і підтримую портфоліо з 15 вебпроєктів та цифрових продуктів."
       ]
     },
     {
@@ -26,7 +27,7 @@ const CV={
       "org": "Комп’ютерна академія IT STEP · Одеса, Україна (дистанційно)",
       "bullets": [
         "Викладаю C++, C#, Java, Python, веброзробку, Android, бази даних, ООП, алгоритми, SOLID і патерни проєктування.",
-        "Розробляю навчальні програми та інтерактивні матеріали, перевіряю код і супроводжую командні та випускні проєкти."
+        "Створюю інтерактивні навчальні матеріали й платформу Alex Lessons; проводжу code review, консультую студентські команди та супроводжую випускні проєкти."
       ]
     },
     {
@@ -69,8 +70,8 @@ const CV={
     ]
   ],
   "soft": "Системне й аналітичне мислення · Технічне наставництво · Проєктна комунікація · Самостійна реалізація продукту",
-  "languages": "Українська — вільно; англійська — робота з технічною документацією; французька — вивчаю. Рівні CEFR не заявлено без підтвердження.",
-  "training": "Професійне навчання: Microsoft Learn, Cisco, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank. Конкретні підтвердження та бейджі: Credly і Microsoft Learn.",
+  "languages": "Українська — вільне володіння; англійська — читання технічної документації; французька — у процесі вивчення. Рівні CEFR буде додано після підтвердження.",
+  "training": "Безперервний професійний розвиток: Microsoft Learn, Cisco, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank. Публічні записи про досягнення та бейджі:",
   "trainingLinks": [
     [
       "Credly",
@@ -105,19 +106,20 @@ const build=function build(c){
 const esc=s=>String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]));
 const url=s=>esc(s);
 const a=(href,label)=>`<a href="${url(href)}">${esc(label)}</a>`;
-const style=`@page{size:A4;margin:13mm 16mm}*{box-sizing:border-box}html{background:white}body{margin:0;color:#192a2c;font-family:"DejaVu Sans",Arial,Helvetica,sans-serif;font-size:9pt;line-height:1.34}main{max-width:100%}header{padding:0 0 10px;border-bottom:2px solid #226956}h1{margin:0 0 3px;font-size:21pt;letter-spacing:-.025em;font-weight:700;line-height:1.15}.role{font-size:10.7pt;font-weight:600;line-height:1.3;margin:0 0 7px}.contact-line{font-size:8.2pt;line-height:1.5;margin:0}.contact-line+.contact-line{margin-top:2px}a{color:#195846;text-decoration:underline;text-underline-offset:1.5px;overflow-wrap:anywhere}h2{font-size:10.3pt;text-transform:uppercase;letter-spacing:.045em;margin:13px 0 6px;padding:0 0 4px;border-bottom:1px solid #ccd9d5;font-weight:700;break-after:avoid}p{margin:0 0 6px}section{margin:0;padding:0}article{break-inside:avoid;page-break-inside:avoid;margin-bottom:9px}article:last-child{margin-bottom:0}.entry-title{font-size:9.3pt;font-weight:700;margin:0}.entry-meta{font-size:8.3pt;color:#4c5f5c;margin:1px 0 4px}.entry-meta strong{color:#203e36}ul{margin:3px 0 0;padding-left:15px}li{padding-left:1px;margin:0 0 3px}li:last-child{margin:0}.skill{margin:0 0 5px}.skill strong{color:#1d3534}.small{font-size:8.4pt}.last-note{color:#566760;font-size:7.5pt;margin:11px 0 0}.project{margin:0 0 6px}.project strong{font-weight:700}@media screen{body{background:#f4f7f5;padding:28px 12px}main{max-width:800px;background:#fff;padding:44px 50px;margin:0 auto;box-shadow:0 8px 35px #14272016}}@media(max-width:640px){body{padding:0}main{padding:25px 20px;box-shadow:none}.role{font-size:10pt}}@media print{body{background:#fff;padding:0}main{padding:0;box-shadow:none}a{text-decoration:none}}`;
+const style=`@page{size:A4;margin:13mm 16mm}*{box-sizing:border-box}html{background:white}body{margin:0;color:#192a2c;font-family:"DejaVu Sans",Arial,Helvetica,sans-serif;font-size:10pt;line-height:1.30}main{max-width:100%}header{padding:0 0 10px;border-bottom:2px solid #226956}h1{margin:0 0 3px;font-size:21pt;letter-spacing:-.025em;font-weight:700;line-height:1.15}.role{font-size:10.7pt;font-weight:600;line-height:1.3;margin:0 0 7px}.contact-line{font-size:9pt;line-height:1.5;margin:0}.contact-line+.contact-line{margin-top:2px}a{color:#195846;text-decoration:underline;text-underline-offset:1.5px;overflow-wrap:anywhere}h2{font-size:12pt;text-transform:uppercase;letter-spacing:.045em;margin:10px 0 5px;padding:0 0 3px;border-bottom:1px solid #ccd9d5;font-weight:700;break-after:avoid}p{margin:0 0 5px}section{margin:0;padding:0}article{break-inside:avoid;page-break-inside:avoid;margin-bottom:7px}article:last-child{margin-bottom:0}.entry-title{font-size:10pt;font-weight:700;margin:0}.entry-meta{font-size:9pt;color:#4c5f5c;margin:1px 0 4px}.entry-meta strong{color:#203e36}ul{margin:3px 0 0;padding-left:15px}li{padding-left:1px;margin:0 0 3px}li:last-child{margin:0}.skill{margin:0 0 4px}.skill strong{color:#1d3534}.small{font-size:8.4pt}.last-note{color:#566760;font-size:7.5pt;margin:11px 0 0}.project{margin:0 0 6px}.project strong{font-weight:700}@media screen{body{background:#f4f7f5;padding:28px 12px}main{max-width:800px;background:#fff;padding:44px 50px;margin:0 auto;box-shadow:0 8px 35px #14272016}}@media(max-width:640px){body{padding:0}main{padding:25px 20px;box-shadow:none}.role{font-size:10pt}}@media print{body{background:#fff;padding:0}main{padding:0;box-shadow:none}a{text-decoration:none}}`;
 const E=(x)=>`<article><p class="entry-title">${esc(x.role)}</p><p class="entry-meta">${esc(x.period)} · ${esc(x.org)}</p>${x.bullets?`<ul>${x.bullets.map(b=>`<li>${esc(b)}</li>`).join("")}</ul>`:""}</article>`;
 return `<!doctype html>
 <html lang="uk">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>${esc(c.name)} · Професійне резюме (CV)</title><style>${style}</style></head>
 <body><main aria-label="Резюме">
 <header><h1>${esc(c.name)}</h1><p class="role">${esc(c.role)}</p>
-<p class="contact-line">${esc(c.location)} · ${a("mailto:"+c.email,c.email)} · ${a(c.site,"sunmeat.dev")}</p>
-<p class="contact-line">${a(c.linkedin,"LinkedIn")} · ${a(c.github,"GitHub")}</p></header>
+<p class="contact-line">${esc(c.location)} · ${a("tel:"+c.phone,"+380 63 030 00 35")} · ${a("mailto:"+c.email,c.email)}</p>
+<p class="contact-line">${a(c.site,"sunmeat.dev")} · ${a(c.linkedin,"linkedin.com/in/sunmeat")} · ${a(c.github,"github.com/sunmeat")}</p></header>
 <section><h2>Професійний профіль</h2><p>${esc(c.profile)}</p></section>
 <section><h2>Досвід роботи</h2>${c.experience.map(E).join("\n")}</section>
 <section><h2>Освіта</h2>${c.education.map(E).join("\n")}</section>
-<section><h2>Навички</h2>${c.hard.map(g=>`<p class="skill"><strong>${esc(g[0])}:</strong> ${esc(g[1])}</p>`).join("\n")}<p class="skill"><strong>Професійні якості:</strong> ${esc(c.soft)}</p></section>
+<section><h2>Технічні навички (Hard Skills)</h2>${c.hard.map(g=>`<p class="skill"><strong>${esc(g[0])}:</strong> ${esc(g[1])}</p>`).join("\n")}</section>
+<section><h2>Професійні якості (Soft Skills)</h2><p class="skill">${esc(c.soft)}</p></section>
 <section><h2>Мови</h2><p>${esc(c.languages)}</p></section>
 <section><h2>Сертифікати та підвищення кваліфікації</h2><p>${esc(c.training)} ${c.trainingLinks.map(x=>a(x[1],x[0])).join(" · ")}</p></section>
 <section><h2>Проєкти</h2>${c.projects.map(x=>`<p class="project"><strong>${a(x.url,x.name)}</strong> · ${esc(x.desc)}</p>`).join("\n")}</section>

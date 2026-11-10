@@ -15,13 +15,18 @@ function Contact() {
                     <h2 className="section__title">Let's build your own app.</h2>
                     <p>
                         Open to freelance projects, long-term collaborations and consulting work. Based in
-                        Orléans, France (EET/EEST, UTC+1) — I typically reply within a business day.
+                        Orléans, France — I typically reply within a business day.
                     </p>
 
                     <div className="contact__details">
-                        <a className="contact__row" href="mailto:sunmeatrich@gmail.com">
+                        <a className="contact__row" href="mailto:zahoruiko@sunmeat.dev">
                             <Icon name="mail" size={17}/>
-                            sunmeatrich@gmail.com
+                            zahoruiko@sunmeat.dev
+                        </a>
+
+                        <a className="contact__row" href="tel:+380630300035">
+                            <Icon name="phone" size={17}/>
+                            +380 63 030 00 35
                         </a>
 
                         <div className="contact__row contact__row--static">
@@ -31,7 +36,7 @@ function Contact() {
                     </div>
 
                     <div className="contact__actions">
-                        <a className="btn btn--primary" href="mailto:sunmeatrich@gmail.com">
+                        <a className="btn btn--primary" href="mailto:zahoruiko@sunmeat.dev">
                             Email me
                         </a>
                         <a

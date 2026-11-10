@@ -41,6 +41,8 @@ jobs:
           test -s public/resume.pdf
           grep -q 'lang="uk"' public/resume.html
           grep -q 'https://www.linkedin.com/in/sunmeat/' public/resume.html
+          grep -q 'zahoruiko@sunmeat.dev' public/resume.html
+          grep -q 'tel:+380630300035' public/resume.html
           pdfinfo public/resume.pdf
           pages=$(pdfinfo public/resume.pdf | awk '/^Pages:/ {print $2}')
           test "$pages" -ge 1 && test "$pages" -le 2
@@ -49,7 +51,9 @@ jobs:
           grep -q 'Олександр' /tmp/resume.txt
           grep -Eq 'Досвід роботи|ДОСВІД РОБОТИ' /tmp/resume.txt
           grep -Eq 'Освіта|ОСВІТА' /tmp/resume.txt
-          grep -q 'LinkedIn' /tmp/resume.txt
+          grep -q 'linkedin.com/in/sunmeat' /tmp/resume.txt
+          grep -q 'zahoruiko@sunmeat.dev' /tmp/resume.txt
+          grep -q '+380 63 030 00 35' /tmp/resume.txt
       - name: Commit generated HTML and PDF
         shell: bash
         run: |
