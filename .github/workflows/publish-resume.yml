@@ -1,0 +1,62 @@
+name: Publish Ukrainian ATS CV
+on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/resume.mjs"
+      - ".github/workflows/publish-resume.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ukrainian-cv-main
+  cancel-in-progress: true
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate semantic HTML
+        run: node scripts/resume.mjs
+      - name: Install PDF renderer
+        run: python -m pip install "weasyprint==66.0"
+      - name: Render selectable-text PDF
+        run: weasyprint public/resume.html public/resume.pdf
+      - name: ATS and page-count checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s public/resume.html
+          test -s public/resume.pdf
+          grep -q 'lang="uk"' public/resume.html
+          grep -q 'https://www.linkedin.com/in/sunmeat/' public/resume.html
+          pdfinfo public/resume.pdf
+          pages=$(pdfinfo public/resume.pdf | awk '/^Pages:/ {print $2}')
+          test "$pages" -ge 1 && test "$pages" -le 2
+          pdftotext -layout public/resume.pdf /tmp/resume.txt
+          grep -q 'Олександр' /tmp/resume.txt
+          grep -q 'Досвід роботи' /tmp/resume.txt
+          grep -q 'Освіта' /tmp/resume.txt
+          grep -q 'LinkedIn' /tmp/resume.txt
+      - name: Commit generated HTML and PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add public/resume.html public/resume.pdf
+          if git diff --cached --quiet; then
+            echo "No generated CV changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish Ukrainian ATS-friendly resume HTML and PDF"
+          git push origin HEAD:master
