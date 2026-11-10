@@ -30,7 +30,9 @@ jobs:
       - name: Install PDF renderer
         run: python -m pip install "weasyprint==66.0"
       - name: Render selectable-text PDF
-        run: weasyprint public/resume.html public/resume.pdf
+        run: |
+          weasyprint public/resume.html public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
+          cp public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf public/resume.pdf
       - name: Install PDF inspection utilities
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
       - name: ATS and page-count checks
@@ -38,15 +40,16 @@ jobs:
         run: |
           set -euo pipefail
           test -s public/resume.html
+          test -s public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
           test -s public/resume.pdf
           grep -q 'lang="uk"' public/resume.html
           grep -q 'https://www.linkedin.com/in/sunmeat/' public/resume.html
           grep -q 'zahoruiko@sunmeat.dev' public/resume.html
           grep -q 'tel:+380630300035' public/resume.html
-          pdfinfo public/resume.pdf
-          pages=$(pdfinfo public/resume.pdf | awk '/^Pages:/ {print $2}')
+          pdfinfo public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
+          pages=$(pdfinfo public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf | awk '/^Pages:/ {print $2}')
           test "$pages" -ge 1 && test "$pages" -le 2
-          pdftotext -layout public/resume.pdf /tmp/resume.txt
+          pdftotext -layout public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf /tmp/resume.txt
           sed -n '1,65p' /tmp/resume.txt
           grep -q 'Олександр' /tmp/resume.txt
           grep -Eq 'Досвід роботи|ДОСВІД РОБОТИ' /tmp/resume.txt
@@ -54,11 +57,17 @@ jobs:
           grep -q 'linkedin.com/in/sunmeat' /tmp/resume.txt
           grep -q 'zahoruiko@sunmeat.dev' /tmp/resume.txt
           grep -q '+380 63 030 00 35' /tmp/resume.txt
+          grep -q 'Англійська' /tmp/resume.txt
+          grep -q 'B2' /tmp/resume.txt
+          grep -q 'Французька' /tmp/resume.txt
+          grep -q 'A2' /tmp/resume.txt
+          grep -q 'Українська' /tmp/resume.txt
+          grep -q 'російська' /tmp/resume.txt
       - name: Commit generated HTML and PDF
         shell: bash
         run: |
           set -euo pipefail
-          git add public/resume.html public/resume.pdf
+          git add public/resume.html public/resume.pdf public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
           if git diff --cached --quiet; then
             echo "No generated CV changes."
             exit 0
