@@ -1,0 +1,233 @@
+/* Edition-aware profile photos. Reserve space while decoding and never reveal
+   a previous language's photo during an image transition. */
+.about-card__photo-trigger {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: zoom-in;
+    text-align: inherit;
+    line-height: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.about-card__photo-trigger:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: -3px;
+    z-index: 2;
+}
+.about-card__photo-zoom {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: rgba(9, 17, 24, .67);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .28);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .2);
+    opacity: .78;
+    transition: transform .2s ease, opacity .2s ease;
+    pointer-events: none;
+}
+.about-card__photo-trigger:hover .about-card__photo-zoom,
+.about-card__photo-trigger:focus-visible .about-card__photo-zoom {
+    opacity: 1;
+    transform: scale(1.09);
+}
+.about-card__photo-wrap .photo-display {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--surface);
+}
+.about-card__photo-wrap .photo-display__image {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+}
+.photo-display__image {
+    display: block;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+.photo-display.is-loaded .photo-display__image {
+    opacity: 1;
+}
+.photo-display__placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(110deg, var(--surface) 12%, var(--border-soft) 40%, var(--surface) 66%);
+    background-size: 220% 100%;
+    animation: photo-placeholder-sweep 1.4s ease-in-out infinite;
+    color: var(--text-muted);
+    font-size: 2rem;
+    line-height: 1;
+}
+@keyframes photo-placeholder-sweep {
+    to { background-position-x: -220%; }
+}
+.photo-lightbox {
+    position: fixed;
+    z-index: 2147483647;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    background: rgba(2, 7, 14, .91);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    animation: photo-overlay-enter .28s ease both;
+}
+.photo-lightbox.is-closing {
+    animation: photo-overlay-exit .24s ease both;
+}
+.photo-lightbox__dialog {
+    position: relative;
+    width: min(1400px, 100%);
+    height: 100%;
+    max-height: 100%;
+    display: grid;
+    place-items: center;
+    animation: photo-dialog-enter .34s cubic-bezier(.18, .72, .3, 1) both;
+}
+.photo-lightbox.is-closing .photo-lightbox__dialog {
+    animation: photo-dialog-exit .24s ease both;
+}
+.photo-lightbox__image-area {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+.photo-lightbox .photo-display--fullscreen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+.photo-lightbox .photo-display--fullscreen .photo-display__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 55px rgba(0, 0, 0, .45));
+}
+.photo-lightbox .photo-display__placeholder {
+    inset: 12%;
+    border-radius: 16px;
+    background-color: #17222d;
+}
+.photo-lightbox__close,
+.photo-lightbox__previous,
+.photo-lightbox__next {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, .22);
+    background: rgba(20, 29, 38, .72);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    font-family: system-ui, sans-serif;
+    font-weight: 300;
+}
+.photo-lightbox__close:hover,
+.photo-lightbox__previous:hover,
+.photo-lightbox__next:hover {
+    background: rgba(59, 77, 93, .96);
+    border-color: rgba(255, 255, 255, .6);
+    transform: scale(1.09);
+}
+.photo-lightbox__close:focus-visible,
+.photo-lightbox__previous:focus-visible,
+.photo-lightbox__next:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+.photo-lightbox__close {
+    width: 48px;
+    height: 48px;
+    right: 2px;
+    top: 0;
+    font-size: 2rem;
+}
+.photo-lightbox__previous,
+.photo-lightbox__next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.6rem;
+}
+.photo-lightbox__previous { left: 0; }
+.photo-lightbox__next { right: 0; }
+.photo-lightbox__previous:hover,
+.photo-lightbox__next:hover { transform: translateY(-50%) scale(1.09); }
+.photo-lightbox--quenya :is(.photo-lightbox__close, .photo-lightbox__previous, .photo-lightbox__next) {
+    border-color: rgba(233, 192, 111, .55);
+    color: #ecd59b;
+}
+@keyframes photo-overlay-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes photo-overlay-exit {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes photo-dialog-enter {
+    from { opacity: 0; transform: scale(.94) translateY(8px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes photo-dialog-exit {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(.96); }
+}
+@media (max-width: 640px) {
+    .photo-lightbox { padding: 12px; }
+    .photo-lightbox__dialog { width: 100%; }
+    .photo-lightbox__close {
+        width: 44px;
+        height: 44px;
+        right: 0;
+        top: max(0px, env(safe-area-inset-top));
+    }
+    .photo-lightbox__previous,
+    .photo-lightbox__next {
+        width: 42px;
+        height: 42px;
+        background: rgba(20, 29, 38, .82);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .photo-display__image,
+    .about-card__photo-zoom,
+    .photo-lightbox,
+    .photo-lightbox.is-closing,
+    .photo-lightbox__dialog,
+    .photo-lightbox.is-closing .photo-lightbox__dialog {
+        animation: none;
+        transition: none;
+    }
+    .photo-display__placeholder { animation: none; }
+}
