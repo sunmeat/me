@@ -45,9 +45,10 @@ jobs:
           pages=$(pdfinfo public/resume.pdf | awk '/^Pages:/ {print $2}')
           test "$pages" -ge 1 && test "$pages" -le 2
           pdftotext -layout public/resume.pdf /tmp/resume.txt
+          sed -n '1,65p' /tmp/resume.txt
           grep -q 'Олександр' /tmp/resume.txt
-          grep -q 'Досвід роботи' /tmp/resume.txt
-          grep -q 'Освіта' /tmp/resume.txt
+          grep -Eq 'Досвід роботи|ДОСВІД РОБОТИ' /tmp/resume.txt
+          grep -Eq 'Освіта|ОСВІТА' /tmp/resume.txt
           grep -q 'LinkedIn' /tmp/resume.txt
       - name: Commit generated HTML and PDF
         shell: bash
