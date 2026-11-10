@@ -493,6 +493,8 @@ function About() {
                     alt="Oleksandr Zahoruiko"
                     language={language}
                     hasMultiple={language === "sa"}
+                    photoIndex={photoIndex}
+                    photoCount={getEditionPhotos(language).length}
                     onPrevious={() => stepPhoto(-1)}
                     onNext={() => stepPhoto(1)}
                     onDoubleClick={handleDoubleClick}
