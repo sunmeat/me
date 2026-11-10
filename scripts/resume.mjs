@@ -70,7 +70,11 @@ const CV={
     ]
   ],
   "soft": "Системне й аналітичне мислення · Технічне наставництво · Проєктна комунікація · Самостійна реалізація продукту",
-  "languages": "Українська — вільне володіння; англійська — читання технічної документації; французька — у процесі вивчення. Рівні CEFR буде додано після підтвердження.",
+  "languages": [
+    "Українська — рідна мова; російська — досконале володіння; білоруська — просунуте володіння; англійська — професійне володіння (Duolingo 129).",
+    "Французька — елементарне володіння (Duolingo 38); польська — елементарне володіння (Duolingo 29); арабська — елементарне володіння (Duolingo 11); іспанська — елементарне володіння (Duolingo 10)."
+  ],
+  "languageNote": "Оцінки Duolingo станом на липень 2026 року; вони не є підтвердженням рівня CEFR.",
   "training": "Безперервний професійний розвиток: Microsoft Learn, Cisco, Google Play Academy, IBM, Prometheus, ITVDN, HackerRank. Публічні записи про досягнення та бейджі:",
   "trainingLinks": [
     [
@@ -100,7 +104,7 @@ const CV={
     }
   ],
   "interests": "Музика (фортепіано, акордеон) · Акриловий живопис",
-  "note": "Оновлено: листопад 2026 · Додаткові приклади робіт і підтвердження кваліфікацій доступні за посиланнями."
+  "note": "Додаткові приклади робіт і підтвердження кваліфікацій доступні за посиланням"
 };
 const build=function build(c){
 const esc=s=>String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]));
@@ -120,10 +124,10 @@ return `<!doctype html>
 <section><h2>Освіта</h2>${c.education.map(E).join("\n")}</section>
 <section><h2>Технічні навички (Hard Skills)</h2>${c.hard.map(g=>`<p class="skill"><strong>${esc(g[0])}:</strong> ${esc(g[1])}</p>`).join("\n")}</section>
 <section><h2>Професійні якості (Soft Skills)</h2><p class="skill">${esc(c.soft)}</p></section>
-<section><h2>Мови</h2><p>${esc(c.languages)}</p></section>
+<section><h2>Мови</h2>${c.languages.map(line=>`<p class="skill">${esc(line)}</p>`).join("\n")}<p class="small">${esc(c.languageNote)}</p></section>
 <section><h2>Сертифікати та підвищення кваліфікації</h2><p>${esc(c.training)} ${c.trainingLinks.map(x=>a(x[1],x[0])).join(" · ")}</p></section>
 <section><h2>Проєкти</h2>${c.projects.map(x=>`<p class="project"><strong>${a(x.url,x.name)}</strong> · ${esc(x.desc)}</p>`).join("\n")}</section>
 <section><h2>Інтереси</h2><p>${esc(c.interests)}</p></section>
-<p class="last-note">${esc(c.note)}</p></main></body></html>`;
+<p class="last-note">${esc(c.note)} ${a(c.site,"sunmeat.dev")}</p></main></body></html>`;
 };
 await writeFile('public/resume.html',build(CV),'utf8');
