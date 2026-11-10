@@ -2958,3 +2958,24 @@ html[lang="qya"] .section__title::after {
         transition: none;
     }
 }
+
+
+/* Desktop-only persistent masthead. 'clip' keeps the decorative background
+   contained without introducing an overflow scrolling ancestor that breaks
+   position: sticky. Mobile keeps its normal document flow. */
+@media (min-width: 861px) {
+    body,
+    .page {
+        overflow-x: clip;
+    }
+
+    .page > .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    main [id] {
+        scroll-margin-top: 100px;
+    }
+}
