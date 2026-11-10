@@ -14,7 +14,7 @@ import Eyebrow from "./Eyebrow.jsx";
 import { QuenyaRelicCrest, QuenyaPhotoFiligree } from "./QuenyaRelicOrnaments.jsx";
 import { AVATAR_URL, getEditionPhotos, getEditionPhotoUrl, nextPhotoIndex } from "../photo-editions.js";
 import PhotoDisplay from "./PhotoDisplay.jsx";
-import PhotoLightbox from "./PhotoLightbox.jsx";
+import PhotoLightbox, { getPhotoLabels } from "./PhotoLightbox.jsx";
 
 const USERNAME = "sunmeat";
 const BASE_LIKES = 228;
@@ -335,7 +335,7 @@ function About() {
                         {isQuenya && <QuenyaRelicCrest />}
                         <div className="about-card__header">
                             <div className="about-card__avatar">
-                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" width="512" height="512" loading="lazy" decoding="async" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/s.jpg"; }} />
+                                <img src={AVATAR_URL} alt="Oleksandr Zahoruiko" width="512" height="512" loading="lazy" decoding="async" onError={(event) => { const img = event.currentTarget; if (!img.src.endsWith("/s.jpg")) img.src = "/s.jpg"; else img.style.visibility = "hidden"; }} />
                             </div>
                             <div className="about-card__meta">
                                 <span className="about-card__username">{USERNAME}</span>
@@ -351,7 +351,7 @@ function About() {
                                 type="button"
                                 className="about-card__photo-trigger"
                                 onClick={() => setPhotoOpen(true)}
-                                aria-label={language === "uk" ? "Відкрити фото на весь екран" : "Open photo fullscreen"}
+                                aria-label={getPhotoLabels(language)[0]}
                             >
                                 <div className="about__frame">
                                     <PhotoDisplay key={language + ":" + photoUrl} src={photoUrl} alt="Oleksandr Zahoruiko" />
