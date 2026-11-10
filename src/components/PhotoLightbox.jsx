@@ -21,7 +21,21 @@ export function getPhotoLabels(language) {
     return LABELS[language] || LABELS.en;
 }
 
-export default function PhotoLightbox({source, alt, language, hasMultiple, onPrevious, onNext, onDoubleClick, onClose}) {
+function PhotoControlIcon({name}) {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"
+             strokeLinejoin="round" aria-hidden="true" focusable="false">
+            {name === "close"
+                ? <path d="M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5"/>
+                : name === "previous"
+                    ? <path d="M15.5 5.5 9 12l6.5 6.5"/>
+                    : <path d="M8.5 5.5 15 12l-6.5 6.5"/>}
+        </svg>
+    );
+}
+
+export default function PhotoLightbox({source, alt, language, hasMultiple, photoIndex = 0, photoCount = 1, onPrevious, onNext, onDoubleClick, onClose}) {
     const [closing, setClosing] = useState(false);
     const [heartBurst, setHeartBurst] = useState(0);
     const closeButton = useRef(null);
@@ -81,6 +95,7 @@ export default function PhotoLightbox({source, alt, language, hasMultiple, onPre
     return createPortal(
         <div
             className={"photo-lightbox" + (closing ? " is-closing" : "") + (language === "qya" ? " photo-lightbox--quenya" : "")}
+            data-edition={language}
             onClick={(event) => { if (event.target === event.currentTarget) requestClose(); }}
         >
             <div
@@ -98,9 +113,26 @@ export default function PhotoLightbox({source, alt, language, hasMultiple, onPre
                     if (Math.abs(delta) > 55) (delta < 0 ? onNext : onPrevious)();
                 }}
             >
-                <button className="photo-lightbox__close" type="button" ref={closeButton} onClick={requestClose} aria-label={labels[1]} title={labels[1]}>×</button>
+                <button className="photo-lightbox__control photo-lightbox__close" type="button"
+                        ref={closeButton} onClick={requestClose} aria-label={labels[1]} title={labels[1]}>
+                    <span className="photo-lightbox__control-icon"><PhotoControlIcon name="close"/></span>
+                </button>
                 {hasMultiple && (
-                    <button className="photo-lightbox__previous" type="button" onClick={onPrevious} aria-label={labels[2]} title={labels[2]}>‹</button>
+                    <div className="photo-lightbox__nav" role="group" aria-label={labels[0]}>
+                        <button className="photo-lightbox__control photo-lightbox__previous" type="button"
+                                onClick={onPrevious} aria-label={labels[2]} title={labels[2]}>
+                            <span className="photo-lightbox__control-icon"><PhotoControlIcon name="previous"/></span>
+                        </button>
+                        <span className="photo-lightbox__counter" aria-live="polite" aria-atomic="true">
+                            <span>{String(photoIndex + 1).padStart(2, "0")}</span>
+                            <span className="photo-lightbox__counter-divider" aria-hidden="true"/>
+                            <span>{String(photoCount).padStart(2, "0")}</span>
+                        </span>
+                        <button className="photo-lightbox__control photo-lightbox__next" type="button"
+                                onClick={onNext} aria-label={labels[3]} title={labels[3]}>
+                            <span className="photo-lightbox__control-icon"><PhotoControlIcon name="next"/></span>
+                        </button>
+                    </div>
                 )}
                 <div
                     className="photo-lightbox__image-area"
@@ -112,9 +144,6 @@ export default function PhotoLightbox({source, alt, language, hasMultiple, onPre
                     <PhotoDisplay key={source} src={source} alt={alt} fullscreen />
                     {heartBurst > 0 && <span key={heartBurst} className="photo-lightbox__heart" aria-hidden="true">♥</span>}
                 </div>
-                {hasMultiple && (
-                    <button className="photo-lightbox__next" type="button" onClick={onNext} aria-label={labels[3]} title={labels[3]}>›</button>
-                )}
             </div>
         </div>,
         document.body
