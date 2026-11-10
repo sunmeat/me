@@ -42,6 +42,7 @@ function Contact() {
                         >
                             Message on Telegram
                         </a>
+                        <a className="btn btn--ghost" href="/resume.pdf" download="Oleksandr-Zahoruiko-Resume.pdf">Download résumé (PDF)</a>
                     </div>
                 </div>
 

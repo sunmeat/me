@@ -4621,6 +4621,9 @@ Object.assign(AR, {
 });
 const TRANSLATIONS = { uk: UK, fr: FR, "pt-BR": PT_BR, es: ES, ru: RU, zh: ZH, "ko-KP": KP, ar: AR, sa: SA, od: OD, de: DE, ja: JA, hv: HV, qya: QUENYA, av: AV, cu: CU };
 
+const RESUME_COPY={uk:"Завантажити резюме (PDF)",fr:"Télécharger le CV (PDF)","pt-BR":"Baixar currículo (PDF)",es:"Descargar currículum (PDF)",ru:"Скачать резюме (PDF)",zh:"下载简历 (PDF)","ko-KP":"리력서 내려받기 (PDF)",ar:"تنزيل السيرة الذاتية (PDF)",sa:"जीवनवृत्तं अवतारयतु (PDF)",de:"Lebenslauf herunterladen (PDF)",ja:"履歴書をダウンロード (PDF)",hv:"Download résumé (PDF)",qya:"Download résumé (PDF)",od:"Скачать резюме (PDF)",av:"Скачать резюме (PDF)",cu:"Съхранити житїе (PDF)"};
+for(const [language,copy]of Object.entries(RESUME_COPY))if(TRANSLATIONS[language])TRANSLATIONS[language]["Download résumé (PDF)"]=copy;
+
 const PROJECT_TRANSLATIONS = {
   "fr": {
     "Sites & projects": "Sites et projets",

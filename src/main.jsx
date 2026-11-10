@@ -9,3 +9,6 @@ createRoot(document.getElementById('root')).render(
         <Analytics/>
     </StrictMode>,
 )
+if(import.meta.env.PROD&&'serviceWorker'in navigator){
+ navigator.serviceWorker.register('/offline-worker.js',{updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(r=>r.active?.postMessage({type:'CACHE_VISITED',urls:performance.getEntriesByType('resource').map(x=>x.name)})).catch(()=>{});
+}

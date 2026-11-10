@@ -1,0 +1,11 @@
+import{spawn}from'node:child_process';import{mkdtemp,rm}from'node:fs/promises';import{tmpdir}from'node:os';import{join}from'node:path';
+export async function browser(){
+ const profile=await mkdtemp(join(tmpdir(),'alex-offline-'));const child=spawn('/usr/bin/chromium',['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--disable-background-networking','--remote-debugging-pipe','--user-data-dir='+profile],{stdio:['ignore','ignore','ignore','pipe','pipe']});
+ let id=0,buffer='';const errors=[],pending=new Map();child.stdio[4].on('data',data=>{buffer+=data;let end;while((end=buffer.indexOf('\0'))>=0){const p=JSON.parse(buffer.slice(0,end));buffer=buffer.slice(end+1);if(p.method==='Runtime.exceptionThrown')errors.push(p.params.exceptionDetails);const r=pending.get(p.id);if(r){pending.delete(p.id);clearTimeout(r.timer);if(p.error)r.reject(Error(p.error.message));else r.resolve(p.result);}}});
+ const call=(method,params={},sessionId)=>new Promise((resolve,reject)=>{const n=++id,timer=setTimeout(()=>{pending.delete(n);reject(Error('CDP timeout '+method))},20000);pending.set(n,{resolve,reject,timer});child.stdio[3].write(JSON.stringify({id:n,method,params,sessionId})+'\0');});
+ const {targetId}=await call('Target.createTarget',{url:'about:blank'}),{sessionId}=await call('Target.attachToTarget',{targetId,flatten:true});
+ const send=(m,p={})=>call(m,p,sessionId);await send('Page.enable');await send('Runtime.enable');await send('Network.enable');
+ const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true,userGesture:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result?.value;};
+ const wait=async expression=>{for(let i=0;i<100;i++){try{if(await evaluate('Promise.resolve(('+expression+')).then(Boolean)'))return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('Timed out: '+expression);};
+ return{send,evaluate,wait,errors,async close(){child.kill('SIGKILL');for(const r of pending.values())clearTimeout(r.timer);await rm(profile,{recursive:true,force:true}).catch(()=>{});}};
+}
