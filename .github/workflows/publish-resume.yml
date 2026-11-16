@@ -40,7 +40,7 @@ jobs:
           grep -q 'tel:+380630300035' public/resume.html
           cmp public/resume.pdf public/Oleksandr_Zahoruiko_Senior_FullStack_Developer_CV_EN.pdf
           cmp public/resume.pdf public/Oleksandr_Zahoruiko_Android_FullStack_Developer_CV.pdf
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: english-cv-proof
           path: |
